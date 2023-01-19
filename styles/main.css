@@ -68,10 +68,17 @@ ul{
 	display: flex;
 	justify-content: center;
 }
+
+ul :hover{
+	transition: all 0.2s ease-in;
+	text-decoration: var(--color-text-menu) underline;
+}
+
 ul li a {
 	text-decoration:none;
 	color: var(--color-text-menu);
 }
+
 .widthp-20{
 	width: 20%;
 }
