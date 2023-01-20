@@ -41,32 +41,6 @@ html{
 /* .links{
 	display: inline-flex;
 } */
-
-/* .color-expertise{
-	background-color:var(--color-expertise);
-	
-} */
-
-/* .width-expertise{
-	width: 20% !important;
-} */
-
-/* .color-innovention{
-	background-color:var(--color-innovention);
-} */
-
-/* .color-recrutement{
-	background-color:var(--color-recrutement);
-} */
-/* .color-ressource{
-	background-color:var(--color-ressource);
-} */
-/* .color-secteur{
-	background-color:var(--color-secteur);
-} */
-/* .color-actualite{
-	background-color:var(--color-actualite);
-} */
 /* .links .link{
 	list-style: none;
 	padding: 10px;
@@ -159,14 +133,10 @@ html{
 	 font-size: 18px;
  }
  .liens .lien a:hover{
-	 background: rgba(119, 174, 246, 0.924);
 	 transition: all 0.2s ease-in;
+	 /* text-decoration:  underline; */
+	 text-decoration: solid underline var(--color-text-menu) 3px;
  }
- 
- 
- /* Style pour le menu deroulant */
- 
- 
  
  .sous-menu .liens .lien{
 	 margin: 20px 0;
@@ -177,7 +147,7 @@ html{
   
  .mengamenu{
 	 position: absolute;
-	 background: #14D1B3;
+	 /* background: #14D1B3; */
 	 top: 65px;
 	 left: 0;
 	 right: 0;
@@ -223,3 +193,28 @@ html{
  .colone h2{
 	 font-size: 1.2rem;
  }
+ .color-expertise{
+	background-color:var(--color-expertise);
+	
+}
+
+/* .width-expertise{
+	width: 20% !important;
+} */
+
+.color-innovention{
+	background-color:var(--color-innovention);
+}
+
+.color-recrutement{
+	background-color:var(--color-recrutement);
+}
+.color-ressource{
+	background-color:var(--color-ressource);
+}
+.color-secteur{
+	background-color:var(--color-secteur);
+}
+.color-actualite{
+	background-color:var(--color-actualite);
+}
