@@ -1,0 +1,28 @@
+.main_home{
+	padding:0 20px;
+}
+.banner_img {
+    bottom: 1%;
+    right: 0;
+    background-color: hsla(0,4%,5%,.5);
+    z-index: 1;
+	margin: 20px;
+    height: 500px!important;
+}
+
+.contenaire_description{
+	width: 100%;
+	display:flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+
+}
+
+.contenaire_description__image{
+	background-color:bisque;
+}
+.illustration{
+	width:25%;
+}
