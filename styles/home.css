@@ -56,25 +56,102 @@ li{
 .container-video{
 	max-width:500px;
 	max-height: 500px;
-	/* width:50%; */
-	/* background-color: antiquewhite; */
 	overflow: hidden;
 }
-/* .wrapper-video{
-	position: absolute;
-	bottom:0 ;
-	
-} */
-/* .wrapper-video ::before{
-	content: "";
-	bottom: 0;
-	width: 100%;
-	position: absolute;
-	background: #000;
-	height: calc(100%+34px); 
-	
-} */
+
 .container-video video{
 	width:100%;
 	border-radius: 5px;
+}
+
+/* Card metier */
+.contenaire-card{
+	display: flex;
+    align-content: center;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+	flex-wrap: wrap;
+}
+.card-card{
+	width: 25%;
+	height: 100%;
+    margin: 5px;
+    padding: 2px!important;
+    border-radius: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+	padding-bottom: 200px;
+}
+.card-image{
+	background-color: #C5C5C5;
+	height:200px;
+	width:100%;
+	padding: 20px !important;																																																													
+}
+.card-card > h4{
+	font-style: normal;
+	font-weight: 700;
+	margin:  20px;
+	font-size: 24px;
+	line-height: 29px;
+	text-align: center;
+}
+
+.card-card > p{
+	font-style: normal;
+	margin: 0 40px;
+	line-height: 27px;
+	text-align: justify;
+}
+
+.card-card > button{
+	width: 217px;
+	height: 49px;
+	background: #FF0000;
+	border-radius: 7px;
+	margin: 25px 0;
+}
+/* Nos partenaire */
+
+.slick-slide{
+    margin: 0 20px;
+}
+.slick-slide img{
+    width: 5%;
+}
+.slick-slider{
+    position: relative;
+    display: block;
+    box-sizing: border-box;
+}
+.slick-list{
+    position: relative;
+    display: block;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+.slick-track{
+    position: relative;
+    top: 0;
+    left: 0;
+    display: block
+}
+.slick-slide{
+    display: none;
+    float: left;
+    height: 100%;
+    min-height: 1px;
+}
+.slick-slide img{
+    display: block;
+}
+.slick-initialized .slick-slide{
+    display: block;
+}
+.copy{
+    padding-top: 250px;
 }
