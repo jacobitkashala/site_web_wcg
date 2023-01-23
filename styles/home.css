@@ -2,6 +2,22 @@
 .main_home{
 	padding:0 20px;
 }
+/* Slider carrousel */
+.home{
+	padding:0;
+}
+.home .slider{
+text-align: center;
+padding:2rem;
+display:flex;
+justify-content: center;
+align-items: center;
+min-height: 60rem;
+}
+.slider img{
+width:400px;
+height:650px;
+}
 /* Slide */
 .swiper {
 	width: 100%;

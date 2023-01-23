@@ -28,7 +28,6 @@ html{
 }
 /* Mise en forme du header */
 .header_container{
-	
 	position: fixed;
 	top: 0;
 	left: 0;
@@ -51,6 +50,7 @@ html{
     align-content: center;
     justify-content: space-evenly;
     align-items: center;
+	margin-top: 1rem;
 }
 
 .header_nav_container a{
