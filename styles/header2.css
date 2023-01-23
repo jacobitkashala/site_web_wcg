@@ -9,8 +9,27 @@
 	--black: #222;
 	--white:#fff;
 	--box-shodow:0 .5rem 1rem rgba(0,0,0,.1);
+}
 
+.color-expertise{
+	background-color:var(--color-expertise);
+}
+.color-innovention{
+	background-color:var(--color-innovention);
+}
 
+.color-recrutement{
+	background-color:var(--color-recrutement);
+}
+.color-ressource{
+	background-color:var(--color-ressource);
+}
+.color-secteur{
+	background-color:var(--color-secteur);
+}
+.color-actualite{
+	background-color:var(--color-actualite);
+	
 }
 *{
 	font-family:Arial, Helvetica, sans-serif;
@@ -34,7 +53,7 @@ html{
 	right: 0;
 	z-index: 1000!important;
 	background:var(--white);
-	padding: 2rem 0;
+	padding-top: 2rem;
 	box-shadow: var(--box-shodow);
 }
 .header_container .header_image{
@@ -48,22 +67,24 @@ html{
     display: flex;
     flex-direction: row;
     align-content: center;
-    justify-content: space-evenly;
+    /* justify-content: space-between; */
+	gap: 0;
     align-items: center;
 	margin-top: 1rem;
 }
 
 .header_nav_container a{
-	font-size:2.5rem;
-	margin-left: 2rem;
+	font-size:2.5rem;	
+	padding:1rem;
+	width: 20%;
 	color: var(--black);
-	
-
+}
+.w20{
+	width: 5%!important;
 }
 .header_nav_container a:hover{
 	transition: all 0.2s ease-in;
-	background-color:#BF24C0;
-	text-decoration: solid underline var(--black) 3px;
+	text-decoration: solid underline var(--white) 2px;
 }
 
 #menu-btn{
