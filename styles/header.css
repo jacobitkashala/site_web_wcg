@@ -166,11 +166,11 @@ header{
  }
  
 
- .lien-mega:hover .mengamenu {
+ /* .lien-mega:hover .mengamenu {
 	 display: block;
 	 transition: all 0.3s ease-in;
 	 top: 55px;
- }
+ } */
  
  .container :hover{
 	transition: all 0.3s ease-in;

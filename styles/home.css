@@ -1,15 +1,37 @@
+  
 .main_home{
 	padding:0 20px;
 }
-.banner_img {
-    bottom: 1%;
-    right: 0;
-    background-color: hsla(0,4%,5%,.5);
-    z-index: 1;
-	margin: 20px;
-    height: 500px!important;
-}
+/* Slide */
+.swiper {
+	width: 100%;
+	height: 75%;
+  }
+  .swiper-slide {
+	text-align: center;
+	font-size: 18px;
+	background: #fff;
 
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	-webkit-justify-content: center;
+	justify-content: center;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	-webkit-align-items: center;
+	align-items: center;
+  }
+  .swiper-slide img {
+	display: block;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+  }
+  /* fin slide */
 .contenaire_description{
 	width: 100%;
 	display:flex;
@@ -25,4 +47,34 @@
 }
 .illustration{
 	width:25%;
+}
+li{
+	list-style: none;
+}
+/* Style pour video */
+
+.container-video{
+	max-width:500px;
+	max-height: 500px;
+	/* width:50%; */
+	/* background-color: antiquewhite; */
+	overflow: hidden;
+}
+/* .wrapper-video{
+	position: absolute;
+	bottom:0 ;
+	
+} */
+/* .wrapper-video ::before{
+	content: "";
+	bottom: 0;
+	width: 100%;
+	position: absolute;
+	background: #000;
+	height: calc(100%+34px); 
+	
+} */
+.container-video video{
+	width:100%;
+	border-radius: 5px;
 }
