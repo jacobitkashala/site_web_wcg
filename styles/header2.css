@@ -64,6 +64,8 @@ html{
 	z-index: 1000;	
 }
 .header_nav_container{
+	/* max-width: 1000px; */
+	overflow-x: auto;
     display: flex;
     flex-direction: row;
     align-content: center;
@@ -71,9 +73,11 @@ html{
 	gap: 0;
     align-items: center;
 	margin-top: 1rem;
+	
 }
 
 .header_nav_container a{
+	/* min-width:110px; */
 	font-size:2.5rem;	
 	padding:1rem;
 	width: 20%;
@@ -95,6 +99,12 @@ html{
 }
 /* Responsive */
 /* tablet */
+
+ @media (max-width:991px) {
+	.header_nav_container{
+		overflow-x:auto ;
+	}	
+} 
 @media (max-width:1280px) {
 	
 }
