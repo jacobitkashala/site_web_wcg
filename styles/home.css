@@ -3,13 +3,43 @@
 }
 .home .slide{
     text-align: center;
-    padding: 2rem;
     background-size: cover !important;
     background-position: center !important;
-    height: 60rem;
+    height: 45rem;
 }
 .home .slide .content{
     width:85rem;
+}
+/* Description section */
+.description{
+    display: flex;
+    flex-direction: row;
+    align-content: stretch;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+.content-image img{
+  margin-right: 20px;
+   width: 200px;
+   height: 200px;
+}
+.content-desc{
+    margin-top:90px; 
+    height: 285px;
+    width: 466px;
+
+}
+.content-desc h1{
+    font-style: normal;
+    font-weight: 600;
+    font-size: 39px;
+    line-height: 48px;
+}
+.contenaire-video video{
+    width: 480px;
+    height: 311px;
+    border-radius: 5px;
 }
 /*
 .home .slide{
