@@ -1,142 +1,29 @@
-  
-.main_home{
-	padding:0 20px;
-}
-/* Slider carrousel */
-.home{
+ .home{
 	padding:0;
 }
-.home .slider{
-text-align: center;
-padding:2rem;
-display:flex;
-justify-content: center;
-align-items: center;
-min-height: 60rem;
+.home .slide{
+    text-align: center;
+    padding: 2rem;
+    background-size: cover !important;
+    background-position: center !important;
+    height: 60rem;
 }
-.slider img{
-width:400px;
-height:650px;
+.home .slide .content{
+    width:85rem;
 }
-/* Slide */
-.swiper {
-	width: 100%;
-	height: 75%;
-  }
-  .swiper-slide {
-	text-align: center;
-	font-size: 18px;
-	background: #fff;
-
-	display: -webkit-box;
-	display: -ms-flexbox;
-	display: -webkit-flex;
+/*
+.home .slide{
 	display: flex;
-	-webkit-box-pack: center;
-	-ms-flex-pack: center;
-	-webkit-justify-content: center;
 	justify-content: center;
-	-webkit-box-align: center;
-	-ms-flex-align: center;
-	-webkit-align-items: center;
-	align-items: center;
-  }
-  .swiper-slide img {
-	display: block;
-	width: 100%;
-	height: 100%;
-	object-fit: cover;
-  }
-  /* fin slide */
-.contenaire_description{
-	width: 100%;
-	display:flex;
-	flex-wrap: wrap;
-	flex-direction: row;
-	justify-content: center;
-	align-items: center;
-
+	align-items:center;
+	background-size: cover !important;
+	background-position: center !important;
 }
-
-.contenaire_description__image{
-	background-color:bisque;
-}
-.illustration{
-	width:25%;
-}
-li{
-	list-style: none;
-}
-/* Style pour video */
-
-.container-video{
-	max-width:500px;
-	max-height: 500px;
-	overflow: hidden;
-}
-
-.container-video video{
-	width:100%;
-	border-radius: 5px;
-}
-
-/* Card metier */
-.contenaire-card{
-	display: flex;
-    align-content: center;
-    align-items: center;
-    flex-direction: row;
-    justify-content: center;
-	flex-wrap: wrap;
-}
-.card-card{
-	width: 25%;
-	height: 100%;
-    margin: 5px;
-    padding: 2px!important;
-    border-radius: 0px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-	padding-bottom: 200px;
-}
-.card-image{
-	background-color: #C5C5C5;
-	height:200px;
-	width:100%;
-	padding: 20px !important;																																																													
-}
-.card-card > h4{
-	font-style: normal;
-	font-weight: 700;
-	margin:  20px;
-	font-size: 24px;
-	line-height: 29px;
-	text-align: center;
-}
-
-.card-card > p{
-	font-style: normal;
-	margin: 0 40px;
-	line-height: 27px;
-	text-align: justify;
-}
-
-.card-card > button{
-	width: 217px;
-	height: 49px;
-	background: #FF0000;
-	border-radius: 7px;
-	margin: 25px 0;
-}
-/* Nos partenaire */
-
 .slick-slide{
     margin: 0 20px;
 }
 .slick-slide img{
-    width: 5%;
+    width: 120px;
 }
 .slick-slider{
     position: relative;
@@ -150,12 +37,10 @@ li{
     margin: 0;
     padding: 0;
 }
-.slick-track{
-    position: relative;
-    top: 0;
-    left: 0;
-    display: block
+.content-slide{
+	width: 85rem;
 }
+
 .slick-slide{
     display: none;
     float: left;
@@ -167,7 +52,11 @@ li{
 }
 .slick-initialized .slick-slide{
     display: block;
-}
-.copy{
-    padding-top: 250px;
+} */
+
+@media (max-width:450px) {
+	.home .slide{
+		padding: 2rem;
+		margin-top: 20rem;
+	}
 }

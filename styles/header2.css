@@ -47,7 +47,8 @@ html{
 }
 /* Mise en forme du header */
 .header_container{
-	position: fixed;
+	/* position: fixed; */
+	position: sticky;
 	top: 0;
 	left: 0;
 	right: 0;
@@ -66,13 +67,12 @@ html{
 .header_nav_container .header_nav_container {
 	z-index: 1000;	
 }
+
 .header_nav_container{
-	/* max-width: 1000px; */
 	overflow-x: auto;
     display: flex;
     flex-direction: row;
     align-content: center;
-    /* justify-content: space-between; */
 	gap: 0;
     align-items: center;
 	margin-top: 1rem;
@@ -125,6 +125,10 @@ html{
 }
 
 @media (max-width:450px) {
+	.header_image > img {
+		height: 90px;
+		width: 200px;
+	}
 	#menu-btn{
 		display: inline-block;
 		transition:.3s linear;
