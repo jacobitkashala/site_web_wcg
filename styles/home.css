@@ -5,7 +5,7 @@
     text-align: center;
     background-size: cover !important;
     background-position: center !important;
-    height: 45rem;
+    height: 55rem;
 }
 .home .slide .content{
     width:85rem;
@@ -15,8 +15,7 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    height: 100vh;
-    align-items: center;
+    height: 52vh;
     justify-content: center;
 }
 .content-image img{
@@ -52,7 +51,7 @@
     border-radius: 5px;
 }
 .container-home{
-    padding:2rem;
+    padding:0 2rem;
 }
 
 /* Services css */
@@ -60,6 +59,12 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+}
+.service-element{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width:80%;
 }
 .service-content{
     display: block;
@@ -135,7 +140,11 @@
 }
 /* .partner_slide{
     padding: 0 3rem;
+        
 } */
+.one-content{
+    margin-top: 3rem;
+}
 .item_slide img{
     width: 100%;
     height: 100%;
@@ -186,13 +195,16 @@
         width: 300px;
     }
     /* Partner */
+    div.container_partner{
+        margin:3rem 0
+    }
     .container_partner h2 {
         font-weight: 400;
         font-size: 21px;
     }
     .container_partner_display {
         display:flex;
-        width:100%;
+        /* width:100%; */
         justify-content: center; 
         text-align: center;
          background: #FFFFFF;
