@@ -113,7 +113,7 @@ html{
 		font-size:40%;
 		overflow-x: hidden;
 	}
-	
+
 }
 
  @media (max-width:994px) {
@@ -137,6 +137,7 @@ html{
 		width: 200px;
 	}
 	#menu-btn{
+		font-size:large;
 		display: inline-block;
 		transition:.3s linear;
 	}
@@ -170,6 +171,8 @@ html{
 		display: block;
 		text-align: justify;
 		margin:1rem;
+		width: 100%;
+		font-size: 4rem;
 	}
 	
 }
