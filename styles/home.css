@@ -14,9 +14,7 @@
 .description{
     display: flex;
     flex-direction: row;
-    /* align-content: stretch; */
-    /* justify-content: center; */
-    /* align-items: flex-start; */
+    height: 60vh;
     flex-wrap: wrap;
 }
 .content-image img{
@@ -33,7 +31,7 @@
 .content-desc h1{
     font-style: normal;
     font-weight: 600;
-    font-size: 39px;
+    font-size: 31px;
     line-height: 48px;
 }
 .content-desc p{
@@ -50,6 +48,56 @@
     height: 311px;
     margin-top: 5rem;
     border-radius: 5px;
+}
+.container-home{
+    padding:2rem;
+}
+
+/* Services css */
+.contenaire-service{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.service-content{
+    display: block;
+    width: 392px;
+    margin-top:2rem;
+    margin-right: 3rem;
+    /* height: 475px; */
+    background: #F5F7F8;
+    border: 1px solid #9D9898;
+}
+.service-content img{
+    margin:3px;
+}
+.service-content h1{
+    margin: 1rem;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    text-align: center;
+    
+    color: #000000;
+    
+}
+.service-content p{
+    width: 327px;
+    text-align: left;
+    padding:2rem;
+    margin:0 !important;
+    font-size: 22px;
+}
+.service-content a{
+    height: 40px;
+    margin: 2rem;
+    background: #FF0000;
+    border-radius: 7px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 17px;
+    line-height: 21px;
+    color: #ffff;
 }
 /*
 .home .slide{
