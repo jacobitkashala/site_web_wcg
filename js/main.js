@@ -1,5 +1,6 @@
+// slide jquery partners
 $(document).ready(function(){
-	$('.customer-logos').slick({
+	$('.patners-logos').slick({
 		slidesToShow: 6,
 		slidesToScroll: 1,
 		autoplay: true,
@@ -20,7 +21,7 @@ $(document).ready(function(){
 		}]
 	});
 });
-
+//btn menu
 const menuBtn = document.querySelector('#menu-btn')
 const navBar = document.querySelector('.header_nav_container')
 
@@ -51,3 +52,23 @@ const swiper = new Swiper('.home-slider', {
     el: '.swiper-scrollbar',
   },
 });
+
+const swiperPartner = new Swiper('.partner_slide', {
+	loop: true,
+  
+	// If we need pagination
+	// pagination: {
+	//   el: '.swiper-pagination',
+	// },
+  
+	// Navigation arrows
+	navigation: {
+	  nextEl: '.swiper-button-next-partners',
+	  prevEl: '.swiper-button-prev-partners',
+	},
+  
+	// And if we need scrollbar
+	scrollbar: {
+	  el: '.swiper-scrollbar',
+	},
+  });
