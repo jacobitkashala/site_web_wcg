@@ -108,19 +108,24 @@ html{
 /* Responsive */
 /* tablet */
 
- @media (max-width:991px) {
+@media (max-width:1282px) {
+	html{
+		font-size:40%;
+		overflow-x: hidden;
+	}
+	
+}
+
+ @media (max-width:994px) {
+
+	html{
+		font-size:30%;
+		overflow-x: hidden;
+	}
 	.header_nav_container{
 		overflow-x:auto ;
 	}	
 } 
-@media (max-width:1280px) {
-	
-}
-@media (max-width:991px) {
-	html{
-		font-size: 55%;
-	}
-}
 /*  mini ipad*/
 @media (max-width:768px) {
 	
