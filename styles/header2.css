@@ -174,5 +174,8 @@ html{
 		width: 100%;
 		font-size: 4rem;
 	}
+	.w20{
+		width:100% !important;
+	}
 	
 }
