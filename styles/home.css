@@ -205,6 +205,23 @@
 
 }
 
+.content-icone-item{
+    display:flex;
+    height: 50px;
+    margin: 2rem;
+    flex-direction: row;
+    width: 50%;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.content-icone{
+    display:flex;
+    align-content: center;
+    justify-content: space-evenly;
+    align-items: center
+}
 @media (max-width:450px) {
 	.home .slide{
 		padding: 2rem;
