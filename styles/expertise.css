@@ -1,0 +1,63 @@
+
+.header_expertise_color_white{
+	height:10px;
+	background: #ffff;
+}
+.header_expertise_box{
+	padding:2rem;
+	height:192px;
+	background: #701475;
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+}
+.expertise_box {
+	display: flex;
+	flex-direction:column;
+	
+}
+.expertise_item{
+	display: inline-block;
+	/* width: 25rem; */
+	border-radius: 5px;
+	margin:10px;
+}
+.expertise_item a{
+	font-family: 'Montserrat';
+	font-style: normal;
+	font-weight: 500;
+	font-size: 23px;
+	line-height: 28px;
+	text-transform: capitalize;
+	color: #BFBDBD;
+}
+
+.expertise_item a:active{
+	font-style: normal;
+	font-weight: 700;
+	font-size: 23px;
+	line-height: 28px;
+	color: #FFFFFF;
+	border: 1px solid #FFFFFF;
+}
+.container_content_expertise{
+   height: 866px;
+   padding:10rem;
+   background-image: url(../images/image_consult.png);
+}
+.container_content_expertise h4{
+	font-style: normal;
+	font-weight: 700;
+	font-size: 40px;
+	margin-bottom: 5rem;
+	line-height: 49px;
+	text-align: left;
+	color: #FFFFFF;
+}
+.container_content_expertise p{
+	font-style: normal;
+	font-weight: 500;
+	font-size: 18px;
+	line-height: 22px;
+	text-align: justify;
+	color: #FFFFFF;
+}
