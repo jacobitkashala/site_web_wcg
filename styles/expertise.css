@@ -1,7 +1,16 @@
 
+.active-nav-main{
+	height:49px;
+	border-bottom: 1px solid #FFFFFF;
+}
 .header_expertise_color_white{
 	height:10px;
 	background: #ffff;
+}
+.header_expertise_color_active{
+	height: 100%;
+	width:17.4%;
+	background: #BF24C0;
 }
 .header_expertise_box{
 	padding:2rem;

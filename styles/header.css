@@ -16,11 +16,6 @@ html{
 	 box-sizing: border-box;
  }
  
- header{
-	width:99%;
-	top:0;
-	left:0;
-} 
  body{
 	font-family: 'Montserrat';
 	font-style: normal;
@@ -28,6 +23,12 @@ html{
 	font-size:20px;
 	height:100vh;
  }
+ header{
+	/* width:; */
+	top:0;
+	height:10vh;
+	left:0;
+} 
  .header_container{
 	position: fixed;
     width: 100%;

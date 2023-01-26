@@ -71,7 +71,7 @@ html{
 }
 
 .header_nav_container{
-	overflow-x: auto;
+	/* overflow-x: auto; */
     display: flex;
     flex-direction: row;
     align-content: center;
