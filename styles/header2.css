@@ -90,6 +90,9 @@ html{
 .w20{
 	width: 5%!important;
 }
+.header_nav_non_active {
+	text-decoration: none;
+}
 .header_nav_container a:hover{
 	transition: all 0.2s ease-in;
 	text-decoration: solid underline var(--white) 2px;
