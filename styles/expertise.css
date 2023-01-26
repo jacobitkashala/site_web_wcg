@@ -30,15 +30,20 @@
 	text-transform: capitalize;
 	color: #BFBDBD;
 }
-
-.expertise_item a:active{
-	font-style: normal;
-	font-weight: 700;
+div.active{
+	width:15rem;
+	padding:10px;
+	border: 1px solid #FFFFFF;
+	border-radius: 5px;
+}
+.expertise_item a.active{
+	color: #FFFFFF;
 	font-size: 23px;
 	line-height: 28px;
-	color: #FFFFFF;
-	border: 1px solid #FFFFFF;
+	font-style: normal;
+	font-weight: 700;
 }
+
 .container_content_expertise{
    height: 866px;
    padding:10rem;
