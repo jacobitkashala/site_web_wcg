@@ -27,17 +27,17 @@ $(document).ready(function () {
 //btn menu
 const menuBtn = document.querySelector('#menu-btn')
 const navBar = document.querySelector('.header_nav_container')
-const expertise = document.querySelector('.header_nav_container a:hover')
+const expertise = document.querySelector('.header_nav_container')
 
 menuBtn.addEventListener('click', () => {
   // console.log("eeeeee")
   navBar.classList.toggle('active')
   menuBtn.classList.toggle('fa-times')
-  // menuBtn.append.name='fermae';
 })
 
 expertise.addEventListener('click', () => {
-  expertise.classList.addClass('header_nav_non_active')
+	console.log("eeee")
+  expertise.addClass('header_nav_non_active')
 })
 
 const swiper = new Swiper('.home-slider', {
