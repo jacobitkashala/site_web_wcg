@@ -24,7 +24,7 @@
 	<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.6/swiper-bundle.css"> -->
 
 	<link rel='stylesheet' type='text/css' media='screen' href='/styles/header2.css'>
-	<link rel='stylesheet' type='text/css' media='screen' href='/styles/home.css'>
+	<link rel='stylesheet' type='text/css' media='screen' href='/styles/innovation.css'>
 	<link rel='stylesheet' type='text/css' media='screen' href='/styles/footer.css'>
 	<link rel="shortcut icon" href="favori.ico">
 
@@ -35,16 +35,18 @@
 <body>
 	<header class="header_container">
 		<div class="header_image">
-			<img src="./images/logo/logo_wcg.png" srcset="./images/icons/logo_smal_mobile.png 450w," alt="logo wcg" />
+			<img src="../images/logo/logo_wcg.png" srcset="./images/icons/logo_smal_mobile.png 450w," alt="logo wcg" />
 		</div>
 		<nav class="header_nav_container">
-			<a href="#" class="color-expertise w20"><img class="logo-menu" src="./images/logo/logo_home.png"
-					alt="logo home" /></a>
+			<a href="index.html" class="color-expertise  w20"><img class="logo-menu" src="./images/logo/logo_home.png"
+					alt="logo home" />
+			</a>
 			<!-- Expertise header -->
-			<a href="expertise.html" class="color-expertise"><img class="logo-menu" src="./images/logo/logo_cerveau.png" alt="logo" />
+			<a href="expertise.html" id="id_expertise" class="color-expertise "><img class="logo-menu"
+					src="./images/logo/logo_cerveau.png" alt="logo" />
 				Expertises</a>
 			<!-- Innovations -->
-			<a href="innovation.html" class="color-innovention"><img class="logo-menu" src="./images/logo/logo_ampoule.png"
+			<a href="#" class="color-innovention active-nav-main"><img class="logo-menu" src="./images/logo/logo_ampoule.png"
 					alt="logo" /> Innovations</a>
 			<!-- Recrutement -->
 			<a href="" class="color-recrutement"><img class="logo-menu" src="./images/logo/logo_loupe.png" alt="logo" />
@@ -66,117 +68,36 @@
 		</div>
 	</header>
 	<main>
-		<section class="home">
-			<div class="home-slider swiper">
-				<div class="swiper-wrapper">
-					<div class="slide swiper-slide" style="background:url(images/part/hero.png) no-repeat">
-						<div class="content">
-						</div>
-					</div>
-					<div class="slide swiper-slide" style="background:url(images/part/hero.png) no-repeat">
-						<div class="content">
-						</div>
-					</div>
-					<div class="slide swiper-slide" style="background:url(images/part/hero.png) no-repeat">
-						<div class="content">
-						</div>
-					</div>
-				</div>
-				<div class="swiper-button-next"></div>
-				<div class="swiper-button-prev"></div>
+		<section class="container_header_inovation">
+
+			 <div class="header_expertise_color_white">
+				<div class="header_color_active"></div>
 			</div>
+			<!--<div class="header_expertise_box">
+				<div class="expertise_box">
+					<div class="expertise_item active"><a class="active" href="#">Consulting</a></div>
+					<div class="expertise_item"><a href="#">Desing</a></div>
+				</div>
+				<div class="expertise_box">
+					<div class="expertise_item"><a href="#">Cloud & data</a></div>
+					<div class="expertise_item"><a href="#">Telecom</a></div>
+				</div>
+				<div class="expertise_box">
+					<div class="expertise_item"><a href="#">HealthCare</a></div>
+					<div class="expertise_item"><a href="#">Digigtal & Innovation</a></div>
+				</div>
+				<div class="expertise_box">
+					<div class="expertise_item"><a href="#">Engineering</a></div>
+				</div>
+			</div> -->
 		</section>
-		<div class="container-home">
-			<section class="description">
-				<div class="content-image"><img class="image-illustration" src="images/part/imageIllustration.png"
-						alt="illustration lampe" srcset=""></div>
-				<div class="content-desc">
-					<h1>World Corp Group RDC, </h1>
-					<p>
-						est une société de consulting et de développement de projets innovants, spécialiste en solutions
-						SMAC (Social, Mobile, Analytics, Cloud).
-						Nous accompagnons nos clients dans la mise en place des solutions SMAC et le développement sur
-						mesure de leur stratégie digitale et multicanale pour une expérience numérique réussie.
-					</p>
-				</div>
-				<div class="contenaire-video">
-					<video src="./demo-video.mp4" controls></video>
-				</div>
-			</section>
-			<!-- consulting -->
-			<div class="contenaire-service">
-				<div class="service-element">
-					<div class="service-content">
-						<img src="./images/images_design_factory.png" alt="image titre" srcset="">
-						<h1>CONSULTING</h1>
-						<p>Nous accompagnons, très en amont de projets, nos clients dans leurs démarches de
-							transformation
-							digitale
-							et d’optimisation de leur stratégie numérique. </p>
-						<a class="btn" href="#">Pour en savoir plus ...</a>
-					</div>
-
-					<div class="service-content">
-						<img src="./images/image_ecran_projection.png" alt="image titre" srcset="">
-						<h1>CONSULTING</h1>
-						<p>Nous accompagnons, très en amont de projets, nos clients dans leurs démarches de
-							transformation
-							digitale
-							et d’optimisation de leur stratégie numérique. </p>
-						<a class="btn" href="#">Pour en savoir plus ...</a>
-					</div>
-					<div class="service-content">
-						<img src="./images/image_consulting.png" alt="image titre" srcset="">
-						<h1>CONSULTING</h1>
-						<p>Nous accompagnons, très en amont de projets, nos clients dans leurs démarches de
-							transformation
-							digitale
-							et d’optimisation de leur stratégie numérique. </p>
-						<a class="btn" href="#">Pour en savoir plus ...</a>
-					</div>
-					<div class="service-content">
-						<img src="./images/image_et_innovation.png" alt="image titre" srcset="">
-						<h1>CONSULTING</h1>
-						<p>Nous accompagnons, très en amont de projets, nos clients dans leurs démarches de
-							transformation
-							digitale
-							et d’optimisation de leur stratégie numérique. </p>
-						<a class="btn" href="#">Pour en savoir plus ...</a>
-					</div>
-					<div class="service-content">
-						<img src="./images/image_telecom.png" alt="image titre" srcset="">
-						<h1>CONSULTING</h1>
-						<p>Nous accompagnons, très en amont de projets, nos clients dans leurs démarches de
-							transformation
-							digitale
-							et d’optimisation de leur stratégie numérique. </p>
-						<a class="btn" href="#">Pour en savoir plus ...</a>
-					</div>
-
-				</div>
-			</div>
-			<!-- slide nos partenaire -->
-			<div class="container_partner_slide">
-				<h2 class="text-center font-weight-bold">Nos Partenaires</h2>
-				<div class="container_partner_display">
-					<div class="partner_block">
-						<div class="container-slide">
-							<img class="" src="./images/left.png" alt="logo" />
-						</div>
-						<div class="partner_display_item ">
-							<div class="item_slide"><img src="images/partners/image_evolis.png" alt="logo"></div>
-							<div class="item_slide"><img src="images/partners/image_huawai.png" alt="logo"></div>
-							<div class="item_slide"><img src="images/partners/image_juris_consult.png" alt="logo"></div>
-							<div class="item_slide"><img src="images/partners/image_konnect.png" alt="logo"></div>
-						</div>
-						<div>
-							<img class="" src="./images/rigth.png" alt="logo" />
-						</div>
-					</div>
-				</div>
-
-			</div>
-		</div>
+		<!-- <section class="container_content_expertise">
+			<h1>Innovation</h1>
+			<p>World Corp Group accompagne ses clients dans leur transformation technique et/ou dans l’optimisation de
+				leur stratégie technique très en amont en tirant parti de dernières innovations technologiques et en
+				tenant compte d’impacts au niveau de leur système d’information.
+			</p>
+		</section> -->
 	</main>
 	<footer class="container-footer">
 		<div class="container-footer-one">

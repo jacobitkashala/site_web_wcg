@@ -59,6 +59,12 @@ html{
 	padding-top: 2rem;
 	box-shadow: var(--box-shodow);
 }
+
+.header_expertise_color_white{
+	position: relative;
+	height:10px;
+	background: #ffff;
+}
 .header_image > img {
 	height: 100px;
 }
