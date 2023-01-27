@@ -40,7 +40,7 @@
 	border:0;
 	text-decoration:none;
 	outline:none;
-	text-transform: capitalize;	
+	/* text-transform: capitalize;	 */
 }
 
 html{

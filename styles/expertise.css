@@ -33,7 +33,7 @@
 	font-weight: 500;
 	font-size: 23px;
 	line-height: 28px;
-	text-transform: capitalize;
+	/* text-transform: capitalize; */
 	color: #BFBDBD;
 }
 div.active{

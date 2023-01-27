@@ -64,7 +64,7 @@ html{
     font-weight: 700;
     font-size: .8rem;
     color: #fff;
-	text-transform: uppercase; 
+	/* text-transform: uppercase;  */
     text-align: center;
  }
  .liens .lien a:hover{
