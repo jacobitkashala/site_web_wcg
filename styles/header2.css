@@ -67,6 +67,14 @@ html{
 	padding-top: 2rem;
 	box-shadow: var(--box-shodow);
 }
+.active-nav-main{
+	height:49px;
+	border-bottom: 1px solid #FFFFFF;
+}
+.active-navigation__main{
+	height:49px;
+	border-bottom: 1px solid #FFFFFF;
+}
 
 .header_expertise_color_white{
 	position: relative;
