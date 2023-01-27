@@ -174,7 +174,6 @@ html{
 		right: 0;
 		display: block;
 		background-color: var(--white);
-		padding:.5rem;
 		clip-path: polygon(0 0,100% 0,100% 0,0 0);
 		transition: .3s linear;
 		

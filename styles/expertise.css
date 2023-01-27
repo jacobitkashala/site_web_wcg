@@ -75,7 +75,6 @@ div.active{
 /* Responsive mobile */
 @media (max-width:450px) {
 	.header_expertise_box{
-		/* padding:2rem; */
 		height:10%;
 		background: #701475;
 		display: grid;
