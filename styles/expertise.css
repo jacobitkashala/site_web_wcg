@@ -72,3 +72,28 @@ div.active{
 	text-align: justify;
 	color: #FFFFFF;
 }
+/* Responsive mobile */
+@media (max-width:450px) {
+	.header_expertise_box{
+		/* padding:2rem; */
+		height:10%;
+		background: #701475;
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		font-size: 18px;
+	}
+	.container_content_expertise{
+		height: 100%;
+	}
+	.expertise_box {
+		display: flex;
+		flex-direction:column;	
+	}
+	div.active{
+		width:90%;
+		padding:10px;
+		border: 1px solid #FFFFFF;
+		border-radius: 5px;
+	}
+
+}
