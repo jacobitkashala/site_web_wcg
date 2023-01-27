@@ -13,14 +13,14 @@
 	--box-shodow:0 .5rem 1rem rgba(0,0,0,.1);
 }
 
-::-webkit-scrollbar{
+/* ::-webkit-scrollbar{
 	width:14px;
 	height:4px;
-}
-::-webkit-scrollbar-thumb{
+} */
+/* ::-webkit-scrollbar-thumb{
 	background:#2592F9;
 	border-radius:2px;
-}
+} */
 .color-expertise{
 	background-color:var(--color-expertise);
 }

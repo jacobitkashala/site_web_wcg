@@ -68,12 +68,17 @@
     width:95%;
 }
 .service-content{
-    display: block;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
     width: 392px;
-    margin-top:2rem;
+    margin-top: 2rem;
     margin-right: 3rem;
     background: #F5F7F8;
     border: 1px solid #9D9898;
+
 }
 .service-content img{
     margin:3px;
@@ -89,19 +94,20 @@
     
 }
 .service-content p{
-    text-align: left;
-    padding:2.5rem;
+    text-align: justify;
+    padding:2rem;
 
 }
 .service-content a{
     height: 40px;
-    margin: 2rem;
+    margin: 2rem 0;
     background: #FF0000;
     border-radius: 7px;
     font-style: normal;
     font-weight: 600;
     font-size: 17px;
     line-height: 21px;
+    text-align: center;
     color: #ffff;
 }
 
