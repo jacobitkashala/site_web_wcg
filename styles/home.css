@@ -52,7 +52,7 @@
     padding:0 2rem;
 }
 
-/* Présentation de services */
+/* Présentation de services 2eme section */
 
 .contenaire-service{
     display: flex;
@@ -63,7 +63,9 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    /* width:80%; */
+    align-content: center;
+    align-items: flex-start;
+    width:95%;
 }
 .service-content{
     display: block;
@@ -87,10 +89,9 @@
     
 }
 .service-content p{
-    /* width: 327px; */
     text-align: left;
-    /* padding:2rem; */
-    /* margin:0 !important; */
+    padding:2.5rem;
+
 }
 .service-content a{
     height: 40px;
