@@ -1,0 +1,109 @@
+.header_color_active{
+	margin-left:31.1%;
+	width: 13.8%;
+	height:100%;
+	border-top: 2px solid #FFFFFF;
+	background: #14D1B3;
+}
+.header-box{
+	height: 129px;
+	background: #14D1B3;
+}
+.header-box h4{
+	text-align:center;
+	padding-top: 3rem;
+	padding-right: 50rem;
+	font-weight: 600;
+	font-size: 50px;
+	line-height: 61px;
+	color: #FFFFFF;
+	
+}
+.container-content-recrutement{
+	font-family: 'Montserrat';
+	padding: 2rem 10rem;
+	font-style: normal;
+	font-weight: 700;
+}
+.container-content-recrutement h4{
+	font-size: 18px;
+	line-height: 23px;
+	color: #000000;
+}
+h4.title__recrutement{
+	margin: 2rem 10rem;
+	font-size: 35px;
+	line-height: 43px;
+	color: #000000;
+}
+.box-content{
+	padding: 2rem 10rem;
+	margin-top:2rem;
+	border-radius: 5px;
+	background-color: #F7F7F7;
+}
+
+.content-item > h4{
+	font-weight: 700;
+	font-size: 20px;
+	line-height: 22px;
+	margin-top:3rem;
+}
+.content-item p {
+	font-weight: 300;
+	font-size: 18px;
+	line-height: 20px;
+	margin-top:3rem;
+}
+.box_info{
+	display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: space-between;
+    align-items:center;
+	margin:4rem 0;
+
+}
+.box_info a{
+	background: #FF0000;
+	border-radius: 8px;
+	font-weight: 600;
+	padding: .8rem;
+	font-size: 20px;
+	line-height: 100.2%;
+	color: #FFFFFF;
+}
+.box_info p{
+	font-weight: 300;
+	font-size: 20px;
+	line-height: 24px;
+	color: #747373;
+}
+.item_inline{
+height: 1px ;
+background-color: #000000;
+margin-bottom: 3rem;
+}
+/* Responsive mobile */
+@media (max-width:450px) {
+
+	.header-box h4{
+		padding-top: 10rem;
+		padding-right: 0rem;
+		text-align:center;
+		font-weight: 900;
+		font-size: 20px;
+		line-height: 19px;
+	}
+	h4.title__recrutement {
+		text-align: center;
+		font-size: 17px;
+		line-height: 43px;
+	}
+	.content-item > h4 {
+		font-size: 15px;
+		line-height: 16px;
+	}
+
+}

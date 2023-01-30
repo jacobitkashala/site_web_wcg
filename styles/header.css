@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,900&display=swap');
+
+html{
+	--color-expertise:#BF24C0;
+	--color-innovention:#2592F9;
+	--color-recrutement:#14D1B3;
+	--color-ressource:#FFB400;
+	--color-secteur:#3F079C;
+	--color-actualite:#FF0000;
+	--color-text-menu:#FFFFFF
+}
+
+ *{
+	 margin: 0;
+	 padding: 0;
+	 box-sizing: border-box;
+ }
+ 
+ body{
+	font-family: 'Montserrat';
+	font-style: normal;
+	font-weight: 400;
+	font-size:20px;
+	height:100vh;
+ }
+ header{
+	/* width:; */
+	top:0;
+	height:10vh;
+	left:0;
+} 
+ .header_container{
+	position: fixed;
+    width: 100%;
+    z-index: 5;
+    background-color: #fff;
+ }
+ .Header_header{
+	display: flex;
+	display: -webkit-flex;
+    display: -moz-box;
+    display: flex;
+    -webkit-align-items: center;
+    -moz-box-align: center;
+    align-items: center;
+	padding: 10px 0;
+ }
+ 
+ .liens{
+	 display: inline-flex;
+	 color: #fff;
+ }
+ 
+ .liens .lien{
+	 list-style: none;
+ } 
+ .liens .lien a{
+	 /* height: 40px; */
+	 text-decoration: none;
+	 font-size: 18px;
+	display: inline-block; 
+    text-decoration: none;
+    padding: 45px 55px;
+    font-weight: 700;
+    font-size: .8rem;
+    color: #fff;
+	/* text-transform: uppercase;  */
+    text-align: center;
+ }
+ .liens .lien a:hover{
+	 transition: all 0.2s ease-in;
+	 text-decoration: solid underline var(--color-text-menu) 3px;
+ }
+ 
+ /* .sous-menu .liens .lien{
+	 margin: 20px 0;
+ } */
+ 
+ /* Style pour les megamenu */
+ 
+  
+ .mengamenu{
+	 position: absolute;
+	 margin-top: 80px;
+	 left: 0;
+	 right: 0;
+	 /* bottom: 200px; */
+	 /* padding: 10px; */
+	 display: none;
+ }
+ 
+
+ /* .lien-mega:hover .mengamenu {
+	 display: block;
+	 transition: all 0.3s ease-in;
+	 top: 55px;
+ } */
+ 
+ .container :hover{
+	transition: all 0.3s ease-in;
+	top: 55px;
+
+ }
+ .container{ 
+	 display: flex;
+	 justify-content: space-evenly;
+	 flex-wrap: wrap;
+	 align-items: center;
+	 text-align: center;
+  }
+ 
+ .colone ul{
+	 display: block;
+ }
+ 
+ .colone ul li{
+	 margin: 20px 0;
+ }
+ 
+ .colone .logo{
+	 height: 200px;
+	 width: 200px;
+	 margin: auto;
+	 border-radius: 1rem;
+	 border: solid 3px #f5f5f5;
+ }
+ 
+ .colone h2{
+	 font-size: 1.2rem;
+ }
+ .color-expertise{
+	background-color:var(--color-expertise);
+}
+
+
+
+.color-innovention{
+	background-color:var(--color-innovention);
+}
+
+.color-recrutement{
+	background-color:var(--color-recrutement);
+}
+.color-ressource{
+	background-color:var(--color-ressource);
+}
+.color-secteur{
+	background-color:var(--color-secteur);
+}
+.color-actualite{
+	background-color:var(--color-actualite);
+	
+}
