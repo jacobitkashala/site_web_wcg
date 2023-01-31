@@ -68,10 +68,10 @@ html{
 	padding-top: 2rem;
 	box-shadow: var(--box-shodow);
 }
-/* .active-nav-main{
-	height:49px;
+.active-nav-main{
+	/* height:49px; */
 	border-bottom: 1px solid #FFFFFF;
-} */
+}
 .active-navigation__main{
 	/* height:40px; */
 	border-bottom: 1px solid #FFFFFF;
