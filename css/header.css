@@ -53,7 +53,6 @@
 
 html{
 	font-size:65%;
-	overflow-x: hidden;
 }
 /* Mise en forme du header */
 .header_container{
@@ -93,7 +92,6 @@ html{
 }
 
 .header_nav_container{
-	/* overflow-x: auto; */
     display: flex;
     flex-direction: row;
     align-content: center;
@@ -129,34 +127,54 @@ html{
 	color: var(--black);
 	display:none;
 }
+@media (max-width:1600px) {
+	.header_nav_container a{
+		font-size:2rem;	
+		padding:5px;
+		/* width: 20%; */
+	}
+
+}
+
+@media (max-width:1342px) {
+	
+	.header_nav_container a{
+		font-size:1.9rem;	
+		padding:5px;
+		/* width: 20%; */
+	}
+
+}
 /* @media(1348){
 
 } */
 /* Responsive */
 /* tablet */
 
-@media (max-width:1382px) {
+@media (max-width:1291px) {
 	.header_nav_container {
-    /* overflow-x: auto; */
+		max-height: 120px;
+    
     display: flex;
     flex-direction: row;
-    align-content: center;
-    gap: 0;
-    align-items: center;
+    /* align-content: center;
+    align-items: center; */
     margin-top: 1rem;
+	overflow-x: auto;
+}
+.header_nav_container a{
+	min-width: 110px;
+	height: 110px;
+	text-align: center;
+	font-size:2.9rem;	
+	padding:5px;
+	/* width: 20%; */
 }
 
 }
 
  @media (max-width:994px) {
 
-	html{
-		font-size:30%;
-		overflow-x: hidden;
-	}
-	.header_nav_container{
-		overflow-x:auto ;
-	}	
 } 
 /*  mini ipad*/
 @media (max-width:768px) {
