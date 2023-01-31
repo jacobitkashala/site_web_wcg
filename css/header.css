@@ -129,14 +129,22 @@ html{
 	color: var(--black);
 	display:none;
 }
+/* @media(1348){
+
+} */
 /* Responsive */
 /* tablet */
 
-@media (max-width:1282px) {
-	html{
-		font-size:40%;
-		overflow-x: hidden;
-	}
+@media (max-width:1382px) {
+	.header_nav_container {
+    /* overflow-x: auto; */
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    gap: 0;
+    align-items: center;
+    margin-top: 1rem;
+}
 
 }
 
