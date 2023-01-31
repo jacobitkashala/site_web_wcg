@@ -169,16 +169,14 @@ html{
     flex-direction: row;
     align-content: center;
     align-items: center; 
-    margin-top: 1rem;
 	overflow-x: auto;
 }
 .header_nav_container a{
-	min-width: 110px;
-	width: 20%;
+	/* min-width: 110px; */
 	height: 110px;
 	text-align: center;
 	font-size:2.9rem;	
-	padding:5px;
+	padding:15px;
 	
 }
 

@@ -45,7 +45,8 @@
     margin: 5rem 0;
 }
 .contenaire-video video{
-    height: 311px;
+    height: 300px;
+    width: 300px;
     border-radius: 5px;
 }
 .container-home{
@@ -123,6 +124,7 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
+    /* width: 100%; */
 }
 .partner_display_item{
     display:flex;
