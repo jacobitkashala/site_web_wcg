@@ -18,6 +18,47 @@
 	color: #FFFFFF;
 	
 }
+/* .bag-offre{
+	position: relative;
+    display: flex;
+    width: 69px;
+    height: 229px;
+    left: 0px;
+    top: 582px;
+    padding: 10px;
+	background: #14D1B3;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+    align-items: center;
+} */
+/*.bag-offre span{
+	 position: absolute;
+width: 177px;
+height: 23px;
+left: 28px;
+top: 785px; 
+
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 700;
+font-size: 17px;
+line-height: 21px;
+text-transform: uppercase;
+font-feature-settings: 'kern' off; 
+color: #FFFFFF;
+
+transform: rotate(-90deg);
+	display: inline-block;
+font-style: normal;
+font-weight: 700;
+font-size: 13px;
+line-height: 21px;
+text-transform: uppercase; 
+transform-origin: 0 0; 
+transform: rotate(-90deg);
+color: #FFFFFF; 
+}*/
 .container-content-recrutement{
 	font-family: 'Montserrat';
 	padding: 2rem 10rem;
