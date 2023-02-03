@@ -377,22 +377,27 @@ COMMIT;
 
 /*
 -- action hover sur un menu principal
--- identifiant_rubrique(1,2,4,5) 
+-- identifiant_rubrique : {1,2,4,5}
+-- identifiant_status:{1,2}
 
 SELECT SRU_ORDRE, SRU_TITRE  
-  FROM sous_rubrique  
-WHERE sous_rubrique.RUB_ID = identifiant_rubrique
+  FROM sous_rubrique
+  INNER JOIN status   ON status.STA_ID = sous_rubrique.STA_ID 
+WHERE sous_rubrique.RUB_ID = 2 AND sous_rubrique.STA_ID = identifiant_status  
   ORDER BY SRU_ORDRE; 
 */
 
 
 /*
 -- action clique  sur un menu pricipal
--- identifiant_rubrique(1:exper,2:secteur,4:home,5:rec)
+-- identifiant_rubrique :{1,2,4,5}
+-- identifiant_status:{1,2}
 
 SELECT RUB_CONTENU,RUB_TITRE, RUB_BACKGROUND,RUB_FONT_NAME,RUB_FONT_COLOR,RUB_FONT_SIZE 
-FROM rubrique 
-WHERE RUB_ID=indentifiant_rubrique;
+  FROM rubrique
+  INNER JOIN status   ON status.STA_ID = rubrique.STA_ID 
+WHERE sous_rubrique.RUB_ID = 2 AND sous_rubrique.STA_ID = identifiant_status  
+  ORDER BY SRU_ORDRE;
 */
 
 /*
@@ -400,23 +405,25 @@ WHERE RUB_ID=indentifiant_rubrique;
 -- identifiant_rubrique(1:exper,2:secteur,4:home,5:rec)
 
 SELECT SRU_TITRE,SRU_CONTENU, SRU_FONT_NAME,SRU_FONT_SIZE,SRU_FONT_COLOR,SRU_BACKGROUND,SRU_LIBELLE 
-FROM  sous_rubrique  WHERE SRU_ID=1;
+FROM  sous_rubrique  
+WHERE SRU_ID = identifiant_rubrique;
 */
 
 /*
 -- Remplir template home_page
-   select * from rubrique  
-   WHERE RUB_LIBELLE = NULL OR RUB_AVANT = 1 OR RUB_UNE = 1
-   UNION
-   select * from sous_rubrique   
-   WHERE SRU_LIBELLE = NULL OR SRU_AVANT = 1 OR SRU_UNE = 1;
+-- Carousel 
+ SELECT media.MED_RESSOURCE 
+FROM media 
+INNER JOIN rubrique ON media.MED_ID = rubrique.RUB_IMG_ID
+WHERE media.MED_ID= rubrique.RUB_IMG_ID AND 
+rubrique.RUB_UNE = 1 AND SIT_ID = 1
+UNION
+SELECT media.MED_RESSOURCE  
+FROM media 
+INNER JOIN sous_rubrique as SRU 
+ON media.MED_ID = SRU.SRU_IMG_ID
+WHERE media.MED_ID = SRU.SRU_IMG_ID AND 
+SRU.SRU_UNE = 1 AND SRU.STA_ID = 1
+LIMIT
+;
 */
-
-/*
-SELECT * 
-	FROM template 
-INNER JOIN rubrique  
-	ON template.TPL_ID =  rubrique.TPL_ID
-INNER JOIN sous_rubrique 
-	ON template.TPL_ID =  sous_rubrique.TPL_ID
-WHERE TPL_LIBELLE="little_content"*/
