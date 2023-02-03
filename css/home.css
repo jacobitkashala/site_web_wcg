@@ -9,40 +9,39 @@
     text-align: center;
     background-size: cover !important;
     background-position: center !important;
-    height: 55rem;
+    height: 33rem;
 }
 .home .slide .content{
     width:85rem;
 }
 /* Description section 1ere section */
 .description{
-    display: flex;
+    /* display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
-    /* height: 52vh; */
+    flex-wrap: wrap; */
 }
 .content-image img{
-    margin-right: 1px;
+    /* margin-right: 1px; */
 }
 .content-desc{
   
-   display: flex;
+   /* display: flex;
    flex-direction: column;
-   width: 45%;
+   width: 45%; */
 }
 .content-desc h1{
-    margin: 5rem 0;
+    /* margin: 5rem 0;
     font-weight: 600;
-    line-height: 48px;
+    line-height: 48px; */
 }
 .content-desc p{
-    font-weight: 400;
+    /* font-weight: 400;
     margin-right:  3rem;
     line-height: 29px;
-    text-align: justify;
+    text-align: justify; */
 }
 .contenaire-video{
-    margin: 5rem 0;
+    /* margin: 5rem 0; */
 }
 .contenaire-video video{
     height: 300px;
