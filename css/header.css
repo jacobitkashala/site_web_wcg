@@ -52,7 +52,7 @@
 }
 
 html{
-	font-size:65%;
+	font-size:18px;
 	min-width: 320;
 	overflow-x: auto;
 }
@@ -83,10 +83,10 @@ html{
 	background: #ffff;
 }
 .header_image > img {
-	height: 100px;
+	height: 70px;
 }
 .header_container .header_image{
-	font-size: 2rem;
+	font-size: 18px;
 }
 
 
@@ -108,7 +108,7 @@ html{
 }
 
 .header_nav_container a{
-	font-size:2.5rem;	
+	font-size:18px;	
 	padding:5px;
 	width: 20%;
 	color: #FFFFFF;
@@ -135,7 +135,7 @@ html{
 }
 @media (max-width:1600px) {
 	.header_nav_container a{
-		font-size:2rem;	
+		font-size:18px;	
 		padding:5px;
 		/* width: 20%; */
 	}
@@ -145,7 +145,7 @@ html{
 @media (max-width:1342px) {
 	
 	.header_nav_container a{
-		font-size:1.9rem;	
+		font-size:18px;	
 		padding:5px;
 		/* width: 20%; */
 	}
@@ -162,25 +162,27 @@ html{
     text-align: center;
     font-size: 1.9rem; */
    
-@media (max-width:1291px) {
+ @media (max-width:1291px) {
 	.header_nav_container {
-	max-height: 120px;
-    display: flex;
-    flex-direction: row;
-    align-content: center;
-    align-items: center; 
-	overflow-x: auto;
-}
-.header_nav_container a{
-	/* min-width: 110px; */
-	height: 110px;
-	text-align: center;
-	font-size:2.9rem;	
-	padding:15px;
-	
-}
+		max-height: 150px;
+    	display: flex;
+    	flex-direction: row;
+    	align-content: center;
+    	align-items: center; 
+		overflow-x: auto;
+	}
+	.header_nav_container a{
+		height: 100px;
+		text-align: center;	
+		font-size:15px;
+		padding:10px;
+	}
+	.logo-menu{
+		width:30px;
+		height:30px;
+	}
 
-}
+} 
 
  @media (max-width:994px) {
 
@@ -191,12 +193,13 @@ html{
 }
 
 @media (max-width:450px) {
+	
 	.header_image > img {
-		height: 90px;
+		height: 50px;
 		width: 200px;
 	}
 	#menu-btn{
-		font-size :6rem;
+		font-size :18px;
 		display: inline-block;
 		transition:.3s linear;
 	}
@@ -212,6 +215,7 @@ html{
 	} 
 	.header_nav_container{
 		position: absolute;
+		/* max-height: 90%; */
 		top:99%;
 		left: 0;
 		right: 0;
@@ -221,6 +225,7 @@ html{
 		transition: .3s linear;
 		
 	}
+
 	.header_nav_container.active{
 		clip-path: polygon(0 0,100% 0,100% 100%,0 100%);
 
@@ -228,9 +233,9 @@ html{
 	.header_nav_container a {
 		display: block;
 		text-align: justify;
-		margin:1rem;
+		margin:0px;
 		width: 100%;
-		font-size: 4rem;
+		font-size: 18px;
 	}
 	.w20{
 		width:100% !important;
