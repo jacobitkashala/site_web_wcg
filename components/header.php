@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
 <head>
 	<title>World Corp Group</title>
 
@@ -45,13 +44,14 @@
 	<!-- <link rel='stylesheet' type='text/css' media='screen' href='./css/footer.css'> -->
 	<link rel="shortcut icon" href="./favori.ico">
 </head>
-
 <body>
 	<header class="header_container">
 		<div class="header_image">
+			<h1>Bonjour</h1>
 			<img src="./images/logo/logo_wcg.png" srcset="./images/icons/logo_smal_mobile.png 450w," alt="logo wcg" />
 		</div>
 		<nav class="header_nav_container">
+
 			<a href="#" class="color-expertise w20"><img class="logo-menu" src="./images/logo/logo_home.png"
 					alt="logo home" /></a>
 			<!-- Expertise header -->

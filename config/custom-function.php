@@ -1,11 +1,5 @@
 <?php
-/*
-functions
----------------------------------------------
-0. xss_clean($data)
-1. get_product_by_id($id=null)
-2. get_product_by_variant_id($arr)
-*/
+
 include_once('Database.php');
 
 class Custom_functions
@@ -14,7 +8,7 @@ class Custom_functions
     function __construct()
     {
         $this->db = new Database();
-        // $this->db->connexion();
+        $this->db->connexion();
     }
 
 
@@ -114,4 +108,3 @@ class Custom_functions
     //     }
     // }
 }
-// $this->db->disconnect();
