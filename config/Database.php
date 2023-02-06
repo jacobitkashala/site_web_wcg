@@ -2,7 +2,6 @@
 class Database{
     // Connexion à la base de données
 
-
     private $host = "127.0.0.1";
     private $db_name = "wcg_site_web_databases";
     private $username = "jaco";
