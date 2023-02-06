@@ -1,6 +1,6 @@
 -- MySQL dump 10.13  Distrib 8.0.32, for Linux (x86_64)
 --
--- Host: localhost    Database: wcg_site_web_databases
+-- Host: localhost    Database: wcg_site_web_database
 -- ------------------------------------------------------
 -- Server version	8.0.32-0ubuntu0.22.04.2
 
@@ -15,6 +15,9 @@
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
+DROP DATABASE IF EXISTS wcg_site_web_databases;
+CREATE DATABASE wcg_site_web_databases;
+use wcg_site_web_databases;
 --
 -- Table structure for table `journal_rubrique`
 --
@@ -426,7 +429,7 @@ UNLOCK TABLES;
 
 -- Dump completed on 2023-02-03 17:13:54
 
-*/
+
 -- Afficher le menu principal
 -- SELECT 
 -- 	 r.RUB_ID, r.RUB_ICONE_ID, r.RUB_LIBELLE,r.RUB_BACKGROUND,r.RUB_FONT_NAME,r.RUB_FONT_SIZE,r.RUB_FONT_COLOR, m.med_ressource FROM rubrique r, media m, site s  
@@ -480,11 +483,10 @@ WHERE media.MED_ID= rubrique.RUB_IMG_ID AND
 rubrique.RUB_UNE = 1 AND SIT_ID = 1
 UNION
 SELECT media.MED_RESSOURCE  
-FROM media 
-INNER JOIN sous_rubrique as SRU 
-ON media.MED_ID = SRU.SRU_IMG_ID
-WHERE media.MED_ID = SRU.SRU_IMG_ID AND 
-SRU.SRU_UNE = 1 AND SRU.STA_ID = 1
+
 LIMIT 5
+
+
+
 ;
 */
