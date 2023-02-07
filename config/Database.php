@@ -5,7 +5,8 @@
  * @Package Database
  */
 
-define('DOMAIN_URL', 'https://nom_domain.com/'); /* chnage to your domain here - don't forget to add forward slash at the end of the URL like this "/" */
+define('DOMAIN_URL', 'https://nom_domain.com/'); 
+define('path_media', ''); /* chnage to your domain here - don't forget to add forward slash at the end of the URL like this "/" */
 
 class Database
 {
