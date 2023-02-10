@@ -2,7 +2,7 @@
 require 'vendor/autoload.php';
 
 //die($_GET['url']);
-echo "Bonjour";
+// echo "Bonjour";
 
 $router = new App\Router($_GET['url']); 
 
