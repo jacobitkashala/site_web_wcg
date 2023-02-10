@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>World Corp Group</title>
+
+	<meta charset='utf-8'>
+	<meta name="description"
+		content="World Corp Group est une société de consulting et de développement de projets innovants, spécialiste en solutions SMAC (Social, Mobile, Analytics, Cloud)" />
+	<meta name="autheur" content="jacobit,kashala,serge kashala,jacobit kashala " />
+	<meta name="keywords" content="World Corp Group, WorldGroupCorp,WorldCorpGroup" />
+	<meta http-equiv='X-UA-Compatible' content='IE=edge'>
+
+	<meta name='viewport' content='width=device-width, initial-scale=1'>
+	<meta property="og:title" content="World Corp Group" />
+	<meta property="og:type" content="website" />
+	<!-- <meta property="og:url" content="http://www.example.com/" /> -->
+	<!-- <meta property="og:image" content="http://example.com/image.jpg" /> -->
+	<meta property="og:description"
+		content="World Corp Group est une société de consulting et de développement de projets innovants, spécialiste en solutions SMAC (Social, Mobile, Analytics, Cloud)" />
+
+	<!-- Twitter Card data -->
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:site" content="@publisher_handle">
+	<meta name="twitter:title" content="World Corp Group">
+	<meta name="twitter:description"
+		content="World Corp Group est une société de consulting et de développement de projets innovants, spécialiste en solutions SMAC (Social, Mobile, Analytics, Cloud)">
+	<meta name="twitter:creator" content="jacobitkashala">
+	<!-- Twitter Summary card images must be at least 200x200px -->
+	<!-- <meta name="twitter:image" content="http://www.example.com/image.jpg"> -->
+	<!-- bootstrap -->
+	<!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"> -->
+
+	<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+		integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+		crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
+	<!-- swiper -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+	<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.6/swiper-bundle.css"> -->
+
+	<link rel='stylesheet' type='text/css' media='screen' href='./css/header.css'>
+	<link rel='stylesheet' type='text/css' media='screen' href='./css/home.css'>
+	<link rel='stylesheet' type='text/css' media='screen' href='./css/footer.css'>
+	<link rel="shortcut icon" href="./favori.ico">
+</head>
+
+<body>
+	<header class="header_container">
+		<div class="header_image">
+			<img src="./images/logo/logo_wcg.png" srcset="./images/icons/logo_smal_mobile.png 450w," alt="logo wcg" />
+		</div>
+		<nav class="header_nav_container">
+			<a href="#" class="color-expertise w20"><img class="logo-menu" src="./images/logo/logo_home.png"
+					alt="logo home" /></a>
+			<!-- Expertise header -->
+			<a href="./pages/expertise.html" class="color-expertise"><img class="logo-menu"
+					src="./images/logo/logo_cerveau.png" alt="logo" />
+				Expertises</a>
+			<!-- Innovations -->
+			<a href="./pages/innovation.html" class="color-innovention"><img class="logo-menu"
+					src="./images/logo/logo_ampoule.png" alt="logo" /> Innovations</a>
+			<!-- Recrutement -->
+			<a href="./pages/recrutement.html" class="color-recrutement"><img class="logo-menu"
+					src="./images/logo/logo_loupe.png" alt="logo" />
+				Recrutement</a>
+			<!-- Ressources -->
+			<a href="./pages/ressources.html" class="color-ressource"><img class="logo-menu"
+					src="./images/logo/logo_ressource.png" alt="logo" /> Ressources</a>
+			<!-- Secteurs -->
+			<a href="./pages/secteur.html" class="color-secteur"><img class="logo-menu"
+					src="./images/logo/logo_secteur.png" alt="logo" />
+				Secteurs</a>
+			<!-- Actualités -->
+			<a href="./pages/actualites.html" class="color-actualite"><img class="logo-menu"
+					src="./images/logo/logo_actualite.png" alt="logo" />Actualités</a>
+			<!-- Actualités -->
+			<a href="#" class="color-expertise"><i class="fa-brands fa-tiktok"></i> Actualités</a>
+		</nav>
+		<div class="fas fa-bars" id="menu-btn">
+			<!--  -->
+		</div>
+	</header>
+	<main>
+		<section class="home">
+			<div class="home-slider swiper">
+				<div class="swiper-wrapper">
+					<div class="slide swiper-slide" style="background:url(images/part/hero.png) no-repeat">
+						<div class="content">
+						</div>
+					</div>
+					<div class="slide swiper-slide" style="background:url(images/part/hero.png) no-repeat">
+						<div class="content">
+						</div>
+					</div>
+					<div class="slide swiper-slide" style="background:url(images/part/hero.png) no-repeat">
+						<div class="content">
+						</div>
+					</div>
+				</div>
+				<div class="swiper-button-next"></div>
+				<div class="swiper-button-prev"></div>
+			</div>
+		</section>
+		<div class="container-home">
+			<section class=" row description">
+				<div class="col-xs-1 col-md-3  content-image">
+					<img class="image-illustration" src="./images/part/imageIllustration.png" alt="illustration lampe"
+						srcset="">
+				</div>
+				<div class=" col-xs-10 col-md-4 content-desc">
+					<h1>World Corp Group RDC, </h1>
+					<p>
+						est une société de consulting et de développement de projets innovants, spécialiste en solutions
+						SMAC (Social, Mobile, Analytics, Cloud).
+						Nous accompagnons nos clients dans la mise en place des solutions SMAC et le développement sur
+						mesure de leur stratégie digitale et multicanale pour une expérience numérique réussie.
+					</p>
+				</div>
+				<div class=" col-xs-10 col-md-4 contenaire-video">
+					<video src="./demo-video.mp4" controls></video>
+				</div>
+			</section>
+			<!-- Présentation de service -->
+			<div class="contenaire-service">
+				<div class="service-element">
+					<div class="service-content">
+						<img src="./images/images_design_factory.png" alt="image titre" srcset="">
+						<h1>CONSULTING</h1>
+						<p>Nous accompagnons, très en amont de projets, nos clients dans leurs démarches de
+							transformation
+							digitale
+							et d’optimisation de leur stratégie numérique. </p>
+						<a class="btn" href="#">Pour en savoir plus ...</a>
+					</div>
+
+					<div class="service-content">
+						<img src="./images/image_ecran_projection.png" alt="image titre" srcset="">
+						<h1>CONSULTING</h1>
+						<p>Nous accompagnons, très en amont de projets, nos clients dans leurs démarches de
+							transformation
+							digitale
+							et d’optimisation de leur stratégie numérique. </p>
+						<a class="btn" href="#">Pour en savoir plus ...</a>
+					</div>
+					<div class="service-content">
+						<img src="./images/image_consulting.png" alt="image titre" srcset="">
+						<h1>CONSULTING</h1>
+						<p>Nous accompagnons, très en amont de projets, nos clients dans leurs démarches de
+							transformation
+							digitale
+							et d’optimisation de leur stratégie numérique. </p>
+						<a class="btn" href="#">Pour en savoir plus ...</a>
+					</div>
+					<div class="service-content">
+						<img src="./images/image_et_innovation.png" alt="image titre" srcset="">
+						<h1>CONSULTING</h1>
+						<p>Nous accompagnons, très en amont de projets, nos clients dans leurs démarches de
+							transformation
+							digitale
+							et d’optimisation de leur stratégie numérique. </p>
+						<a class="btn" href="#">Pour en savoir plus ...</a>
+					</div>
+					<div class="service-content">
+						<img src="./images/image_telecom.png" alt="image titre" srcset="">
+						<h1>CONSULTING</h1>
+						<p>Nous accompagnons, très en amont de projets, nos clients dans leurs démarches de
+							transformation
+							digitale
+							et d’optimisation de leur stratégie numérique. </p>
+						<a class="btn" href="#">Pour en savoir plus ...</a>
+					</div>
+
+				</div>
+			</div>
+			<!-- slide nos partenaire -->
+			<div class="container_partner_slide">
+				<h2 class="text-center font-weight-bold">Nos Partenaires</h2>
+				<div class="container_partner_display">
+					<div class="partner_block">
+						<div class="container-slide">
+							<img class="" src="./images/left.png" alt="logo" />
+						</div>
+						<div class="partner_display_item ">
+							<div class="item_slide"><img src="./images/partners/image_evolis.png" alt="logo"></div>
+							<div class="item_slide"><img src="./images/partners/image_huawai.png" alt="logo"></div>
+							<div class="item_slide"><img src="./images/partners/image_juris_consult.png" alt="logo">
+							</div>
+							<div class="item_slide"><img src="./images/partners/image_konnect.png" alt="logo"></div>
+						</div>
+						<div>
+							<img class="" src="./images/rigth.png" alt="logo" />
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
+	<footer class="container-footer">
+		<div class="container-footer-one">
+			<div class="one-content">
+				<div class="content-element">
+					<h4>Newsletter</h4>
+					<div class="element-input">
+						<input type="input" value="" placeholder="Votre adresse mail">
+						<button>S'inscrire</button>
+					</div>
+
+				</div>
+			</div>
+		</div>
+		<div class="container-footer-two">
+			<div class="container_element">
+				<div class="box_element">
+					<a href="#">A propos</a>
+					<a href="#">Mentions légales</a>
+					<a href="#">Gestion des cookies</a>
+					<a href="#">Politique de confidentialité</a>
+					<a href="#">CGU</a>
+					<a href="#">@2020WCG</a>
+				</div>
+			</div>
+			<div class="content-icone">
+				<div class="content-icone-item">
+					<div class="content-icon"><a href="#"><img src="./images/icons/adresse.png" alt="logo"
+								srcset=""></a></div>
+					<div class="content-icon"><a href="#"><img src="./images/icons/appel.png" alt="logo" srcset=""></a>
+					</div>
+					<div class="content-icon"><a href="#"><img src="./images/icons/face.png" alt="logo" srcset=""></a>
+					</div>
+					<div class="content-icon"><a href="#"><img src="./images/icons/lindin.png" alt="logo" srcset=""></a>
+					</div>
+					<div class="content-icon"><a href="#"><img src="./images/icons/mail.png" alt="logo" srcset=""></a>
+					</div>
+					<div class="content-icon"><a href="#"><img src="./images/icons/youtube.png" alt="logo"
+								srcset=""></a></div>
+					<div class="content-icon"><a href="#"><img src="./images/icons/maison_bleu.png" alt="logo"
+								srcset=""></a></div>
+					<div class="content-icon"><a href="#"><img src="./images/icons/twitter.png" alt="logo"
+								srcset=""></a></div>
+					<div class="content-icon"><a href="#"><img src="./images/icons/Insta.png" alt="logo" srcset=""></a>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</footer>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+	<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+	<script src='js/main.js'></script>
+
+</html>
