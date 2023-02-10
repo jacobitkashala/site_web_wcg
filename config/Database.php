@@ -48,10 +48,13 @@ class Database
             echo "Erreur de connexion : " . $exception->getMessage();
         }
     }
+
     public function getConnection(){
-        $this->connexion = null;
-        $this->connexion=$this->pdo;
-        return $this->connexion;
+        if($this->con){
+             return $this->connexion??$this->connexion=$this->pdo; ;
+        }
+        $this->connect();
+       
     }   
 
     // Function to disconnect from the database
