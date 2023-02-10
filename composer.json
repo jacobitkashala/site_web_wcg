@@ -1,0 +1,11 @@
+{
+    "name": "jacobit/site_web_wcg",
+    "type": "projet",
+    "minimum-stability": "stable",
+    "autoload":{
+        "psr-4":{
+            "App\\":"src"
+        }
+    },
+    "require": {}
+}
