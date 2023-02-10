@@ -1,8 +1,8 @@
 <?php
 
-require_once('src/model.php');
+// require_once('src/model.php');
 
-function homeppage(){
-	$posts = getPosts();
-	require('templates/homepage.php');
-}
+// function homeppage(){
+// 	$posts = getPosts();
+// 	require('templates/homepage.php');
+// }
