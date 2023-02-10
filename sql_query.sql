@@ -9,7 +9,8 @@
 -- 	m.med_id = r.rub_icone_id and r.SIT_ID = s.SIT_ID and s.SIT_ID = 1 
 -- order by r.RUB_ORDRE
 
--- use wcg_site_web_databases;
+use wcg_site_web_databases;
+
 -- SELECT SRU_ORDRE, SRU_TITRE  
 --   FROM sous_rubrique
 --   INNER JOIN status   ON status.STA_ID = sous_rubrique.STA_ID 
@@ -33,10 +34,10 @@
 
 -- Home Text Premier section
 
---  SELECT media.MED_RESSOURCE ,sous_rubrique.SRU_ORDRE
---  FROM  media
---  Inner JOIN sous_rubrique ON sous_rubrique.SRU_IMG_ID = media.MED_ID
---  Inner JOIN site ON sous_rubrique.SIT_ID = site.SIT_ID
---  WHERE  sous_rubrique.SRU_UNE = 1;
+ SELECT media.MED_RESSOURCE ,sous_rubrique.SRU_ORDRE
+ FROM  media
+ Inner JOIN sous_rubrique ON sous_rubrique.SRU_IMG_ID = media.MED_ID
+ Inner JOIN site ON sous_rubrique.SIT_ID = site.SIT_ID
+ WHERE  sous_rubrique.SRU_UNE = 1 AND site.SIT_ID=1;
 
 -- Home Text Premier section

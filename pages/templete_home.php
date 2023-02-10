@@ -1,19 +1,45 @@
+<?php
+// On inclut les fichiers de configuration et d'accès aux données
+include_once '../config/Database.php';
+include_once '../config/include.php';
+
+$sqlCarousel1 = "SELECT media.MED_RESSOURCE ,sous_rubrique.SRU_ORDRE
+		FROM  media
+		Inner JOIN sous_rubrique ON sous_rubrique.SRU_IMG_ID = media.MED_ID
+		Inner JOIN site ON sous_rubrique.SIT_ID = site.SIT_ID
+		WHERE  sous_rubrique.SRU_UNE = 1 AND site.SIT_ID=1";
+
+$db->sql($sqlCarousel1);
+$resultCarousel = $db->getResult();
+
+// $database = new Database();
+// $dbCon = $database->getConnection();
+
+$carousels = $resultCarousel;
+
+?>
 <main>
 	<section class="home">
 		<div class="home-slider swiper">
 			<div class="swiper-wrapper">
-				<div class="slide swiper-slide" style="background:url(images/part/hero.png) no-repeat">
+				<?php
+				foreach ($carousels as $image) {
+				 ?>
+				<div class="slide swiper-slide" style="background:url(images/part/<?php echo $image['MED_RESSOURCE']; ?>) no-repeat">
 					<div class="content">
 					</div>
 				</div>
-				<div class="slide swiper-slide" style="background:url(images/part/hero.png) no-repeat">
+				<?php
+				}
+			?>
+				<!-- <div class="slide swiper-slide" style="background:url(images/part/hero.png) no-repeat">
 					<div class="content">
 					</div>
-				</div>
-				<div class="slide swiper-slide" style="background:url(images/part/hero.png) no-repeat">
+				</div> -->
+				<!-- <div class="slide swiper-slide" style="background:url(images/part/hero.png) no-repeat">
 					<div class="content">
 					</div>
-				</div>
+				</div> -->
 			</div>
 			<div class="swiper-button-next"></div>
 			<div class="swiper-button-prev"></div>
