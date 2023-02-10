@@ -6,23 +6,14 @@ include_once '../config/include.php';
 include_once '../models/SousMenu.php';
 include_once '../models/ItmeSousMenu.php';
 
-// $db->sql("SET NAMES 'utf8'");
 $sql = "SELECT * FROM `V_Menu_Princepal`";
 $db->sql($sql);
 $result = $db->getResult();
 
-$database = new Database();
-$dbCon = $database->getConnection();
-
 $menus = $result;
-// $sousMenu = ["Cyber security", "Marketing Digital & Sponsorship", "e-Governance", "HealthCare", "engineering"];
 
-$dataMenu = ["id" => 0];
+// $dataMenu = ["id" => 0];
 
-// $ModelSousMenu = new SousMenu($dbCon);
-// $stateSousMenu = $ModelSousMenu->getSousMenu(2); $menu["RUB_ID"]
-// $itemSousMenu = new ItemSousMenu;
-// $itemSousMenu->id = 1;
 class SousRubrique
 {
 	public float $longueur;
@@ -63,18 +54,18 @@ $dataSRubrique = [];
 						<?php echo $menu['RUB_LIBELLE']; ?>
 					</a>
 					<?php if ($menu['a_sous_rubrique']) {
-						$newSRubrique = new SousRubrique;
-						$newSRubrique->titreRubrique = $menu['RUB_LIBELLE'];
+						// $newSRubrique = new SousRubrique;
+						// $newSRubrique->titreRubrique = $menu['RUB_LIBELLE'];
 						$sql2 = "SELECT sous_rubrique.SRU_ID as id, SRU_TITRE  as title 
-					FROM sous_rubrique 
-					INNER JOIN status   ON status.STA_ID = sous_rubrique.STA_ID 
-					WHERE sous_rubrique.RUB_ID = " . $menu['RUB_ID'] . " AND sous_rubrique.STA_ID =1
-					ORDER BY SRU_ORDRE";
+								  FROM sous_rubrique 
+								  INNER JOIN status   ON status.STA_ID = sous_rubrique.STA_ID 
+								  WHERE sous_rubrique.RUB_ID = " . $menu['RUB_ID'] . " AND sous_rubrique.STA_ID =1
+								  ORDER BY SRU_ORDRE";
 						$db->sql($sql2);
 						$resultSousMenu = $db->getResult();
 						// $sousMenuItem = [];
 						// array_push($sousMenuItem, $resultSousMenu);
-						$newSRubrique->nomSousRubrique = $sousMenuItem;
+						// $newSRubrique->nomSousRubrique = $sousMenuItem;
 					?>
 						<i class="fa-solid fa-plus icon-cog" id="btn-plus-sous-menu"></i>
 						<div class=" sous-menu <?php echo $menu['RUB_BACKGROUND'] ?> ">
