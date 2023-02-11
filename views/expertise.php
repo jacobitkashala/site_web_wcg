@@ -50,7 +50,10 @@ $db->connect();
 </head>
 
 <body>
-	<h1>Mon site</h1>
+	<?php include 'components/header.php'; ?>
+<h1>Expertise</h1>
+	<?php include 'components/footer.php'; ?>
+
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
 	<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> -->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
