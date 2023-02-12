@@ -1,6 +1,7 @@
 <?php
 
 use App\MODEL\Menu;
+use App\MODEL\SousMenu;
 
 $pdo = new PDO("mysql:host=127.0.0.1;dbname=wcg_site_web_databases", 'jaco', '1234');
 $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
@@ -15,61 +16,49 @@ $menus = $query->fetchAll(PDO::FETCH_CLASS, Menu::class);
 // echo '<pre>';
 // echo print_r(icons);
 // echo '<pre>';
-$resultSousMenu=[];
+$resultSousMenu = [];
 ?>
-<h1>Header</h1>
-
-<?php foreach ($menus as $itemMenu) : ?>
-	<p><?= $itemMenu->getIsSubMenu()?> </p>
-<?php endforeach ?>
-
-<!-- <img src=<?= logo . 'logo_wcg.png' ?> srcset="./images/icons/logo_smal_mobile.png 450w," alt="logo wcg" /> -->
-
+<!-- <?php foreach ($menus as $itemMenu) : ?>
+	<p><?= $itemMenu->getMenuId() ?> </p>
+<?php endforeach ?> -->
 
 <header class="header_container">
 	<div class="header_image">
 		<img src=<?= logo . 'logo_wcg.png' ?> alt="logo wcg" />
-		<!-- <img src=<?= logo . 'logo_wcg.png' ?> srcset="./images/icons/logo_smal_mobile.png 450w," alt="logo wcg" /> -->
 	</div>
 	<nav class="header_nav_container">
 		<ul class="link-navbar bg-color-shadox" id="main-menu">
-			<?php foreach ($menus as $itemMenu) :?>
-				<!-- <li class="menu <?php echo ($itemMenu->getIsSubMenu() == 1 ? "link-menu-grid overMenu" : ""); ?>"> -->
-				<li class="menu  <?php echo $itemMenu->getMenuBackgroud() ." ". $itemMenu->getMenuFontColor() ?> link  <?php ?>">
+			<?php foreach ($menus as $itemMenu) : ?>
+				<li class="menu  <?php echo $itemMenu->getMenuBackgroud() . " " . $itemMenu->getMenuFontColor() ?> link  <?php echo ($itemMenu->getIsSubMenu() == 1 ? "link-menu-grid overMenu" : "") ?>">
 					<a href="#">
-						<img class="logo-menu" src="<?php echo icons. $itemMenu->getMenuNameIcone(); ?>" alt="logo" />
+						<img class="logo-menu" src="<?php echo icons . $itemMenu->getMenuNameIcone(); ?>" alt="logo" />
 						<?php echo $itemMenu->getMenuName()  ?>
 					</a>
-					<?php if (false) {
-						// $sql2 = "SELECT sous_rubrique.SRU_ID as id, SRU_TITRE  as title 
-						// 		  FROM sous_rubrique 
-						// 		  INNER JOIN status   ON status.STA_ID = sous_rubrique.STA_ID 
-						// 		  WHERE sous_rubrique.RUB_ID = " . $menu['RUB_ID'] . " AND sous_rubrique.STA_ID =1
-						// 		  ORDER BY SRU_ORDRE";
-						// $db->sql($sql2);
-						// $resultSousMenu = $db->getResult();
+					<?php if ($itemMenu->getIsSubMenu() == 1) {
+						// $sql2 = "SELECT sous_rubrique.SRU_ID as id, SRU_TITRE  as title FROM sous_rubrique INNER JOIN status   ON status.STA_ID = sous_rubrique.STA_ID WHERE sous_rubrique.RUB_ID = " . $menu['RUB_ID'] . " AND sous_rubrique.STA_ID =1 ORDER BY SRU_ORDRE";
+						$sql2 = "SELECT sous_rubrique.SRU_ID as id, SRU_TITRE  as title , template.TPL_LIBELLE as url_sub_menu, template.TPL_RESSOURCES as ressource_sub_menu FROM sous_rubrique INNER JOIN status   ON status.STA_ID = sous_rubrique.STA_ID INNER JOIN template   ON template.TPL_ID = sous_rubrique.TPL_ID WHERE sous_rubrique.RUB_ID = ".$itemMenu->getMenuId()." AND sous_rubrique.STA_ID = 1 ORDER BY SRU_ORDRE";
+						$query = $pdo->query($sql2);
+						$subMenus = $query->fetchAll(PDO::FETCH_CLASS, SousMenu::class);
+						// echo '<pre>';
+						// echo print_r($subMenus);
+						// echo '<pre>';
 					?>
 						<i class="fa-solid fa-plus icon-cog" id="btn-plus-sous-menu"></i>
-						<div class=" sous-menu <?php echo $itemMenu['RUB_BACKGROUND'] ?> ">
+						<div class="sous-menu <?php echo $itemMenu->getMenuBackgroud() ?> ">
 							<div class="container-sous-menu-grid">
 								<ul class="link-navbar">
-									<?php
-									foreach ($resultSousMenu as $itemSousMenu) {
-									?>
-										<li class="link <?php echo $menu['RUB_FONT_COLOR'] ?>">
+									<?php foreach ($subMenus as $itemSousMenu) : ?>
+										<li class="link <?php echo $itemMenu->getMenuFontColor() ?>">
 											<a class="" href="#">
-												<?php echo $itemSousMenu['title']; ?>
+												<?php echo $itemSousMenu->getSubMenuTitle(); ?>
 											</a>
 										</li>
-									<?php }
-									?>
+									<?php endforeach ?>
 								</ul>
 							</div>
 						</div>
 					<?php } ?>
-				<?php
-			endforeach
-				?>
+				<?php endforeach ?>
 				</li>
 		</ul>
 	</nav>

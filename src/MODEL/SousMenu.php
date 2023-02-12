@@ -4,60 +4,29 @@ namespace App\Model;
 
 class SousMenu
 {
-	private $RUB_ID;
-	private $RUB_ICONE_ID;
-	private $RUB_LIBELLE;
-	private $RUB_BACKGROUND;
-	private $RUB_FONT_NAME;
-	private $RUB_FONT_SIZE;
-	private $RUB_FONT_COLOR;
-	private $med_ressource;
-	private $a_sous_rubrique;
-	private $url_page;
+	private $id;
+	private $title;
+	private $url_sub_menu;
+	private $ressource_sub_menu;
+
 
 	// private $menu;
 
-	public function getMenuId()
+	public function getSubMenuId()
 	{
-		return $this->RUB_ID;
+		return $this->id;
 	}
-	public function getUrlMenu()
+	public function getSubMenuTitle()
 	{
-		return $this->url_page;
+		return $this->title;
 	}
-	public function getIsSubMenu()
+	public function getSubMenuUrl()
 	{
-		if ($this->a_sous_rubrique == 1) {
-			return true;
-		}
-		return false;
+		return $this->url_sub_menu;
 	}
-	public function getMenuIdIcone()
+	public function getSubMenuRessource()
 	{
-		return $this->RUB_ICONE_ID;
+		return $this->ressource_sub_menu;
 	}
-	public function getMenuName()
-	{
-		return $this->RUB_LIBELLE;
-	}
-	public function getMenuBackgroud()
-	{
-		return $this->RUB_BACKGROUND;
-	}
-	public function getMenuFontName()
-	{
-		return $this->RUB_FONT_NAME;
-	}
-	public function getMenuFontSize()
-	{
-		return $this->RUB_FONT_SIZE;
-	}
-	public function getMenuFontColor()
-	{
-		return $this->RUB_FONT_COLOR;
-	}
-	public function getMenuNameIcone()
-	{
-		return $this->med_ressource;
-	}
+
 }
