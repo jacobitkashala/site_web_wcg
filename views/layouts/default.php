@@ -34,8 +34,10 @@
 	<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.6/swiper-bundle.css"> -->
 
 	<link rel='stylesheet' type='text/css' media='screen' href='css/header.css'>
-
-	<link rel="shortcut icon" href="../favori.ico">
+	<link rel='stylesheet' type='text/css' media='screen' href='css/util.css'>
+	<link rel='stylesheet' type='text/css' media='screen' href='css/home.css'>
+	<link rel='stylesheet' type='text/css' media='screen' href='css/footer.css'>
+	<link rel="shortcut icon" href="./favori.ico">
 	<title><?= $titlePage ?? "World Corp Group" ?></title>
 </head>
 
