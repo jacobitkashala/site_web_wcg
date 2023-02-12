@@ -1,5 +1,5 @@
 <?php
-$titlePage = 'ma home page';
-$descriptionPage = 'Toute la description de ma page'
+$titlePage = 'Ma home page';
+$descriptionPage = 'World Corp Group est une société de consulting et de développement de projets innovants, spécialiste en solutions SMAC (Social, Mobile, Analytics, Cloud)'
 ?>
-<h1>Home page</h1>
+<p>Home page</p>

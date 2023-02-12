@@ -1,10 +1,7 @@
 <?php
-
-// namespace App;
-
 require '../vendor/autoload.php';
 
-
+define('DEBUG_TIME',microtime(true));
 
 // $uri = $_SERVER['REQUEST_URI'];
 
