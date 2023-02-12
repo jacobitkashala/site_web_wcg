@@ -2,7 +2,7 @@
 
 namespace App\Model;
 
-class Menu
+class SousMenu
 {
 	private $RUB_ID;
 	private $RUB_ICONE_ID;

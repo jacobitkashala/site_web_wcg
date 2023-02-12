@@ -37,7 +37,7 @@
 	<link rel='stylesheet' type='text/css' media='screen' href='css/util.css'>
 	<link rel='stylesheet' type='text/css' media='screen' href='css/home.css'>
 	<link rel='stylesheet' type='text/css' media='screen' href='css/footer.css'>
-	<link rel="shortcut icon" href="./favori.ico">
+	<link rel="shortcut icon" href="./media/favico.ico">
 	<title><?= $titlePage ?? "World Corp Group" ?></title>
 </head>
 

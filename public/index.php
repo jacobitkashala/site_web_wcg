@@ -1,5 +1,6 @@
 <?php
 require '../vendor/autoload.php';
+require 'path.php';
 
 // $uri = $_SERVER['REQUEST_URI'];
 /**
