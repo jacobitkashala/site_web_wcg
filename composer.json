@@ -7,5 +7,7 @@
             "App\\":"src"
         }
     },
-    "require": {}
+    "require": {
+        "altorouter/altorouter": "^2.0"
+    }
 }
