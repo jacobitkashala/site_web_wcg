@@ -1,7 +1,7 @@
 <?php
 require '../vendor/autoload.php';
 
-$uri = $_SERVER['REQUEST_URI'];
+// $uri = $_SERVER['REQUEST_URI'];
 /**
  * ce-ci est a mettre en commentaire avant la mis en prod
  */
