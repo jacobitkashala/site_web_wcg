@@ -1,7 +1,9 @@
 <?php
 
 namespace App\Model;
-
+/**
+ * La class menu principal
+ */
 class Menu
 {
 	private $RUB_ID;
@@ -14,10 +16,14 @@ class Menu
 	private $med_ressource;
 	private $a_sous_rubrique;
 	private $url_page;
+	private $TPL_LIBELLE;
+	private $slug;
+	
 
 	// private $menu;
 
-	public function getMenuId()
+	
+	public function getMenuId(): ?int
 	{
 		return $this->RUB_ID;
 	}
@@ -60,4 +66,13 @@ class Menu
 	{
 		return $this->med_ressource;
 	}
+	public function getMenuTemplate()
+	{
+		return $this->TPL_LIBELLE;
+	}
+	public function getMenuSlug(): ?string
+	{
+		return $this->slug;
+	}
+
 }

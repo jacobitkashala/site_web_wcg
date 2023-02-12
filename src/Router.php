@@ -27,8 +27,6 @@ class Router
     {
         $this->router->map('GET', $url, $view, $name);
         return $this;
-        // $route = new Route($path, $callable);
-        // $this->routes["GET"][] = $route;
         // return $route; // On retourne la route pour "enchainer" les méthodes
     }
     public function post($path, $callable)
@@ -42,6 +40,7 @@ class Router
     {
         $match = $this->router->match();
         $view = $match['target'];
+        $router= $this->router;
         ob_start();
     //  echo '<pre>';
 	//  var_dump($this->viewPath . $view);
