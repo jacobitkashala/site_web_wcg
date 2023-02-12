@@ -4,20 +4,32 @@ namespace App;
 
 class Router
 {
+    /**
+     * @var string
+     */
+    private $viewPath; // contiendra le chemin du nos view
 
-    private $url; // Contiendra l'URL sur laquelle on souhaite se rendre
-    private $routes = []; // Contiendra la liste des routes
+    /**
+     * @var  AltoRouter
+     */
+    private $router;
 
-    public function __construct($url)
+    // private $url; // Contiendra l'URL sur laquelle on souhaite se rendre
+    // private $routes = []; // Contiendra la liste des routes
+
+    public function __construct(string $viewPath)
     {
-        $this->url = $url;
+        $this->viewPath = $viewPath;
+        $this-> router =new \AltoRouter();
     }
 
-    public function get($path, $callable)
+    public function get(string $url,string $view,?string $name= null):self
     {
-        $route = new Route($path, $callable);
-        $this->routes["GET"][] = $route;
-        return $route; // On retourne la route pour "enchainer" les méthodes
+        $this->router->map('GET',$url,$view,$name);
+        return $this;
+        // $route = new Route($path, $callable);
+        // $this->routes["GET"][] = $route;
+        // return $route; // On retourne la route pour "enchainer" les méthodes
     }
     public function post($path, $callable)
     {
@@ -26,21 +38,11 @@ class Router
         return $route; // On retourne la route pour "enchainer" les méthodes
     }
 
-    public function run()
+    public function run():self
     {
-        // echo '<pre>';
-        // echo print_r($this->routes);
-        // echo '<pre>';
-        if (!isset($this->routes[$_SERVER['REQUEST_METHOD']])) {
-            //  throw new \Exception ('REQUEST_METHOD does not exist');
-            throw new RouterException('REQUEST_METHOD does not exist');
+        $match = $this->router->match();
+         $view = $match['target'];
+         require $this->viewPath.$view;
+        return $this;
         }
-        foreach ($this->routes[$_SERVER['REQUEST_METHOD']] as $route) {
-            if ($route->match($this->url)) {
-                return $route->call();
-            }
-        }
-        // throw new \Exception ('No matching routes');
-        throw new RouterException('No matching routes');
-    }
 }
