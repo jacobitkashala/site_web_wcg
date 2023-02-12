@@ -1,7 +1,7 @@
 <?php
 namespace App\Model;
 
-class Menus{
+class Menu{
 	private $RUB_ID;
 	private $RUB_ICONE_ID;
 	private $RUB_LIBELLE;
