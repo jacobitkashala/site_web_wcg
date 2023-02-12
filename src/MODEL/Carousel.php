@@ -4,8 +4,9 @@ namespace App\Model;
 
 class Carousel
 {
-	private $id;
-	private $nameResource;
+	private $MED_ID;
+	private $SRU_ORDRE;
+	private $MED_RESSOURCE;
 
 
 
@@ -13,11 +14,15 @@ class Carousel
 
 	public function getSubMenuId()
 	{
-		return $this->id;
+		return $this->MED_ID;
 	}
-	public function getNameRessource()
+	public function getCarouselOrdre()
 	{
-		return $this->nameResource;
+		return $this->SRU_ORDRE;
+	}
+	public function getCarouselNameRessource()
+	{
+		return $this->MED_RESSOURCE;
 	}
 	
 

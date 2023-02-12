@@ -30,9 +30,9 @@ $resultData = $db->getResult();
 // foreach ($resultSection as $item) {
 // 	echo $data;
 // }
-echo '<pre>';
-var_dump($resultData);
-echo '</pre>';
+// echo '<pre>';
+// var_dump($resultData);
+// echo '</pre>';
 
 $paramsHome = "home";
 

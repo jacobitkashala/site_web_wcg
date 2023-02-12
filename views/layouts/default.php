@@ -42,10 +42,8 @@
 </head>
 
 <body>
-	
 	<?php require  'header.php' ?>
 	<?= $contentPage ?>
 	<?php require  'footer.php' ?>
 </body>
-
 </html>
