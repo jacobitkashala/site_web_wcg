@@ -20,12 +20,12 @@ class Router
     public function __construct(string $viewPath)
     {
         $this->viewPath = $viewPath;
-        $this-> router =new \AltoRouter();
+        $this->router = new \AltoRouter();
     }
 
-    public function get(string $url,string $view,?string $name= null):self
+    public function get(string $url, string $view, ?string $name = null): self
     {
-        $this->router->map('GET',$url,$view,$name);
+        $this->router->map('GET', $url, $view, $name);
         return $this;
         // $route = new Route($path, $callable);
         // $this->routes["GET"][] = $route;
@@ -38,11 +38,18 @@ class Router
         return $route; // On retourne la route pour "enchainer" les méthodes
     }
 
-    public function run():self
+    public function run(): self
     {
         $match = $this->router->match();
-         $view = $match['target'];
-         require $this->viewPath.$view;
+        $view = $match['target'];
+        ob_start();
+    //  echo '<pre>';
+	//  var_dump($this->viewPath . $view);
+	//  echo '</pre>';
+        require $this->viewPath . $view;
+        $contentPage = ob_get_clean();
+        require $this->viewPath . '/layouts/default.php';
+
         return $this;
-        }
+    }
 }

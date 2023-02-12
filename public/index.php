@@ -12,7 +12,7 @@ require '../vendor/autoload.php';
 
 $router = new App\Router('../views');
 $router->get('/', '/index.php', 'homepage');
-$router->get('/contact', '/templete', 'category');
+$router->get('/contact', '/contact.php', 'concat');
 $router->run();
 // require '../config/route.php';
 
