@@ -1,4 +1,5 @@
 <?php
+define('DOMAIN_URL', 'https://nom_domain.com/'); 
 define('evideo','./media/video');
 define('ephoto','./media/photo');
 define('logo','./media/logo');
