@@ -35,16 +35,22 @@ class Router
         $this->routes["POST"][] = $route;
         return $route; // On retourne la route pour "enchainer" les méthodes
     }
+    public function url(string $name, array $params = [])
+    {
+        return $this->router->generate($name,$params);
+    }
 
     public function run(): self
     {
         $match = $this->router->match();
+        $params =$match['params'];
+        // $view = "{$match['target']}";
         $view = $match['target'];
-        $router= $this->router;
+        $router = $this;
         ob_start();
-    //  echo '<pre>';
-	//  var_dump($this->viewPath . $view);
-	//  echo '</pre>';
+        //  echo '<pre>';
+        //  var_dump($this->viewPath . $view);
+        //  echo '</pre>';
         require $this->viewPath . $view;
         $contentPage = ob_get_clean();
         require $this->viewPath . '/layouts/default.php';

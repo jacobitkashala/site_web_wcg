@@ -3,7 +3,7 @@
 
 .container-footer-one{
 	height: 256px;
-   background-image: url(../images/news_letter.png);
+   background-image: url(../media/photo/news_letter.png);
 }
 .one-content{
    display: flex;

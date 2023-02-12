@@ -30,7 +30,7 @@ $menus = $query->fetchAll(PDO::FETCH_CLASS, Menu::class);
 		<ul class="link-navbar bg-color-shadox" id="main-menu">
 			<?php foreach ($menus as $itemMenu) : ?>
 				<li class="menu  <?php echo $itemMenu->getMenuBackgroud() . " " . $itemMenu->getMenuFontColor() ?> link  <?php echo ($itemMenu->getIsSubMenu() == 1 ? "link-menu-grid overMenu" : "") ?>">
-				<a href="<?= $router->generate($itemMenu->getMenuTemplate(),['id'=>$itemMenu->getMenuId(),'subId'=>0,'slug'=>$itemMenu->getMenuSlug()])?>">	
+				<a href="<?= $router->url($itemMenu->getMenuTemplate(),['id'=>$itemMenu->getMenuId(),'subId'=>0,'slug'=>$itemMenu->getMenuSlug()])?>">	
 				<!-- <a href="#"> -->
 						<img class="logo-menu" src="<?php echo icons . $itemMenu->getMenuNameIcone(); ?>" alt="logo" />
 						<?php echo $itemMenu->getMenuName()  ?>

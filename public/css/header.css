@@ -96,7 +96,7 @@ html{
  	position: absolute;
     width: 100%;
 	display: none;
-    padding: 0px 20px;
+    padding: 20px 0px;
 	left:0;
 }
 .disable-menu{
