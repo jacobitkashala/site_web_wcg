@@ -11,8 +11,8 @@ require 'path.php';
 // $whoops->register();
 
 $router = new App\Router('../views');
-$router->get('/news', '/news.php', 'news');
 $router->get('/', '/index.php', 'homepage');
+$router->get('/news', '/news.php', 'news');
 $router->get('/hiring', '/hiring.php', 'hiring');
 $router->get('/legal_content', '/legal_content.php', 'legal_content');
 $router->get('/little_content', '/little_content.php', 'little_content');
