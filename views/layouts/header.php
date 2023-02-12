@@ -16,12 +16,10 @@ $menus = $query->fetchAll(PDO::FETCH_CLASS, Menu::class);
 // echo '<pre>';
 // echo print_r(icons);
 // echo '<pre>';
-$resultSousMenu = [];
 ?>
 <!-- <?php foreach ($menus as $itemMenu) : ?>
 	<p><?= $itemMenu->getMenuId() ?> </p>
 <?php endforeach ?> -->
-
 <header class="header_container">
 	<div class="header_image">
 		<img src=<?= logo . 'logo_wcg.png' ?> alt="logo wcg" />
@@ -35,13 +33,9 @@ $resultSousMenu = [];
 						<?php echo $itemMenu->getMenuName()  ?>
 					</a>
 					<?php if ($itemMenu->getIsSubMenu() == 1) {
-						// $sql2 = "SELECT sous_rubrique.SRU_ID as id, SRU_TITRE  as title FROM sous_rubrique INNER JOIN status   ON status.STA_ID = sous_rubrique.STA_ID WHERE sous_rubrique.RUB_ID = " . $menu['RUB_ID'] . " AND sous_rubrique.STA_ID =1 ORDER BY SRU_ORDRE";
 						$sql2 = "SELECT sous_rubrique.SRU_ID as id, SRU_TITRE  as title , template.TPL_LIBELLE as url_sub_menu, template.TPL_RESSOURCES as ressource_sub_menu FROM sous_rubrique INNER JOIN status   ON status.STA_ID = sous_rubrique.STA_ID INNER JOIN template   ON template.TPL_ID = sous_rubrique.TPL_ID WHERE sous_rubrique.RUB_ID = ".$itemMenu->getMenuId()." AND sous_rubrique.STA_ID = 1 ORDER BY SRU_ORDRE";
 						$query = $pdo->query($sql2);
 						$subMenus = $query->fetchAll(PDO::FETCH_CLASS, SousMenu::class);
-						// echo '<pre>';
-						// echo print_r($subMenus);
-						// echo '<pre>';
 					?>
 						<i class="fa-solid fa-plus icon-cog" id="btn-plus-sous-menu"></i>
 						<div class="sous-menu <?php echo $itemMenu->getMenuBackgroud() ?> ">

@@ -11,6 +11,12 @@ $pdo->setAttribute(PDO::ATTR_EMULATE_PREPARES, false);
 $pdo->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
 $pdo->setAttribute(PDO::MYSQL_ATTR_INIT_COMMAND, "SET NAMES utf8");
 
-
+$carouselSlq="SELECT media.MED_ID, media.MED_RESSOURCE ,sous_rubrique.SRU_ORDRE FROM  media Inner JOIN sous_rubrique ON sous_rubrique.SRU_IMG_ID = media.MED_ID Inner JOIN site ON sous_rubrique.SIT_ID = site.SIT_ID WHERE  sous_rubrique.SRU_UNE = 1 AND site.SIT_ID=1";
+$query = $pdo->query($carouselSlq);
+// $menus = $query->fetchAll(PDO::FETCH_OBJ);
+$carousels = $query->fetchAll(PDO::FETCH_CLASS, Carousel::class);
+// echo '<pre>';
+// echo print_r($carousels);
+// echo '<pre>';
 ?>
 <p>Home page</p>
