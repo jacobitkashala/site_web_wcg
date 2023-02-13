@@ -42,7 +42,13 @@ use wcg_site_web_databases;
 
 -- Home Text Premier section
 
- SELECT  sous_rubrique.SRU_ID ,sous_rubrique.SRU_TITRE , sous_rubrique.SRU_CONTENU FROM  sous_rubrique WHERE sous_rubrique.SRU_LIBELLE = "home"  AND STA_ID = 1 AND SIT_ID = 1 ;
+--  SELECT  sous_rubrique.SRU_ID ,sous_rubrique.SRU_TITRE , sous_rubrique.SRU_CONTENU 
+--  FROM  sous_rubrique 
+--  WHERE sous_rubrique.SRU_LIBELLE = "home"  AND STA_ID = 1 AND SIT_ID = 1 And SRU_AVANT =1 ;
+
+--  SELECT  sous_rubrique.SRU_ID ,media.MED_RESSOURCE  FROM  sous_rubrique INNER JOIN media ON media.MED_ID= sous_rubrique.SRU_IMG_ID WHERE sous_rubrique.SRU_LIBELLE = "actualite"  AND STA_ID = 1 AND SIT_ID = 1 And SRU_AVANT =1 LIMIT 4 ;
+
+
 
 -- CREATE OR REPLACE VIEW V_home_section_Une AS
 --  SELECT sous_rubrique.SRU_TITRE , sous_rubrique.SRU_CONTENU 
@@ -59,3 +65,5 @@ use wcg_site_web_databases;
 
 -- SELECT media.MED_ID, media.MED_RESSOURCE ,sous_rubrique.SRU_ORDRE FROM  media Inner JOIN sous_rubrique ON sous_rubrique.SRU_IMG_ID = media.MED_ID Inner JOIN site ON sous_rubrique.SIT_ID = site.SIT_ID WHERE  sous_rubrique.SRU_UNE = 1 AND site.SIT_ID=1
 -- SELECT  media.MED_RESSOURCE,rubrique.RUB_ID, rubrique.RUB_TITRE , rubrique.RUB_CONTENU FROM  rubrique INNER JOIN media ON media.MED_ID = rubrique.RUB_IMG_ID WHERE RUB_ID = 1 AND SIT_ID = 1 ;
+
+SELECT media.MED_RESSOURCE, sous_rubrique.SRU_LIBELLE, sous_rubrique.SRU_TITRE , sous_rubrique.SRU_CONTENU FROM sous_rubrique INNER JOIN media ON media.MED_ID = sous_rubrique.SRU_VIGNETTE_ID WHERE SRU_AVANT = 1 AND STA_ID = 1 ORDER BY SRU_ORDRE LIMIT 5;

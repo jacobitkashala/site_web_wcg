@@ -2,6 +2,8 @@
 
 use App\MODEL\Carousel;
 use App\MODEL\HomeSection;
+use App\MODEL\AlaUneActualite;
+
 use App\Connection;
 
 $titlePage = 'LittleContent';
@@ -10,18 +12,27 @@ $descriptionPage = 'World Corp Group est une société de consulting et de déve
 
 $pdo = Connection::getPDO();
 $carouselSlq = "SELECT media.MED_ID, media.MED_RESSOURCE ,sous_rubrique.SRU_ORDRE FROM  media Inner JOIN sous_rubrique ON sous_rubrique.SRU_IMG_ID = media.MED_ID Inner JOIN site ON sous_rubrique.SIT_ID = site.SIT_ID WHERE  sous_rubrique.SRU_UNE = 1 AND site.SIT_ID=1";
-$query = $pdo->query($carouselSlq);
-$carousels = $query->fetchAll(PDO::FETCH_CLASS, Carousel::class);
+$query1 = $pdo->query($carouselSlq);
+$carousels = $query1->fetchAll(PDO::FETCH_CLASS, Carousel::class);
 
 $homeSectionlSlq = "SELECT  sous_rubrique.SRU_ID ,sous_rubrique.SRU_TITRE , sous_rubrique.SRU_CONTENU FROM  sous_rubrique WHERE sous_rubrique.SRU_LIBELLE = 'home'  AND STA_ID = 1 AND SIT_ID = 1 ";
-$query = $pdo->query($homeSectionlSlq);
-$homeSection = $query->fetchAll(PDO::FETCH_CLASS, HomeSection::class);
+$query2 = $pdo->query($homeSectionlSlq);
+$homeSection = $query2->fetchAll(PDO::FETCH_CLASS, HomeSection::class);
+
+// $homeActualitelSlq = "SELECT media.MED_RESSOURCE, sous_rubrique.SRU_LIBELLE, sous_rubrique.SRU_TITRE , sous_rubrique.SRU_CONTENU FROM sous_rubrique INNER JOIN media ON media.MED_ID = sous_rubrique.SRU_VIGNETTE_ID WHERE SRU_AVANT = 1 AND STA_ID = 1 ORDER BY SRU_ORDRE LIMIT 5";
+// $query = $pdo->query($homeSectionlSlq);
+// $homeSection = $query->fetchAll(PDO::FETCH_CLASS, HomeSection::class);
+
+
+$homeActualitelSlq = "SELECT  sous_rubrique.SRU_ID ,media.MED_RESSOURCE  FROM  sous_rubrique INNER JOIN media ON media.MED_ID= sous_rubrique.SRU_IMG_ID WHERE sous_rubrique.SRU_LIBELLE = 'actualite'  AND STA_ID = 1 AND SIT_ID = 1 And SRU_AVANT =1 LIMIT 3";
+$query3 = $pdo->query($homeActualitelSlq);
+$homeActualite = $query3->fetchAll(PDO::FETCH_CLASS, AlaUneActualite::class);
 
 
 $resultData = [];
 
 // echo '<pre>';
-// echo print_r($homeSection);
+// echo print_r($homeActualite);
 // echo '<pre>';
 ?>
 <main>
@@ -41,21 +52,18 @@ $resultData = [];
 	</section>
 	<div class="container-home">
 		<section class=" row description">
-			<div class="col-xs-1 col-md-3  content-image">
-				<img class="image-illustration" src="./images/part/imageIllustration.png" alt="illustration lampe" srcset="">
+			<!-- <div class="col-xs-1 col-md-3  content-image"> -->
+			<div class="col-xs-1 col-md-3  ">
+				<img class="image-illustration" src="<?php  echo ephoto."image1.png" ?>" alt="illustration lampe" srcset="">
 			</div>
 			<div class=" col-xs-10 col-md-4 content-desc">
-				<h1>World Corp Group RDC <?php echo $homeSection[0]->getTitle() ?> </h1>
-
+				<h1><?php echo $homeSection[0]->getTitle() ?> </h1>
 				<p>
-					est une société de consulting et de développement de projets innovants, spécialiste en solutions
-					SMAC (Social, Mobile, Analytics, Cloud).
-					Nous accompagnons nos clients dans la mise en place des solutions SMAC et le développement sur
-					mesure de leur stratégie digitale et multicanale pour une expérience numérique réussie.
+					<?php echo $homeSection[0]->getContenue() ?>
 				</p>
 			</div>
 			<div class=" col-xs-10 col-md-4 contenaire-video">
-				<video src="./demo-video.mp4" controls></video>
+				<video src="<?php  echo evideo.$homeActualite[0]->getRessource() ?>" controls></video>
 			</div>
 		</section>
 		<!-- Présentation de service -->

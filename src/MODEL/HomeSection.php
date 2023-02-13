@@ -20,4 +20,5 @@ class HomeSection
 	{
 		return $this->SRU_CONTENU;
 	}
+
 }
