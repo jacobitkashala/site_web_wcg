@@ -66,9 +66,6 @@ use wcg_site_web_databases;
 -- SELECT media.MED_ID, media.MED_RESSOURCE ,sous_rubrique.SRU_ORDRE FROM  media Inner JOIN sous_rubrique ON sous_rubrique.SRU_IMG_ID = media.MED_ID Inner JOIN site ON sous_rubrique.SIT_ID = site.SIT_ID WHERE  sous_rubrique.SRU_UNE = 1 AND site.SIT_ID=1
 -- SELECT  media.MED_RESSOURCE,rubrique.RUB_ID, rubrique.RUB_TITRE , rubrique.RUB_CONTENU FROM  rubrique INNER JOIN media ON media.MED_ID = rubrique.RUB_IMG_ID WHERE RUB_ID = 1 AND SIT_ID = 1 ;
 
-SELECT sous_rubrique.SRU_ID, media.MED_RESSOURCE, sous_rubrique.SRU_LIBELLE
+
 -- SELECT sous_rubrique.SRU_ID, sous_rubrique.SRU_TITRE , sous_rubrique.SRU_IMG_ID 
-FROM sous_rubrique
-INNER JOIN media ON media.MED_ID = sous_rubrique.SRU_ICONE_ID 
-WHERE sous_rubrique.SRU_LIBELLE = "footer" 
-LIMIT 9;
+SELECT sous_rubrique.SRU_ID, media.MED_RESSOURCE, sous_rubrique.SRU_LIBELLE FROM sous_rubrique INNER JOIN media ON media.MED_ID = sous_rubrique.SRU_ICONE_ID WHERE sous_rubrique.SRU_LIBELLE = "footer" LIMIT 9;
