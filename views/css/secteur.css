@@ -53,7 +53,7 @@ div.active{
 .container_content_expertise{
    height: 866px;
    padding:10rem;
-   /* background-image: url(../images/image_consult.png); */
+   background-image: url(../images/image_consult.png);
 }
 .container_content_expertise h4{
 	font-style: normal;

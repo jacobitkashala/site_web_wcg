@@ -18,6 +18,10 @@ $menus = $query->fetchAll(PDO::FETCH_CLASS, Menu::class);
 // echo '<pre>';
 // echo print_r($menus);
 // echo '<pre>';
+// echo '<pre>';
+// echo print_r(dirname(__DIR__));
+// echo '<pre>';
+
 ?>
 <!-- <?php foreach ($menus as $itemMenu) : ?>
 	<p><?= $itemMenu->getMenuId() ?> </p>

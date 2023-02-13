@@ -36,6 +36,14 @@
 	<link rel='stylesheet' type='text/css' media='screen' href='css/header.css'>
 	<link rel='stylesheet' type='text/css' media='screen' href='css/util.css'>
 	<link rel='stylesheet' type='text/css' media='screen' href='css/home.css'>
+	<link rel='stylesheet' type='text/css' media='screen' href='css/actualite.css'>
+	<link rel='stylesheet' type='text/css' media='screen' href='css/detail_recrutement.css'>
+	<link rel='stylesheet' type='text/css' media='screen' href='css/expertise.css'>
+	<link rel='stylesheet' type='text/css' media='screen' href='css/formulaire_recrutement.css'>
+	<link rel='stylesheet' type='text/css' media='screen' href='css/innovation.css'>
+	<link rel='stylesheet' type='text/css' media='screen' href='css/recrutement.css'>
+	<link rel='stylesheet' type='text/css' media='screen' href='css/ressource.css'>
+	<link rel='stylesheet' type='text/css' media='screen' href='css/secteur.css'>
 	<link rel='stylesheet' type='text/css' media='screen' href='css/footer.css'>
 	<link rel="shortcut icon" href=<?= icons . 'favico.ico' ?> alt="logo wcg" />
 	<title><?= $titlePage ?? "World Corp Group" ?></title>

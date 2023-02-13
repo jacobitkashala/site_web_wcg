@@ -65,10 +65,7 @@ $paramsHome = "home";
 				<?php
 				// $sql3 = "SELECT sous_rubrique.SRU_TITRE , sous_rubrique.SRU_CONTENU FROM sous_rubrique Where sous_rubrique.SRU_ID = 1";
 				try {
-					// $sqlSectionOne = "SELECT sous_rubrique.SRU_TITRE , sous_rubrique.SRU_CONTENU 
-					// FROM  sous_rubrique WHERE sous_rubrique.SRU_LIBELLE = 'home' AND sous_rubrique.STA_ID = 1";
-					// $db->sql($sqlSectionOne);
-					// $resultSectionOne = $db->getResult();
+
 
 				} catch (Exception) {
 					echo '<pre>';
