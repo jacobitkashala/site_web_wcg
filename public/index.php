@@ -12,9 +12,9 @@ require 'path.php';
 
 $router = new App\Router('../views');
 $router->get('/', '/index.php', 'homepage');
-$router->get('/news', '/news.php', 'news');
-$router->get('/hiring', '/hiring.php', 'hiring');
-$router->get('/legal_content/[*:slug]-[i:id]-[i:subId]', '/legal_content.php', 'legal_content');
-$router->get('/little_content', '/little_content.php', 'little_content');
+$router->get('/news/[*:slug]-[i:id]', '/news.php', 'news');
+$router->get('/hiring/[*:slug]-[i:id]', '/hiring.php', 'hiring');
+$router->get('/legal_content/[*:slug]-[i:id]', '/legal_content.php', 'legal_content');
+$router->get('/little_content/[*:slug]-[i:id]', '/little_content.php', 'little_content');
 
 $router->run();

@@ -30,8 +30,7 @@ $menus = $query->fetchAll(PDO::FETCH_CLASS, Menu::class);
 		<ul class="link-navbar bg-color-shadox" id="main-menu">
 			<?php foreach ($menus as $itemMenu) : ?>
 				<li class="menu  <?php echo $itemMenu->getMenuBackgroud() . " " . $itemMenu->getMenuFontColor() ?> link  <?php echo ($itemMenu->getIsSubMenu() == 1 ? "link-menu-grid overMenu" : "") ?>">
-				<a href="<?= $router->url($itemMenu->getMenuTemplate(),['id'=>$itemMenu->getMenuId(),'subId'=>0,'slug'=>$itemMenu->getMenuSlug()])?>">	
-				<!-- <a href="#"> -->
+				<a href="<?= $router->url($itemMenu->getMenuTemplate(),array('id'=>$itemMenu->getMenuId(),'slug'=>$itemMenu->getMenuSlug()))?>">	
 						<img class="logo-menu" src="<?php echo icons . $itemMenu->getMenuNameIcone(); ?>" alt="logo" />
 						<?php echo $itemMenu->getMenuName()  ?>
 					</a>
@@ -46,7 +45,7 @@ $menus = $query->fetchAll(PDO::FETCH_CLASS, Menu::class);
 								<ul class="link-navbar">
 									<?php foreach ($subMenus as $itemSousMenu) : ?>
 										<li class="link <?php echo $itemMenu->getMenuFontColor() ?>">
-											<a class="" href="#">
+											<a class="" href="<?= $router->url($itemMenu->getMenuTemplate(),array('id'=>$itemSousMenu->getSubMenuId(),'slug'=>$itemMenu->getMenuId()))?>">
 												<?php echo $itemSousMenu->getSubMenuTitle(); ?>
 											</a>
 										</li>

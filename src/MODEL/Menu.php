@@ -17,7 +17,7 @@ class Menu
 	private $a_sous_rubrique;
 	private $url_page;
 	private $TPL_LIBELLE;
-	private $slug;
+	private $slug="0";
 	
 
 	// private $menu;

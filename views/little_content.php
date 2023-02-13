@@ -15,4 +15,4 @@ $descriptionPage = 'World Corp Group est une société de consulting et de déve
 // echo print_r($carousels);
 // echo '<pre>';
 ?>
-<p>show tittle content</p>
+<p>Secteur</p>
