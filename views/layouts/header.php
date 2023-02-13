@@ -10,7 +10,7 @@ use App\Connection;
 // $pdo->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
 // $pdo->setAttribute(PDO::MYSQL_ATTR_INIT_COMMAND, "SET NAMES utf8");
 
-$pdo =Connection::getPDO(); 
+$pdo = Connection::getPDO();
 $query = $pdo->query('SELECT  template.TPL_LIBELLE,r.a_sous_rubrique,r.url_page,r.RUB_ID, r.RUB_ICONE_ID, r.RUB_LIBELLE,r.RUB_BACKGROUND,r.RUB_FONT_NAME,r.RUB_FONT_SIZE,r.RUB_FONT_COLOR, m.med_ressource FROM rubrique r, media m, site s ,template WHERE m.med_id = r.rub_icone_id and r.SIT_ID = s.SIT_ID and s.SIT_ID = 1 and template.TPL_ID = r.TPL_ID ORDER BY r.RUB_ORDRE');
 // $menus = $query->fetchAll(PDO::FETCH_OBJ);
 $menus = $query->fetchAll(PDO::FETCH_CLASS, Menu::class);
@@ -28,18 +28,30 @@ $menus = $query->fetchAll(PDO::FETCH_CLASS, Menu::class);
 <?php endforeach ?> -->
 <header class="header_container">
 	<div class="header_image">
-		<img src=<?= logo . 'logo_wcg.png' ?> alt="logo wcg" />
+		<?php if ($_SERVER['REQUEST_URI'] == '/') {
+		?>
+			<img src=<?= logo . 'logo_wcg.png' ?> alt="logo wcg" />
+		<?php
+		}
+		?>
+		<img src=<?= "." . logo . 'logo_wcg.png' ?> alt="logo wcg" />
 	</div>
 	<nav class="header_nav_container">
 		<ul class="link-navbar bg-color-shadox" id="main-menu">
 			<?php foreach ($menus as $itemMenu) : ?>
 				<li class="menu  <?php echo $itemMenu->getMenuBackgroud() . " " . $itemMenu->getMenuFontColor() ?> link  <?php echo ($itemMenu->getIsSubMenu() == 1 ? "link-menu-grid overMenu" : "") ?>">
-				<a href="<?= $router->url($itemMenu->getMenuTemplate(),array('id'=>$itemMenu->getMenuId(),'slug'=>$itemMenu->getMenuSlug()))?>">	
-						<img class="logo-menu" src="<?php echo icons . $itemMenu->getMenuNameIcone(); ?>" alt="logo" />
+					<a href="<?= $router->url($itemMenu->getMenuTemplate(), array('id' => $itemMenu->getMenuId(), 'slug' => $itemMenu->getMenuSlug())) ?>">
+						<?php if ($_SERVER['REQUEST_URI'] == '/') {
+						?>
+							<img class="logo-menu" src="<?php echo icons . $itemMenu->getMenuNameIcone(); ?>" alt="logo" />
+						<?php
+						}
+						?>
+						<img class="logo-menu" src="<?php echo "." . icons . $itemMenu->getMenuNameIcone(); ?>" alt="logo" />
 						<?php echo $itemMenu->getMenuName()  ?>
 					</a>
 					<?php if ($itemMenu->getIsSubMenu() == 1) {
-						$sql2 = "SELECT sous_rubrique.SRU_ID as id, SRU_TITRE  as title , template.TPL_LIBELLE as url_sub_menu, template.TPL_RESSOURCES as ressource_sub_menu FROM sous_rubrique INNER JOIN status   ON status.STA_ID = sous_rubrique.STA_ID INNER JOIN template   ON template.TPL_ID = sous_rubrique.TPL_ID WHERE sous_rubrique.RUB_ID = ".$itemMenu->getMenuId()." AND sous_rubrique.STA_ID = 1 ORDER BY SRU_ORDRE";
+						$sql2 = "SELECT sous_rubrique.SRU_ID as id, SRU_TITRE  as title , template.TPL_LIBELLE as url_sub_menu, template.TPL_RESSOURCES as ressource_sub_menu FROM sous_rubrique INNER JOIN status   ON status.STA_ID = sous_rubrique.STA_ID INNER JOIN template   ON template.TPL_ID = sous_rubrique.TPL_ID WHERE sous_rubrique.RUB_ID = " . $itemMenu->getMenuId() . " AND sous_rubrique.STA_ID = 1 ORDER BY SRU_ORDRE";
 						$query = $pdo->query($sql2);
 						$subMenus = $query->fetchAll(PDO::FETCH_CLASS, SousMenu::class);
 					?>
@@ -49,7 +61,7 @@ $menus = $query->fetchAll(PDO::FETCH_CLASS, Menu::class);
 								<ul class="link-navbar">
 									<?php foreach ($subMenus as $itemSousMenu) : ?>
 										<li class="link <?php echo $itemMenu->getMenuFontColor() ?>">
-											<a class="" href="<?= $router->url($itemMenu->getMenuTemplate(),array('id'=>$itemSousMenu->getSubMenuId(),'slug'=>$itemMenu->getMenuId()))?>">
+											<a class="" href="<?= $router->url($itemMenu->getMenuTemplate(), array('id' => $itemSousMenu->getSubMenuId(), 'slug' => $itemMenu->getMenuId())) ?>">
 												<?php echo $itemSousMenu->getSubMenuTitle(); ?>
 											</a>
 										</li>

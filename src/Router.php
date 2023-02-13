@@ -51,9 +51,9 @@ class Router
         //  echo '<pre>';
         //  var_dump($this->viewPath . $view);
         //  echo '</pre>';
-        require $this->viewPath . $view;
+        require $this->viewPath.DIRECTORY_SEPARATOR. $view;
         $contentPage = ob_get_clean();
-        require $this->viewPath . '/layouts/default.php';
+        require $this->viewPath.DIRECTORY_SEPARATOR.'/layouts/default.php';
 
         return $this;
     }

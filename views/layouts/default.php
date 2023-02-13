@@ -1,8 +1,16 @@
+<?php
+// define('DOMAIN_URL', 'https://nom_domain.com/'); 
+// define('evideo','../media/video/');
+// define('ephoto','../media/photo/');
+// $logo = '../media/logo/';
+// define('ecrousel','../media/carousel/');
+// define('icons','../media/icons/');
+// define('background','../media/background/');
+?>
+
 <!DOCTYPE html>
 <html>
-
 <head>
-
 	<meta charset='utf-8'>
 	<meta name="description" content=<?= $descritionPage ?? " " ?> />
 	<meta name="autheur" content="jacobit,kashala,serge kashala,jacobit kashala " />
@@ -33,19 +41,31 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 	<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.6/swiper-bundle.css"> -->
 
-	<link rel='stylesheet' type='text/css' media='screen' href='css/header.css'>
+	<link rel='stylesheet' type='text/css' media='screen' href="css/header.css">
+	<link rel='stylesheet' type='text/css' media='screen' href="../css/header.css">
 	<link rel='stylesheet' type='text/css' media='screen' href='css/util.css'>
+	<link rel='stylesheet' type='text/css' media='screen' href='../css/util.css'>
 	<link rel='stylesheet' type='text/css' media='screen' href='css/home.css'>
+	<link rel='stylesheet' type='text/css' media='screen' href='../css/home.css'>
 	<link rel='stylesheet' type='text/css' media='screen' href='css/actualite.css'>
+	<link rel='stylesheet' type='text/css' media='screen' href='../css/actualite.css'>
 	<link rel='stylesheet' type='text/css' media='screen' href='css/detail_recrutement.css'>
+	<link rel='stylesheet' type='text/css' media='screen' href='../css/detail_recrutement.css'>
 	<link rel='stylesheet' type='text/css' media='screen' href='css/expertise.css'>
-	<link rel='stylesheet' type='text/css' media='screen' href='css/formulaire_recrutement.css'>
+	<link rel='stylesheet' type='text/css' media='screen' href='../css/expertise.css'>
+	<link rel='stylesheet' type='text/css' media='screen' href='cssc/formulaire_recrutement.css'>
+	<link rel='stylesheet' type='text/css' media='screen' href='../cssc/formulaire_recrutement.css'>
 	<link rel='stylesheet' type='text/css' media='screen' href='css/innovation.css'>
+	<link rel='stylesheet' type='text/css' media='screen' href='../css/innovation.css'>
 	<link rel='stylesheet' type='text/css' media='screen' href='css/recrutement.css'>
+	<link rel='stylesheet' type='text/css' media='screen' href='../css/recrutement.css'>
 	<link rel='stylesheet' type='text/css' media='screen' href='css/ressource.css'>
+	<link rel='stylesheet' type='text/css' media='screen' href='../css/ressource.css'>
+	<link rel='stylesheet' type='text/css' media='screen' href='../css/secteur.css'>
 	<link rel='stylesheet' type='text/css' media='screen' href='css/secteur.css'>
 	<link rel='stylesheet' type='text/css' media='screen' href='css/footer.css'>
-	<link rel="shortcut icon" href=<?= icons . 'favico.ico' ?> alt="logo wcg" />
+	<link rel='stylesheet' type='text/css' media='screen' href='../css/footer.css'>
+	<link rel="shortcut icon" href=<?= icons?? icons2 . 'favico.ico' ?> alt="logo wcg" />
 	<title><?= $titlePage ?? "World Corp Group" ?></title>
 </head>
 
@@ -54,4 +74,5 @@
 	<?= $contentPage ?>
 	<?php require  'footer.php' ?>
 </body>
+
 </html>

@@ -7,9 +7,11 @@ use App\MODEL\SectionTwoHome;
 
 use App\Connection;
 
+
 $titlePage = 'LittleContent';
 $descriptionPage = 'World Corp Group est une société de consulting et de développement de projets innovants, spécialiste en solutions SMAC (Social, Mobile, Analytics, Cloud)';
 
+define('pathCss','css/');
 
 $pdo = Connection::getPDO();
 $carouselSlq = "SELECT media.MED_ID, media.MED_RESSOURCE ,sous_rubrique.SRU_ORDRE FROM  media Inner JOIN sous_rubrique ON sous_rubrique.SRU_IMG_ID = media.MED_ID Inner JOIN site ON sous_rubrique.SIT_ID = site.SIT_ID WHERE  sous_rubrique.SRU_UNE = 1 AND site.SIT_ID=1";
@@ -28,7 +30,7 @@ $homeServiceMiseEnAvantSql = "SELECT media.MED_RESSOURCE, sous_rubrique.SRU_LIBE
 $query4 = $pdo->query($homeServiceMiseEnAvantSql);
 $homeServiceMiseEnAvant = $query4->fetchAll(PDO::FETCH_CLASS, SectionTwoHome::class);
 
-
+// define();
 // echo '<pre>';
 // echo print_r($homeServiceMiseEnAvant);
 // echo '<pre>';
@@ -71,7 +73,7 @@ $homeServiceMiseEnAvant = $query4->fetchAll(PDO::FETCH_CLASS, SectionTwoHome::cl
 				foreach ($homeServiceMiseEnAvant as $contentMiseEnAvant) : ?>
 					<!-- <div class="service-content"> -->
 					<div class="service-content">
-						<img src="<?php echo ephoto. $contentMiseEnAvant->getRessource() ?>" alt="image titre" srcset="">
+						<img src="<?php echo ephoto . $contentMiseEnAvant->getRessource() ?>" alt="image titre" srcset="">
 						<h1><?php echo $contentMiseEnAvant->getTitre() ?></h1>
 						<p><?php echo $contentMiseEnAvant->getContenu() ?> </p>
 						<a class="btn" href="#">Pour en savoir plus ...</a>
@@ -85,17 +87,17 @@ $homeServiceMiseEnAvant = $query4->fetchAll(PDO::FETCH_CLASS, SectionTwoHome::cl
 			<div class="container_partner_display">
 				<div class="partner_block">
 					<div class="container-slide">
-						<img class="" src="./images/left.png" alt="logo" />
+						<img class="" src=" <?php echo ephoto . "left.png" ?>" alt="logo" />
 					</div>
 					<div class="partner_display_item ">
-						<div class="item_slide"><img src="./images/partners/image_evolis.png" alt="logo"></div>
-						<div class="item_slide"><img src="./images/partners/image_huawai.png" alt="logo"></div>
-						<div class="item_slide"><img src="./images/partners/image_juris_consult.png" alt="logo">
+						<div class="item_slide"><img src="<?php echo logo . "image_evolis.png" ?>" alt="logo"></div>
+						<div class="item_slide"><img src=" <?php echo logo . "image_huawai.png" ?>" alt="logo"></div>
+						<div class="item_slide"><img src=" <?php echo logo . "image_juris_consult.png" ?>" alt="logo">
 						</div>
-						<div class="item_slide"><img src="./images/partners/image_konnect.png" alt="logo"></div>
+						<div class="item_slide"><img src=" <?php echo logo . "image_konnect.png" ?>" alt="logo"></div>
 					</div>
 					<div>
-						<img class="" src="./images/rigth.png" alt="logo" />
+						<img class="" src="<?php echo ephoto . "rigth.png" ?>" alt="logo" />
 					</div>
 				</div>
 			</div>
