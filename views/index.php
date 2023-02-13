@@ -3,6 +3,7 @@
 use App\MODEL\Carousel;
 use App\MODEL\HomeSection;
 use App\MODEL\AlaUneActualite;
+use App\MODEL\SectionTwoHome;
 
 use App\Connection;
 
@@ -19,20 +20,17 @@ $homeSectionlSlq = "SELECT  sous_rubrique.SRU_ID ,sous_rubrique.SRU_TITRE , sous
 $query2 = $pdo->query($homeSectionlSlq);
 $homeSection = $query2->fetchAll(PDO::FETCH_CLASS, HomeSection::class);
 
-// $homeActualitelSlq = "SELECT media.MED_RESSOURCE, sous_rubrique.SRU_LIBELLE, sous_rubrique.SRU_TITRE , sous_rubrique.SRU_CONTENU FROM sous_rubrique INNER JOIN media ON media.MED_ID = sous_rubrique.SRU_VIGNETTE_ID WHERE SRU_AVANT = 1 AND STA_ID = 1 ORDER BY SRU_ORDRE LIMIT 5";
-// $query = $pdo->query($homeSectionlSlq);
-// $homeSection = $query->fetchAll(PDO::FETCH_CLASS, HomeSection::class);
-
-
-$homeActualitelSlq = "SELECT  sous_rubrique.SRU_ID ,media.MED_RESSOURCE  FROM  sous_rubrique INNER JOIN media ON media.MED_ID= sous_rubrique.SRU_IMG_ID WHERE sous_rubrique.SRU_LIBELLE = 'actualite'  AND STA_ID = 1 AND SIT_ID = 1 And SRU_AVANT =1 LIMIT 3";
+$homeActualitelSlq = "SELECT  sous_rubrique.SRU_ID ,media.MED_RESSOURCE  FROM  sous_rubrique INNER JOIN media ON media.MED_ID= sous_rubrique.SRU_IMG_ID WHERE sous_rubrique.SRU_LIBELLE = 'actualite'  AND STA_ID = 1 AND SIT_ID = 1 And SRU_AVANT = 1 LIMIT 3";
 $query3 = $pdo->query($homeActualitelSlq);
 $homeActualite = $query3->fetchAll(PDO::FETCH_CLASS, AlaUneActualite::class);
 
+$homeServiceMiseEnAvantSql = "SELECT media.MED_RESSOURCE, sous_rubrique.SRU_LIBELLE, sous_rubrique.SRU_TITRE , sous_rubrique.SRU_CONTENU FROM sous_rubrique INNER JOIN media ON media.MED_ID = sous_rubrique.SRU_VIGNETTE_ID WHERE SRU_AVANT = 1 AND STA_ID = 1 ORDER BY SRU_ORDRE LIMIT 5";
+$query4 = $pdo->query($homeServiceMiseEnAvantSql);
+$homeServiceMiseEnAvant = $query4->fetchAll(PDO::FETCH_CLASS, SectionTwoHome::class);
 
-$resultData = [];
 
 // echo '<pre>';
-// echo print_r($homeActualite);
+// echo print_r($homeServiceMiseEnAvant);
 // echo '<pre>';
 ?>
 <main>
@@ -54,7 +52,7 @@ $resultData = [];
 		<section class=" row description">
 			<!-- <div class="col-xs-1 col-md-3  content-image"> -->
 			<div class="col-xs-1 col-md-3  ">
-				<img class="image-illustration" src="<?php  echo ephoto."image1.png" ?>" alt="illustration lampe" srcset="">
+				<img class="image-illustration" src="<?php echo ephoto . "image1.png" ?>" alt="illustration lampe" srcset="">
 			</div>
 			<div class=" col-xs-10 col-md-4 content-desc">
 				<h1><?php echo $homeSection[0]->getTitle() ?> </h1>
@@ -63,60 +61,22 @@ $resultData = [];
 				</p>
 			</div>
 			<div class=" col-xs-10 col-md-4 contenaire-video">
-				<video src="<?php  echo evideo.$homeActualite[0]->getRessource() ?>" controls></video>
+				<video src="<?php echo evideo . $homeActualite[0]->getRessource() ?>" controls></video>
 			</div>
 		</section>
 		<!-- Présentation de service -->
 		<div class="contenaire-service">
 			<div class="service-element">
 				<?php
-				foreach ($resultData as $contentMiseEnAvant) : ?>
-					<!-- <div class="service-content">
-						<img src="./images/images_design_factory.png" alt="image titre" srcset="">
-						<h1><?php echo $contentMiseEnAvant['SRU_TITRE'] ?></h1>
-						<p><?php echo $contentMiseEnAvant['SRU_CONTENU'] ?> </p>
+				foreach ($homeServiceMiseEnAvant as $contentMiseEnAvant) : ?>
+					<!-- <div class="service-content"> -->
+					<div class="service-content">
+						<img src="<?php echo ephoto. $contentMiseEnAvant->getRessource() ?>" alt="image titre" srcset="">
+						<h1><?php echo $contentMiseEnAvant->getTitre() ?></h1>
+						<p><?php echo $contentMiseEnAvant->getContenu() ?> </p>
 						<a class="btn" href="#">Pour en savoir plus ...</a>
-					</div> -->
+					</div>
 				<?php endforeach ?>
-
-				<!-- 
-				<div class="service-content">
-					<img src="./images/image_ecran_projection.png" alt="image titre" srcset="">
-					<h1>CONSULTING</h1>
-					<p>Nous accompagnons, très en amont de projets, nos clients dans leurs démarches de
-						transformation
-						digitale
-						et d’optimisation de leur stratégie numérique. </p>
-					<a class="btn" href="#">Pour en savoir plus ...</a>
-				</div>
-				<div class="service-content">
-					<img src="./images/image_consulting.png" alt="image titre" srcset="">
-					<h1>CONSULTING</h1>
-					<p>Nous accompagnons, très en amont de projets, nos clients dans leurs démarches de
-						transformation
-						digitale
-						et d’optimisation de leur stratégie numérique. </p>
-					<a class="btn" href="#">Pour en savoir plus ...</a>
-				</div>
-				<div class="service-content">
-					<img src="./images/image_et_innovation.png" alt="image titre" srcset="">
-					<h1>CONSULTING</h1>
-					<p>Nous accompagnons, très en amont de projets, nos clients dans leurs démarches de
-						transformation
-						digitale
-						et d’optimisation de leur stratégie numérique. </p>
-					<a class="btn" href="#">Pour en savoir plus ...</a>
-				</div>
-				<div class="service-content">
-					<img src="./images/image_telecom.png" alt="image titre" srcset="">
-					<h1>CONSULTING</h1>
-					<p>Nous accompagnons, très en amont de projets, nos clients dans leurs démarches de
-						transformation
-						digitale
-						et d’optimisation de leur stratégie numérique. </p>
-					<a class="btn" href="#">Pour en savoir plus ...</a>
-				</div> -->
-
 			</div>
 		</div>
 		<!-- slide nos partenaire -->

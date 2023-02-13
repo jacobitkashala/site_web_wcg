@@ -6,7 +6,9 @@ class AlaUneActualite
 {
 	private $SRU_ID;
 	private $MED_RESSOURCE;
+	
 
+	
 	public function getId()
 	{
 		return $this->SRU_ID;
