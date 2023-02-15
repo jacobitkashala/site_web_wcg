@@ -4,6 +4,7 @@ namespace App;
 
 use \PDO;
 
+
 class Auth{
 	private $pdo;
 	public function __construct($pdo){
@@ -13,7 +14,8 @@ class Auth{
 	public function user(){
 
 	}
-	public function login(string $username, string $password){
+	public function login(string $username, string $password)
+	{
 
 	}
 }

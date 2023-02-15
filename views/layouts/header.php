@@ -21,9 +21,6 @@ if ($_SERVER['REQUEST_URI'] != '/') {
 // echo '<pre>';
 
 ?>
-<!-- <?php foreach ($menus as $itemMenu) : ?>
-	<p><?= $itemMenu->getMenuId() ?> </p>
-<?php endforeach ?> -->
 <header class="header_container">
 	<div class="header_image">
 		

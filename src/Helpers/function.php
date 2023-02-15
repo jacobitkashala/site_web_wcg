@@ -1,7 +1,7 @@
 <?php
-namespace App\Functions;
+namespace App\Helpers;
 
-function pathEphoto(string $page){
+function Path(string $page){
 
 	if($page ==='/index.php'){
 		return 'ee';

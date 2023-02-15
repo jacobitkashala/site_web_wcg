@@ -1,7 +1,7 @@
 <?php
 
-namespace App\Helpers;
 
+namespace App\Helpers;
 class Text{
 
 	public static function exerpt(string $content, int $limit=60){

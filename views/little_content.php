@@ -1,6 +1,7 @@
 <?php
 
 use App\MODEL\LittleContent;
+use App\Helpers\Text;
 use App\Connection;
 
 $pdo = Connection::getPDO();
@@ -21,22 +22,24 @@ if ($idParent === 0) {
 }
 
 $resultquery = $queryLittleContent->fetchAll(PDO::FETCH_CLASS, LittleContent::class);
+$color = "#000";
 
-echo '<style>
+$newPathEphoto = ephoto;
+
+if ($_SERVER['REQUEST_URI'] != '/') {
+	$newPathEphoto = "." . $newPathEphoto;
+}
+
+echo "
+<style>
 .container_content_expertise{
- 
-//    background: #000 ;
-   background-image: url(.' . ephoto . '/expertises_fond.png) ;
+   background-image:  url(" . $newPathEphoto . $resultquery[0]->getBgImage() . " ) ;
 background-repeat: no-repeat;
 }
-</style>';
+</style>
+ ";
 
-// echo '<pre>';
-// echo print_r($resultquery);
-// echo '<pre>'
 ?>
-
-
 <section class="container_content_expertise">
 	<h4> <?php echo $resultquery[0]->getLittTitle() ?></h4>
 	<p>

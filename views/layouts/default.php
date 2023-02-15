@@ -26,15 +26,13 @@
 	<meta name="twitter:creator" content="jacobitkashala">
 	<!-- Twitter Summary card images must be at least 200x200px -->
 	<meta name="twitter:image" content="http://www.example.com/image.jpg">
-	<!-- bootstrap -->
-	<!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"> -->
+
 
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 	<!-- swiper -->
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-	<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.6/swiper-bundle.css"> -->
-
+	
 	<link rel='stylesheet' type='text/css' media='screen' href="css/header.css">
 	<link rel='stylesheet' type='text/css' media='screen' href="../css/header.css">
 	<link rel='stylesheet' type='text/css' media='screen' href='css/util.css'>
