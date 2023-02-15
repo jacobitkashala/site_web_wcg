@@ -1,9 +1,17 @@
 <?php
+$newPathCss = pathCss;
+$newIcons = icons;
 
+if ($_SERVER['REQUEST_URI'] != '/') {
+	$newPathCss = "." . $newPathCss;
+	$newIcons = "." . $newIcons;
+}
+// ../media/icons/favico.ico
 ?>
 
 <!DOCTYPE html>
 <html>
+
 <head>
 	<meta charset='utf-8'>
 	<meta name="description" content=<?= $descritionPage ?? " " ?> />
@@ -32,9 +40,8 @@
 	<!-- swiper -->
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-	
-	<link rel='stylesheet' type='text/css' media='screen' href="css/header.css">
-	<link rel='stylesheet' type='text/css' media='screen' href="../css/header.css">
+
+	<link rel='stylesheet' type='text/css' media='screen' href="<?= $newPathCss . "/header.css" ?>">
 	<link rel='stylesheet' type='text/css' media='screen' href='css/util.css'>
 	<link rel='stylesheet' type='text/css' media='screen' href='../css/util.css'>
 	<link rel='stylesheet' type='text/css' media='screen' href='css/home.css'>
@@ -57,7 +64,7 @@
 	<link rel='stylesheet' type='text/css' media='screen' href='css/secteur.css'>
 	<link rel='stylesheet' type='text/css' media='screen' href='css/footer.css'>
 	<link rel='stylesheet' type='text/css' media='screen' href='../css/footer.css'>
-	<link rel="shortcut icon" href=<?= icons. 'favico.ico' ?> alt="logo wcg" />
+	<link rel="shortcut icon" href="<?= $newIcons . 'favico.ico' ?>" alt="logo wcg" />
 	<title><?= $titlePage ?? "World Corp Group" ?></title>
 </head>
 
