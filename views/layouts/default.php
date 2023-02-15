@@ -1,11 +1,5 @@
 <?php
-// define('DOMAIN_URL', 'https://nom_domain.com/'); 
-// define('evideo','../media/video/');
-// define('ephoto','../media/photo/');
-// $logo = '../media/logo/';
-// define('ecrousel','../media/carousel/');
-// define('icons','../media/icons/');
-// define('background','../media/background/');
+
 ?>
 
 <!DOCTYPE html>
@@ -54,7 +48,7 @@
 	<link rel='stylesheet' type='text/css' media='screen' href='css/expertise.css'>
 	<link rel='stylesheet' type='text/css' media='screen' href='../css/expertise.css'>
 	<link rel='stylesheet' type='text/css' media='screen' href='cssc/formulaire_recrutement.css'>
-	<link rel='stylesheet' type='text/css' media='screen' href='../cssc/formulaire_recrutement.css'>
+	<link rel='stylesheet' type='text/css' media='screen' href='../css/formulaire_recrutement.css'>
 	<link rel='stylesheet' type='text/css' media='screen' href='css/innovation.css'>
 	<link rel='stylesheet' type='text/css' media='screen' href='../css/innovation.css'>
 	<link rel='stylesheet' type='text/css' media='screen' href='css/recrutement.css'>
@@ -65,7 +59,7 @@
 	<link rel='stylesheet' type='text/css' media='screen' href='css/secteur.css'>
 	<link rel='stylesheet' type='text/css' media='screen' href='css/footer.css'>
 	<link rel='stylesheet' type='text/css' media='screen' href='../css/footer.css'>
-	<link rel="shortcut icon" href=<?= icons?? icons2 . 'favico.ico' ?> alt="logo wcg" />
+	<link rel="shortcut icon" href=<?= icons. 'favico.ico' ?> alt="logo wcg" />
 	<title><?= $titlePage ?? "World Corp Group" ?></title>
 </head>
 
