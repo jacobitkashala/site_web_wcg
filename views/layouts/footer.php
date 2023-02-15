@@ -1,4 +1,5 @@
 <?php
+
 use App\MODEL\LogoFooter;
 use App\Connection;
 
@@ -8,7 +9,7 @@ $query9 = $pdo->query("SELECT sous_rubrique.SRU_ID, media.MED_RESSOURCE, sous_ru
 $dataLogoFooter = $query9->fetchAll(PDO::FETCH_CLASS, LogoFooter::class);
 
 // echo '<pre>';
-// echo print_r($dataLogoFooter);
+// echo print_r($newPathIcons);
 // echo '<pre>';
 ?>
 
@@ -38,24 +39,12 @@ $dataLogoFooter = $query9->fetchAll(PDO::FETCH_CLASS, LogoFooter::class);
 		</div>
 		<div class="content-icone">
 			<div class="content-icone-item">
-				<?php foreach ($dataLogoFooter as $item) :?>
-				<div class="content-icon"><a href="#"><img src="<?= icons.$item->getNameRessource() ?>" alt="logo" srcset=""></a></div>
+				<?php foreach ($dataLogoFooter as $item) : ?>
+					<div class="content-icon"><a href="#"><img src="<?= $newPathIcons . $item->getNameRessource() ?>" alt="logo" srcset=""></a></div>
 				<?php endforeach ?>
-				<!-- <div class="content-icon"><a href="#"><img src="<?= icons.'appel.png'?>" alt="logo" srcset=""></a>
-				</div>
-				<div class="content-icon"><a href="#"><img src="<?= icons.'face.png'?>" alt="logo" srcset=""></a>
-				</div>
-				<div class="content-icon"><a href="#"><img src="<?= icons.'lindin.png'?>" alt="logo" srcset=""></a>
-				</div>
-				<div class="content-icon"><a href="#"><img src="<?= icons.'mail.png'?>" alt="logo" srcset=""></a>
-				</div>
-				<div class="content-icon"><a href="#"><img src="<?= icons.'youtube.png'?>"alt="logo" srcset=""></a></div>
-				<div class="content-icon"><a href="#"><img src="<?= icons.'maison_bleu.png'?>" alt="logo" srcset=""></a></div>
-				<div class="content-icon"><a href="#"><img src="<?= icons.'twitter.png'?>" alt="logo" srcset=""></a></div>
-				<div class="content-icon"><a href="#"><img src="<?= icons.'Insta.png'?>" alt="logo" srcset=""></a> -->
-				</div>
 			</div>
 		</div>
+	</div>
 
 	</div>
 </footer>

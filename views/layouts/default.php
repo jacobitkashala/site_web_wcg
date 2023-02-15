@@ -1,17 +1,19 @@
 <?php
 $newPathCss = pathCss;
-$newIcons = icons;
+$newPathIcons = icons;
 
 if ($_SERVER['REQUEST_URI'] != '/') {
-	$newPathCss = "." . $newPathCss;
-	$newIcons = "." . $newIcons;
+	$newPathCss = ".".pathCss;
+	$newPathIcons = "." . icons;
 }
-// ../media/icons/favico.ico
+//"../css/header.css" content
+//../public/css
+// ./css/header.css racine
+//./pulic/media
 ?>
 
 <!DOCTYPE html>
 <html>
-
 <head>
 	<meta charset='utf-8'>
 	<meta name="description" content=<?= $descritionPage ?? " " ?> />
@@ -41,7 +43,7 @@ if ($_SERVER['REQUEST_URI'] != '/') {
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 
-	<link rel='stylesheet' type='text/css' media='screen' href="<?= $newPathCss . "/header.css" ?>">
+	<link rel='stylesheet' type='text/css' media='screen' href="<?= $newPathCss . "header.css" ?>">
 	<link rel='stylesheet' type='text/css' media='screen' href='css/util.css'>
 	<link rel='stylesheet' type='text/css' media='screen' href='../css/util.css'>
 	<link rel='stylesheet' type='text/css' media='screen' href='css/home.css'>
@@ -52,7 +54,7 @@ if ($_SERVER['REQUEST_URI'] != '/') {
 	<link rel='stylesheet' type='text/css' media='screen' href='../css/detail_recrutement.css'>
 	<link rel='stylesheet' type='text/css' media='screen' href='css/expertise.css'>
 	<link rel='stylesheet' type='text/css' media='screen' href='../css/expertise.css'>
-	<link rel='stylesheet' type='text/css' media='screen' href='cssc/formulaire_recrutement.css'>
+	<link rel='stylesheet' type='text/css' media='screen' href='css/formulaire_recrutement.css'>
 	<link rel='stylesheet' type='text/css' media='screen' href='../css/formulaire_recrutement.css'>
 	<link rel='stylesheet' type='text/css' media='screen' href='css/innovation.css'>
 	<link rel='stylesheet' type='text/css' media='screen' href='../css/innovation.css'>
@@ -64,7 +66,7 @@ if ($_SERVER['REQUEST_URI'] != '/') {
 	<link rel='stylesheet' type='text/css' media='screen' href='css/secteur.css'>
 	<link rel='stylesheet' type='text/css' media='screen' href='css/footer.css'>
 	<link rel='stylesheet' type='text/css' media='screen' href='../css/footer.css'>
-	<link rel="shortcut icon" href="<?= $newIcons . 'favico.ico' ?>" alt="logo wcg" />
+	<link rel="shortcut icon" href="<?= $newPathIcons . 'favico.ico' ?>" alt="logo wcg" />
 	<title><?= $titlePage ?? "World Corp Group" ?></title>
 </head>
 
@@ -73,5 +75,4 @@ if ($_SERVER['REQUEST_URI'] != '/') {
 	<?= $contentPage ?>
 	<?php require  'footer.php' ?>
 </body>
-
 </html>

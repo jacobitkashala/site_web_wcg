@@ -29,26 +29,26 @@ class Router
         return $this;
         // return $route; // On retourne la route pour "enchainer" les méthodes
     }
-   
+
     public function url(string $name, array $params = [])
     {
-        return $this->router->generate($name,$params);
+        return $this->router->generate($name, $params);
     }
 
     public function run(): self
     {
         $match = $this->router->match();
-        $params =$match['params'];
+        $params = $match['params'];
         // $view = "{$match['target']}";
         $view = $match['target'];
         $router = $this;
         ob_start();
-        //  echo '<pre>';
-        //  var_dump($this->viewPath . $view);
-        //  echo '</pre>';
-        require $this->viewPath.DIRECTORY_SEPARATOR. $view;
+        // echo '<pre>';
+        // var_dump($this->viewPath . $view);
+        // echo '</pre>';
+        require $this->viewPath . DIRECTORY_SEPARATOR . $view;
         $contentPage = ob_get_clean();
-        require $this->viewPath.DIRECTORY_SEPARATOR.'/layouts/default.php';
+        require $this->viewPath . DIRECTORY_SEPARATOR . '/layouts/default.php';
 
         return $this;
     }
