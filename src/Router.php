@@ -29,12 +29,7 @@ class Router
         return $this;
         // return $route; // On retourne la route pour "enchainer" les méthodes
     }
-    public function post($path, $callable)
-    {
-        $route = new Route($path, $callable);
-        $this->routes["POST"][] = $route;
-        return $route; // On retourne la route pour "enchainer" les méthodes
-    }
+   
     public function url(string $name, array $params = [])
     {
         return $this->router->generate($name,$params);

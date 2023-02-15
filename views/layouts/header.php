@@ -7,9 +7,14 @@ use App\Connection;
 
 $pdo = Connection::getPDO();
 $query = $pdo->query('SELECT  template.TPL_LIBELLE,r.a_sous_rubrique,r.url_page,r.RUB_ID, r.RUB_ICONE_ID, r.RUB_LIBELLE,r.RUB_BACKGROUND,r.RUB_FONT_NAME,r.RUB_FONT_SIZE,r.RUB_FONT_COLOR, m.med_ressource FROM rubrique r, media m, site s ,template WHERE m.med_id = r.rub_icone_id and r.SIT_ID = s.SIT_ID and s.SIT_ID = 1 and template.TPL_ID = r.TPL_ID ORDER BY r.RUB_ORDRE');
-// $menus = $query->fetchAll(PDO::FETCH_OBJ);
 $menus = $query->fetchAll(PDO::FETCH_CLASS, Menu::class);
 
+$newPathLogo= logo;
+$newPathIcons= icons;
+if ($_SERVER['REQUEST_URI'] != '/') {
+	$newPathLogo = "." .$newPathLogo;
+	$newPathIcons = ".".$newPathIcons;
+}
 
 // echo '<pre>';
 // echo print_r(dirname(__DIR__));
@@ -21,26 +26,15 @@ $menus = $query->fetchAll(PDO::FETCH_CLASS, Menu::class);
 <?php endforeach ?> -->
 <header class="header_container">
 	<div class="header_image">
-		<?php if ($_SERVER['REQUEST_URI'] == '/') {
-		?>
-			<img src=<?= logo . 'logo_wcg.png' ?> alt="logo wcg" />
-		<?php
-		}
-		?>
-		<img src=<?= "." . logo . 'logo_wcg.png' ?> alt="logo wcg" />
+		
+		<img src=<?= $newPathLogo . 'logo_wcg.png' ?> alt="logo wcg" />
 	</div>
 	<nav class="header_nav_container">
 		<ul class="link-navbar bg-color-shadox" id="main-menu">
 			<?php foreach ($menus as $itemMenu) : ?>
 				<li class="menu  <?php echo $itemMenu->getMenuBackgroud() . " " . $itemMenu->getMenuFontColor() ?> link  <?php echo ($itemMenu->getIsSubMenu() == 1 ? "link-menu-grid overMenu" : "") ?>">
 					<a href="<?= $router->url($itemMenu->getMenuTemplate(), array('id' => $itemMenu->getMenuId(), 'slug' => $itemMenu->getMenuSlug())) ?>">
-						<?php if ($_SERVER['REQUEST_URI'] == '/') {
-						?>
-							<img class="logo-menu" src="<?php echo icons . $itemMenu->getMenuNameIcone(); ?>" alt="logo" />
-						<?php
-						}
-						?>
-						<img class="logo-menu" src="<?php echo "." . icons . $itemMenu->getMenuNameIcone(); ?>" alt="logo" />
+						<img class="logo-menu" src="<?=  $newPathIcons.$itemMenu->getMenuNameIcone(); ?>" alt="logo" />
 						<?php echo $itemMenu->getMenuName()  ?>
 					</a>
 					<?php if ($itemMenu->getIsSubMenu() == 1) {

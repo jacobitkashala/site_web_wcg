@@ -5,8 +5,9 @@ namespace App\Model;
 class LittleContent
 {
 	private $id;
-	private $title;
-	private $description;
+	private $titre;
+	private $contenu;
+	private $bgImage;
 
 	public function getLittId()
 	{
@@ -14,10 +15,15 @@ class LittleContent
 	}
 	public function getLittTitle()
 	{
-		return $this->title;
+		return $this->titre;
 	}
-	public function getLittDescriotion()
+	public function getLittContenu()
 	{
-		return $this->description;
+		return $this->contenu;
+	}
+
+	public function getBgImage()
+	{
+		return $this->bgImage;
 	}
 }

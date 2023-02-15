@@ -1,56 +1,46 @@
 <?php
+
+use App\MODEL\LittleContent;
+use App\Connection;
+
+$pdo = Connection::getPDO();
+
 $titlePage = 'Little content';
 $descriptionPage = 'World Corp Group est une société de consulting et de développement de projets innovants, spécialiste en solutions SMAC (Social, Mobile, Analytics, Cloud)';
 
-$idMenu=$params['id'];
-$idParent=$params['slug'];
+$idMenu = intval($params['id']);
+$idParent = intval($params['slug']);
 
-if($idParent === 0){
+$queryLittleContent = "";
 
+if ($idParent === 0) {
+	$queryLittleContent = $pdo->query("SELECT rubrique.SIT_ID as id, media.MED_RESSOURCE as bgImage, rubrique.RUB_LIBELLE as libelle,rubrique.RUB_TITRE as titre ,rubrique.RUB_CONTENU  as contenu FROM rubrique INNER JOIN media ON media.MED_ID = rubrique.RUB_IMG_ID WHERE rubrique.RUB_ID = " . $idMenu . " AND rubrique.SIT_ID = 1 AND rubrique.STA_ID = 1 LIMIT 1");
+	// echo  $idParent;
+	// echo  $idMenu;
+	// $queryLittleContent = $pdo->query("SELECT rubrique.RUB_LIBELLE,rubrique.RUB_TITRE ,rubrique.RUB_CONTENU FROM rubrique INNER JOIN media ON media.MED_ID = rubrique.RUB_IMG_ID WHERE rubrique.RUB_ID = ".$idMenu." AND rubrique.SIT_ID = 1 AND rubrique.STA_ID = 1 LIMIT 1");	
 }
 
-// $pdo =Connection::getPDO(); 
-// $carouselSlq="SELECT media.MED_ID, media.MED_RESSOURCE ,sous_rubrique.SRU_ORDRE FROM  media Inner JOIN sous_rubrique ON sous_rubrique.SRU_IMG_ID = media.MED_ID Inner JOIN site ON sous_rubrique.SIT_ID = site.SIT_ID WHERE  sous_rubrique.SRU_UNE = 1 AND site.SIT_ID=1";
-// $query = $pdo->query($carouselSlq);
-// $carousels = $query->fetchAll(PDO::FETCH_CLASS, Carousel::class);
-// echo '<pre>';
-// echo print_r($carousels);
-// echo '<pre>';
+$resultquery = $queryLittleContent->fetchAll(PDO::FETCH_CLASS, LittleContent::class);
 
 echo '<style>
 .container_content_expertise{
  
-   background-image: url('.ephoto.'/expertises_fond.png);
+//    background: #000 ;
+   background-image: url(.' . ephoto . '/expertises_fond.png) ;
+background-repeat: no-repeat;
 }
 </style>';
 
-//  echo '<pre>';
-//  echo print_r(dirname(__DIR__));
-//  echo '<pre>'
+// echo '<pre>';
+// echo print_r($resultquery);
+// echo '<pre>'
 ?>
 
 
 <section class="container_content_expertise">
-	<h4>CONSULTING</h4>
-	<p>World Corp Group accompagne ses clients dans leur transformation technique et/ou dans l’optimisation de
-		leur stratégie technique très en amont en tirant parti de dernières innovations technologiques et en
-		tenant compte d’impacts au niveau de leur système d’information.
-	</p>
+	<h4> <?php echo $resultquery[0]->getLittTitle() ?></h4>
 	<p>
-		Notre savoir-faire se décline à travers une gamme de prestations de services pour accompagner nos
-		clients et partenaires : <br>
-		<br>
-		- Audit :<br>
-		- Etude de faisabilité :<br>
-		nouveaux usages, prototypes et benchmark, études de marché, accompagnement au changement,
-		recommandations stratégiques, optimisation, etc. ;<br>
-		<br>
-		- AMOA et conception :<br>
-		identification et conception des services, recommandations technologiques (architecture, optimisation,
-		etc.), analyse de l’existant, cadrage de besoins, rédaction de cahiers de charges, etc. ;<br>
-		<br>
-		-Implémentation des prototypes (POC) ;<br>
-		-Pilotage des projets complexes de bout en bout ;<br>
-		-Etc.<br>
+		<?php echo $resultquery[0]->getLittContenu() ?>
 	</p>
+
 </section>
