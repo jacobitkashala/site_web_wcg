@@ -3,7 +3,7 @@ $newPathCss = pathCss;
 $newPathIcons = icons;
 
 if ($_SERVER['REQUEST_URI'] != '/') {
-	$newPathCss = ".".pathCss;
+	$newPathCss = "." . pathCss;
 	$newPathIcons = "." . icons;
 }
 //"../css/header.css" content
@@ -14,6 +14,7 @@ if ($_SERVER['REQUEST_URI'] != '/') {
 
 <!DOCTYPE html>
 <html>
+
 <head>
 	<meta charset='utf-8'>
 	<meta name="description" content=<?= $descritionPage ?? " " ?> />
@@ -72,5 +73,12 @@ if ($_SERVER['REQUEST_URI'] != '/') {
 	<?php require  'header.php' ?>
 	<?= $contentPage ?>
 	<?php require  'footer.php' ?>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+	<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+	<script src='js/main.js'></script>
 </body>
+
 </html>

@@ -84,7 +84,14 @@ html{
     list-style: none;
 	width: 100%;
 }
-/* */
+
+.link-navbar-sous-menu {
+    list-style: none;
+	width: 25%;
+}
+li{
+	list-style: none;
+}
 
 .link-navbar .link a{
     text-decoration: none;
@@ -96,23 +103,22 @@ html{
  	position: absolute;
     width: 100%;
 	display: none;
-    padding: 20px 0px;
+    padding: 29px 0px;
+	margin-top: 11px;
 	left:0;
 }
-.disable-menu{
-	display: none;
-	transition: all 0.3s ease-in;
-   
-}
 
+/* .link  :hover{
+	transform: scale(1);
+	font-weight: bold;
+} */
 .menu:hover .sous-menu{
 	display: block;
 	transition: all 0.3s ease-in;
 }
-.menu:active .sous-menu{
-	display: block;
-	transition: all 0.3s ease-in;
-  }
+/* div.container-sous-menu-grid{
+
+} */
 
 
 .container-sous-menu-grid{
@@ -121,7 +127,10 @@ html{
     align-items: center;
     text-align: center;
 }
-
+.element-sous-menu{
+	display: flex;
+	justify-content: flex-start;
+}
 .logo-menu{
 	width: 30px;
 	height: 30px;

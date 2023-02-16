@@ -9,13 +9,13 @@ $pdo = Connection::getPDO();
 $query = $pdo->query('SELECT  template.TPL_LIBELLE,r.a_sous_rubrique,r.url_page,r.RUB_ID, r.RUB_ICONE_ID, r.RUB_LIBELLE,r.RUB_BACKGROUND,r.RUB_FONT_NAME,r.RUB_FONT_SIZE,r.RUB_FONT_COLOR, m.med_ressource FROM rubrique r, media m, site s ,template WHERE m.med_id = r.rub_icone_id and r.SIT_ID = s.SIT_ID and s.SIT_ID = 1 and template.TPL_ID = r.TPL_ID ORDER BY r.RUB_ORDRE');
 $menus = $query->fetchAll(PDO::FETCH_CLASS, Menu::class);
 
-$newPathLogo= logo;
-$newPathIcons= icons;
+$newPathLogo = logo;
+$newPathIcons = icons;
 // $newPathEphoto = ephoto;
 
 if ($_SERVER['REQUEST_URI'] != '/') {
-	$newPathLogo = "." .$newPathLogo;
-	$newPathIcons = ".".$newPathIcons;
+	$newPathLogo = "." . $newPathLogo;
+	$newPathIcons = "." . $newPathIcons;
 	// $newPathEphoto  = ".".$newPathEphoto;
 
 
@@ -35,7 +35,7 @@ if ($_SERVER['REQUEST_URI'] != '/') {
 			<?php foreach ($menus as $itemMenu) : ?>
 				<li class="menu  <?php echo $itemMenu->getMenuBackgroud() . " " . $itemMenu->getMenuFontColor() ?> link  <?php echo ($itemMenu->getIsSubMenu() == 1 ? "link-menu-grid overMenu" : "") ?>">
 					<a href="<?= $router->url($itemMenu->getMenuTemplate(), array('id' => $itemMenu->getMenuId(), 'slug' => $itemMenu->getMenuSlug())) ?>">
-						<img class="logo-menu" src="<?=  $newPathIcons.$itemMenu->getMenuNameIcone(); ?>" alt="logo" />
+						<img class="logo-menu" src="<?= $newPathIcons . $itemMenu->getMenuNameIcone(); ?>" alt="logo" />
 						<?= $itemMenu->getMenuName()  ?>
 					</a>
 					<?php if ($itemMenu->getIsSubMenu() == 1) {
@@ -46,9 +46,10 @@ if ($_SERVER['REQUEST_URI'] != '/') {
 						<i class="fa-solid fa-plus icon-cog" id="btn-plus-sous-menu"></i>
 						<div class="sous-menu <?php echo $itemMenu->getMenuBackgroud() ?> ">
 							<div class="container-sous-menu-grid">
-								<ul class="link-navbar">
+								<ul class="element-sous-menu link-navbar">
 									<?php foreach ($subMenus as $itemSousMenu) : ?>
-										<li class="link <?php echo $itemMenu->getMenuFontColor() ?>">
+										<li class="  <?= $itemMenu->getMenuFontColor() ?>">
+											<!-- <li class="link <?= $itemMenu->getMenuFontColor() ?>"> -->
 											<a class="" href="<?= $router->url($itemMenu->getMenuTemplate(), array('id' => $itemSousMenu->getSubMenuId(), 'slug' => $itemMenu->getMenuId())) ?>">
 												<?php echo $itemSousMenu->getSubMenuTitle(); ?>
 											</a>
