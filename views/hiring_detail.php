@@ -95,7 +95,7 @@ $resultQueryHiring = $query2->fetchAll(PDO::FETCH_CLASS, HiringContent::class);
 				</div>
 				<div>
 					<h4>Postuler en ligne</h4>
-					<div class="box_info"> <a class="btn" href="<?= $router->url($itemHiring->getTemplate(), array('id' => $itemHiring->getId(), 'slug' => 0)) ?>"> Postuler</a>
+					<div class="box_info"> <a class="btn" href="<?= $router->url("form", array('id' => 1, 'slug' => 0)) ?>"> Postuler</a>
 				</div>
 			</div>
 		</div>
