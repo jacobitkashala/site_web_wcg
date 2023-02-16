@@ -76,9 +76,7 @@ html{
 	 
 }
 .link{
-	padding: 2px;
 	cursor: pointer;
-	padding-bottom: 9px;
 }
 .link-navbar .link{
     list-style: none;
@@ -96,9 +94,12 @@ li{
 .link-navbar .link a{
     text-decoration: none;
     padding: 10px 15px;
+	
     font-size: 18px;
 }
-
+ul .menu:nth-child(0n+1){
+	width: 20%;
+}
 .link-menu-grid .sous-menu{
  	position: absolute;
     width: 100%;
