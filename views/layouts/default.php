@@ -1,10 +1,12 @@
 <?php
 $newPathCss = pathCss;
+$newPathJs = pathJs;
 $newPathIcons = icons;
 
 if ($_SERVER['REQUEST_URI'] != '/') {
 	$newPathCss = "." . pathCss;
 	$newPathIcons = "." . icons;
+	$newPathJs = "." . pathJs;
 }
 //"../css/header.css" content
 //../public/css
@@ -78,7 +80,7 @@ if ($_SERVER['REQUEST_URI'] != '/') {
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
-	<script src='js/main.js'></script>
+	<script src='<?= $newPathJs . "main.js" ?>'></script>
 </body>
 
 </html>

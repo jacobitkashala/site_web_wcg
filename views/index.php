@@ -52,7 +52,6 @@ $homeServiceMiseEnAvant = $query4->fetchAll(PDO::FETCH_CLASS, SectionTwoHome::cl
 	</section>
 	<div class="container-home">
 		<section class="row">
-			<!-- <div class="col-xs-1 col-md-3  content-image"> -->
 			<div class="col-2  ">
 				<img class="image-illustration" src="<?= ephoto . "image1.png" ?>" alt="illustration lampe" srcset="">
 			</div>
@@ -63,11 +62,9 @@ $homeServiceMiseEnAvant = $query4->fetchAll(PDO::FETCH_CLASS, SectionTwoHome::cl
 				</p>
 			</div>
 			<div class="col-4 ">
-				<!-- <div class="container-grid-video"> -->
 				<div>
-					<video class="w-video-main" src="<?php echo evideo . $homeActualite[0]->getRessource() ?>" controls></video>
+					<video class="w-video-main" src="<?= evideo . $homeActualite[0]->getRessource() ?>" controls></video>
 				</div>
-				<!-- </div> -->
 			</div>
 			<div class="col-2">
 				<video class="w-video-second" src="<?php echo evideo . $homeActualite[0]->getRessource() ?>" controls></video>
