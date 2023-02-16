@@ -16,13 +16,13 @@ $queryLittleContent = "";
 
 if ($idParent === 0) {
 	$queryLittleContent = $pdo->query("SELECT rubrique.SIT_ID as id, media.MED_RESSOURCE as bgImage, rubrique.RUB_LIBELLE as libelle,rubrique.RUB_TITRE as titre ,rubrique.RUB_CONTENU  as contenu FROM rubrique INNER JOIN media ON media.MED_ID = rubrique.RUB_IMG_ID WHERE rubrique.RUB_ID = " . $idMenu . " AND rubrique.SIT_ID = 1 AND rubrique.STA_ID = 1 LIMIT 1");
-	// echo  $idParent;
-	// echo  $idMenu;
-	// $queryLittleContent = $pdo->query("SELECT rubrique.RUB_LIBELLE,rubrique.RUB_TITRE ,rubrique.RUB_CONTENU FROM rubrique INNER JOIN media ON media.MED_ID = rubrique.RUB_IMG_ID WHERE rubrique.RUB_ID = ".$idMenu." AND rubrique.SIT_ID = 1 AND rubrique.STA_ID = 1 LIMIT 1");	
+
+}else if($idParent > 0){
+	$queryLittleContent = $pdo->query("SELECT media.MED_RESSOURCE as bgImage, sous_rubrique.SRU_LIBELLE as libelle,sous_rubrique.SRU_TITRE as titre ,sous_rubrique.SRU_CONTENU  as contenu FROM sous_rubrique INNER JOIN media ON media.MED_ID = sous_rubrique.SRU_IMG_ID WHERE sous_rubrique.RUB_ID = " . $idParent . " AND sous_rubrique.SRU_ID = ". $idMenu." AND sous_rubrique.STA_ID = 1 LIMIT 1");	
+
 }
 
 $resultquery = $queryLittleContent->fetchAll(PDO::FETCH_CLASS, LittleContent::class);
-$color = "#000";
 
 $newPathEphoto = ephoto;
 

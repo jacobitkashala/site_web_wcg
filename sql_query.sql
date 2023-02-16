@@ -73,4 +73,9 @@
 
 -- SELECT rubrique.RUB_LIBELLE,rubrique.RUB_TITRE ,rubrique.RUB_CONTENU FROM rubrique INNER JOIN media ON media.MED_ID = rubrique.RUB_IMG_ID WHERE rubrique.RUB_ID =  AND rubrique.SIT_ID = 1 AND rubrique.STA_ID = 1 LIMIT 1;
 
-SELECT rubrique.SIT_ID as id, media.MED_RESSOURCE as bgImage, rubrique.RUB_LIBELLE as libelle,rubrique.RUB_TITRE as titre ,rubrique.RUB_CONTENU  as contenu FROM rubrique INNER JOIN media ON media.MED_ID = rubrique.RUB_IMG_ID WHERE rubrique.RUB_ID = 2 AND rubrique.SIT_ID = 1 AND rubrique.STA_ID = 1 LIMIT 1;
+-- SELECT rubrique.SIT_ID as id, media.MED_RESSOURCE as bgImage, rubrique.RUB_LIBELLE as libelle,rubrique.RUB_TITRE as titre ,rubrique.RUB_CONTENU  as contenu FROM rubrique INNER JOIN media ON media.MED_ID = rubrique.RUB_IMG_ID WHERE rubrique.RUB_ID = 2 AND rubrique.SIT_ID = 1 AND rubrique.STA_ID = 1 LIMIT 1;
+
+
+-- Select sous_rubrique.SRU_LIBELLE,media.MED_RESSOURCE, sous_rubrique.SRU_TITRE, sous_rubrique.SRU_CONTENU FROM sous_rubrique INNER JOIN media ON  media.MED_RESSOURCE = sous_rubrique.SRU_IMG_ID WHERE  sous_rubrique.RUB_ID = 1 AND sous_rubrique.SRU_ID = 1;
+
+Select sous_rubrique.SRU_LIBELLE, sous_rubrique.SRU_TITRE, media.MED_RESSOURCE,sous_rubrique.SRU_CONTENU FROM sous_rubrique INNER JOIN media ON media.MED_ID = sous_rubrique.SRU_IMG_ID WHERE  sous_rubrique.RUB_ID = 1 AND sous_rubrique.SRU_ID = 1;
