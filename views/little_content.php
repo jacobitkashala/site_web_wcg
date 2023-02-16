@@ -39,6 +39,10 @@ background-repeat: no-repeat;
 </style>
  ";
 
+//  echo '<pre>';
+//  echo print_r($params);
+//  echo '<pre>';
+//  exit();
 ?>
 <section class="container_content_expertise">
 	<h4> <?php echo $resultquery[0]->getLittTitle() ?></h4>

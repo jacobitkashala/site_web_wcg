@@ -11,9 +11,14 @@ $menus = $query->fetchAll(PDO::FETCH_CLASS, Menu::class);
 
 $newPathLogo= logo;
 $newPathIcons= icons;
+// $newPathEphoto = ephoto;
+
 if ($_SERVER['REQUEST_URI'] != '/') {
 	$newPathLogo = "." .$newPathLogo;
 	$newPathIcons = ".".$newPathIcons;
+	// $newPathEphoto  = ".".$newPathEphoto;
+
+
 }
 
 // echo '<pre>';
