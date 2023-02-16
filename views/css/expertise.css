@@ -51,9 +51,9 @@ div.active{
 }
 
 .container_content_expertise{
-   height: 866px;
-   padding:10rem;
-   /* background-image: url(../images/image_consult.png); */
+   object-fit: cover;
+   width: 100%;
+
 }
 .container_content_expertise h4{
 	font-style: normal;

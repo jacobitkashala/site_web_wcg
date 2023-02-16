@@ -44,8 +44,8 @@ if ($_SERVER['REQUEST_URI'] != '/') {
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 
 	<link rel='stylesheet' type='text/css' media='screen' href="<?= $newPathCss . "header.css" ?>">
-	<link rel='stylesheet' type='text/css' media='screen' href='css/util.css'>
-	<link rel='stylesheet' type='text/css' media='screen' href='../css/util.css'>
+	<link rel='stylesheet' type='text/css' media='screen' href='<?= $newPathCss . "util.css" ?>'>
+	<!-- <link rel='stylesheet' type='text/css' media='screen' href='../css/util.css'> -->
 	<link rel='stylesheet' type='text/css' media='screen' href='css/home.css'>
 	<link rel='stylesheet' type='text/css' media='screen' href='../css/home.css'>
 	<link rel='stylesheet' type='text/css' media='screen' href='css/actualite.css'>
@@ -62,8 +62,8 @@ if ($_SERVER['REQUEST_URI'] != '/') {
 	<link rel='stylesheet' type='text/css' media='screen' href='../css/recrutement.css'>
 	<link rel='stylesheet' type='text/css' media='screen' href='css/ressource.css'>
 	<link rel='stylesheet' type='text/css' media='screen' href='../css/ressource.css'>
-	<link rel='stylesheet' type='text/css' media='screen' href='../css/secteur.css'>
-	<link rel='stylesheet' type='text/css' media='screen' href='css/secteur.css'>
+	<!-- <link rel='stylesheet' type='text/css' media='screen' href='../css/secteur.css'> -->
+	<!-- <link rel='stylesheet' type='text/css' media='screen' href='css/secteur.css'> -->
 	<link rel='stylesheet' type='text/css' media='screen' href='css/footer.css'>
 	<link rel='stylesheet' type='text/css' media='screen' href='../css/footer.css'>
 	<link rel="shortcut icon" href="<?= $newPathIcons . 'favico.ico' ?>" alt="logo wcg" />
