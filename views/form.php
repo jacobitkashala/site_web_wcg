@@ -38,8 +38,8 @@ $descriptionPage = 'World Corp Group est une société de consulting et de déve
 	</section>
 	<section class="container-form my-5">
 		<h4 class="text-center">Merci de remplir les champs ci-dessous</h4>
-		<div class="row d-flex justify-content-center">
-			<div class="form-card p-5 col-4 card ">
+		<div class="d-flex justify-content-center ">
+			<div class="form-card p-5 col-5 card ">
 				<form class="form">
 					<div class="mb-3">
 						<!-- <label for="exampleInputEmail1" class="form-label">Email address</label> -->
@@ -65,20 +65,20 @@ $descriptionPage = 'World Corp Group est une société de consulting et de déve
 						</select>
 					</div>
 					<div class="form-check ">
-						<div class="row d-flex align-items-start">
-							<div class="col-3">
+						<div class="row d-flex align-items-end">
+							<div class="col-2">
 								<label class="form-check-label" for="exampleRadios1">
 									Sex
 								</label>
 							</div>
 
-							<div class="col-3">
+							<div class="col-2">
 								<input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
 								<label class="form-check-label" for="exampleRadios1">
 									F
 								</label>
 							</div>
-							<div class="col-3">
+							<div class="col-2">
 								<input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
 								<label class="form-check-label" for="exampleRadios1">
 									M
@@ -89,17 +89,11 @@ $descriptionPage = 'World Corp Group est une société de consulting et de déve
 					<div class="form-group">
 						<div class="mb-3">
 							<textarea class="form-control" id="exampleFormControlTextarea3" rows="7"></textarea>
-							<!-- <label for="telephone" class="form-label">votre numero de téléphone</label> -->
-							<!-- <input type="text" placeholder="Votre etat civil"  class="form-control" > -->
 						</div>
 						<div class="custom-file mb-3">
 							<input type="file" class="custom-file-input" id="inputGroupFile01">
 							<label class="custom-file-label" for="inputGroupFile01">Votre cv en format PDF</label>
 						</div>
-						<!-- <div class="mb-3 form-check">
-				<input type="checkbox" class="form-check-input" id="exampleCheck1">
-				<label class="form-check-label" for="exampleCheck1">Check me out</label>
-			</div> -->
 						<button type="submit" class="btn btn-primary">Je postule </button>
 				</form>
 			</div>
