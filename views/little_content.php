@@ -45,9 +45,8 @@ background-repeat: no-repeat;
 //  exit();
 ?>
 <section class="container_content_expertise">
-	<h4> <?php echo $resultquery[0]->getLittTitle() ?></h4>
+	<h4> <?=  $resultquery[0]->getLittTitle() ?></h4>
 	<p>
-		<?php echo $resultquery[0]->getLittContenu() ?>
+		<?= $resultquery[0]->getLittContenu() ?>
 	</p>
-
 </section>

@@ -62,8 +62,6 @@ if ($_SERVER['REQUEST_URI'] != '/') {
 	<link rel='stylesheet' type='text/css' media='screen' href='../css/recrutement.css'>
 	<link rel='stylesheet' type='text/css' media='screen' href='css/ressource.css'>
 	<link rel='stylesheet' type='text/css' media='screen' href='../css/ressource.css'>
-	<!-- <link rel='stylesheet' type='text/css' media='screen' href='../css/secteur.css'> -->
-	<!-- <link rel='stylesheet' type='text/css' media='screen' href='css/secteur.css'> -->
 	<link rel='stylesheet' type='text/css' media='screen' href='css/footer.css'>
 	<link rel='stylesheet' type='text/css' media='screen' href='../css/footer.css'>
 	<link rel="shortcut icon" href="<?= $newPathIcons . 'favico.ico' ?>" alt="logo wcg" />
