@@ -48,4 +48,12 @@ class Text{
         // we are done...
         return $data;
     }
+    function is_valide_mail($email){
+        if (filter_var($email, FILTER_VALIDATE_EMAIL)) {
+           return true;
+         }
+         else{
+            return false;
+         }
+    }
 }

@@ -44,6 +44,8 @@ class Router
     public function run(): self
     {
         $match = $this->router->match();
+        if (is_array($match)) {
+
         $params = $match['params'];
         // $view = "{$match['target']}";
         $view = $match['target'];
@@ -54,7 +56,13 @@ class Router
         // echo '</pre>';
         require $this->viewPath . DIRECTORY_SEPARATOR . $view;
         $contentPage = ob_get_clean();
+       
         require $this->viewPath . DIRECTORY_SEPARATOR . 'layouts/default.php';
+            
+        }else{
+        require $this->viewPath . DIRECTORY_SEPARATOR . 'layouts/error.php';
+
+        }
 
         return $this;
     }
