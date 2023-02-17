@@ -11,27 +11,21 @@ $titlePage = 'Form';
 $descriptionPage = 'World Corp Group est une société de consulting et de développement de projets innovants, spécialiste en solutions SMAC (Social, Mobile, Analytics, Cloud)';
 
 $userSex = "F";
-$file_name;
-$file_type;
-$messageError = "";
-
-
+$file_name = "Bonjour";
+$file_type = "";
+$messageError = "";;
 if (!empty($_FILES)) {
-
-	$file_name = $_FILES['fichierCv']['name'];
-	$file_tmp_name = $_FILES['fichierCv']['tmp_name'];
-	$file_dest = "files/".$file_name;
+	$file_name = $_FILES['fichier']['name'];
+	$file_tmp_name = $_FILES['fichier']['tmp_name'];
+	$file_dest = "files/" . $file_name;
 	$file_extension = strrchr($file_name, ".");
 	$extensions_autorisees = array('.pdf', '.PDF');
 
-	if (in_array($file_extension, $extensions_autorisees)) {
-		// if(move_uploaded_file($file_tmp_name,$file_dest)){
-		// Fichier envoyé
-		// }
-	}else{
-		$messageError="Seuls les fichiers PDF sont autorisés";
+	if (!in_array($file_extension, $extensions_autorisees)) {
+
+		$messageError = "Seuls les fichiers PDF sont autorisés";
 	}
-	echo $file_type;
+	// echo "Bonjour";
 }
 
 if (isset($_GET['btonPostuler'])) {
@@ -67,12 +61,19 @@ if (isset($_GET['btonPostuler'])) {
 
 	if (empty($messageError)) {
 		$messageError = $userNote;
+		// if(move_uploaded_file($file_tmp_name,$file_dest)){
+		// Fichier envoyé
+		// }
 	}
 }
 
 // creer une  de type array  	
 // $messageError= "coll";
 // 
+// echo '<pre>';
+// echo print_r($_FILES);
+// echo '<pre>';
+echo $_FILES;
 ?>
 <main>
 	<section class="container_header_inovation">
@@ -114,7 +115,6 @@ if (isset($_GET['btonPostuler'])) {
 						</select>
 					</div>
 					<div class="form-check ">
-						<?= $userSex === "M" ? "true" : "false" ?>
 						<div class="row d-flex align-items-end">
 							<div class="col-2">
 								<label class="form-check-label" for="exampleRadios1">
@@ -141,8 +141,8 @@ if (isset($_GET['btonPostuler'])) {
 							<textarea value="<?= $userNote ?? "" ?>" value="" class="form-control" name="noteUser" rows="7"></textarea>
 						</div>
 						<div class="custom-file mb-3">
-							<input type="file" class="custom-file-input" name="fichierCv" id="inputGroupFile">
-							<label class="custom-file-label" for="inputGroupFile">Votre cv en format PDF</label>
+							<input type="file" class="custom-file-input" name="fichier" id="inputGroupFile">
+							<label class="custom-file-label" for="inputGroupFile"> <?= $file_name ?? "Votre cv en format pdf" ?> </label>
 						</div>
 						<button type="submit" name="btonPostuler" class="btn btn-primary">Je postule </button>
 				</form>
