@@ -1,31 +1,22 @@
 <?php
 // use App\MODEL\LittleContent;
 // use App\MODEL\HiringContent;
-// use App\Helpers\Text;
-use App\Connection;
+use App\Helpers\Text;
+// use App\Connection;
 
+$text= new Text;
 // $pdo = Connection::getPDO();
 
 $titlePage = 'Form';
 $descriptionPage = 'World Corp Group est une société de consulting et de développement de projets innovants, spécialiste en solutions SMAC (Social, Mobile, Analytics, Cloud)';
 
 
-// $idMenu = intval($params['id']);
-// $idParent = intval($params['slug']);
+if(isset($_POST['btonPostuler'])){
 
-// $queryLittleContent = "";
-// if ($idParent === 0) {
-// 	$queryLittleContent = $pdo->query("SELECT rubrique.SIT_ID as id, media.MED_RESSOURCE as bgImage, rubrique.RUB_LIBELLE as libelle,rubrique.RUB_TITRE as titre ,rubrique.RUB_CONTENU  as contenu FROM rubrique INNER JOIN media ON media.MED_ID = rubrique.RUB_IMG_ID WHERE rubrique.RUB_ID = " . $idMenu . " AND rubrique.SIT_ID = 1 AND rubrique.STA_ID = 1 LIMIT 1");
-// }
-// $resultquery = $queryLittleContent->fetchAll(PDO::FETCH_CLASS, LittleContent::class);
-// idMenu
+	// creer une  de type array  	
+	$messageError= "coll";
+}
 
-// $carouselSlq="SELECT media.MED_ID, media.MED_RESSOURCE ,sous_rubrique.SRU_ORDRE FROM  media Inner JOIN sous_rubrique ON sous_rubrique.SRU_IMG_ID = media.MED_ID Inner JOIN site ON sous_rubrique.SIT_ID = site.SIT_ID WHERE  sous_rubrique.SRU_UNE = 1 AND site.SIT_ID=1";
-// $query = $pdo->query($carouselSlq);
-// $carousels = $query->fetchAll(PDO::FETCH_CLASS, Carousel::class);
-// echo '<pre>';
-// echo print_r($resultQueryHiring);
-// echo '<pre>';
 ?>
 <main>
 	<section class="container_header_inovation">
@@ -39,8 +30,11 @@ $descriptionPage = 'World Corp Group est une société de consulting et de déve
 	<section class="container-form my-5">
 		<h4 class="text-center">Merci de remplir les champs ci-dessous</h4>
 		<div class="d-flex justify-content-center ">
+			<div>
+				<label class="label-danger"><?= $messageError?? " " ?></label>
+			</div>
 			<div class="form-card p-5 col-5 card ">
-				<form class="form">
+				<form method="post" enctype="multipart/form-data" class="form">
 					<div class="mb-3">
 						<!-- <label for="exampleInputEmail1" class="form-label">Email address</label> -->
 						<input placeholder="Votre nom complet" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
@@ -94,7 +88,7 @@ $descriptionPage = 'World Corp Group est une société de consulting et de déve
 							<input type="file" class="custom-file-input" id="inputGroupFile01">
 							<label class="custom-file-label" for="inputGroupFile01">Votre cv en format PDF</label>
 						</div>
-						<button type="submit" class="btn btn-primary">Je postule </button>
+						<button type="submit" name="btonPostuler" class="btn btn-primary">Je postule </button>
 				</form>
 			</div>
 

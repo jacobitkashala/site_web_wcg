@@ -9,7 +9,7 @@ require '../vendor/autoload.php';
  */
 $whoops = new \Whoops\Run;
 $whoops->pushHandler(new \Whoops\Handler\PrettyPageHandler);
-$whoops->register();  
+$whoops->register();
 
 // echo dirname(__DIR__);
 $router = new App\Router(dirname(__DIR__) . '/views');
@@ -20,5 +20,6 @@ $router->get('/hiring_detail/[*:slug]-[i:id]', '/hiring_detail.php', 'hiring_det
 $router->get('/form/[*:slug]-[i:id]', '/form.php', 'form');
 $router->get('/legal_content/[*:slug]-[i:id]', '/legal_content.php', 'legal_content');
 $router->get('/little_content/[*:slug]-[i:id]', '/little_content.php', 'little_content');
+// $router->post('/form/[*:slug]-[i:id]', '/form.php', 'form');
 
 $router->run();
