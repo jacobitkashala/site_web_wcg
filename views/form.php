@@ -73,7 +73,7 @@ if (isset($_GET['btonPostuler'])) {
 // echo '<pre>';
 // echo print_r($_FILES);
 // echo '<pre>';
-echo $_FILES;
+// echo $_FILES;
 ?>
 <main>
 	<section class="container_header_inovation">
@@ -118,7 +118,7 @@ echo $_FILES;
 						<div class="row d-flex align-items-end">
 							<div class="col-2">
 								<label class="form-check-label" for="exampleRadios1">
-									Sex
+									Sexe
 								</label>
 							</div>
 

@@ -56,12 +56,13 @@ html{
 }
 .header_nav_container{
 	z-index: 1000;	
-	overflow-x: auto;
+	/* overflow-x: auto; */
     display: flex;
 	width: 100%;
+	/* height: 65px; */
     flex-direction: row;
-    align-content: center;
-	gap: 0;
+    /* align-content: center; */
+	/* gap: 0; */
     align-items: center;
 	
 }
@@ -104,7 +105,7 @@ ul .menu:nth-child(0n+1){
     width: 100%;
 	display: none;
     padding: 29px 0px;
-	margin-top: 11px;
+	margin-top: 2px;
 	left:0;
 }
 

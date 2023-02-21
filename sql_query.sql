@@ -9,7 +9,7 @@
 -- 	m.med_id = r.rub_icone_id and r.SIT_ID = s.SIT_ID and s.SIT_ID = 1 
 -- order by r.RUB_ORDRE
 
--- use wcg_site_web_databases;
+use wcg_site_web_databases;
 
 -- SELECT SRU_ORDRE, SRU_TITRE  
 --   FROM sous_rubrique
@@ -85,3 +85,22 @@
 -- SELECT rubrique.SIT_ID as id, media.MED_RESSOURCE as bgImage, rubrique.RUB_LIBELLE as libelle,rubrique.RUB_TITRE as titre ,rubrique.RUB_CONTENU  as contenu FROM rubrique INNER JOIN media ON media.MED_ID = rubrique.RUB_IMG_ID WHERE rubrique.RUB_ID = 5 AND rubrique.SIT_ID = 1 AND rubrique.STA_ID = 1 LIMIT 1 
 
 -- SELECT template.TPL_LIBELLE as template,sous_rubrique.SRU_ID as id, sous_rubrique.SRU_LIBELLE as libelle,sous_rubrique.SRU_TITRE as titre ,sous_rubrique.SRU_CONTENU  as contenu FROM sous_rubrique INNER JOIN template ON  template.TPL_ID = sous_rubrique.TPL_ID WHERE sous_rubrique.RUB_ID = 5  AND sous_rubrique.STA_ID = 1
+
+-- CREATE TABLE  IF NOT EXISTS Candidat(
+--    `Id` int NOT NULL AUTO_INCREMENT,
+--   `Email` VARCHAR(255) NOT NULL,
+--   `telephone` VARCHAR(255)  NOT NULL,
+--   `Date_naissance`date NOT NULL,
+--   `Sexe` varchar(2)  NOT NULL,
+--   `SRU_ID` int NOT NULL,
+--   `Note` TEXT,
+--   PRIMARY KEY (`Id`)
+-- )
+;
+-- CREATE TABLE  IF NOT EXISTS Partenaire(
+--    `Id` int NOT NULL AUTO_INCREMENT,
+--   `nom` VARCHAR(255) NOT NULL,
+--   `media_id` int NOT NULL,
+--   `description` TEXT DEFAULT NULL,
+--   PRIMARY KEY (`Id`)
+-- );
