@@ -2,19 +2,21 @@
 
 
 namespace App\Helpers;
-class Text{
 
-	public static function exerpt(string $content, int $limit=60){
-		if(mb_strlen($content)<=$limit){
-			return $content;
+class Text
+{
 
-		}else{
-			$lastSpace= mb_strpos($content,' ',$limit);
-			return mb_substr($content,0,$lastSpace).' ...';
-		}
-	}
-	
-	function xss_clean($data)
+    public static function exerpt(string $content, int $limit = 60)
+    {
+        if (mb_strlen($content) <= $limit) {
+            return $content;
+        } else {
+            $lastSpace = mb_strpos($content, ' ', $limit);
+            return mb_substr($content, 0, $lastSpace) . ' ...';
+        }
+    }
+
+    function xss_clean($data)
     {
         $data = trim($data);
         // Fix &entity\n;
@@ -48,12 +50,20 @@ class Text{
         // we are done...
         return $data;
     }
-    function is_valide_mail($email){
-        if (filter_var($email, FILTER_VALIDATE_EMAIL)) {
-           return true;
-         }
-         else{
+    function is_valide_mail($email)
+    {
+        if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+            return true;
+        } else {
             return false;
-         }
+        }
+    }
+    function is_valide_phone($numberPhone)
+    {
+        if (preg_match('/^[0-9]{10}+$/', $numberPhone)) {
+            return true;
+        } else {
+            return false;
+        }
     }
 }

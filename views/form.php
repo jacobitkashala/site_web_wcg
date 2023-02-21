@@ -7,64 +7,89 @@ use App\Helpers\Text;
 $text = new Text;
 // $pdo = Connection::getPDO();
 
-$titlePage = 'Form';
+$titlePage = 'Formulaire recrutement';
 $descriptionPage = 'World Corp Group est une société de consulting et de développement de projets innovants, spécialiste en solutions SMAC (Social, Mobile, Analytics, Cloud)';
-
+var_dump($_FILES);
+$error = true;
 $userSex = "F";
-$file_name = "Bonjour";
+$file_name;
 $file_type = "";
-$messageError = "";;
-if (!empty($_FILES)) {
-	$file_name = $_FILES['fichier']['name'];
-	$file_tmp_name = $_FILES['fichier']['tmp_name'];
-	$file_dest = "files/" . $file_name;
-	$file_extension = strrchr($file_name, ".");
-	$extensions_autorisees = array('.pdf', '.PDF');
-
-	if (!in_array($file_extension, $extensions_autorisees)) {
-
-		$messageError = "Seuls les fichiers PDF sont autorisés";
-	}
-	// echo "Bonjour";
-}
+$messageError = "";
+$messageError;
 
 if (isset($_GET['btonPostuler'])) {
 	$userName = $text->xss_clean($_GET['nameUser']);
 	$userEmail = $text->xss_clean($_GET['emailUser']);
 	$userPhoneNumber = $text->xss_clean($_GET['phoneNumber']);
 	$userDataNaissance = $text->xss_clean($_GET['dataNaissance']);
-	// $userEmail = 
-	$userEtatCivil = $_GET['selectEtatCivil'];
+	// $userEtatCivil = $text->xss_clean($_GET['etatCivil']);
 	$userSex = $text->xss_clean($_GET['sexUser']);
 	$userNote = $text->xss_clean($_GET['noteUser']);
-
 
 	// if (empty($userEtatCivil)) {
 	// 	$messageError = "Veuillez séléctionner votre etat civile";
 	// }
-	if (empty($userEtatCivil)) {
-		$messageError = "Veuillez séléctionner votre etat civile";
+	//Verification de cv
+	if (!empty($_FILES)) {
+		$file_name = $_FILES['fichier']['name'];
+		$file_tmp_name = $_FILES['fichier']['tmp_name'];
+		$file_type = $_FILES['fichier']['type'];
+		$file_size = $_FILES['fichier']['size'];
+		$file_extension = strrchr($file_name, '.');
+		$extension_autorisees = array('.pdf', '.PDF');
+
+		$file_dest = 'files_cv/' . "01" . $file_name;
+
+		// echo '<br/>' . 'Nom: ' . $file_name . '<br/>';
+		// echo 'Type: ' . $file_type . '<br/>';
+
+		if (in_array($file_extension, $extension_autorisees)) {
+			if ($file_size < 19905260) {
+				if (move_uploaded_file($file_tmp_name, $file_dest)) {
+					// $messageError = "Fichier envoyer avec succès";
+					$error = false;
+				} else {
+					$messageError = "Une erreur est survenue lors de l'envoi du fichier";
+				}
+			} else {
+				$messageError = "Le fichier est superrieur à la taille max";
+			}
+		} else {
+			$messageError = "Seuls les fichiers PDF sont autorisés";
+		}
+	} else {
+		$messageError = "Veuillez télécharger votre cv";
 	}
-	if (empty($userName)) {
-		$messageError = "Veuillez renseigner votre nom s'il vous plait";
+	if (empty($userDataNaissance)) {
+		$messageError = "Veuillez renseigner votre date de naissance";
+	}
+	if (!$text->is_valide_phone($userPhoneNumber)) {
+		$messageError = "Le numéro de téléphone n'est pas valide";
 	}
 	if (empty($userPhoneNumber)) {
 		$messageError = "Veuillez renseigner votre numéro de téléphone ";
 	}
-
+	if ($text->is_valide_mail($_GET['emailUser'])) {
+		$messageError = "Votre adresse email n'est pas au bon format veuillez le modifier s'il vous plait";
+	}
 	if (empty($userEmail)) {
 		$messageError = "Veuillez renseigner votre adresse email s'il vous plait";
-		if ($text->is_valide_mail($_GET['emailUser'])) {
-			$messageError = "votre adresse email n'est pas au bon format veuillez le modifier s'il vous plait";
-		}
+	}
+	if (empty($userName)) {
+		$messageError = "Veuillez renseigner votre nom complet s'il vous plait";
 	}
 
-	if (empty($messageError)) {
-		$messageError = $userNote;
-		// if(move_uploaded_file($file_tmp_name,$file_dest)){
-		// Fichier envoyé
-		// }
+	if (!$error) {
+		$messageError = "OK";
 	}
+	// if (empty($messageError)) {
+	// $messageError = $userNote;
+	// if(move_uploaded_file($file_tmp_name,$file_dest)){
+	// Fichier envoyé
+	// }
+	// echo "Bien";
+
+	// }
 }
 
 // creer une  de type array  	
@@ -90,7 +115,7 @@ if (isset($_GET['btonPostuler'])) {
 		<div class="d-flex justify-content-center ">
 			<div class="form-card p-5 col-5 card ">
 				<!-- <form method="GET" enctype="multipart/form-data" class="form" action="fom.php"> -->
-				<form method="GET" enctype="multipart/form-data" class="form">
+				<form method="GET" enctype="multipart/form-dat" class="form">
 					<div class="mb-3">
 						<!-- <label for="exampleInputEmail1" class="form-label">Email address</label> -->
 						<input value="<?= $userName ?? "" ?>" placeholder="Votre nom complet ( Ex:jean dupont )" name="nameUser" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
@@ -107,13 +132,13 @@ if (isset($_GET['btonPostuler'])) {
 						<!-- <label for="telephone" class="form-label">votre numero de téléphone</label> -->
 						<input type="date" value="<?= $userDataNaissance ?? "" ?>" name="dataNaissance" placeholder="Votre date de naissance" class="form-control">
 					</div>
-					<div class="form-group">
-						<select class="form-control" name="selectEtatCivil" id="elementFormControlSelect">
+					<!-- <div class="form-group">
+						<select class="form-control" name="etatCivil" id="elementFormControlSelect">
 							<option selected disabled hidden> <?= $userEtatCivil ?? "Votre etat civil" ?></option>
 							<option value="Marié">Marié</option>
 							<option value="Célibataire">Célibataire</option>
 						</select>
-					</div>
+					</div> -->
 					<div class="form-check ">
 						<div class="row d-flex align-items-end">
 							<div class="col-2">
@@ -140,6 +165,7 @@ if (isset($_GET['btonPostuler'])) {
 						<div class="mb-3">
 							<textarea value="<?= $userNote ?? "" ?>" value="" class="form-control" name="noteUser" rows="7"></textarea>
 						</div>
+						<!-- <input type="file" name="fichier" /> -->
 						<div class="custom-file mb-3">
 							<input type="file" class="custom-file-input" name="fichier" id="inputGroupFile">
 							<label class="custom-file-label" for="inputGroupFile"> <?= $file_name ?? "Votre cv en format pdf" ?> </label>
