@@ -35,4 +35,5 @@ $RECYCLE.BIN/
 .directory
 
 /public/en.php
+/public/env.php
 /src/en.php
