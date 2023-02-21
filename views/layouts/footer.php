@@ -4,7 +4,7 @@ use App\MODEL\LogoFooter;
 use App\Connection;
 
 
-$pdo = Connection::getPDO();
+$pdo = Connection::getPDO($db_host,$db_user,$db_pass,$db_name);
 $query9 = $pdo->query("SELECT sous_rubrique.SRU_ID, media.MED_RESSOURCE, sous_rubrique.SRU_LIBELLE FROM sous_rubrique INNER JOIN media ON media.MED_ID = sous_rubrique.SRU_ICONE_ID WHERE sous_rubrique.SRU_LIBELLE = 'footer' LIMIT 9");
 $dataLogoFooter = $query9->fetchAll(PDO::FETCH_CLASS, LogoFooter::class);
 

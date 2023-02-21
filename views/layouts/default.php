@@ -3,15 +3,13 @@ $newPathCss = pathCss;
 $newPathJs = pathJs;
 $newPathIcons = icons;
 
+
 if ($_SERVER['REQUEST_URI'] != '/') {
 	$newPathCss = "." . pathCss;
 	$newPathIcons = "." . icons;
 	$newPathJs = "." . pathJs;
 }
-//"../css/header.css" content
-//../public/css
-// ./css/header.css racine
-//./pulic/media
+
 ?>
 
 <!DOCTYPE html>
@@ -72,7 +70,10 @@ if ($_SERVER['REQUEST_URI'] != '/') {
 </head>
 
 <body>
+	
 	<?php require  'header.php' ?>
+	<?=  "$db_host" ?>
+	
 	<?= $contentPage ?>
 	<?php require  'footer.php' ?>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>

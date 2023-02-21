@@ -1,6 +1,7 @@
 <?php
 require 'path.php';
 require '../vendor/autoload.php';
+require 'en.php';
 
 
 // $uri = $_SERVER['REQUEST_URI'];

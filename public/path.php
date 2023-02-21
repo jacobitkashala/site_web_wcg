@@ -8,3 +8,4 @@ define('logo', './media/logo/');
 define('ecrousel', './media/carousel/');
 define('icons', './media/icons/');
 define('background', './media/background/');
+// define('en', './');

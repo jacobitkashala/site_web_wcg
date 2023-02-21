@@ -5,7 +5,7 @@ use App\Helpers\Text;
 // use App\Connection;
 
 $text = new Text;
-// $pdo = Connection::getPDO();
+// $pdo = Connection::getPDO(db_host,db_user,db_pass,db_name);
 // var_dump($_FILES); $_FILES['fichier']['name'];
 // var_dump($_POST);
 

@@ -4,7 +4,7 @@ use App\MODEL\LittleContent;
 use App\Helpers\Text;
 use App\Connection;
 
-$pdo = Connection::getPDO();
+$pdo = Connection::getPDO(db_host,db_user,db_pass,db_name);
 
 $titlePage = 'Little content';
 $descriptionPage = 'World Corp Group est une société de consulting et de développement de projets innovants, spécialiste en solutions SMAC (Social, Mobile, Analytics, Cloud)';
