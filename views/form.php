@@ -36,9 +36,6 @@ if (!empty($_FILES)) {
 
 	$file_dest = 'files_cv/' . $file_name;
 
-	// echo '<br/>' . 'Nom: ' . $file_name . '<br/>';
-	// echo 'Type: ' . $file_type . '<br/>';
-
 	if (in_array($file_extension, $extension_autorisees)) {
 		if ($file_size < 19905260) {
 			if (move_uploaded_file($file_tmp_name, $file_dest)) {
@@ -52,7 +49,7 @@ if (!empty($_FILES)) {
 			$messageError = "Le fichier est superrieur à la taille max";
 		}
 	} else {
-		$messageError = "Seuls les fichiers PDF sont autorisés";
+		$messageError = "Veuillez bien verifier votre cv en format pdf";
 	}
 }
 
@@ -64,15 +61,6 @@ if (isset($_POST['btonPostuler'])) {
 	// $userEtatCivil = $text->xss_clean($_POST['etatCivil']);
 	// $userSex = $text->xss_clean($_POST['sexUser']);
 	$userNote = $text->xss_clean($_POST['noteUser']);
-
-	// if (empty($userEtatCivil)) {
-	// 	$messageError = "Veuillez séléctionner votre etat civile";
-	// }
-	//Verification de cv
-
-	if ($error) {
-		$messageError = "Veuillez télécharger votre cv";
-	}
 
 	if (empty($userDataNaissance)) {
 		$messageError = "Veuillez renseigner votre date de naissance";
