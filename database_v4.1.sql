@@ -1,8 +1,3 @@
--- MySQL dump 10.13  Distrib 8.0.32, for Linux (x86_64)
---
--- Host: localhost    Database: wcg_site_web_database
--- ------------------------------------------------------
--- Server version	8.0.32-0ubuntu0.22.04.2
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -18,24 +13,19 @@
 --
 -- Table structure for table `Candidat`
 --
-DROP DATABASE IF EXISTS wcg_site_web_database;
-CREATE DATABASE wcg_site_web_database;
-use wcg_site_web_database;
+
 DROP TABLE IF EXISTS `Candidat`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `Candidat` (
   `Id` int NOT NULL AUTO_INCREMENT,
   `Email` varchar(255) NOT NULL,
-  `nom_complet` varchar(255) NOT NULL,
   `telephone` varchar(255) NOT NULL,
   `Date_naissance` date NOT NULL,
-  -- `Sexe` varchar(2) NOT NULL,
+  `Sexe` varchar(2) NOT NULL,
   `SRU_ID` int NOT NULL,
   `Note` text,
   PRIMARY KEY (`Id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-/*!40101 SET character_set_client = @saved_cs_client */;
+)  
+;
 
 --
 -- Dumping data for table `Candidat`
@@ -51,15 +41,14 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `Partenaire`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET character_set_client = utf8mb4 */;
+
 CREATE TABLE `Partenaire` (
   `Id` int NOT NULL AUTO_INCREMENT,
   `nom` varchar(255) NOT NULL,
   `media_id` int NOT NULL,
   `description` text,
   PRIMARY KEY (`Id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+)  
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -78,7 +67,7 @@ UNLOCK TABLES;
 DROP TABLE IF EXISTS `V_Contenu_Expertise`;
 /*!50001 DROP VIEW IF EXISTS `V_Contenu_Expertise`*/;
 SET @saved_cs_client     = @@character_set_client;
-/*!50503 SET character_set_client = utf8mb4 */;
+
 /*!50001 CREATE VIEW `V_Contenu_Expertise` AS SELECT 
  1 AS `MED_RESSOURCE`,
  1 AS `RUB_TITRE`,
@@ -93,7 +82,7 @@ SET character_set_client = @saved_cs_client;
 DROP TABLE IF EXISTS `V_Contenu_Nos_Secteur`;
 /*!50001 DROP VIEW IF EXISTS `V_Contenu_Nos_Secteur`*/;
 SET @saved_cs_client     = @@character_set_client;
-/*!50503 SET character_set_client = utf8mb4 */;
+ 
 /*!50001 CREATE VIEW `V_Contenu_Nos_Secteur` AS SELECT 
  1 AS `MED_RESSOURCE`,
  1 AS `RUB_TITRE`,
@@ -108,7 +97,7 @@ SET character_set_client = @saved_cs_client;
 DROP TABLE IF EXISTS `V_Contenu_projet_innovant`;
 /*!50001 DROP VIEW IF EXISTS `V_Contenu_projet_innovant`*/;
 SET @saved_cs_client     = @@character_set_client;
-/*!50503 SET character_set_client = utf8mb4 */;
+ 
 /*!50001 CREATE VIEW `V_Contenu_projet_innovant` AS SELECT 
  1 AS `MED_RESSOURCE`,
  1 AS `RUB_TITRE`,
@@ -123,7 +112,7 @@ SET character_set_client = @saved_cs_client;
 DROP TABLE IF EXISTS `V_Contenu_recrutement`;
 /*!50001 DROP VIEW IF EXISTS `V_Contenu_recrutement`*/;
 SET @saved_cs_client     = @@character_set_client;
-/*!50503 SET character_set_client = utf8mb4 */;
+ 
 /*!50001 CREATE VIEW `V_Contenu_recrutement` AS SELECT 
  1 AS `MED_RESSOURCE`,
  1 AS `RUB_TITRE`,
@@ -138,7 +127,7 @@ SET character_set_client = @saved_cs_client;
 DROP TABLE IF EXISTS `V_Menu_Princepal`;
 /*!50001 DROP VIEW IF EXISTS `V_Menu_Princepal`*/;
 SET @saved_cs_client     = @@character_set_client;
-/*!50503 SET character_set_client = utf8mb4 */;
+ 
 /*!50001 CREATE VIEW `V_Menu_Princepal` AS SELECT 
  1 AS `RUB_ID`,
  1 AS `a_sous_rubrique`,
@@ -159,7 +148,7 @@ SET character_set_client = @saved_cs_client;
 DROP TABLE IF EXISTS `V_Sous_Menu_Exp`;
 /*!50001 DROP VIEW IF EXISTS `V_Sous_Menu_Exp`*/;
 SET @saved_cs_client     = @@character_set_client;
-/*!50503 SET character_set_client = utf8mb4 */;
+ 
 /*!50001 CREATE VIEW `V_Sous_Menu_Exp` AS SELECT 
  1 AS `SRU_ORDRE`,
  1 AS `SRU_TITRE`*/;
@@ -172,7 +161,7 @@ SET character_set_client = @saved_cs_client;
 DROP TABLE IF EXISTS `V_Sous_Menu_Sect`;
 /*!50001 DROP VIEW IF EXISTS `V_Sous_Menu_Sect`*/;
 SET @saved_cs_client     = @@character_set_client;
-/*!50503 SET character_set_client = utf8mb4 */;
+ 
 /*!50001 CREATE VIEW `V_Sous_Menu_Sect` AS SELECT 
  1 AS `SRU_ORDRE`,
  1 AS `SRU_TITRE`*/;
@@ -185,7 +174,7 @@ SET character_set_client = @saved_cs_client;
 DROP TABLE IF EXISTS `V_home_page_carousel`;
 /*!50001 DROP VIEW IF EXISTS `V_home_page_carousel`*/;
 SET @saved_cs_client     = @@character_set_client;
-/*!50503 SET character_set_client = utf8mb4 */;
+ 
 /*!50001 CREATE VIEW `V_home_page_carousel` AS SELECT 
  1 AS `MED_RESSOURCE`*/;
 SET character_set_client = @saved_cs_client;
@@ -197,7 +186,7 @@ SET character_set_client = @saved_cs_client;
 DROP TABLE IF EXISTS `V_home_section_Une`;
 /*!50001 DROP VIEW IF EXISTS `V_home_section_Une`*/;
 SET @saved_cs_client     = @@character_set_client;
-/*!50503 SET character_set_client = utf8mb4 */;
+ 
 /*!50001 CREATE VIEW `V_home_section_Une` AS SELECT 
  1 AS `SRU_TITRE`,
  1 AS `SRU_CONTENU`*/;
@@ -209,7 +198,7 @@ SET character_set_client = @saved_cs_client;
 
 DROP TABLE IF EXISTS `journal_rubrique`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET character_set_client = utf8mb4 */;
+ 
 CREATE TABLE `journal_rubrique` (
   `JOR_ID` int NOT NULL AUTO_INCREMENT,
   `USR_ID` int DEFAULT NULL,
@@ -238,7 +227,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `journal_site`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET character_set_client = utf8mb4 */;
+ 
 CREATE TABLE `journal_site` (
   `JST_ID` int NOT NULL AUTO_INCREMENT,
   `USR_ID` int DEFAULT NULL,
@@ -267,7 +256,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `journal_sous_rubrique`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET character_set_client = utf8mb4 */;
+ 
 CREATE TABLE `journal_sous_rubrique` (
   `JOS_ID` int NOT NULL AUTO_INCREMENT,
   `USR_ID` int DEFAULT NULL,
@@ -296,7 +285,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `media`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET character_set_client = utf8mb4 */;
+ 
 CREATE TABLE `media` (
   `MED_ID` int NOT NULL AUTO_INCREMENT,
   `TYM_ID` int DEFAULT NULL,
@@ -316,7 +305,48 @@ CREATE TABLE `media` (
 
 LOCK TABLES `media` WRITE;
 /*!40000 ALTER TABLE `media` DISABLE KEYS */;
-INSERT INTO `media` VALUES (1,4,'favico','favico.ico',NULL,NULL),(2,1,'expertises_menu','expertise_menu.png','Expertises',NULL),(3,1,'expertises_fond','expertises_fond.png',NULL,NULL),(4,1,'secteurs_menu','secteur_menu.png','Secteurs',NULL),(5,1,'secteurs_fond','secteurs_fond.png',NULL,NULL),(6,1,'innovations_menu','innovation_menu.png','Innovations',NULL),(7,1,'innovations_fond','innovations_fond.png',NULL,NULL),(8,1,'Homme_menu','home_menu.png','Accueil',NULL),(9,1,'hiring_menu','recrutement_menu.png','Recrutements',NULL),(10,1,'hiring_fond','hiring_fond.png',NULL,NULL),(11,1,'carousel_accueil','cover1.png',NULL,NULL),(12,2,'carousel_accueil','video.mp4',NULL,NULL),(13,1,'carousel_acceuil','cover1.png',NULL,NULL),(14,1,'icone_actualite','actualite_menu.png','actualité',NULL),(15,1,'icone_ressource','ressource_menu.png','ressource',NULL),(16,1,'image_vignette_consulting','image_vignette_consulting.png',NULL,NULL),(17,1,'image_vignette_desing','image_vignette_desing.png',NULL,NULL),(18,1,'image_vignette_telecom','image_vignette_telecom.png',NULL,NULL),(19,1,'image_vignette_CLOUD_DATA','image_vignette_cloud_data.png',NULL,NULL),(20,1,'image_vignette_digital_innovation','image_vignette_digital_innovation.png',NULL,NULL),(21,1,'carousel','carousel1.png','carousel2',NULL),(22,1,'carousel','carousel2.png','carousel2',NULL),(23,2,'video_actualité','video1.mp4','actualité',NULL),(24,2,'video_actualité','video2.mp4','actualité',NULL),(25,2,'video_actualité','video4.mp4','actualité',NULL),(26,2,'video_actualité','video5.mp4','actualité',NULL),(27,1,'footer','footer1.png','footer',NULL),(28,1,'footer','footer2.png','footer',NULL),(29,1,'footer','footer3.png','footer',NULL),(30,1,'footer','footer4.png','footer',NULL),(31,1,'footer','footer5.png','footer',NULL),(32,1,'footer','footer6.png','footer',NULL),(33,1,'footer','footer7.png','footer',NULL),(34,1,'footer','footer8.png','footer',NULL),(35,1,'footer','footer9.png','footer',NULL),(36,1,'consulting','consulting.png',NULL,NULL),(37,1,'cloud_data','cloud_data.png',NULL,NULL),(38,1,'digital_innovation','digital_innovation.png',NULL,NULL),(39,1,'telecom','telecom.png',NULL,NULL),(40,1,'cyber_security','cyber_security.png',NULL,NULL),(41,1,'egouvernance','egouvernance.png',NULL,NULL),(42,1,'engineering','engineering.png',NULL,NULL);
+INSERT INTO `media` VALUES (1,4,'favico','favico.ico',NULL,NULL);
+INSERT INTO `media` VALUES (2,1,'expertises_menu','expertise_menu.png','Expertises',NULL);
+INSERT INTO `media` VALUES (3,1,'expertises_fond','expertises_fond.png',NULL,NULL);
+INSERT INTO `media` VALUES (4,1,'secteurs_menu','secteur_menu.png','Secteurs',NULL);
+INSERT INTO `media` VALUES (5,1,'secteurs_fond','secteurs_fond.png',NULL,NULL);
+INSERT INTO `media` VALUES (6,1,'innovations_menu','innovation_menu.png','Innovations',NULL);
+INSERT INTO `media` VALUES (7,1,'innovations_fond','innovations_fond.png',NULL,NULL);
+INSERT INTO `media` VALUES (8,1,'Homme_menu','home_menu.png','Accueil',NULL);
+INSERT INTO `media` VALUES (9,1,'hiring_menu','recrutement_menu.png','Recrutements',NULL);
+INSERT INTO `media` VALUES (10,1,'hiring_fond','hiring_fond.png',NULL,NULL);
+INSERT INTO `media` VALUES (11,1,'carousel_accueil','cover1.png',NULL,NULL);
+INSERT INTO `media` VALUES (12,2,'carousel_accueil','video.mp4',NULL,NULL);
+INSERT INTO `media` VALUES (13,1,'carousel_acceuil','cover1.png',NULL,NULL);
+INSERT INTO `media` VALUES (14,1,'icone_actualite','actualite_menu.png','actualité',NULL);
+INSERT INTO `media` VALUES (15,1,'icone_ressource','ressource_menu.png','ressource',NULL);
+INSERT INTO `media` VALUES (16,1,'image_vignette_consulting','image_vignette_consulting.png',NULL,NULL);
+INSERT INTO `media` VALUES (17,1,'image_vignette_desing','image_vignette_desing.png',NULL,NULL);
+INSERT INTO `media` VALUES (18,1,'image_vignette_telecom','image_vignette_telecom.png',NULL,NULL);
+INSERT INTO `media` VALUES (19,1,'image_vignette_CLOUD_DATA','image_vignette_cloud_data.png',NULL,NULL);
+INSERT INTO `media` VALUES (20,1,'image_vignette_digital_innovation','image_vignette_digital_innovation.png',NULL,NULL);
+INSERT INTO `media` VALUES (21,1,'carousel','carousel1.png','carousel2',NULL);
+INSERT INTO `media` VALUES (22,1,'carousel','carousel2.png','carousel2',NULL);
+INSERT INTO `media` VALUES (23,2,'video_actualité','video1.mp4','actualité',NULL);
+INSERT INTO `media` VALUES (24,2,'video_actualité','video2.mp4','actualité',NULL);
+INSERT INTO `media` VALUES (25,2,'video_actualité','video4.mp4','actualité',NULL);
+INSERT INTO `media` VALUES (26,2,'video_actualité','video5.mp4','actualité',NULL);
+INSERT INTO `media` VALUES (27,1,'footer','footer1.png','footer',NULL);
+INSERT INTO `media` VALUES (28,1,'footer','footer2.png','footer',NULL);
+INSERT INTO `media` VALUES (29,1,'footer','footer3.png','footer',NULL);
+INSERT INTO `media` VALUES (30,1,'footer','footer4.png','footer',NULL);
+INSERT INTO `media` VALUES (31,1,'footer','footer5.png','footer',NULL);
+INSERT INTO `media` VALUES (32,1,'footer','footer6.png','footer',NULL);
+INSERT INTO `media` VALUES (33,1,'footer','footer7.png','footer',NULL);
+INSERT INTO `media` VALUES (34,1,'footer','footer8.png','footer',NULL);
+INSERT INTO `media` VALUES (35,1,'footer','footer9.png','footer',NULL);
+INSERT INTO `media` VALUES (36,1,'consulting','consulting.png',NULL,NULL);
+INSERT INTO `media` VALUES (37,1,'cloud_data','cloud_data.png',NULL,NULL);
+INSERT INTO `media` VALUES (38,1,'digital_innovation','digital_innovation.png',NULL,NULL);
+INSERT INTO `media` VALUES (39,1,'telecom','telecom.png',NULL,NULL);
+INSERT INTO `media` VALUES (40,1,'cyber_security','cyber_security.png',NULL,NULL);
+INSERT INTO `media` VALUES (41,1,'egouvernance','egouvernance.png',NULL,NULL);
+INSERT INTO `media` VALUES (42,1,'engineering','engineering.png',NULL,NULL);
 /*!40000 ALTER TABLE `media` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -326,7 +356,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `newsletter`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET character_set_client = utf8mb4 */;
+ 
 CREATE TABLE `newsletter` (
   `NEW_ID` int NOT NULL AUTO_INCREMENT,
   `NEW_LIBELLE` varchar(1000) NOT NULL,
@@ -351,7 +381,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `rezo`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET character_set_client = utf8mb4 */;
+ 
 CREATE TABLE `rezo` (
   `REZ_ID` int NOT NULL AUTO_INCREMENT,
   `REZ_NOM` varchar(1000) NOT NULL,
@@ -377,7 +407,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `rubrique`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET character_set_client = utf8mb4 */;
+ 
 CREATE TABLE `rubrique` (
   `RUB_ID` int NOT NULL AUTO_INCREMENT,
   `TPL_ID` int DEFAULT NULL,
@@ -417,7 +447,13 @@ CREATE TABLE `rubrique` (
 
 LOCK TABLES `rubrique` WRITE;
 /*!40000 ALTER TABLE `rubrique` DISABLE KEYS */;
-INSERT INTO `rubrique` VALUES (1,2,1,1,2,NULL,3,2,'Expertises','Nos expertises','Notre Pôle HealthCare accompagne nos clients, publics et privés, dans le choix, l’achat, le déploiement, le paramétrage des matériels et dispositifs médicaux et hospitaliers. Aussi bien pour des établissements en construction qu’en réhabilitation.\nLa bonne connaissance de nos consultants de la sphère médicale, une adaptabilité sans cesse renouvelée aux exigences spécifiques du marché, la collaboration exclusive de partenaires prestigieux du secteur, ont fait de nous le partenaire privilégié du monde médical, hospitalo-universitaire ou clinique. ',0,0,'bg-couleur-wc-expertise','Montserrat',40,'texte-couleur-blanche','Les expertises de WCG RDC','Les expertises de l\'entreprise World Corp Group RDC','2023-02-02 14:52:18','2023-02-02 14:52:18',NULL,1,'ulrex'),(2,2,1,1,4,NULL,5,3,'Secteurs','Nos secteurs d\'activités','jksdjfsdjfsdjjkhdsfhjfjjhsjkdjgfsjkgjkfdsjkgfjdkgjsdfjkgjksdfjkgjksdjgkjksdlf',0,0,'bg-couleur-wc-secteur','Montserrat',40,'texte-couleur-blanche','Les secteurs d\'activités de WCG RDC','Les secteur d\'activités de l\'entreprise World Corp Group RDC','2023-02-02 14:52:18','2023-02-02 14:52:18',NULL,1,'ulrex'),(3,2,1,1,6,NULL,7,4,'Innovations','Nos projets innovants','jksdjfsdjfsdjjkhdsfhjfjjhsjkdjgfsjkgjkfdsjkgfjdkgjsdfjkgjksdfjkgjksdjgkjksdlf',0,0,'bg-couleur-wc-innovantion','Montserrat',40,'texte-couleur-blanche','Les projets innovants de WCG RDC','Les projets innovants de l\'entreprise World Corp Group RDC','2023-02-02 14:52:18','2023-02-02 14:52:18',NULL,0,'ulrex'),(4,1,1,1,8,NULL,11,1,'','','',1,0,'bg-couleur-wc-home','Montserrat',40,'texte-couleur-blanche','Site Internet de WCG RDC','WCG est une entreprise de consulting et de projets innovants','2023-02-02 14:52:18','2023-02-02 14:52:18',NULL,0,'ulrex'),(5,4,1,1,9,NULL,13,5,'Recrutements','Rejoignez-nous!','OFFRES D’EMPLOI',1,0,'bg-couleur-wc-recrutement','Montserrat',40,'texte-couleur-blanche','Rejoignez notre entreprise','Découvrez nos offres','2023-02-02 14:52:18','2023-02-02 14:52:18',NULL,0,'ulrex'),(6,3,1,1,14,NULL,NULL,6,'Actualités','Actualités','POURQUOI LIBRA N’EST PAS UNE CRYPTOMONNAIE?\nPar Florian Darras ( Opportunités Technos )\n\nDifficile de passer à côté de Facebook et de son projet de monnaie numérique Libra cette semaine, tant le sujet inonde la presse et les réseaux sociaux depuis la publication de son livre blanc mardi.\nLes mots \"blockchain\" et \"cryptomonnaie\" reviennent sur le devant de la scène. Mais ne tombez pas dans l\'écueil suivant : la Libra n\'a rien d\'un Bitcoin.\nPour le respecté Andreas Antonopoulos, célèbre pour son travail de vulgarisation dans le domaine des cryptos depuis 2012, la Libra n\'est en rien une cryptomonnaie qui reposerait sur une blockchain ouverte.',NULL,0,'bground-couleur-wc-actualite','Montserrat',40,'texte-couleur-blanche','Actualité','Actualité','2023-02-02 14:52:18','2023-02-02 14:52:18',NULL,0,'ulrex'),(7,3,1,1,15,NULL,NULL,7,'Ressoources','Nos ressources','lorem ressources',NULL,0,'bg-couleur-wc-ressource','Montserrat',40,'texte-couleur-blanche','Ressources','Ressources','2023-02-02 14:52:18','2023-02-02 14:52:18',NULL,0,'ulrex');
+INSERT INTO `rubrique` VALUES (1,2,1,1,2,NULL,3,2,'Expertises','Nos expertises','Notre Pôle HealthCare accompagne nos clients, publics et privés, dans le choix, l’achat, le déploiement, le paramétrage des matériels et dispositifs médicaux et hospitaliers. Aussi bien pour des établissements en construction qu’en réhabilitation.\nLa bonne connaissance de nos consultants de la sphère médicale, une adaptabilité sans cesse renouvelée aux exigences spécifiques du marché, la collaboration exclusive de partenaires prestigieux du secteur, ont fait de nous le partenaire privilégié du monde médical, hospitalo-universitaire ou clinique. ',0,0,'bg-couleur-wc-expertise','Montserrat',40,'texte-couleur-blanche','Les expertises de WCG RDC','Les expertises de l\'entreprise World Corp Group RDC','2023-02-02 14:52:18','2023-02-02 14:52:18',NULL,1,'ulrex');
+INSERT INTO `rubrique` VALUES (2,2,1,1,4,NULL,5,3,'Secteurs','Nos secteurs d\'activités','jksdjfsdjfsdjjkhdsfhjfjjhsjkdjgfsjkgjkfdsjkgfjdkgjsdfjkgjksdfjkgjksdjgkjksdlf',0,0,'bg-couleur-wc-secteur','Montserrat',40,'texte-couleur-blanche','Les secteurs d\'activités de WCG RDC','Les secteur d\'activités de l\'entreprise World Corp Group RDC','2023-02-02 14:52:18','2023-02-02 14:52:18',NULL,1,'ulrex');
+INSERT INTO `rubrique` VALUES (3,2,1,1,6,NULL,7,4,'Innovations','Nos projets innovants','jksdjfsdjfsdjjkhdsfhjfjjhsjkdjgfsjkgjkfdsjkgfjdkgjsdfjkgjksdfjkgjksdjgkjksdlf',0,0,'bg-couleur-wc-innovantion','Montserrat',40,'texte-couleur-blanche','Les projets innovants de WCG RDC','Les projets innovants de l\'entreprise World Corp Group RDC','2023-02-02 14:52:18','2023-02-02 14:52:18',NULL,0,'ulrex');
+INSERT INTO `rubrique` VALUES (4,1,1,1,8,NULL,11,1,'','','',1,0,'bg-couleur-wc-home','Montserrat',40,'texte-couleur-blanche','Site Internet de WCG RDC','WCG est une entreprise de consulting et de projets innovants','2023-02-02 14:52:18','2023-02-02 14:52:18',NULL,0,'ulrex');
+INSERT INTO `rubrique` VALUES (5,4,1,1,9,NULL,13,5,'Recrutements','Rejoignez-nous!','OFFRES D’EMPLOI',1,0,'bg-couleur-wc-recrutement','Montserrat',40,'texte-couleur-blanche','Rejoignez notre entreprise','Découvrez nos offres','2023-02-02 14:52:18','2023-02-02 14:52:18',NULL,0,'ulrex');
+INSERT INTO `rubrique` VALUES (6,3,1,1,14,NULL,NULL,6,'Actualités','Actualités','POURQUOI LIBRA N’EST PAS UNE CRYPTOMONNAIE?\nPar Florian Darras ( Opportunités Technos )\n\nDifficile de passer à côté de Facebook et de son projet de monnaie numérique Libra cette semaine, tant le sujet inonde la presse et les réseaux sociaux depuis la publication de son livre blanc mardi.\nLes mots \"blockchain\" et \"cryptomonnaie\" reviennent sur le devant de la scène. Mais ne tombez pas dans l\'écueil suivant : la Libra n\'a rien d\'un Bitcoin.\nPour le respecté Andreas Antonopoulos, célèbre pour son travail de vulgarisation dans le domaine des cryptos depuis 2012, la Libra n\'est en rien une cryptomonnaie qui reposerait sur une blockchain ouverte.',NULL,0,'bground-couleur-wc-actualite','Montserrat',40,'texte-couleur-blanche','Actualité','Actualité','2023-02-02 14:52:18','2023-02-02 14:52:18',NULL,0,'ulrex');
+INSERT INTO `rubrique` VALUES (7,3,1,1,15,NULL,NULL,7,'Ressoources','Nos ressources','lorem ressources',NULL,0,'bg-couleur-wc-ressource','Montserrat',40,'texte-couleur-blanche','Ressources','Ressources','2023-02-02 14:52:18','2023-02-02 14:52:18',NULL,0,'ulrex');
 /*!40000 ALTER TABLE `rubrique` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -427,7 +463,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `site`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET character_set_client = utf8mb4 */;
+ 
 CREATE TABLE `site` (
   `SIT_ID` int NOT NULL AUTO_INCREMENT,
   `STA_ID` int DEFAULT NULL,
@@ -457,7 +493,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `sous_rubrique`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET character_set_client = utf8mb4 */;
+ 
 CREATE TABLE `sous_rubrique` (
   `SRU_ID` int NOT NULL AUTO_INCREMENT,
   `TPL_ID` int DEFAULT NULL,
@@ -496,7 +532,40 @@ CREATE TABLE `sous_rubrique` (
 
 LOCK TABLES `sous_rubrique` WRITE;
 /*!40000 ALTER TABLE `sous_rubrique` DISABLE KEYS */;
-INSERT INTO `sous_rubrique` VALUES (1,2,1,1,0,17,36,1,'CONSULTING','CONSULTING','Nous accompagnons, très en amont de projets, nos clients dans leurs démarches de transformation digitale et d’optimisation de leur stratégie numérique. ',NULL,1,'#701475','roboto',12,'#701475','Meta titre','Meta description','2023-02-02 14:52:18','2023-02-02 14:52:18','2023-02-02 14:52:18',1),(2,2,1,1,0,16,37,2,'CLOUD & DATA','CLOUD & DATA','Notre savoir-faire se décline à travers une gamme de prestations de services pour accompagner nos clients et partenaires :',NULL,1,'#701475','roboto',12,'#701475','Meta titre','Meta description','2023-02-02 14:52:18','2023-02-02 14:52:18','2023-02-02 14:52:18',1),(3,2,1,1,0,18,38,3,'DIGITAL & INNOVATION','DIGITAL & INNOVATION','-Implémentation des prototypes (POC) ;\n-Pilotage des projets complexes de bout en bout ;\n-Etc.',NULL,1,'#701475','roboto',12,'#701475','Meta titre','Meta description','2023-02-02 14:52:18','2023-02-02 14:52:18','2023-02-02 14:52:18',1),(4,2,1,1,0,19,39,4,'TELECOM  desc','TELECOM ','Télécom contenue',NULL,1,'#701475','roboto',12,'#701475',NULL,NULL,'2023-02-02 14:52:18','2023-02-02 14:52:18','2023-02-02 14:52:18',1),(5,2,1,1,NULL,20,38,5,'DIGITAL & INNOVATION desc','DIGITAL & INNOVATION','Nous accompagnons nos clients dans l’implémentation et le maintien en conditions opérationnelles de leurs plateformes digitales ou des services digitaux en concrétisant leurs projets.',NULL,0,'#701475','roboto',12,'#701475','Meta titre',NULL,'2023-02-02 14:52:18','2023-02-02 14:52:18','2023-02-02 14:52:18',1),(6,2,2,1,NULL,NULL,40,1,'Cyber security desc','Cyber security','Cyber security contenu',0,0,'#701475','roboto',12,'#3F079C','Meta titre',NULL,'2023-02-02 14:52:18',NULL,NULL,1),(7,2,2,1,NULL,NULL,41,2,'e-Governance desc','e-Governance','e-Governance contenu',0,0,'#701475','#701475',NULL,NULL,NULL,NULL,'2023-02-02 14:52:18','2023-02-02 14:52:18','2023-02-02 14:52:18',1),(8,2,2,1,NULL,NULL,42,3,'engineering desc ','engineering ','engineering contenu ',0,0,NULL,NULL,NULL,NULL,NULL,NULL,'2023-02-02 14:52:18',NULL,NULL,1),(9,7,5,1,NULL,NULL,NULL,1,'Ouverture : 04-11-2022 / clôture : 26-12-2022','RECRUTEMENT DÉVELOPPEUR  JAVA FULL-STACK (H/F)','Pour renforcer les équipes de notre centre de développement de Kinshasa, nous cherchons à recruter un DÉVELOPPEUR JAVA FULL-STACK (H/F) pour assurer principalement le développement, l\'évolution et l\'intégration des API. ',0,0,NULL,NULL,NULL,NULL,NULL,NULL,'2023-02-02 14:52:18',NULL,NULL,1),(10,7,5,1,NULL,NULL,NULL,2,'Ouverture : 04-11-2022 / clôture : 26-12-2022','RECRUTEMENT chef de projet','Pour renforcer les équipes de notre centre de développement de Kinshasa, nous cherchons à recruter un DÉVELOPPEUR JAVA FULL-STACK (H/F) pour assurer principalement le développement, l\'évolution et l\'intégration des API. ',0,0,NULL,NULL,NULL,NULL,NULL,NULL,'2023-02-02 14:52:18',NULL,NULL,1),(11,7,5,1,NULL,NULL,NULL,3,'Ouverture : 04-11-2022 / clôture : 26-12-2022','RECRUTEMENT webdesigner','Pour renforcer les équipes de notre centre de développement de Kinshasa, nous cherchons à recruter un DÉVELOPPEUR JAVA FULL-STACK (H/F) pour assurer principalement le développement, l\'évolution et l\'intégration des API. ',0,0,NULL,NULL,NULL,NULL,NULL,NULL,'2023-02-02 14:52:18',NULL,NULL,1),(12,7,5,1,NULL,NULL,NULL,4,'Ouverture : 04-11-2022 / clôture : 26-12-2022','RECRUTEMENT professionnel dans le MARKRTING digital','Pour renforcer les équipes de notre centre de développement de Kinshasa, nous cherchons à recruter un DÉVELOPPEUR JAVA FULL-STACK (H/F) pour assurer principalement le développement, l\'évolution et l\'intégration des API. ',0,0,NULL,NULL,NULL,NULL,NULL,NULL,'2023-02-02 14:52:18',NULL,NULL,1),(13,6,3,1,NULL,NULL,NULL,1,'carousel actualité','carousel actualité','Lorem Ipsum Lorem Ipsum Lorem Ipsum\nLorem Ipsum Lorem Ipsum Lorem Ipsum\nLorem Ipsum Lorem Ipsum Lorem Ipsum\nLorem Ipsum Lorem Ipsum Lorem Ipsum--',0,0,NULL,NULL,NULL,NULL,NULL,NULL,'2023-02-02 14:52:18',NULL,NULL,1),(14,6,3,1,NULL,NULL,NULL,2,'grid un','grid un','Lorem Ipsum  Lorem Ipsum\nLorem Ipsum  Lorem Ipsum\nLorem Ipsum  Lorem Ipsum',0,0,NULL,NULL,NULL,NULL,NULL,NULL,'2023-02-02 14:52:18',NULL,NULL,1),(15,6,3,1,NULL,NULL,NULL,3,'grid 2','grid 2','Lorem Ipsum  Lorem Ipsum\nLorem Ipsum  Lorem Ipsum\nLorem Ipsum  Lorem Ipsum',0,0,NULL,NULL,NULL,NULL,NULL,NULL,'2023-02-02 14:52:18',NULL,NULL,1),(16,6,3,1,NULL,NULL,NULL,4,' grid 3','grid 3','Lorem Ipsum  Lorem Ipsum\nLorem Ipsum  Lorem Ipsum\nLorem Ipsum  Lorem Ipsum',0,0,NULL,NULL,NULL,NULL,NULL,NULL,'2023-02-02 14:52:18',NULL,NULL,1),(17,NULL,NULL,1,NULL,NULL,21,1,'carousel','carousel','carousel1.png',1,0,NULL,NULL,NULL,NULL,NULL,NULL,'2023-02-02 14:52:18',NULL,NULL,1),(18,0,NULL,1,NULL,NULL,22,2,'carousel2','carousel','carousel2.png',1,0,NULL,NULL,NULL,NULL,NULL,NULL,'2023-02-02 14:52:18',NULL,NULL,1),(19,0,NULL,1,NULL,NULL,NULL,1,'home','World Corp Group RDC, ','est une société de consulting et de développement de projets innovants, spécialiste en solutions SMAC (Social, Mobile, Analytics, Cloud).\nNous accompagnons nos clients dans la mise en place des solutions SMAC et le développement sur mesure de leur stratégie digitale et multicanale pour une expérience numérique réussie. ',0,1,NULL,NULL,NULL,NULL,NULL,NULL,'2023-02-02 14:52:18',NULL,NULL,1),(20,0,6,1,NULL,NULL,23,1,'actualite','actualité','actualité',0,1,NULL,NULL,NULL,NULL,NULL,NULL,'2023-02-02 14:52:18',NULL,NULL,1),(21,0,6,1,NULL,NULL,24,2,'actualite','actualité','actualité',0,1,NULL,NULL,NULL,NULL,NULL,NULL,'2023-02-02 14:52:18',NULL,NULL,1),(22,0,6,1,NULL,NULL,25,3,'actualité','actualité','actualité',0,1,NULL,NULL,NULL,NULL,NULL,NULL,'2023-02-02 14:52:18',NULL,NULL,1),(24,0,6,1,NULL,NULL,26,4,'actualité','actualité','actualité',0,1,NULL,NULL,NULL,NULL,NULL,NULL,'2023-02-02 14:52:18',NULL,NULL,1),(25,0,NULL,1,27,NULL,NULL,1,'footer','footer','footer',0,0,NULL,NULL,NULL,NULL,NULL,NULL,'2023-02-02 14:52:18',NULL,NULL,1),(26,0,0,1,28,NULL,NULL,2,'footer','footer','footer',0,0,NULL,NULL,NULL,NULL,NULL,NULL,'2023-02-02 14:52:18',NULL,NULL,1),(27,0,0,1,29,NULL,NULL,3,'footer','footer','footer',0,0,NULL,NULL,NULL,NULL,NULL,NULL,'2023-02-02 14:52:18',NULL,NULL,1),(28,NULL,NULL,1,30,NULL,NULL,4,'footer','footer','footer',0,0,NULL,NULL,NULL,NULL,NULL,NULL,'2023-02-02 14:52:18',NULL,NULL,1),(29,NULL,NULL,1,31,NULL,NULL,5,'footer','footer','footer',0,0,NULL,NULL,NULL,NULL,NULL,NULL,'2023-02-02 14:52:18',NULL,NULL,1),(30,NULL,NULL,1,32,NULL,NULL,6,'footer','footer','footer',0,0,NULL,NULL,NULL,NULL,NULL,NULL,'2023-02-02 14:52:18',NULL,NULL,1),(31,NULL,NULL,1,33,NULL,NULL,7,'footer','footer','footer',0,0,NULL,NULL,NULL,NULL,NULL,NULL,'2023-02-02 14:52:18',NULL,NULL,1),(32,NULL,NULL,1,34,NULL,NULL,8,'footer','footer','footer',0,0,NULL,NULL,NULL,NULL,NULL,NULL,'2023-02-02 14:52:18',NULL,NULL,1),(33,NULL,NULL,1,35,NULL,NULL,9,'footer','footer','footer',0,0,NULL,NULL,NULL,NULL,NULL,NULL,'2023-02-02 14:52:18',NULL,NULL,1),(34,7,5,1,NULL,NULL,NULL,1,'Ouverture : 04-11-2022 / clôture : 26-12-2022','RECRUTEMENT DÉVELOPPEUR JAVA FULL-STACK (H/F)','Pour renforcer les équipes de notre centre de développement de Kinshasa, nous cherchons à recruter un DÉVELOPPEUR JAVA FULL-STACK (H/F) pour assurer principalement le développement, l\'évolution et l\'intégration des API.',0,0,NULL,NULL,NULL,NULL,NULL,NULL,'2023-02-02 14:52:18',NULL,NULL,1),(35,7,5,1,NULL,NULL,NULL,2,'Ouverture : 04-11-2022 / clôture : 26-12-2022','RECRUTEMENT DÉVELOPPEUR JAVA FULL-STACK (H/F)','Pour renforcer les équipes de notre centre de développement de Kinshasa, nous cherchons à recruter un DÉVELOPPEUR JAVA FULL-STACK (H/F) pour assurer principalement le développement, l\'évolution et l\'intégration des API.',0,0,NULL,NULL,NULL,NULL,NULL,NULL,'2023-02-02 14:52:18',NULL,NULL,1);
+INSERT INTO `sous_rubrique` VALUES (1,2,1,1,0,17,36,1,'CONSULTING','CONSULTING','Nous accompagnons, très en amont de projets, nos clients dans leurs démarches de transformation digitale et d’optimisation de leur stratégie numérique. ',NULL,1,'#701475','roboto',12,'#701475','Meta titre','Meta description','2023-02-02 14:52:18','2023-02-02 14:52:18','2023-02-02 14:52:18',1);
+INSERT INTO `sous_rubrique` VALUES (2,2,1,1,0,16,37,2,'CLOUD & DATA','CLOUD & DATA','Notre savoir-faire se décline à travers une gamme de prestations de services pour accompagner nos clients et partenaires :',NULL,1,'#701475','roboto',12,'#701475','Meta titre','Meta description','2023-02-02 14:52:18','2023-02-02 14:52:18','2023-02-02 14:52:18',1);
+INSERT INTO `sous_rubrique` VALUES (3,2,1,1,0,18,38,3,'DIGITAL & INNOVATION','DIGITAL & INNOVATION','-Implémentation des prototypes (POC) ;\n-Pilotage des projets complexes de bout en bout ;\n-Etc.',NULL,1,'#701475','roboto',12,'#701475','Meta titre','Meta description','2023-02-02 14:52:18','2023-02-02 14:52:18','2023-02-02 14:52:18',1);
+INSERT INTO `sous_rubrique` VALUES (4,2,1,1,0,19,39,4,'TELECOM  desc','TELECOM ','Télécom contenue',NULL,1,'#701475','roboto',12,'#701475',NULL,NULL,'2023-02-02 14:52:18','2023-02-02 14:52:18','2023-02-02 14:52:18',1);
+INSERT INTO `sous_rubrique` VALUES (5,2,1,1,NULL,20,38,5,'DIGITAL & INNOVATION desc','DIGITAL & INNOVATION','Nous accompagnons nos clients dans l’implémentation et le maintien en conditions opérationnelles de leurs plateformes digitales ou des services digitaux en concrétisant leurs projets.',NULL,0,'#701475','roboto',12,'#701475','Meta titre',NULL,'2023-02-02 14:52:18','2023-02-02 14:52:18','2023-02-02 14:52:18',1);
+INSERT INTO `sous_rubrique` VALUES (6,2,2,1,NULL,NULL,40,1,'Cyber security desc','Cyber security','Cyber security contenu',0,0,'#701475','roboto',12,'#3F079C','Meta titre',NULL,'2023-02-02 14:52:18',NULL,NULL,1);
+INSERT INTO `sous_rubrique` VALUES (7,2,2,1,NULL,NULL,41,2,'e-Governance desc','e-Governance','e-Governance contenu',0,0,'#701475','#701475',NULL,NULL,NULL,NULL,'2023-02-02 14:52:18','2023-02-02 14:52:18','2023-02-02 14:52:18',1);
+INSERT INTO `sous_rubrique` VALUES (8,2,2,1,NULL,NULL,42,3,'engineering desc ','engineering ','engineering contenu ',0,0,NULL,NULL,NULL,NULL,NULL,NULL,'2023-02-02 14:52:18',NULL,NULL,1);
+INSERT INTO `sous_rubrique` VALUES (9,7,5,1,NULL,NULL,NULL,1,'Ouverture : 04-11-2022 / clôture : 26-12-2022','RECRUTEMENT DÉVELOPPEUR  JAVA FULL-STACK (H/F)','Pour renforcer les équipes de notre centre de développement de Kinshasa, nous cherchons à recruter un DÉVELOPPEUR JAVA FULL-STACK (H/F) pour assurer principalement le développement, l\'évolution et l\'intégration des API. ',0,0,NULL,NULL,NULL,NULL,NULL,NULL,'2023-02-02 14:52:18',NULL,NULL,1);
+INSERT INTO `sous_rubrique` VALUES (10,7,5,1,NULL,NULL,NULL,2,'Ouverture : 04-11-2022 / clôture : 26-12-2022','RECRUTEMENT chef de projet','Pour renforcer les équipes de notre centre de développement de Kinshasa, nous cherchons à recruter un DÉVELOPPEUR JAVA FULL-STACK (H/F) pour assurer principalement le développement, l\'évolution et l\'intégration des API. ',0,0,NULL,NULL,NULL,NULL,NULL,NULL,'2023-02-02 14:52:18',NULL,NULL,1);
+INSERT INTO `sous_rubrique` VALUES (11,7,5,1,NULL,NULL,NULL,3,'Ouverture : 04-11-2022 / clôture : 26-12-2022','RECRUTEMENT webdesigner','Pour renforcer les équipes de notre centre de développement de Kinshasa, nous cherchons à recruter un DÉVELOPPEUR JAVA FULL-STACK (H/F) pour assurer principalement le développement, l\'évolution et l\'intégration des API. ',0,0,NULL,NULL,NULL,NULL,NULL,NULL,'2023-02-02 14:52:18',NULL,NULL,1);
+INSERT INTO `sous_rubrique` VALUES (12,7,5,1,NULL,NULL,NULL,4,'Ouverture : 04-11-2022 / clôture : 26-12-2022','RECRUTEMENT professionnel dans le MARKRTING digital','Pour renforcer les équipes de notre centre de développement de Kinshasa, nous cherchons à recruter un DÉVELOPPEUR JAVA FULL-STACK (H/F) pour assurer principalement le développement, l\'évolution et l\'intégration des API. ',0,0,NULL,NULL,NULL,NULL,NULL,NULL,'2023-02-02 14:52:18',NULL,NULL,1);
+INSERT INTO `sous_rubrique` VALUES (13,6,3,1,NULL,NULL,NULL,1,'carousel actualité','carousel actualité','Lorem Ipsum Lorem Ipsum Lorem Ipsum\nLorem Ipsum Lorem Ipsum Lorem Ipsum\nLorem Ipsum Lorem Ipsum Lorem Ipsum\nLorem Ipsum Lorem Ipsum Lorem Ipsum--',0,0,NULL,NULL,NULL,NULL,NULL,NULL,'2023-02-02 14:52:18',NULL,NULL,1);
+INSERT INTO `sous_rubrique` VALUES (14,6,3,1,NULL,NULL,NULL,2,'grid un','grid un','Lorem Ipsum  Lorem Ipsum\nLorem Ipsum  Lorem Ipsum\nLorem Ipsum  Lorem Ipsum',0,0,NULL,NULL,NULL,NULL,NULL,NULL,'2023-02-02 14:52:18',NULL,NULL,1);
+INSERT INTO `sous_rubrique` VALUES (15,6,3,1,NULL,NULL,NULL,3,'grid 2','grid 2','Lorem Ipsum  Lorem Ipsum\nLorem Ipsum  Lorem Ipsum\nLorem Ipsum  Lorem Ipsum',0,0,NULL,NULL,NULL,NULL,NULL,NULL,'2023-02-02 14:52:18',NULL,NULL,1);
+INSERT INTO `sous_rubrique` VALUES (16,6,3,1,NULL,NULL,NULL,4,' grid 3','grid 3','Lorem Ipsum  Lorem Ipsum\nLorem Ipsum  Lorem Ipsum\nLorem Ipsum  Lorem Ipsum',0,0,NULL,NULL,NULL,NULL,NULL,NULL,'2023-02-02 14:52:18',NULL,NULL,1);
+INSERT INTO `sous_rubrique` VALUES (17,NULL,NULL,1,NULL,NULL,21,1,'carousel','carousel','carousel1.png',1,0,NULL,NULL,NULL,NULL,NULL,NULL,'2023-02-02 14:52:18',NULL,NULL,1);
+INSERT INTO `sous_rubrique` VALUES (18,0,NULL,1,NULL,NULL,22,2,'carousel2','carousel','carousel2.png',1,0,NULL,NULL,NULL,NULL,NULL,NULL,'2023-02-02 14:52:18',NULL,NULL,1);
+INSERT INTO `sous_rubrique` VALUES (19,0,NULL,1,NULL,NULL,NULL,1,'home','World Corp Group RDC, ','est une société de consulting et de développement de projets innovants, spécialiste en solutions SMAC (Social, Mobile, Analytics, Cloud).\nNous accompagnons nos clients dans la mise en place des solutions SMAC et le développement sur mesure de leur stratégie digitale et multicanale pour une expérience numérique réussie. ',0,1,NULL,NULL,NULL,NULL,NULL,NULL,'2023-02-02 14:52:18',NULL,NULL,1);
+INSERT INTO `sous_rubrique` VALUES (20,0,6,1,NULL,NULL,23,1,'actualite','actualité','actualité',0,1,NULL,NULL,NULL,NULL,NULL,NULL,'2023-02-02 14:52:18',NULL,NULL,1);
+INSERT INTO `sous_rubrique` VALUES (21,0,6,1,NULL,NULL,24,2,'actualite','actualité','actualité',0,1,NULL,NULL,NULL,NULL,NULL,NULL,'2023-02-02 14:52:18',NULL,NULL,1);
+INSERT INTO `sous_rubrique` VALUES (22,0,6,1,NULL,NULL,25,3,'actualité','actualité','actualité',0,1,NULL,NULL,NULL,NULL,NULL,NULL,'2023-02-02 14:52:18',NULL,NULL,1);
+INSERT INTO `sous_rubrique` VALUES (24,0,6,1,NULL,NULL,26,4,'actualité','actualité','actualité',0,1,NULL,NULL,NULL,NULL,NULL,NULL,'2023-02-02 14:52:18',NULL,NULL,1);
+INSERT INTO `sous_rubrique` VALUES (25,0,NULL,1,27,NULL,NULL,1,'footer','footer','footer',0,0,NULL,NULL,NULL,NULL,NULL,NULL,'2023-02-02 14:52:18',NULL,NULL,1);
+INSERT INTO `sous_rubrique` VALUES (26,0,0,1,28,NULL,NULL,2,'footer','footer','footer',0,0,NULL,NULL,NULL,NULL,NULL,NULL,'2023-02-02 14:52:18',NULL,NULL,1);
+INSERT INTO `sous_rubrique` VALUES (27,0,0,1,29,NULL,NULL,3,'footer','footer','footer',0,0,NULL,NULL,NULL,NULL,NULL,NULL,'2023-02-02 14:52:18',NULL,NULL,1);
+INSERT INTO `sous_rubrique` VALUES (28,NULL,NULL,1,30,NULL,NULL,4,'footer','footer','footer',0,0,NULL,NULL,NULL,NULL,NULL,NULL,'2023-02-02 14:52:18',NULL,NULL,1);
+INSERT INTO `sous_rubrique` VALUES (29,NULL,NULL,1,31,NULL,NULL,5,'footer','footer','footer',0,0,NULL,NULL,NULL,NULL,NULL,NULL,'2023-02-02 14:52:18',NULL,NULL,1);
+INSERT INTO `sous_rubrique` VALUES (30,NULL,NULL,1,32,NULL,NULL,6,'footer','footer','footer',0,0,NULL,NULL,NULL,NULL,NULL,NULL,'2023-02-02 14:52:18',NULL,NULL,1);
+INSERT INTO `sous_rubrique` VALUES (31,NULL,NULL,1,33,NULL,NULL,7,'footer','footer','footer',0,0,NULL,NULL,NULL,NULL,NULL,NULL,'2023-02-02 14:52:18',NULL,NULL,1);
+INSERT INTO `sous_rubrique` VALUES (32,NULL,NULL,1,34,NULL,NULL,8,'footer','footer','footer',0,0,NULL,NULL,NULL,NULL,NULL,NULL,'2023-02-02 14:52:18',NULL,NULL,1);
+INSERT INTO `sous_rubrique` VALUES (33,NULL,NULL,1,35,NULL,NULL,9,'footer','footer','footer',0,0,NULL,NULL,NULL,NULL,NULL,NULL,'2023-02-02 14:52:18',NULL,NULL,1);
+INSERT INTO `sous_rubrique` VALUES (34,7,5,1,NULL,NULL,NULL,1,'Ouverture : 04-11-2022 / clôture : 26-12-2022','RECRUTEMENT DÉVELOPPEUR JAVA FULL-STACK (H/F)','Pour renforcer les équipes de notre centre de développement de Kinshasa, nous cherchons à recruter un DÉVELOPPEUR JAVA FULL-STACK (H/F) pour assurer principalement le développement, l\'évolution et l\'intégration des API.',0,0,NULL,NULL,NULL,NULL,NULL,NULL,'2023-02-02 14:52:18',NULL,NULL,1);
+INSERT INTO `sous_rubrique` VALUES (35,7,5,1,NULL,NULL,NULL,2,'Ouverture : 04-11-2022 / clôture : 26-12-2022','RECRUTEMENT DÉVELOPPEUR JAVA FULL-STACK (H/F)','Pour renforcer les équipes de notre centre de développement de Kinshasa, nous cherchons à recruter un DÉVELOPPEUR JAVA FULL-STACK (H/F) pour assurer principalement le développement, l\'évolution et l\'intégration des API.',0,0,NULL,NULL,NULL,NULL,NULL,NULL,'2023-02-02 14:52:18',NULL,NULL,1);
 /*!40000 ALTER TABLE `sous_rubrique` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -506,7 +575,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `status`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET character_set_client = utf8mb4 */;
+ 
 CREATE TABLE `status` (
   `STA_ID` int NOT NULL AUTO_INCREMENT,
   `STA_LIBELLE` varchar(1000) NOT NULL,
@@ -521,7 +590,8 @@ CREATE TABLE `status` (
 
 LOCK TABLES `status` WRITE;
 /*!40000 ALTER TABLE `status` DISABLE KEYS */;
-INSERT INTO `status` VALUES (1,'Actif'),(2,'Inactif');
+INSERT INTO `status` VALUES (1,'Actif');
+INSERT INTO `status` VALUES (2,'Inactif');
 /*!40000 ALTER TABLE `status` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -531,7 +601,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `template`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET character_set_client = utf8mb4 */;
+ 
 CREATE TABLE `template` (
   `TPL_ID` int NOT NULL AUTO_INCREMENT,
   `TPL_LIBELLE` varchar(1000) NOT NULL,
@@ -547,7 +617,13 @@ CREATE TABLE `template` (
 
 LOCK TABLES `template` WRITE;
 /*!40000 ALTER TABLE `template` DISABLE KEYS */;
-INSERT INTO `template` VALUES (1,'homepage','home.php'),(2,'little_content','little_content.php'),(3,'news','news.php'),(4,'hiring','hiring.php'),(5,'legal_content','legal_content.php'),(6,'resource_template','resource.php'),(7,'hiring_detail','hiring_detail.php');
+INSERT INTO `template` VALUES (1,'homepage','home.php');
+INSERT INTO `template` VALUES (2,'little_content','little_content.php');
+INSERT INTO `template` VALUES (3,'news','news.php');
+INSERT INTO `template` VALUES (4,'hiring','hiring.php');
+INSERT INTO `template` VALUES (5,'legal_content','legal_content.php');
+INSERT INTO `template` VALUES (6,'resource_template','resource.php');
+INSERT INTO `template` VALUES (7,'hiring_detail','hiring_detail.php');
 /*!40000 ALTER TABLE `template` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -557,7 +633,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `type_media`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET character_set_client = utf8mb4 */;
+ 
 CREATE TABLE `type_media` (
   `TYM_ID` int NOT NULL AUTO_INCREMENT,
   `TYM_LIBELLE` varchar(1000) NOT NULL,
@@ -572,7 +648,11 @@ CREATE TABLE `type_media` (
 
 LOCK TABLES `type_media` WRITE;
 /*!40000 ALTER TABLE `type_media` DISABLE KEYS */;
-INSERT INTO `type_media` VALUES (1,'image'),(2,'vidéo'),(3,'icône'),(4,'favico'),(5,'url');
+INSERT INTO `type_media` VALUES (1,'image');
+INSERT INTO `type_media` VALUES (2,'vidéo');
+INSERT INTO `type_media` VALUES (3,'icône');
+INSERT INTO `type_media` VALUES (4,'favico');
+INSERT INTO `type_media` VALUES (5,'url');
 /*!40000 ALTER TABLE `type_media` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -582,7 +662,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `users`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET character_set_client = utf8mb4 */;
+ 
 CREATE TABLE `users` (
   `USR_ID` int NOT NULL AUTO_INCREMENT,
   `USR_FRIST_NAME` varchar(1000) DEFAULT NULL,
@@ -777,4 +857,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2023-02-21 15:27:43
+-- Dump completed on 2023-02-21 17:10:03

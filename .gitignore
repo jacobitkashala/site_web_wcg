@@ -37,3 +37,4 @@ $RECYCLE.BIN/
 /public/en.php
 /public/env.php
 /src/en.php
+*.log
