@@ -72,4 +72,18 @@ class Text
             return false;
         }
     }
+    function is_valide_date($date)
+    {
+        $prefix = ["081", "082", "083", "099", "085", "097"];
+        $initial = substr($date, 0, 3);
+        if (in_array($initial, $prefix)) {
+            if (preg_match('/^[0-9]{10}+$/', $date)) {
+                return true;
+            } else {
+                return false;
+            }
+        }else{
+            return false;
+        }
+    }
 }
