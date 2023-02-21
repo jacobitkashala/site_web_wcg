@@ -7,9 +7,9 @@ require '../vendor/autoload.php';
 /**
  * ce-ci est a mettre en commentaire avant la mis en prod
  */
-$whoops = new \Whoops\Run;
-$whoops->pushHandler(new \Whoops\Handler\PrettyPageHandler);
-$whoops->register();
+// $whoops = new \Whoops\Run;
+// $whoops->pushHandler(new \Whoops\Handler\PrettyPageHandler);
+// $whoops->register();
 
 // echo dirname(__DIR__);
 $router = new App\Router(dirname(__DIR__) . '/views');

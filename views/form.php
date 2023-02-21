@@ -13,7 +13,6 @@ $titlePage = 'Formulaire recrutement';
 $descriptionPage = 'World Corp Group est une société de consulting et de développement de projets innovants, spécialiste en solutions SMAC (Social, Mobile, Analytics, Cloud)';
 
 $error = true;
-// $userSex = "F";
 $file_name;
 $file_type = null;
 $messageError = null;
@@ -26,7 +25,6 @@ $userName = null;
 $success = null;
 
 if (!empty($_FILES)) {
-	// var_dump($_FILES['fichier']['name']);
 	$file_name = $_FILES['fichier']['name'];
 	$file_tmp_name = $_FILES['fichier']['tmp_name'];
 	$file_type = $_FILES['fichier']['type'];
@@ -58,8 +56,6 @@ if (isset($_POST['btonPostuler'])) {
 	$userEmail = $text->xss_clean($_POST['emailUser']);
 	$userPhoneNumber = $text->xss_clean($_POST['phoneNumber']);
 	$userDataNaissance = $text->xss_clean($_POST['dataNaissance']);
-	// $userEtatCivil = $text->xss_clean($_POST['etatCivil']);
-	// $userSex = $text->xss_clean($_POST['sexUser']);
 	$userNote = $text->xss_clean($_POST['noteUser']);
 
 	if (empty($userDataNaissance)) {
@@ -82,7 +78,6 @@ if (isset($_POST['btonPostuler'])) {
 	}
 }
 
-// echo !empty($_FILES);
 ?>
 <main>
 	<section class="container_header_inovation">
