@@ -44,6 +44,7 @@ if (!empty($_FILES)) {
 			if (move_uploaded_file($file_tmp_name, $file_dest)) {
 				// $messageError = "Fichier envoyer avec succès";
 				$error = false;
+				$success = "Votre demande a été envoyer avec succès";
 			} else {
 				$messageError = "Une erreur est survenue lors de l'envoi du fichier";
 			}
