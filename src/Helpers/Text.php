@@ -60,9 +60,15 @@ class Text
     }
     function is_valide_phone($numberPhone)
     {
-        if (preg_match('/^[0-9]{10}+$/', $numberPhone)) {
-            return true;
-        } else {
+        $prefix = ["081", "082", "083", "099", "085", "097"];
+        $initial = substr($numberPhone, 0, 3);
+        if (in_array($initial, $prefix)) {
+            if (preg_match('/^[0-9]{10}+$/', $numberPhone)) {
+                return true;
+            } else {
+                return false;
+            }
+        }else{
             return false;
         }
     }
