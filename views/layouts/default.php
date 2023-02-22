@@ -45,38 +45,29 @@ if ($_SERVER['REQUEST_URI'] != '/') {
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 
 	<link rel='stylesheet' type='text/css' media='screen' href="<?= $newPathCss . "header.css" ?>">
-	<link rel='stylesheet' type='text/css' media='screen' href='<?= $newPathCss . "util.css" ?>'>
-	<!-- <link rel='stylesheet' type='text/css' media='screen' href='../css/util.css'> -->
-	<link rel='stylesheet' type='text/css' media='screen' href='css/home.css'>
-	<link rel='stylesheet' type='text/css' media='screen' href='../css/home.css'>
-	<link rel='stylesheet' type='text/css' media='screen' href='css/actualite.css'>
-	<link rel='stylesheet' type='text/css' media='screen' href='../css/actualite.css'>
-	<link rel='stylesheet' type='text/css' media='screen' href='css/detail_recrutement.css'>
-	<link rel='stylesheet' type='text/css' media='screen' href='../css/detail_recrutement.css'>
-	<link rel='stylesheet' type='text/css' media='screen' href='css/expertise.css'>
-	<link rel='stylesheet' type='text/css' media='screen' href='../css/expertise.css'>
-	<link rel='stylesheet' type='text/css' media='screen' href='css/formulaire_recrutement.css'>
-	<link rel='stylesheet' type='text/css' media='screen' href='../css/formulaire_recrutement.css'>
-	<link rel='stylesheet' type='text/css' media='screen' href='css/innovation.css'>
-	<link rel='stylesheet' type='text/css' media='screen' href='../css/innovation.css'>
-	<link rel='stylesheet' type='text/css' media='screen' href='css/recrutement.css'>
-	<link rel='stylesheet' type='text/css' media='screen' href='../css/recrutement.css'>
-	<link rel='stylesheet' type='text/css' media='screen' href='css/ressource.css'>
-	<link rel='stylesheet' type='text/css' media='screen' href='../css/ressource.css'>
-	<link rel='stylesheet' type='text/css' media='screen' href='css/footer.css'>
-	<link rel='stylesheet' type='text/css' media='screen' href='../css/footer.css'>
+	<link rel='stylesheet' type='text/css' media='screen' href="<?= $newPathCss . "util.css" ?>">
+	<link rel='stylesheet' type='text/css' media='screen' href="<?= $newPathCss . "new.css" ?>">
+	<link rel='stylesheet' type='text/css' media='screen' href=" <?= $newPathCss . "home.css" ?>">
+	<link rel='stylesheet' type='text/css' media='screen' href=" <?= $newPathCss . "actualite.css" ?>">
+	<link rel='stylesheet' type='text/css' media='screen' href=" <?= $newPathCss . "detail_recrutement.css" ?>">
+	<link rel='stylesheet' type='text/css' media='screen' href=" <?= $newPathCss . "expertise.css" ?>">
+	<link rel='stylesheet' type='text/css' media='screen' href=" <?= $newPathCss . "formulaire_recrutement.css" ?>">
+	<link rel='stylesheet' type='text/css' media='screen' href=" <?= $newPathCss . "innovation.css" ?>">
+	<link rel='stylesheet' type='text/css' media='screen' href=" <?= $newPathCss . "recrutement.css" ?>">
+	<link rel='stylesheet' type='text/css' media='screen' href=" <?= $newPathCss . "ressource.css" ?>">
+	<link rel='stylesheet' type='text/css' media='screen' href=" <?= $newPathCss . "footer.css" ?>">
 	<link rel="shortcut icon" href="<?= $newPathIcons . 'favico.ico' ?>" alt="logo wcg" />
 	<title><?= $titlePage ?? "World Corp Group" ?></title>
 </head>
 
 <body>
-	
+
 	<?php require  'header.php' ?>
 
 	<?= $contentPage ?>
 
 	<?php require  'footer.php' ?>
-	
+
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
 	<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> -->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>

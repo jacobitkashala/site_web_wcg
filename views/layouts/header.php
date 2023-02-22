@@ -6,7 +6,6 @@ use App\Connection;
 
 
 $pdo = Connection::getPDO(db_host,db_user,db_pass,db_name);
-// $pdo = Connection::getPDO();
 $query = $pdo->query('SELECT  template.TPL_LIBELLE,r.a_sous_rubrique,r.url_page,r.RUB_ID, r.RUB_ICONE_ID, r.RUB_LIBELLE,r.RUB_BACKGROUND,r.RUB_FONT_NAME,r.RUB_FONT_SIZE,r.RUB_FONT_COLOR, m.med_ressource FROM rubrique r, media m, site s ,template WHERE m.med_id = r.rub_icone_id and r.SIT_ID = s.SIT_ID and s.SIT_ID = 1 and template.TPL_ID = r.TPL_ID ORDER BY r.RUB_ORDRE');
 $menus = $query->fetchAll(PDO::FETCH_CLASS, Menu::class);
 
