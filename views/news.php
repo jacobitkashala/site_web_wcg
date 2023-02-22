@@ -64,6 +64,7 @@ echo "
 			</div>
 		</div>
 	</div>
+
 	<div class="row bg-image-new mb-4 d-flex justify-content-end ">
 		<div class="col-log-4 col-md-3 col-sm-9 ">
 			<div class="">
@@ -73,4 +74,28 @@ echo "
 			</div>
 		</div>
 	</div>
+
+	<div class="container-fluid">
+		<div class="row mb-4">
+			<div class="col-log-5 col-md-4 col-sm-9 ">
+				<img src="<?= "." . ephoto . "business.jpg" ?>" class="img-fluid" alt="...">
+			</div>
+			<div class="col-log-5 col-md-5 col-sm-9 ">
+				<h1>Lorem Ipsum Lorem </h1>
+				<p>
+					Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum
+					Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum
+
+					Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum
+					Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum
+
+					Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum
+					Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum
+				</p>
+
+			</div>
+		</div>
+	</div>
+
+
 </main>
