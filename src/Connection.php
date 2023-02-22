@@ -15,11 +15,6 @@ class Connection
 	
 
 
-	// 
-	// private $db_host = "127.0.0.1";
-    // private $db_user = "jacobit.k";
-    // private $db_pass = "wcg2023!";
-    // private $db_name = "wcg_site_web_databases";
 
 	// public static $pdo;
 

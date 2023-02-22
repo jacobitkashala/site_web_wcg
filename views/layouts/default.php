@@ -72,10 +72,11 @@ if ($_SERVER['REQUEST_URI'] != '/') {
 <body>
 	
 	<?php require  'header.php' ?>
-	<?=  "$db_host" ?>
-	
+
 	<?= $contentPage ?>
+
 	<?php require  'footer.php' ?>
+	
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
 	<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> -->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
