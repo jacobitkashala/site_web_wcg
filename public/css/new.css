@@ -38,3 +38,9 @@ color: #FFFFFF;
 	height:19px;
 	color: #FFFFFF;
 }
+.bg-image-new{
+	object-fit: cover;
+	width: 100%;
+	background-size: cover;
+	height: 457px;
+ }

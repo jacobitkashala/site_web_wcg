@@ -20,41 +20,56 @@ echo "
    background-image:  url(." . ephoto . "cloud_data.png ) ;
    background-repeat: no-repeat;
 }
+.bg-image-new{
+	background-image:  url(." . ephoto . "new.jpg ) ;
+	background-repeat: no-repeat;
+ }
 </style>
  ";
 ?>
 <main>
 	<div class="row bg-image mb-4">
-		<div class="col-log-5 col-md-5 col-sm-9 contenair-new">
+		<div class="col-log-3 col-md-3 col-sm-9 contenair-new">
 			<p>
 				Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum
 			</p>
 			<a class="btn" href="#">En savoir plus</a>
 		</div>
 	</div>
-	<div class=" row d-flex justify-content-center">
-		<div class="card col-log-5 col-md-5 col-sm-9  " style="width: 20rem">
-			<img src="<?= "." . ephoto . "business.jpg" ?>" class="img-fluid" alt="...">
-			<div class="card-body">
-				<p class="card-text"> title and make up the bulk of the card's content. Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum
-				</p>
-				<a href="#" class="btn btn-primary">En savoir plus</a>
+	<div class="container-fluid">
+		<div class="row  d-flex justify-content-center mb-4">
+			<div class="card col-log-4 col-md-3 col-sm-9  " style="width: 19rem">
+				<img src="<?= "." . ephoto . "business.jpg" ?>" class="img-fluid" alt="...">
+				<div class="card-body">
+					<p class="card-text"> title and make up the bulk of the card's content. Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum
+					</p>
+					<a href="#" class="btn btn-primary">En savoir plus</a>
+				</div>
+			</div>
+			<div class="card mx-2  col-log-3 col-md-3 col-sm-9 ">
+				<img src="<?= "." . ephoto . "business.jpg" ?>" class="img-fluid" alt="...">
+				<div class="card-body">
+					<p class="card-text"> title and make s content. Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum
+					</p>
+					<a href="#" class="btn btn-primary">En savoir plus</a>
+				</div>
+			</div>
+			<div class="card col-log-3 col-md-3 col-sm-9 " style="width: 19rem">
+				<img src="<?= "." . ephoto . "business.jpg" ?>" class="img-fluid" alt="...">
+				<div class="card-body">
+					<p class="card-text"> title and make up the bulk of the card's content. Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum
+					</p>
+					<a href="#" class="btn btn-primary">En savoir plus</a>
+				</div>
 			</div>
 		</div>
-		<div class="card mx-2 col-log-5 col-md-5 col-sm-9 " style="width: 20rem">
-			<img src="<?= "." . ephoto . "business.jpg" ?>" class="img-fluid" alt="...">
-			<div class="card-body">
-				<p class="card-text"> title and make up the bulk of the card's content. Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum
+	</div>
+	<div class="row bg-image-new mb-4 d-flex justify-content-end ">
+		<div class="col-log-4 col-md-3 col-sm-9 ">
+			<div class="">
+				<p>
+					Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum
 				</p>
-				<a href="#" class="btn btn-primary">En savoir plus</a>
-			</div>
-		</div>
-		<div class="card col-log-5 col-md-5 col-sm-9 " style="width: 20rem">
-			<img src="<?= "." . ephoto . "business.jpg" ?>" class="img-fluid" alt="...">
-			<div class="card-body">
-				<p class="card-text"> title and make up the bulk of the card's content. Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum
-				</p>
-				<a href="#" class="btn btn-primary">En savoir plus</a>
 			</div>
 		</div>
 	</div>
