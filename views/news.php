@@ -17,26 +17,45 @@ $descriptionPage = 'World Corp Group est une société de consulting et de déve
 echo "
 <style>
 .bg-image{
-   background-image:  url(.". ephoto."cloud_data.png ) ;
+   background-image:  url(." . ephoto . "cloud_data.png ) ;
    background-repeat: no-repeat;
 }
 </style>
  ";
 ?>
 <main>
-
-	<div class="bg-image">
-		<div class="row">
-			<div class="col-5">
-				<p>
-					Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum
+	<div class="row bg-image mb-4">
+		<div class="col-log-5 col-md-5 col-sm-9 contenair-new">
+			<p>
+				Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum
+			</p>
+			<a class="btn" href="#">En savoir plus</a>
+		</div>
+	</div>
+	<div class=" row d-flex justify-content-center">
+		<div class="card col-log-5 col-md-5 col-sm-9  " style="width: 20rem">
+			<img src="<?= "." . ephoto . "business.jpg" ?>" class="img-fluid" alt="...">
+			<div class="card-body">
+				<p class="card-text"> title and make up the bulk of the card's content. Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum
 				</p>
-				<div>
-					<a class="btn" href="#"></a>
-				</div>
-
+				<a href="#" class="btn btn-primary">En savoir plus</a>
+			</div>
+		</div>
+		<div class="card mx-2 col-log-5 col-md-5 col-sm-9 " style="width: 20rem">
+			<img src="<?= "." . ephoto . "business.jpg" ?>" class="img-fluid" alt="...">
+			<div class="card-body">
+				<p class="card-text"> title and make up the bulk of the card's content. Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum
+				</p>
+				<a href="#" class="btn btn-primary">En savoir plus</a>
+			</div>
+		</div>
+		<div class="card col-log-5 col-md-5 col-sm-9 " style="width: 20rem">
+			<img src="<?= "." . ephoto . "business.jpg" ?>" class="img-fluid" alt="...">
+			<div class="card-body">
+				<p class="card-text"> title and make up the bulk of the card's content. Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum
+				</p>
+				<a href="#" class="btn btn-primary">En savoir plus</a>
 			</div>
 		</div>
 	</div>
-
 </main>

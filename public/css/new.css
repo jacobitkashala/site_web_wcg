@@ -2,5 +2,39 @@
 	object-fit: cover;
 	width: 100%;
 	background-size: cover;
-	height: 866px;
+	height: 600px;
+}
+.contenair-new{
+font-weight: 600;
+line-height: 32px;
+background: rgba(0, 0, 0, 0.5);
+height:100%;
+display: flex;
+padding: 0 65px;
+flex-direction: column;
+flex-wrap: nowrap;
+justify-content: center;
+align-items: center;
+}
+.contenair-new p{
+font-weight: 600;
+font-size: 26px;
+line-height: 32px;
+color: #FFFFFF;
+}
+.contenair-new a{
+	font-weight: 600;
+	font-size: 26px;
+	line-height: 32px;
+	background: #FFFFFF;
+	border: 1px solid #000000;
+	border-radius: 7px; 
+	color: #000000;
+	}
+
+
+.new-btn a{
+	width:19px;
+	height:19px;
+	color: #FFFFFF;
 }

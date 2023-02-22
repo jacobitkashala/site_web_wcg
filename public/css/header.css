@@ -221,6 +221,7 @@ font-size: 1.9rem; */
 		display:flex;
 		justify-content: space-between;
 		align-items: center;
+		background-color:#fff;
 		padding: 2px;
 		border-bottom: 2px black;
 	} 

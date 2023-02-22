@@ -3,7 +3,7 @@
 // use App\MODEL\HiringContent;
 use App\Helpers\Text;
 // use App\Connection;
-
+// Merci de manifester votre intérêt pour notre entreprise
 $text = new Text;
 // $pdo = Connection::getPDO(db_host,db_user,db_pass,db_name);
 // var_dump($_FILES); $_FILES['fichier']['name'];
