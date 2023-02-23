@@ -13,7 +13,7 @@ $descriptionPage = 'World Corp Group est une société de consulting et de déve
 
 
 
-$pdo = Connection::getPDO(db_host,db_user,db_pass,db_name);
+$pdo = Connection::getPDO(db_host, db_user, db_pass, db_name);
 $carouselSlq = "SELECT media.MED_ID, media.MED_RESSOURCE ,sous_rubrique.SRU_ORDRE FROM  media Inner JOIN sous_rubrique ON sous_rubrique.SRU_IMG_ID = media.MED_ID Inner JOIN site ON sous_rubrique.SIT_ID = site.SIT_ID WHERE  sous_rubrique.SRU_UNE = 1 AND site.SIT_ID=1";
 $query1 = $pdo->query($carouselSlq);
 $carousels = $query1->fetchAll(PDO::FETCH_CLASS, Carousel::class);
@@ -51,27 +51,33 @@ $homeServiceMiseEnAvant = $query4->fetchAll(PDO::FETCH_CLASS, SectionTwoHome::cl
 		</div>
 	</section>
 	<div class="container-home">
-		<section class="row">
-			<div class="col-2  ">
+		<div class="row">
+			<div class="col-log-2 col-md-2 col-sm-1  ">
 				<img class="image-illustration" src="<?= ephoto . "image1.png" ?>" alt="illustration lampe" srcset="">
 			</div>
-			<div class=" col-4 content-desc">
+			<div class=" col-log-5 col-md-5 col-sm-9 ">
+				<!-- <div class=" col-log-4 col-md-9 col-sm-9 content-desc"> -->
 				<h1><?php echo $homeSection[0]->getTitle() ?> </h1>
 				<p>
 					<?php echo $homeSection[0]->getContenue() ?>
 				</p>
 			</div>
-			<div class="col-4 ">
-				<div>
-					<video class="w-video-main" src="<?= evideo . $homeActualite[0]->getRessource() ?>" controls></video>
-				</div>
+			<div class=" col-log-5 col-md-5 col-sm-9 ">
+				<!-- <div class=" col-log-4 col-md-9 col-sm-9 content-desc"> -->
+				<!-- <div class="row"> -->
+				<!-- <div class="col-log-6"> -->
+				<!-- <video class="" src="<?= evideo . $homeActualite[0]->getRessource() ?>" controls></video> -->
+				<video class="w-video-main" src="<?= evideo . $homeActualite[0]->getRessource() ?>" controls></video>
+				<!-- </div> -->
+				<!-- <div class="col-log-6"> -->
+				<!-- <video class="w-video-second" src="<?php echo evideo . $homeActualite[0]->getRessource() ?>" controls></video> -->
+				<!-- <video class="w-video-second" src="<?php echo evideo . $homeActualite[0]->getRessource() ?>" controls></video> -->
+				<!-- <video class="w-video-second" src="<?php echo evideo . $homeActualite[0]->getRessource() ?>" controls></video> -->
+				<!-- </div> -->
+				<!-- </div> -->
+
 			</div>
-			<div class="col-2">
-				<video class="w-video-second" src="<?php echo evideo . $homeActualite[0]->getRessource() ?>" controls></video>
-				<video class="w-video-second" src="<?php echo evideo . $homeActualite[0]->getRessource() ?>" controls></video>
-				<video class="w-video-second" src="<?php echo evideo . $homeActualite[0]->getRessource() ?>" controls></video>
-			</div>
-		</section>
+		</div>
 		<!-- Présentation de service -->
 		<div class="contenaire-service">
 			<div class="service-element">
