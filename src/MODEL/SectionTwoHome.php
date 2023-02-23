@@ -8,20 +8,20 @@ class SectionTwoHome
 	private $SRU_LIBELLE;
 	private $SRU_TITRE;
 	private $SRU_CONTENU;
-	private $little_content;
+	private $template;
 	private $id_sous_rubrique;
 	private $id_rubrique;
 
 
 	public function getTemplate()
 	{
-		return $this->little_content;
+		return $this->template;
 	}
-	public function getSousRubriaque()
+	public function getIdSousRubrique()
 	{
 		return $this->id_sous_rubrique;
 	}
-	public function getRubrique()
+	public function getIdRubrique()
 	{
 		return $this->id_rubrique;
 	}

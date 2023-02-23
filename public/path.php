@@ -1,5 +1,6 @@
 <?php
 define('DOMAIN_URL', 'http://localhost:8080/');
+
 define('evideo', './media/video/');
 define('ephoto', './media/photo/');
 define('pathCss', DOMAIN_URL . 'css/');
