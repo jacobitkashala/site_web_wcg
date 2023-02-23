@@ -80,11 +80,12 @@ $homeServiceMiseEnAvant = $query4->fetchAll(PDO::FETCH_CLASS, SectionTwoHome::cl
 		</div>
 		<!-- Présentation de service -->
 		<div class="contenaire-service">
-			<div class="service-element">
+			<!-- <div class=""> -->
+			<div class="row text-center service-element">
 				<?php
 				foreach ($homeServiceMiseEnAvant as $contentMiseEnAvant) : ?>
 					<!-- <div class="service-content"> -->
-					<div class="service-content">
+					<div class=" col-sm-5 service-content">
 						<img src="<?php echo ephoto . $contentMiseEnAvant->getRessource() ?>" alt="image titre" srcset="">
 						<h1><?php echo $contentMiseEnAvant->getTitre() ?></h1>
 						<p><?php echo $contentMiseEnAvant->getContenu() ?> </p>
