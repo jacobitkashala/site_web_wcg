@@ -32,7 +32,7 @@ color: #FFFFFF;
 	color: #000000;
 	}
 
-
+/* <a href="<?= $router->url($contentMiseEnAvant->getTemplate(), array('id' => $contentMiseEnAvant->getRubrique(), 'slug' => $contentMiseEnAvant->getSousRubriaque())) ?>"> */
 .new-btn a{
 	width:19px;
 	height:19px;

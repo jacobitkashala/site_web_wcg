@@ -22,6 +22,7 @@ $router->get('/form', '/form.php', 'form');
 $router->post('/form', '/form.php', 'soumettre');
 $router->get('/legal_content:[*:slug]-[i:id]', '/legal_content.php', 'legal_content');
 $router->get('/little_content:[*:slug]-[i:id]', '/little_content.php', 'little_content');
+$router->get('/resource_template:[*:slug]-[i:id]', '/resource_template.php', 'resource_template');
 // $router->post('/form/[*:slug]-[i:id]', '/form.php', 'form');
 
 $router->run();

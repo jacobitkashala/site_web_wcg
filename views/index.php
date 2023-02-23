@@ -26,14 +26,18 @@ $homeActualitelSlq = "SELECT  sous_rubrique.SRU_ID ,media.MED_RESSOURCE  FROM  s
 $query3 = $pdo->query($homeActualitelSlq);
 $homeActualite = $query3->fetchAll(PDO::FETCH_CLASS, AlaUneActualite::class);
 
-$homeServiceMiseEnAvantSql = "SELECT media.MED_RESSOURCE, sous_rubrique.SRU_LIBELLE, sous_rubrique.SRU_TITRE , sous_rubrique.SRU_CONTENU FROM sous_rubrique INNER JOIN media ON media.MED_ID = sous_rubrique.SRU_VIGNETTE_ID WHERE SRU_AVANT = 1 AND STA_ID = 1 ORDER BY SRU_ORDRE LIMIT 5";
+// $homeServiceMiseEnAvantSql = "SELECT media.MED_RESSOURCE, sous_rubrique.SRU_LIBELLE, sous_rubrique.SRU_TITRE , sous_rubrique.SRU_CONTENU FROM sous_rubrique INNER JOIN media ON media.MED_ID = sous_rubrique.SRU_VIGNETTE_ID WHERE SRU_AVANT = 1 AND STA_ID = 1 ORDER BY SRU_ORDRE LIMIT 5";
+$homeServiceMiseEnAvantSql = "SELECT template.TPL_LIBELLE as template,sous_rubrique.SRU_ID as id_sous_rubrique,rubrique.RUB_ID as id_rubrique, media.MED_RESSOURCE, sous_rubrique.SRU_LIBELLE, sous_rubrique.SRU_TITRE , sous_rubrique.SRU_CONTENU FROM sous_rubrique INNER JOIN media ON media.MED_ID = sous_rubrique.SRU_VIGNETTE_ID INNER JOIN rubrique ON rubrique.RUB_ID = sous_rubrique.RUB_ID INNER JOIN template ON template.TPL_ID = sous_rubrique.TPL_ID WHERE sous_rubrique.SRU_AVANT = 1 AND sous_rubrique.STA_ID = 1 AND sous_rubrique.SIT_ID = 1 ORDER BY SRU_ORDRE LIMIT " . limite5;
+
 $query4 = $pdo->query($homeServiceMiseEnAvantSql);
 $homeServiceMiseEnAvant = $query4->fetchAll(PDO::FETCH_CLASS, SectionTwoHome::class);
 
-// define();
+
 // echo '<pre>';
 // echo print_r($homeServiceMiseEnAvant);
 // echo '<pre>';
+// exit();
+
 ?>
 <main>
 	<section class="home">
@@ -57,9 +61,9 @@ $homeServiceMiseEnAvant = $query4->fetchAll(PDO::FETCH_CLASS, SectionTwoHome::cl
 			</div>
 			<div class=" col-log-5 col-md-5 col-sm-9 ">
 				<!-- <div class=" col-log-4 col-md-9 col-sm-9 content-desc"> -->
-				<h1><?php echo $homeSection[0]->getTitle() ?> </h1>
+				<h1><?= $homeSection[0]->getTitle() ?> </h1>
 				<p>
-					<?php echo $homeSection[0]->getContenue() ?>
+					<?= $homeSection[0]->getContenue() ?>
 				</p>
 			</div>
 			<div class=" col-log-5 col-md-5 col-sm-9 ">
@@ -85,11 +89,14 @@ $homeServiceMiseEnAvant = $query4->fetchAll(PDO::FETCH_CLASS, SectionTwoHome::cl
 				<?php
 				foreach ($homeServiceMiseEnAvant as $contentMiseEnAvant) : ?>
 					<!-- <div class="service-content"> -->
-					<div class=" col-sm-5 service-content">
-						<img src="<?php echo ephoto . $contentMiseEnAvant->getRessource() ?>" alt="image titre" srcset="">
-						<h1><?php echo $contentMiseEnAvant->getTitre() ?></h1>
-						<p><?php echo $contentMiseEnAvant->getContenu() ?> </p>
-						<a class="btn" href="#">Pour en savoir plus ...</a>
+					<div class="service-content">
+						<img src="<?= ephoto . $contentMiseEnAvant->getRessource() ?>" alt="image titre" srcset="">
+						<h1><?= $contentMiseEnAvant->getTitre() ?></h1>
+						<p><?= $contentMiseEnAvant->getContenu() ?> </p>
+						<p><?= $contentMiseEnAvant->getTemplate() ?> </p>
+						<a href="<?= $router->url("news", array('id' => 1, 'slug' => 1)) ?>">
+
+							<!-- <a class="btn" href="#">Pour en savoir plus ... ddd</a> -->
 					</div>
 				<?php endforeach ?>
 			</div>

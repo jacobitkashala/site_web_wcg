@@ -9,7 +9,7 @@
 -- 	m.med_id = r.rub_icone_id and r.SIT_ID = s.SIT_ID and s.SIT_ID = 1 
 -- order by r.RUB_ORDRE
 
-use wcg_site_web_databases;
+-- use wcg_site_web_databases;
 
 -- SELECT SRU_ORDRE, SRU_TITRE  
 --   FROM sous_rubrique
@@ -104,3 +104,5 @@ use wcg_site_web_databases;
 --   `description` TEXT DEFAULT NULL,
 --   PRIMARY KEY (`Id`)
 -- );
+
+-- SELECT template.TPL_RESSOURCES as template,sous_rubrique.SRU_ID as id_sous_rubrique,rubrique.RUB_ID as id_rubrique, media.MED_RESSOURCE, sous_rubrique.SRU_LIBELLE, sous_rubrique.SRU_TITRE , sous_rubrique.SRU_CONTENU FROM sous_rubrique INNER JOIN media ON media.MED_ID = sous_rubrique.SRU_VIGNETTE_ID INNER JOIN rubrique ON rubrique.RUB_ID = sous_rubrique.RUB_ID INNER JOIN template ON template.TPL_ID = sous_rubrique.TPL_ID WHERE sous_rubrique.SRU_AVANT = 1 AND sous_rubrique.STA_ID = 1 AND sous_rubrique.SIT_ID = 1 ORDER BY SRU_ORDRE LIMIT 5;

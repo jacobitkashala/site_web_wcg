@@ -13,13 +13,11 @@ $newPathLogo = logo;
 $newPathIcons = icons;
 // $newPathEphoto = ephoto;
 
-if ($_SERVER['REQUEST_URI'] != '/') {
-	$newPathLogo = "." . $newPathLogo;
-	$newPathIcons = "." . $newPathIcons;
-	// $newPathEphoto  = ".".$newPathEphoto;
-
-
-}
+// if ($_SERVER['REQUEST_URI'] != '/') {
+// 	$newPathLogo = "." . $newPathLogo;
+// 	$newPathIcons = "." . $newPathIcons;
+// 	// $newPathEphoto  = ".".$newPathEphoto;
+// }
 
 // echo db_host;
 // echo print_r(dirname(__DIR__));
