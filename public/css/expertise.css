@@ -55,23 +55,21 @@ div.active{
    width: 100%;
    background-size: cover;
    height: 866px;
-
+   padding-top: 111px;
+   padding-left: 126px;
 }
 .container_content_expertise h4{
 	font-style: normal;
 	font-weight: 700;
 	font-size: 40px;
 	margin-bottom: 1rem;
-	padding-top: 111px;
-    padding-left: 126px;
 	line-height: 49px;
 	text-align: left;
 	color: #FFFFFF;
 }
 .container_content_expertise p{
 	font-style: normal;
-	font-weight: 500;
-    padding-left: 126px;
+	font-weight: 500;	
 	font-size: 18px;
 	line-height: 22px;
 	text-align: justify;
@@ -87,7 +85,15 @@ div.active{
 		font-size: 18px;
 	}
 	.container_content_expertise{
-		height: 100%;
+		object-fit: cover;
+		width: 100%;
+		background-size: cover;
+		height: 866px;
+		padding-top: 111px;
+		padding-left: 0px;
+	 }
+	 .container_content_expertise h4{
+		margin-bottom: 0;
 	}
 	.expertise_box {
 		display: flex;

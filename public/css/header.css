@@ -199,14 +199,14 @@ font-size: 1.9rem; */
 @media (max-width:768px) {
 	
 }
-
+/* Mobile */
 @media (max-width:450px) {
 	.header_image > img {
 		height: 50px;
 		width: 200px;
 	}
 	.icon-cog{
-		display:block;
+		display: inherit;
 	}
 	#menu-btn{
 		font-size :2rem;
@@ -250,5 +250,10 @@ font-size: 1.9rem; */
 		width: 100%;
 		font-size: 18px;
 	}
+	ul .menu:nth-child(0n+1) {
+		width: 100%;
+	}
+	
+	
 	
 }
