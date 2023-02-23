@@ -82,6 +82,7 @@ html{
 .link-navbar .link{
     list-style: none;
 	width: 100%;
+	padding:.5rem;
 }
 
 .link-navbar-sous-menu {
@@ -95,7 +96,7 @@ li{
 .link-navbar .link a{
     text-decoration: none;	
     font-size: 18px;
-	padding:10px
+	
 }
 ul .menu:nth-child(0n+1){
 	width: 20%;

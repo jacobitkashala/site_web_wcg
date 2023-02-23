@@ -93,10 +93,7 @@ $homeServiceMiseEnAvant = $query4->fetchAll(PDO::FETCH_CLASS, SectionTwoHome::cl
 						<img src="<?= ephoto . $contentMiseEnAvant->getRessource() ?>" alt="image titre" srcset="">
 						<h1><?= $contentMiseEnAvant->getTitre() ?></h1>
 						<p><?= $contentMiseEnAvant->getContenu() ?> </p>
-						<p><?= $contentMiseEnAvant->getTemplate() ?> </p>
-						<a href="<?= $router->url("news", array('id' => 1, 'slug' => 1)) ?>">
-
-							<!-- <a class="btn" href="#">Pour en savoir plus ... ddd</a> -->
+						<a class="btn" href="#">Pour en savoir plus ... ddd</a>
 					</div>
 				<?php endforeach ?>
 			</div>
