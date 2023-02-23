@@ -3,7 +3,11 @@ define('DOMAIN_URL', 'http://localhost:8080/');
 
 define('evideo', './media/video/');
 define('ephoto', './media/photo/');
-define('pathCss', ROOT_HOST . 'css/');
+if (ROOT_HOST == 'http://localhost:8080/') {
+	define('pathCss', ROOT_HOST . 'css/');
+} else {
+	define('pathCss', ROOT_HOST . 'public/css/');
+}
 define('pathJs', './js/');
 define('logo', './media/logo/');
 define('ecrousel', './media/carousel/');
