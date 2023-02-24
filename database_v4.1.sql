@@ -13,7 +13,9 @@
 --
 -- Table structure for table `Candidat`
 --
+CREATE DATABASE wcg_site_web_database;
 
+use  DATABASE wcg_site_web_database;
 DROP TABLE IF EXISTS `Candidat`;
 CREATE TABLE `Candidat` (
   `Id` int NOT NULL AUTO_INCREMENT,
