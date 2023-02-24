@@ -17,11 +17,11 @@ $descriptionPage = 'World Corp Group est une société de consulting et de déve
 echo "
 <style>
 .bg-image{
-   background-image:  url(." . ephoto . "cloud_data.png ) ;
+   background-image:  url(" . ephoto . "cloud_data.png ) ;
    background-repeat: no-repeat;
 }
 .bg-image-new{
-	background-image:  url(." . ephoto . "new.jpg ) ;
+	background-image:  url(" . ephoto . "new.jpg ) ;
 	background-repeat: no-repeat;
  }
 </style>
@@ -39,7 +39,7 @@ echo "
 	<div class="container-fluid">
 		<div class="row  d-flex justify-content-center mb-4">
 			<div class="card col-log-4 col-md-3 col-sm-9  " style="width: 19rem">
-				<img src="<?= "." . ephoto . "business.jpg" ?>" class="img-fluid" alt="...">
+				<img src="<?= ephoto . "business.jpg" ?>" class="img-fluid" alt="...">
 				<div class="card-body">
 					<p class="card-text"> title and make up the bulk of the card's content. Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum
 					</p>
@@ -55,7 +55,7 @@ echo "
 				</div>
 			</div>
 			<div class="card col-log-3 col-md-3 col-sm-9 " style="width: 19rem">
-				<img src="<?= "." . ephoto . "business.jpg" ?>" class="img-fluid" alt="...">
+				<img src="<?= ephoto . "business.jpg" ?>" class="img-fluid" alt="...">
 				<div class="card-body">
 					<p class="card-text"> title and make up the bulk of the card's content. Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum
 					</p>
@@ -78,7 +78,7 @@ echo "
 	<div class="container-fluid">
 		<div class="row mb-4">
 			<div class="col-log-5 col-md-4 col-sm-9 ">
-				<img src="<?= "." . ephoto . "business.jpg" ?>" class="img-fluid" alt="...">
+				<img src="<?= ephoto . "business.jpg" ?>" class="img-fluid" alt="...">
 			</div>
 			<div class="col-log-5 col-md-5 col-sm-9 ">
 				<h1>Lorem Ipsum Lorem </h1>
