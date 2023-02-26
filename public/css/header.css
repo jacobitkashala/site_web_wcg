@@ -82,7 +82,7 @@ html{
 .link-navbar .link{
     list-style: none;
 	width: 100%;
-	padding:.5rem;
+	padding:10px;
 }
 
 .link-navbar-sous-menu {
@@ -117,6 +117,9 @@ ul .menu:nth-child(0n+1){
 .menu:hover .sous-menu{
 	display: block;
 	transition: all 0.3s ease-in;
+}
+.navbar {
+	padding:0px;
 }
 /* div.container-sous-menu-grid{
 

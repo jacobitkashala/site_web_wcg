@@ -44,25 +44,29 @@ class Router
     public function run(): self
     {
         $match = $this->router->match();
-        if (is_array($match)) {
+        // $uri =;
 
-        $params = $match['params'];
-        // $view = "{$match['target']}";
-        $view = $match['target'];
-        $router = $this;
-        ob_start();
-        // echo '<pre>';
-        // var_dump($this->viewPath . $view);
-        // echo '</pre>';
-        require $this->viewPath . DIRECTORY_SEPARATOR . $view;
-        $contentPage = ob_get_clean();
-       
-        require $this->viewPath . DIRECTORY_SEPARATOR . 'layouts/default.php';
-            
-        }else{
-        require $this->viewPath . DIRECTORY_SEPARATOR . 'layouts/error.php';
+        if ($_SERVER['REQUEST_URI'] === "/admin") {
+            require $this->viewPath . DIRECTORY_SEPARATOR . 'admin/index.php';
+        } else {
+            if (is_array($match)) {
+                $params = $match['params'];
+                // $view = "{$match['target']}";
+                $view = $match['target'];
+                $router = $this;
+                ob_start();
+                // echo '<pre>';
+                // var_dump($this->viewPath . $view);
+                // echo '</pre>';
+                require $this->viewPath . DIRECTORY_SEPARATOR . $view;
+                $contentPage = ob_get_clean();
 
+                require $this->viewPath . DIRECTORY_SEPARATOR . 'layouts/default.php';
+            } else {
+                require $this->viewPath . DIRECTORY_SEPARATOR . 'layouts/error.php';
+            }
         }
+
 
         return $this;
     }

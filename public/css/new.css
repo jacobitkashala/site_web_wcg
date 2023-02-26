@@ -10,7 +10,7 @@ line-height: 32px;
 background: rgba(0, 0, 0, 0.5);
 height:100%;
 display: flex;
-padding: 0 65px;
+/* padding: 32px 65px; */
 flex-direction: column;
 flex-wrap: nowrap;
 justify-content: center;
@@ -43,4 +43,32 @@ color: #FFFFFF;
 	width: 100%;
 	background-size: cover;
 	height: 457px;
+ }
+ .margin-15{
+	     margin-right: 0px;
+ }
+ .bloc-mood{
+	position: relative;
+	height: 90vh;
+	width: 100vw;
+    /* background-color: red; */
+	overflow: hidden;
+	 margin-right: 0px;
+	 color:#FFFFFF;
+ }
+ .bloc-mood video{
+	position:absolute;
+	min-width: 100%;
+	min-height: 100%;
+	top: 50%;
+	z-index:-100;
+	left: 50%;
+	transform: translate(-50%,-50%);
+ }
+ .bloc-mood video ::before{
+	position:absolute;
+	content: "";
+	height: 100%;
+	width: 100%;
+	background-color: red;
  }

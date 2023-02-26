@@ -28,14 +28,20 @@ echo "
  ";
 ?>
 <main>
-	<div class="row bg-image mb-4">
-		<div class="col-log-3 col-md-3 col-sm-9 contenair-new">
-			<p>
-				Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum
-			</p>
-			<a class="btn" href="#">En savoir plus</a>
+	<div class="row margin-15 mb-5">
+		<div class="bloc-mood">
+			<video playsinline="" autoplay="autoplay" loop="infinite" muted="muted">
+				<source src="<?= evideo . "safari_beach.mp4" ?>" type="video/mp4">
+			</video>
+			<div class="col-log-3 col-md-3 col-sm-9 contenair-new">
+				<p>
+					Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum
+				</p>
+				<a class="btn" href="#">En savoir plus</a>
+			</div>
 		</div>
 	</div>
+
 	<div class="container-fluid">
 		<div class="row  d-flex justify-content-center mb-4">
 			<div class="card col-log-4 col-md-3 col-sm-9  " style="width: 19rem">
