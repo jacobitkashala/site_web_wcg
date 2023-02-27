@@ -35,6 +35,12 @@ class Router
         return $this;
         // return $route; // On retourne la route pour "enchainer" les méthodes
     }
+    public function match(string $url, string $view, ?string $name = null): self
+    {
+        $this->router->map('POST|GET', $url, $view, $name);
+        return $this;
+        // return $route; // On retourne la route pour "enchainer" les méthodes
+    }
 
     public function url(string $name, array $params = [])
     {

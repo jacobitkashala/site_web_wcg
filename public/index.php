@@ -24,6 +24,9 @@ $router->post(ROOT_URL . 'form', '/form.php', 'soumettre');
 $router->get(ROOT_URL . 'legal_content:[*:slug]-[i:id]', '/legal_content.php', 'legal_content');
 $router->get(ROOT_URL . 'little_content:[*:slug]-[i:id]', '/little_content.php', 'little_content');
 $router->get(ROOT_URL . 'resource_template:[*:slug]-[i:id]', '/resource_template.php', 'resource_template');
+
+$router->match(ROOT_URL . '/login', 'auth/login', 'login');
+
 $router->get(ROOT_URL . 'admin', 'admin/index.php', 'admin');
 // $router->post('/form/[*:slug]-[i:id]', '/form.php', 'form');
 
