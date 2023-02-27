@@ -12,11 +12,11 @@
 			<div class="box-header with-border">
 				<h3 class="box-title">Administrator Login</h3>
 			</div>
-			<form method="post" enctype="multipart/form-data">
+			<form method="POST" enctype="multipart/form-data">
 				<div class="box-body">
 					<div class="form-group">
 						<label for="exampleInputEmail1">Username :</label>
-						<input type="text" name="username" class="form-control" value="<?=  'info@koumishop.com' ?>" required>
+						<input type="text" name="username" class="form-control" value="<?=  'username' ?>" required>
 					</div>
 					<div class="form-group">
 						<label for="exampleInputEmail1">Password :</label>
