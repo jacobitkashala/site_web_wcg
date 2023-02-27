@@ -68,7 +68,7 @@ class Text
             } else {
                 return false;
             }
-        }else{
+        } else {
             return false;
         }
     }
@@ -82,7 +82,7 @@ class Text
             } else {
                 return false;
             }
-        }else{
+        } else {
             return false;
         }
     }

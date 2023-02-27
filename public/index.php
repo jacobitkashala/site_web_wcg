@@ -15,13 +15,12 @@ $whoops = new \Whoops\Run;
 $whoops->pushHandler(new \Whoops\Handler\PrettyPageHandler);
 $whoops->register();
 
-if ($_SERVER['REQUEST_URI'] == "/admin") {
+if ($_SERVER['REQUEST_URI'] == "/admin" || $_SERVER['REQUEST_URI'] == "/login" ) {
 	// le router pour l'admin
 	$routerAdmin = new App\RouterAdmin(dirname(__DIR__) . '/views');
 
 	$routerAdmin->match(ROOT_URL . 'admin', 'admin/index.php', 'admin');
 	$routerAdmin->match(ROOT_URL . 'login', 'admin/login.php', 'login');
-	// $routerAdmin->match(ROOT_URL . 'login', 'auth/login.php', 'login');
 	$routerAdmin->run();
 } else {
 	$router = new App\Router(dirname(__DIR__) . '/views');

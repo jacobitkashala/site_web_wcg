@@ -2,92 +2,95 @@
 
 namespace App\Model;
 
-class User{
+class User
+{
 	/**
 	 * la classe qui va gère le user
 	 */
 	private $id;
-	private $userName;
-	private $password;
-	private $role;
+	private $USR_PWD;
+	private $USR_ID;
+	private $USR_FRIST_NAME;
+	private $USR_LOGIN;
+
 
 
 	/**
-	 * Get the value of userName
-	 */ 
-	public function getUserName()
+	 * Get the value of USR_LOGIN
+	 */
+	public function getUSR_LOGIN()
 	{
-		return $this->userName;
+		return $this->USR_LOGIN;
 	}
 
 	/**
-	 * Set the value of userName
+	 * Set the value of USR_LOGIN
 	 *
 	 * @return  self
-	 */ 
-	public function setUserName($userName)
+	 */
+	public function setUSR_LOGIN($USR_LOGIN)
 	{
-		$this->userName = $userName;
+		$this->USR_LOGIN = $USR_LOGIN;
 
 		return $this;
 	}
 
 	/**
-	 * Get the value of password
-	 */ 
-	public function getPassword()
+	 * Get the value of USR_FRIST_NAME
+	 */
+	public function getUSR_FRIST_NAME()
 	{
-		return $this->password;
+		return $this->USR_FRIST_NAME;
 	}
 
 	/**
-	 * Set the value of password
+	 * Set the value of USR_FRIST_NAME
 	 *
 	 * @return  self
-	 */ 
-	public function setPassword($password)
+	 */
+	public function setUSR_FRIST_NAME($USR_FRIST_NAME)
 	{
-		$this->password = $password;
+		$this->USR_FRIST_NAME = $USR_FRIST_NAME;
 
 		return $this;
 	}
 
 	/**
-	 * Get the value of role
-	 */ 
-	public function getRole():?string
+	 * Get the value of USR_ID
+	 */
+	public function getUSR_ID()
 	{
-		return $this->role;
+		return $this->USR_ID;
 	}
 
 	/**
-	 * Set the value of role
+	 * Set the value of USR_ID
 	 *
 	 * @return  self
-	 */ 
-	public function setRole($role)
+	 */
+	public function setUSR_ID($USR_ID)
 	{
-		$this->role = $role;
+		$this->USR_ID = $USR_ID;
 
 		return $this;
 	}
 
 	/**
-	 * Get la classe qui va gère le user
+	 * Get the value of USR_PWD
 	 */ 
-	public function getId()
+	public function getUSR_PWD()
 	{
-		return $this->id;
+		return $this->USR_PWD;
 	}
 
 	/**
-	 * Set la classe qui va gère le user
+	 * Set the value of USR_PWD
 	 *
 	 * @return  self
 	 */ 
-	public function setId($id)
+	public function setUSR_PWD($USR_PWD)
 	{
-		$this->id = $id;
+		$this->USR_PWD = $USR_PWD;
 
 		return $this;
 	}
