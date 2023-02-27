@@ -1,5 +1,24 @@
 <?php
+// Verification l'autentification de l'utilisateur
+use App\Helpers\Text;
 
+$text = new Text;
+$messageError = null;
+$success = null;
+if (isset($_POST['btnLogin'])) {
+
+
+	$username = $text->xss_clean($_POST['username']);
+	// $userName = $text->xss_clean($_POST['nameUser']);
+	$messageError = $username;
+}
+// if (!empty($_POST)) {
+// 	if (empty($_POST('username')) || empty($_POST('userPassword'))) {
+// 	} else {
+// 		$userName = $text->xss_clean($_POST['username']);
+// 		$password = $text->xss_clean($_POST['userPassword']);
+// 	}
+// }
 ?>
 <section class="vh-100" style="background-color: #508bfc;">
 	<div class="container py-5 h-100">
@@ -7,32 +26,35 @@
 			<div class="col-12 col-md-8 col-lg-6 col-xl-5">
 				<div class="card shadow-2-strong" style="border-radius: 1rem;">
 					<div class="card-body p-5 text-center">
-
 						<h3 class="mb-5">Se connecter</h3>
+						<?php if ($messageError) : ?>
+							<h4 class="text-center text-danger mb-3"><?= $messageError  ?></h4>
+						<?php elseif ($success) : ?>
+							<h4 class="text-center text-success mb-3"><?= $success  ?></h4>
+						<?php endif ?>
+						<form method="post" enctype="multipart/form-data">
+							<div class="form-outline mb-4">
+								<input type="text" name="username" id="typeEmailX-2" class="form-control form-control-lg" />
+								<label class="form-label" for="typeEmailX-2">Email ou non d'utilisateur</label>
+							</div>
+							<div class="form-outline mb-4">
+								<input type="password" name="userPassword" id="typePasswordX-2" class="form-control form-control-lg" />
+								<label class="form-label" for="typePasswordX-2">Password</label>
+							</div>
 
-						<div class="form-outline mb-4">
-							<input type="email" id="typeEmailX-2" class="form-control form-control-lg" />
-							<label class="form-label" for="typeEmailX-2">Email ou Non d'utilisateur</label>
-						</div>
+							<!-- Checkbox -->
+							<div class="form-check d-flex justify-content-start mb-4">
+								<input class="form-check-input" type="checkbox" value="" id="form1Example3" />
+								<label class="form-check-label" for="form1Example3"> Remember password </label>
+							</div>
 
-						<div class="form-outline mb-4">
-							<input type="password" id="typePasswordX-2" class="form-control form-control-lg" />
-							<label class="form-label" for="typePasswordX-2">Password</label>
-						</div>
+							<button class="btn btn-primary btn-lg btn-block" name="btnLogin" type="submit">Login</button>
 
-						<!-- Checkbox -->
-						<div class="form-check d-flex justify-content-start mb-4">
-							<input class="form-check-input" type="checkbox" value="" id="form1Example3" />
-							<label class="form-check-label" for="form1Example3"> Remember password </label>
-						</div>
+							<hr class="my-4">
 
-						<button class="btn btn-primary btn-lg btn-block" type="submit">Login</button>
-
-						<hr class="my-4">
-
-						<!-- <button class="btn btn-lg btn-block btn-primary" style="background-color: #dd4b39;" type="submit"><i class="fab fa-google me-2"></i> Sign in with google</button> -->
-						<!-- <button class="btn btn-lg btn-block btn-primary mb-2" style="background-color: #3b5998;" type="submit"><i class="fab fa-facebook-f me-2"></i>Sign in with facebook</button> -->
-
+							<!-- <button class="btn btn-lg btn-block btn-primary" style="background-color: #dd4b39;" type="submit"><i class="fab fa-google me-2"></i> Sign in with google</button> -->
+							<!-- <button class="btn btn-lg btn-block btn-primary mb-2" style="background-color: #3b5998;" type="submit"><i class="fab fa-facebook-f me-2"></i>Sign in with facebook</button> -->
+						</form>
 					</div>
 				</div>
 			</div>

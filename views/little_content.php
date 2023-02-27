@@ -40,8 +40,8 @@ background-repeat: no-repeat;
 //  exit();
 ?>
 <section class=" row container_content_expertise">
-	<h4 class=" col-log-10 col-md-10 col-sm-10"> <?= $resultquery[0]->getLittTitle() ?></h4>
-	<p class=" col-log-10 col-md-10 col-sm-10">
+	<h4 class=" col-log-10 col-md-10 col-sm-10 mb-4"> <?= $resultquery[0]->getLittTitle() ?></h4>
+	<p class=" col-log-10 col-md-10 col-sm-10 mb-4">
 		<?= $resultquery[0]->getLittContenu() ?>
 	</p>
 </section>
