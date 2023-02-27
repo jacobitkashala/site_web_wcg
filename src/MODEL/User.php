@@ -55,7 +55,7 @@ class User{
 	/**
 	 * Get the value of role
 	 */ 
-	public function getRole()
+	public function getRole():?string
 	{
 		return $this->role;
 	}

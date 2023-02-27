@@ -3,11 +3,11 @@ $newPathCss = pathCss;
 $newPathJs = pathJs;
 $newPathIcons = icons;
 
-if ($_SERVER['REQUEST_URI'] != '/') {
-	$newPathCss = "." . pathCss;
-	$newPathIcons = "." . icons;
-	$newPathJs = "." . pathJs;
-}
+// if ($_SERVER['REQUEST_URI'] != '/') {
+// 	$newPathCss = "." . pathCss;
+// 	$newPathIcons = "." . icons;
+// 	$newPathJs = "." . pathJs;
+// }
 //"../css/header.css" content
 //../public/css
 // ./css/header.css racine
