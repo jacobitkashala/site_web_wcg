@@ -40,13 +40,13 @@ let active = true
 btnSousMenu?.addEventListener('click', () => {
   if (active) {
     // console.log('active')
-    containerSousMenu.classList.remove('sous-menu');
-    containerSousMenu.classList.add('disable-menu');
+    containerSousMenu.classList.remove('sous-menu')
+    containerSousMenu.classList.add('disable-menu')
     active = false
   } else {
     active = true
-    containerSousMenu.classList.remove('disable-menu');
-    containerSousMenu.classList.add('sous-menu');
+    containerSousMenu.classList.remove('disable-menu')
+    containerSousMenu.classList.add('sous-menu')
     // console.log('desactive')
   }
   // containerSousMenu.style.display = 'block'
@@ -91,4 +91,40 @@ const swiperPartner = new Swiper('.partner_slide', {
   scrollbar: {
     el: '.swiper-scrollbar',
   },
+})
+
+// Slider partenaire
+$(function () {
+  $('.slider-for').slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: false,
+    fade: true,
+    asNavFor: '.slider-nav',
+  })
+  $('.slider-nav').slick({
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    asNavFor: '.slider-for',
+    dots: true,
+    centerMode: true,
+    focusOnSelect: true,
+  })
+})
+// par
+$(document).on('ready', function () {
+  $('.regular').slick({
+    dots: true,
+    infinite: true,
+    slidesToShow: 3,
+    slidesToScroll: 3,
+  })
+  $('.center').slick({
+    dots: true,
+    infinite: true,
+    centerMode: true,
+    slidesToShow: 5,
+    slidesToScroll: 3,
+  })
+
 })

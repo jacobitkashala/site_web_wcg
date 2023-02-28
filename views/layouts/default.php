@@ -2,16 +2,7 @@
 $newPathCss = pathCss;
 $newPathJs = pathJs;
 $newPathIcons = icons;
-
-
-// if ($_SERVER['REQUEST_URI'] != '/') {
-// 	$newPathCss = "." . pathCss;
-// 	$newPathIcons = "." . icons;
-// 	$newPathJs = "." . pathJs;
-// }
-
 ?>
-
 <!DOCTYPE html>
 <html>
 
@@ -45,6 +36,7 @@ $newPathIcons = icons;
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 
 	<link rel='stylesheet' type='text/css' media='screen' href="<?= $newPathCss . "slick.css" ?>">
+	<link rel='stylesheet' type='text/css' media='screen' href="<?= $newPathCss . "slick-theme.css" ?>">
 	<link rel='stylesheet' type='text/css' media='screen' href="<?= $newPathCss . "header.css" ?>">
 	<link rel='stylesheet' type='text/css' media='screen' href="<?= $newPathCss . "util.css" ?>">
 	<link rel='stylesheet' type='text/css' media='screen' href="<?= $newPathCss . "new.css" ?>">
@@ -58,7 +50,7 @@ $newPathIcons = icons;
 	<link rel='stylesheet' type='text/css' media='screen' href=" <?= $newPathCss . "ressource.css" ?>">
 	<link rel='stylesheet' type='text/css' media='screen' href=" <?= $newPathCss . "footer.css" ?>">
 	<link rel="shortcut icon" href="<?= $newPathIcons . 'favico.ico' ?>" alt="logo wcg" />
-	
+
 	<title><?= $titlePage ?? "World Corp Group" ?></title>
 </head>
 
@@ -71,12 +63,14 @@ $newPathIcons = icons;
 	<?php require_once  'footer.php' ?>
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-	<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> -->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+	<script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
-	<script src='<?= $newPathJs . "main.js" ?>'></script>
 	<script src='<?= $newPathJs . "slick.min.js" ?>'></script>
+	<script src='<?= $newPathJs . "slick.js" ?>'></script>
+	<script src='<?= $newPathJs . "main.js" ?>'></script>
+
 </body>
 
 </html>

@@ -67,7 +67,7 @@ $homeServiceMiseEnAvant = $query4->fetchAll(PDO::FETCH_CLASS, SectionTwoHome::cl
 				</p>
 			</div>
 			<div class=" col-log-5 col-md-5 col-sm-9 ">
-			
+
 				<!-- <video class="" src="<?= evideo . $homeActualite[0]->getRessource() ?>" controls></video> -->
 				<video class="w-video-main" src="<?= evideo . $homeActualite[0]->getRessource() ?>" controls></video>
 				<!-- </div> -->
@@ -88,7 +88,7 @@ $homeServiceMiseEnAvant = $query4->fetchAll(PDO::FETCH_CLASS, SectionTwoHome::cl
 				foreach ($homeServiceMiseEnAvant as $contentMiseEnAvant) : ?>
 					<!-- <div class="service-content"> -->
 					<div class="service-content">
-						<img class="image" src="<?= ephoto . $contentMiseEnAvant->getRessource() ?>" alt="image titre" srcset="">
+						<img class=" img-fluid image" src="<?= ephoto . $contentMiseEnAvant->getRessource() ?>" alt="image titre" srcset="">
 						<h1><?= $contentMiseEnAvant->getTitre() ?></h1>
 						<p><?= $contentMiseEnAvant->getContenu() ?> </p>
 						<a class="btn mb-1" href="<?= $router->url($contentMiseEnAvant->getTemplate(), array('slug' => $contentMiseEnAvant->getIdRubrique(), 'id' => $contentMiseEnAvant->getIdSousRubrique())) ?>">Pour en savoir plus ...</a>
@@ -97,31 +97,74 @@ $homeServiceMiseEnAvant = $query4->fetchAll(PDO::FETCH_CLASS, SectionTwoHome::cl
 			</div>
 		</div>
 		<!-- slide nos partenaire -->
-	<div class="container">
-		<div class="row">
-				</div>	
-
-	</div>
-		<!-- <div class="container_partner_slide">
-			<h2 class="text-center font-weight-bold">Nos Partenaires</h2>
-			<div class="container_partner_display">
-				<div class="partner_block">
-					<div class="container-slide">
-						<img class="" src=" <?php echo ephoto . "left.png" ?>" alt="logo" />
-					</div>
-					<div class="partner_display_item ">
-						<div class="item_slide"><img src="<?php echo logo . "image_evolis.png" ?>" alt="logo"></div>
-						<div class="item_slide"><img src=" <?php echo logo . "image_huawai.png" ?>" alt="logo"></div>
-						<div class="item_slide"><img src=" <?php echo logo . "image_juris_consult.png" ?>" alt="logo">
-						</div>
-						<div class="item_slide"><img src=" <?php echo logo . "image_konnect.png" ?>" alt="logo"></div>
-					</div>
-					<div>
-						<img class="" src="<?php echo ephoto . "rigth.png" ?>" alt="logo" />
-					</div>
+		<div class="container mt-5">
+			<div class="row text-center">
+				<div class="col">
+					<h2> Nos partenaires</h2>
 				</div>
 			</div>
-		</div> -->
+			<div class="row mt-5">
+				<div class="col">
+				<div class="center slider">
+    <div>
+      <img src="http://placehold.it/750x700?text=1">
+    </div>
+    <div>
+      <img src="http://placehold.it/750x700?text=2">
+    </div>
+    <div>
+      <img src="http://placehold.it/750x700?text=3">
+    </div>
+    <div>
+      <img src="http://placehold.it/750x700?text=4">
+    </div>
+    <div>
+      <img src="http://placehold.it/750x700?text=5">
+    </div>
+    <div>
+      <img src="http://placehold.it/350x300?text=6">
+    </div>
+    <div>
+      <img src="http://placehold.it/350x300?text=7">
+    </div>
+    <div>
+      <img src="http://placehold.it/750x700?text=8">
+    </div>
+    <div>
+      <img src="http://placehold.it/750x700?text=9">
+    </div>
+	<!-- <div class="img-container">
+                <picture>
+                  <source media="(max-width: 575px)" srcset="/images/partners/facebook-white.png?w=160">
+                  <source media="(max-width: 768px)" srcset="/images/partners/facebook-white.png?w=90">
+                  <img src="/images/partners/facebook-white.png?w=160" alt="Facebook"
+                    class="img-fluid" loading="lazy">
+                </picture>
+              </div> -->
+				</div>
+				</div>
+				<!-- <div class="col"> -->
+				<!-- <div class=" slick-initialized slick-slider"> -->
+				<!-- <div class=" for_slick_slider "> -->
+				<!-- <div class="container-next-slide">
+						<img class="slick-prev slick-arrow" src=" <?php echo ephoto . "left.png" ?>" alt="logo" />
+					</div> -->
+				<!-- <div class="slider multiple-items">
+						<div class="slider_items items"><img class="img-fluid" src="<?php echo logo . "image_evolis.png" ?>" alt="logo"></div>
+						<div class="slider_items items"><img class="img-fluid" src=" <?php echo logo . "image_huawai.png" ?>" alt="logo"></div>
+						<div class="slider_items items"><img class="img-fluid" src=" <?php echo logo . "image_juris_consult.png" ?>" alt="logo"></div>
+						<div class="slider_items items"><img class="img-fluid" src=" <?php echo logo . "image_konnect.png" ?>" alt="logo"></div>
+					</div> -->
 
+				<!-- <div class="slick-list draggable">
+
+						</div> -->
+				<!-- <div class="container-next-slide">
+						<img class="slick-next slick-arrow" src="<?php echo ephoto . "rigth.png" ?>" alt="logo" />
+					</div> -->
+				<!-- </div> -->
+				<!-- </div> -->
+			</div>
+		</div>
 	</div>
 </main>
