@@ -67,9 +67,7 @@ $homeServiceMiseEnAvant = $query4->fetchAll(PDO::FETCH_CLASS, SectionTwoHome::cl
 				</p>
 			</div>
 			<div class=" col-log-5 col-md-5 col-sm-9 ">
-				<!-- <div class=" col-log-4 col-md-9 col-sm-9 content-desc"> -->
-				<!-- <div class="row"> -->
-				<!-- <div class="col-log-6"> -->
+			
 				<!-- <video class="" src="<?= evideo . $homeActualite[0]->getRessource() ?>" controls></video> -->
 				<video class="w-video-main" src="<?= evideo . $homeActualite[0]->getRessource() ?>" controls></video>
 				<!-- </div> -->
@@ -99,7 +97,12 @@ $homeServiceMiseEnAvant = $query4->fetchAll(PDO::FETCH_CLASS, SectionTwoHome::cl
 			</div>
 		</div>
 		<!-- slide nos partenaire -->
-		<div class="container_partner_slide">
+	<div class="container">
+		<div class="row">
+				</div>	
+
+	</div>
+		<!-- <div class="container_partner_slide">
 			<h2 class="text-center font-weight-bold">Nos Partenaires</h2>
 			<div class="container_partner_display">
 				<div class="partner_block">
@@ -118,6 +121,7 @@ $homeServiceMiseEnAvant = $query4->fetchAll(PDO::FETCH_CLASS, SectionTwoHome::cl
 					</div>
 				</div>
 			</div>
-		</div>
+		</div> -->
+
 	</div>
 </main>

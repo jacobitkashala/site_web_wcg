@@ -109,16 +109,15 @@ ul .menu:nth-child(0n+1){
 	margin-top: 2px;
 	left:0;
 }
-
-/* .link  :hover{
+/* a  :hover{
 	transform: scale(1);
 	font-weight: bold;
-} */
+}  */
 .menu:hover .sous-menu{
 	display: block;
 	transition: all 0.3s ease-in;
 }
-.navbar {
+nav.navbar {
 	padding:0px;
 }
 /* div.container-sous-menu-grid{
@@ -136,6 +135,15 @@ ul .menu:nth-child(0n+1){
 	display: flex;
 	justify-content: flex-start;
 }
+.element-sous-menu li::before {
+    content: "•";
+    /* content: "Alt+0 1 4 9"; */
+	
+    color: white;
+    margin-left: 1rem;
+    font-size: 1.5em
+}
+
 .logo-menu{
 	width: 30px;
 	height: 30px;
