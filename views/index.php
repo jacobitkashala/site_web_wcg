@@ -57,7 +57,7 @@ $homeServiceMiseEnAvant = $query4->fetchAll(PDO::FETCH_CLASS, SectionTwoHome::cl
 	<div class="container-home">
 		<div class="row">
 			<div class="col-log-2 col-md-2 col-sm-1  ">
-				<img class="image-illustration" src="<?= ephoto . "image1.png" ?>" alt="illustration lampe" srcset="">
+				<img class="img-fluid image-illustration" src="<?= ephoto . "image1.png" ?>" alt="illustration lampe" srcset="">
 			</div>
 			<div class=" col-log-5 col-md-5 col-sm-9 ">
 				<!-- <div class=" col-log-4 col-md-9 col-sm-9 content-desc"> -->
@@ -90,10 +90,10 @@ $homeServiceMiseEnAvant = $query4->fetchAll(PDO::FETCH_CLASS, SectionTwoHome::cl
 				foreach ($homeServiceMiseEnAvant as $contentMiseEnAvant) : ?>
 					<!-- <div class="service-content"> -->
 					<div class="service-content">
-						<img src="<?= ephoto . $contentMiseEnAvant->getRessource() ?>" alt="image titre" srcset="">
+						<img class="image" src="<?= ephoto . $contentMiseEnAvant->getRessource() ?>" alt="image titre" srcset="">
 						<h1><?= $contentMiseEnAvant->getTitre() ?></h1>
 						<p><?= $contentMiseEnAvant->getContenu() ?> </p>
-						<a class="btn" href="<?= $router->url($contentMiseEnAvant->getTemplate(), array('slug' => $contentMiseEnAvant->getIdRubrique(), 'id' => $contentMiseEnAvant->getIdSousRubrique())) ?>">Pour en savoir plus ...</a>
+						<a class="btn mb-1" href="<?= $router->url($contentMiseEnAvant->getTemplate(), array('slug' => $contentMiseEnAvant->getIdRubrique(), 'id' => $contentMiseEnAvant->getIdSousRubrique())) ?>">Pour en savoir plus ...</a>
 					</div>
 				<?php endforeach ?>
 			</div>

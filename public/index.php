@@ -3,8 +3,7 @@ require 'env.php';
 require 'path.php';
 require '../vendor/autoload.php';
 
-use App;
-
+// use App;
 
 /**
  * ce-ci est a mettre en commentaire avant la mis en prod

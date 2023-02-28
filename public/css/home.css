@@ -116,12 +116,12 @@
 }
 .service-content p{
     text-align: justify;
-    padding:2rem;
+    padding:1rem 2rem;
 
 }
 .service-content a{
     height: 40px;
-    margin: 2rem 0;
+    /* margin: 2rem 0; */
     background: #FF0000;
     border-radius: 7px;
     font-style: normal;

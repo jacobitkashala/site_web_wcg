@@ -10,9 +10,9 @@
 ?>
 
 <main id="content">
-	<div className="row m-3 ">
-		<div className="col">
-			<div className="list-inline-item"><a class="btn" href="#">nom menu</a></div>
+	<div class="row m-3 ">
+		<div class="col">
+			<div class="list-inline-item"><a class="btn  btn-outline-info" href="#">nom menu</a></div>
 		</div>
 	</div>
 	<!-- <div class="head-title">
