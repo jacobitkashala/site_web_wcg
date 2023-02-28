@@ -4,29 +4,29 @@ use App\Helpers\Text;
 use App\Connection;
 use App\MODEL\User;
 
-
+// echo '<pre>';
+// var_dump(($querySelectNameUser));
+// var_dump(($resultNameUser));
+// var_dump(count($resultNameUser));
+// echo '</pre>';
+// exit();
 $text = new Text;
 $messageError = null;
 $success = null;
 $pdo = Connection::getPDO(db_host, db_user, db_pass, db_name);
 
-// $password=
 $options = [
 	'cost' => 12,
 ];
 // echo password_hash("admin", PASSWORD_BCRYPT, $options);
 
 if (isset($_POST['btnLogin'])) {
-
-
 	$username = $text->xss_clean($_POST['username']);
 	$password = $text->xss_clean($_POST['userPassword']);
 
-	// set time for session timeout
+	// définir l'heure d'expiration de la session
 	$currentTime = time() + 25200;
 	$expired = 3600;
-
-	// $messageError = $username;
 	// Verifier si le mot de pass de l'utilisateur  
 	if (empty($username)) {
 		$messageError = "Veuillez renseigner votre adresse mail ou le nom d'utilisateur ";
@@ -39,15 +39,17 @@ if (isset($_POST['btnLogin'])) {
 		if ($text->is_valide_mail($username)) {
 			$querySelectNameUser = $pdo->query("SELECT  * FROM  users  WHERE USR_LAST_NAME = '" . $username . "'");
 			$resultNameUser = $querySelectNameUser->fetchAll(PDO::FETCH_CLASS, User::class);
-			// echo '<pre>';
-			// var_dump(($querySelectNameUser));
-			// var_dump(($resultNameUser));
-			// var_dump(count($resultNameUser));
-			// echo '</pre>';
-			// exit();
+
 			if (count($resultNameUser) > 0) {
 				if (password_verify($password, $resultNameUser[0]->getUSR_PWD())) {
-					$messageError = 'Redirection dashboard';
+					// set time for session timeout
+
+					$_SESSION['id'] = $res[0]['id'];
+					// $_SESSION['role'] = $res[0]['role'];
+					$_SESSION['user'] = "jaco";
+					$_SESSION['timeout'] = $currentTime + $expired;
+					//Redirection dashboard
+					header("Location:" . $router->url("admin"));
 				} else {
 					$messageError = 'Veuillez verifiez votre login ou mot de pass';
 				}
@@ -55,13 +57,17 @@ if (isset($_POST['btnLogin'])) {
 				$messageError = 'Veuillez verifiez votre login ou mot de pass';
 			}
 		} else {
-
 			$querySelectNameUser = $pdo->query("SELECT  * FROM  users  WHERE USR_LOGIN = '" . $username . "'");
 			$resultNameUser = $querySelectNameUser->fetchAll(PDO::FETCH_CLASS, User::class);
 
 			if (count($resultNameUser) > 0) {
 				if (password_verify($password, $resultNameUser[0]->getUSR_PWD())) {
-					$messageError = 'Redirection dashboard';
+					$_SESSION['id'] = $res[0]['id'];
+					// $_SESSION['role'] = $res[0]['role'];
+					$_SESSION['user'] = "jaco";
+					$_SESSION['timeout'] = $currentTime + $expired;
+					//Redirection dashboard
+					header("Location:" . $routerAdmin->url("admin"));
 				} else {
 					$messageError = 'Veuillez verifiez votre login ou mot de pass';
 				}

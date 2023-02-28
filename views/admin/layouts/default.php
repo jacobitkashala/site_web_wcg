@@ -1,9 +1,3 @@
-<?php
-
-// echo pathCss . "admin.js \n";
-// echo pathJs . "admin.js";
-// exit();
-?>
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -31,6 +25,25 @@
 </head>
 
 <body>
+	<?php
+	// si la session n'est pas définie, accédez à la page de connexion
+	// si la session est définie on charge le header 
+	// if (isset($_SESSION['user'])) {
+	// 	require_once  'header.php';
+	// }
+	// if current time is more than session timeout back to login page
+	// if ($currentTime > $_SESSION['timeout']) {
+	// 	session_destroy();
+	// 	header("Location:index.php");
+	// }
+	// détruire le délai d'expiration de la session précédente et en créer un nouveau
+	// unset($_SESSION['timeout']);
+	// $_SESSION['timeout'] = $currentTime + $expired;
+
+	?>
+
+
+	<?php require_once  'header.php' ?>
 	<?= $contentPageAdmin ?>
 </body>
 <!-- MDB -->

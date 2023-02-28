@@ -5,9 +5,7 @@ require '../vendor/autoload.php';
 
 
 
-$uri = $_SERVER['REQUEST_URI'];
-// echo $uri;
-// exit();
+
 /**
  * ce-ci est a mettre en commentaire avant la mis en prod
  */
@@ -15,15 +13,20 @@ $whoops = new \Whoops\Run;
 $whoops->pushHandler(new \Whoops\Handler\PrettyPageHandler);
 $whoops->register();
 
-if ($_SERVER['REQUEST_URI'] == "/admin" || $_SERVER['REQUEST_URI'] == "/login" ) {
+$uri = $_SERVER['REQUEST_URI'];
+// echo $uri;
+// exit();
+$routerAdmin = new App\RouterAdmin(dirname(__DIR__) . '/views');
+$router = new App\Router(dirname(__DIR__) . '/views');
+if (strpos($uri, "admin") !== false) {
 	// le router pour l'admin
-	$routerAdmin = new App\RouterAdmin(dirname(__DIR__) . '/views');
+
 
 	$routerAdmin->match(ROOT_URL . 'admin', 'admin/index.php', 'admin');
-	$routerAdmin->match(ROOT_URL . 'login', 'admin/login.php', 'login');
+	$routerAdmin->match(ROOT_URL . 'admin:login', 'admin/login.php', 'login');
 	$routerAdmin->run();
 } else {
-	$router = new App\Router(dirname(__DIR__) . '/views');
+
 	$router->get(ROOT_URL, '/index.php', 'homepage');
 	$router->get(ROOT_URL . 'news:[*:slug]-[i:id]', '/news.php', 'news');
 	$router->get(ROOT_URL . 'hiring:[*:slug]-[i:id]', '/hiring.php', 'hiring');

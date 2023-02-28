@@ -1,106 +1,28 @@
 <?php
-echo "admin";
-?>
-<?php
-
+session_start();
+$currentTime = null;
+$_SESSION['user'] = "jaco";
 /**
  * On verifie si l'utiliseur n'est pas connecter on lui redirige a 
  * l'interface login
  */
+// si la session est définie on charge le header 
+// if (!isset($_SESSION['user'])) {
+// 	header('Location:' . $router->url('login'));
+// } else {
+// 	header('Location:' . $router->url('admin'));
+// }
 
-// header("location: admin/login");
-// echo "index admin";
-// header('Location:' . $routerAdmin->url('login'));
+
 ?>
-<!-- SIDEBAR -->
-<!-- <section id="sidebar">
-		<a href="#" class="brand">
-			<i class='bx bxs-smile'></i>
-			<span class="text">AdminHub</span>
-		</a>
-		<ul class="side-menu top">
-			<li class="active">
-				<a href="#">
-					<i class='bx bxs-dashboard'></i>
-					<span class="text">Dashboard</span>
-				</a>
-			</li>
-			<li>
-				<a href="#">
-					<i class='bx bxs-shopping-bag-alt'></i>
-					<span class="text">My Store</span>
-				</a>
-			</li>
-			<li>
-				<a href="#">
-					<i class='bx bxs-doughnut-chart'></i>
-					<span class="text">Analytics</span>
-				</a>
-			</li>
-			<li>
-				<a href="#">
-					<i class='bx bxs-message-dots'></i>
-					<span class="text">Message</span>
-				</a>
-			</li>
-			<li>
-				<a href="#">
-					<i class='bx bxs-group'></i>
-					<span class="text">Team</span>
-				</a>
-			</li>
-		</ul>
-		<ul class="side-menu">
-			<li>
-				<a href="#">
-					<i class='bx bxs-cog'></i>
-					<span class="text">Settings</span>
-				</a>
-			</li>
-			<li>
-				<a href="#" class="logout">
-					<i class='bx bxs-log-out-circle'></i>
-					<span class="text">Logout</span>
-				</a>
-			</li>
-		</ul>
-	</section> -->
-<!-- SIDEBAR -->
-
-
-
-<!-- CONTENT -->
-<!-- <section id="content"> -->
-<!-- NAVBAR -->
-<!-- <nav>
-	<i class='bx bx-menu'></i>
-	<a href="#" class="nav-link">Categories</a>
-	<form action="#">
-		<div class="form-input">
-			<input type="search" placeholder="Search...">
-			<button type="submit" class="search-btn"><i class='bx bx-search'></i></button>
-		</div>
-	</form>
-	<input type="checkbox" id="switch-mode" hidden>
-	<label for="switch-mode" class="switch-mode"></label>
-	<a href="#" class="notification">
-		<i class='bx bxs-bell'></i>
-		<span class="num">8</span>
-	</a>
-	<a href="#" class="profile">
-		<img src="img/people.png">
-	</a>
-</nav> -->
-<!-- NAVBAR -->
-
 <!-- MAIN -->
-<!-- <main>
+<main>
 	<div class="head-title">
 		<div class="left">
-			<h1>Dashboard</h1>
+			<h1>Non du site</h1>
 			<ul class="breadcrumb">
 				<li>
-					<a href="#">Dashboard</a>
+					<a href="#">Rubrique</a>
 				</li>
 				<li><i class='bx bx-chevron-right'></i></li>
 				<li>
@@ -113,7 +35,6 @@ echo "admin";
 			<span class="text">Download PDF</span>
 		</a>
 	</div>
-
 	<ul class="box-info">
 		<li>
 			<i class='bx bxs-calendar-check'></i>
@@ -137,8 +58,6 @@ echo "admin";
 			</span>
 		</li>
 	</ul>
-
-
 	<div class="table-data">
 		<div class="order">
 			<div class="head">
@@ -228,36 +147,7 @@ echo "admin";
 			</ul>
 		</div>
 	</div>
-</main> -->
+</main>
 <!-- MAIN -->
 <!-- </section> -->
 <!-- CONTENT -->
-<!-- <div class="col-md-4 col-md-offset-4 " style="margin-top:150px;">
-	<div class='row'>
-		<div class="col-md-12 text-center">
-			<h3> Dashboard</h3>
-		</div>
-		<div class="box box-info col-md-12">
-			<div class="box-header with-border">
-				<h3 class="box-title">Administrator Login</h3>
-			</div>
-			<form method="POST" enctype="multipart/form-data">
-				<div class="box-body">
-					<div class="form-group">
-						<label for="exampleInputEmail1">Username :</label>
-						<input type="text" name="username" class="form-control" value="<?= 'username' ?>" required>
-					</div>
-					<div class="form-group">
-						<label for="exampleInputEmail1">Password :</label>
-						<input type="password" class="form-control" name="password" value="<?= '****' ?>" required>
-					</div>
-					<div class="box-footer">
-						<button type="submit" name="btnLogin" class="btn btn-info pull-left">Login</button>
-						<a href="forgot-password.php" class="pull-right">Forgot Password?</a>
-					</div>
-				</div>
-			</form>
-		</div>
-	</div>
-</div> -->
-
