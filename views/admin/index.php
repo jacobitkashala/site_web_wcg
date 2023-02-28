@@ -7,8 +7,6 @@
  * l'interface login
  */
 // si la session est définie on charge le header 
-
-
 ?>
 <!-- MAIN -->
 <h1>Contenu du menu</h1>

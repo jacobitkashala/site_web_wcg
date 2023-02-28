@@ -139,6 +139,9 @@ body {
 	white-space: nowrap;
 	overflow-x: hidden;
 }
+#sidebar .side-menu li a:hover{
+text-decoration: none;
+}
 #sidebar .side-menu.top li.active a {
 	color: var(--blue);
 }
