@@ -11,7 +11,8 @@
 
 ?>
 <!-- MAIN -->
-<main>
+<h1>Contenu du menu</h1>
+<!-- <main>
 	<div class="head-title">
 		<div class="left">
 			<h1><?= "jaco" ?></h1>
@@ -142,7 +143,7 @@
 			</ul>
 		</div>
 	</div>
-</main>
+</main> -->
 <!-- MAIN -->
 <!-- </section> -->
 <!-- CONTENT -->
