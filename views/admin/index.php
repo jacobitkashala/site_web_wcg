@@ -8,9 +8,13 @@
  */
 // si la session est définie on charge le header 
 ?>
-<!-- MAIN -->
-<!-- <h1>Contenu du menu</h1> -->
-<main>
+
+<main id="content">
+	<div className="row m-3 ">
+		<div className="col">
+			<div className="list-inline-item"><a class="btn" href="#">nom menu</a></div>
+		</div>
+	</div>
 	<!-- <div class="head-title">
 		<div class="left">
 			<h1><?= "jaco" ?></h1>
@@ -28,8 +32,8 @@
 			<i class='bx bxs-cloud-download'></i>
 			<span class="text">Download PDF</span>
 		</a>
-	</div>
-	<ul class="box-info">
+	</div> -->
+	<!-- <ul class="box-info">
 		<li>
 			<i class='bx bxs-calendar-check'></i>
 			<span class="text">
@@ -141,7 +145,5 @@
 			</ul>
 		</div>
 	</div> -->
+
 </main>
-<!-- MAIN -->
-<!-- </section> -->
-<!-- CONTENT -->

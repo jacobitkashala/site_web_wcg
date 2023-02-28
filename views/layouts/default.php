@@ -57,6 +57,7 @@ $newPathIcons = icons;
 	<link rel='stylesheet' type='text/css' media='screen' href=" <?= $newPathCss . "ressource.css" ?>">
 	<link rel='stylesheet' type='text/css' media='screen' href=" <?= $newPathCss . "footer.css" ?>">
 	<link rel="shortcut icon" href="<?= $newPathIcons . 'favico.ico' ?>" alt="logo wcg" />
+	
 	<title><?= $titlePage ?? "World Corp Group" ?></title>
 </head>
 

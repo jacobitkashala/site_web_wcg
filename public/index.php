@@ -3,7 +3,7 @@ require 'env.php';
 require 'path.php';
 require '../vendor/autoload.php';
 
-
+use App;
 
 
 /**
@@ -24,6 +24,15 @@ if (strpos($uri, "admin") !== false) {
 	// }
 	$routerAdmin->match(ROOT_URL . 'admin', 'admin/index.php', 'admin');
 	$routerAdmin->match(ROOT_URL . 'admin:login', 'admin/login.php', 'login');
+	// $routerAdmin->get(ROOT_URL, 'admin', 'homepage');
+	$routerAdmin->get(ROOT_URL . 'admin:news:[*:slug]-[i:id]', '/news.php', 'news');
+	$routerAdmin->get(ROOT_URL . 'admin:hiring:[*:slug]-[i:id]', '/hiring.php', 'hiring');
+	$routerAdmin->get(ROOT_URL . 'admin:hiring_detail:[*:slug]-[i:id]', '/hiring_detail.php', 'hiring_detail');
+	$routerAdmin->get(ROOT_URL . 'admin:form', '/form.php', 'form');
+	$routerAdmin->post(ROOT_URL . 'admin:form', '/form.php', 'soumettre');
+	$routerAdmin->get(ROOT_URL . 'admin:legal_content:[*:slug]-[i:id]', '/legal_content.php', 'legal_content');
+	$routerAdmin->get(ROOT_URL . 'admin:little_content:[*:slug]-[i:id]', '/little_content.php', 'little_content');
+	$routerAdmin->get(ROOT_URL . 'admin:resource_template:[*:slug]-[i:id]', '/resource_template.php', 'resource_template');
 	$routerAdmin->run();
 } else {
 
