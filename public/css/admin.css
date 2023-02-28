@@ -45,11 +45,6 @@ body {
 	background: var(--grey);
 	/* overflow-x: hidden; */
 }
-
-
-
-
-
 /* SIDEBAR */
 #sidebar {
 	position: fixed;
