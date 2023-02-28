@@ -20,8 +20,8 @@ $routerAdmin = new App\RouterAdmin(dirname(__DIR__) . '/views');
 $router = new App\Router(dirname(__DIR__) . '/views');
 if (strpos($uri, "admin") !== false) {
 	// le router pour l'admin
-
-
+	session_start();
+	// }
 	$routerAdmin->match(ROOT_URL . 'admin', 'admin/index.php', 'admin');
 	$routerAdmin->match(ROOT_URL . 'admin:login', 'admin/login.php', 'login');
 	$routerAdmin->run();

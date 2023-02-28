@@ -52,19 +52,30 @@ class RouterAdmin
         $match = $this->router->match();
         $view = $match['target'];
         $router = $this;
-        // echo '<pre>';
-        // var_dump($view);
-        // echo '</pre>';
 
+        $uri = $_SERVER['REQUEST_URI'];
+        $params = $match['params'];
+        $view = $match['target'];
+        $router = $this;
         if (is_array($match)) {
-            $params = $match['params'];
-            $view = $match['target'];
-            $router = $this;
-            ob_start();
-            require $this->viewPath . DIRECTORY_SEPARATOR . $view;
-            $contentPageAdmin = ob_get_clean();
+            // echo '<pre>';
+            // var_dump($uri);
+            // echo '</pre>';
+            if (strpos($uri, "login") !== false) {
+                // si la variable de session  est definit  on charge la page admin
+                if (isset($_SESSION['user'])) {
+                    header("Location:" . $router->url("admin"));
+                } else {
+                    require $this->viewPath . DIRECTORY_SEPARATOR . $view;
+                }
+            } else {
 
-            require $this->viewPath . DIRECTORY_SEPARATOR . 'admin/layouts/default.php';
+                ob_start();
+                require $this->viewPath . DIRECTORY_SEPARATOR . $view;
+                $contentPageAdmin = ob_get_clean();
+
+                require $this->viewPath . DIRECTORY_SEPARATOR . 'admin/layouts/default.php';
+            }
         }
         return $this;
     }

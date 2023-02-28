@@ -1,17 +1,12 @@
 <?php
-session_start();
-$currentTime = null;
-$_SESSION['user'] = "jaco";
+
+// $currentTime = null;
+// $_SESSION['user'] = null;
 /**
  * On verifie si l'utiliseur n'est pas connecter on lui redirige a 
  * l'interface login
  */
 // si la session est définie on charge le header 
-// if (!isset($_SESSION['user'])) {
-// 	header('Location:' . $router->url('login'));
-// } else {
-// 	header('Location:' . $router->url('admin'));
-// }
 
 
 ?>
@@ -19,7 +14,7 @@ $_SESSION['user'] = "jaco";
 <main>
 	<div class="head-title">
 		<div class="left">
-			<h1>Non du site</h1>
+			<h1><?= "jaco" ?></h1>
 			<ul class="breadcrumb">
 				<li>
 					<a href="#">Rubrique</a>

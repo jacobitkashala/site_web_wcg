@@ -1,3 +1,10 @@
+<?php
+// if (is_null($_SESSION['user']) === "Undefined") {
+// 	header('Location:' . $router->url('login'));
+// 	exit();
+// }
+
+?>
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -31,6 +38,11 @@
 	// if (isset($_SESSION['user'])) {
 	// 	require_once  'header.php';
 	// }
+	// if (is_null($_SESSION['user']) === "Undefined") {
+	// 	header('Location:' . $router->url('login'));
+	// 	exit();
+	// }
+
 	// if current time is more than session timeout back to login page
 	// if ($currentTime > $_SESSION['timeout']) {
 	// 	session_destroy();
@@ -39,12 +51,17 @@
 	// détruire le délai d'expiration de la session précédente et en créer un nouveau
 	// unset($_SESSION['timeout']);
 	// $_SESSION['timeout'] = $currentTime + $expired;
+	// if (is_null($_SESSION['user'])) {
 
+	// }
+	if (isset($_SESSION['user'])) {
+		require_once  'header.php';
+		echo $contentPageAdmin;
+	} else {
+		header("Location:" . $router->url("login"));
+	}
 	?>
 
-
-	<?php require_once  'header.php' ?>
-	<?= $contentPageAdmin ?>
 </body>
 <!-- MDB -->
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.1.0/mdb.min.js"></script>
