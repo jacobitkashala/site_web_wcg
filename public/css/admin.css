@@ -43,7 +43,7 @@ body.dark {
 
 body {
 	background: var(--grey);
-	overflow-x: hidden;
+	/* overflow-x: hidden; */
 }
 
 

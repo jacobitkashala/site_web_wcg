@@ -9,9 +9,9 @@
 // si la session est définie on charge le header 
 ?>
 <!-- MAIN -->
-<h1>Contenu du menu</h1>
-<!-- <main>
-	<div class="head-title">
+<!-- <h1>Contenu du menu</h1> -->
+<main>
+	<!-- <div class="head-title">
 		<div class="left">
 			<h1><?= "jaco" ?></h1>
 			<ul class="breadcrumb">
@@ -140,8 +140,8 @@
 				</li>
 			</ul>
 		</div>
-	</div>
-</main> -->
+	</div> -->
+</main>
 <!-- MAIN -->
 <!-- </section> -->
 <!-- CONTENT -->
