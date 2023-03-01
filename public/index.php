@@ -8,9 +8,9 @@ require '../vendor/autoload.php';
 /**
  * ce-ci est a mettre en commentaire avant la mis en prod
  */
-// $whoops = new \Whoops\Run;
-// $whoops->pushHandler(new \Whoops\Handler\PrettyPageHandler);
-// $whoops->register();
+$whoops = new \Whoops\Run;
+$whoops->pushHandler(new \Whoops\Handler\PrettyPageHandler);
+$whoops->register();
 
 $uri = $_SERVER['REQUEST_URI'];
 // echo $uri;
@@ -23,8 +23,8 @@ if (strpos($uri, "admin") !== false) {
 	// }
 	$routerAdmin->match(ROOT_URL . 'admin', 'admin/index.php', 'admin');
 	$routerAdmin->match(ROOT_URL . 'admin:login', 'admin/login.php', 'login');
-	// $routerAdmin->get(ROOT_URL, 'admin', 'homepage');
-	$routerAdmin->get(ROOT_URL . 'admin:news:[*:slug]-[i:id]', '/news.php', 'news');
+	$routerAdmin->get(ROOT_URL . 'admin:ressource:[*:slug]-[i:id]', 'admin/ressources.php', 'resourcesParams');
+	$routerAdmin->get(ROOT_URL . 'admin:ressources', 'admin/ressources.php', 'ressources');
 	$routerAdmin->get(ROOT_URL . 'admin:hiring:[*:slug]-[i:id]', '/hiring.php', 'hiring');
 	$routerAdmin->get(ROOT_URL . 'admin:hiring_detail:[*:slug]-[i:id]', '/hiring_detail.php', 'hiring_detail');
 	$routerAdmin->get(ROOT_URL . 'admin:form', '/form.php', 'form');

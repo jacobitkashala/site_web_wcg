@@ -13,7 +13,9 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!--bootstrapcdn  -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+
 	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
 	<!-- Google Fonts -->
 
@@ -35,8 +37,12 @@
 	// si la session n'est pas définie, accédez à la page de connexion
 	// si la session est définie on charge le header
 	// }
+	// echo '<pre>';
+	// var_dump(isset($_SESSION['user']));
+	// echo '</pre>';
+	// exit();
 	if (isset($_SESSION['user'])) {
-		require_once  'header.php';
+		require_once  'sidebar.php';
 		echo $contentPageAdmin;
 	} else {
 		header("Location:" . $router->url("login"));
@@ -44,11 +50,12 @@
 	?>
 
 </body>
-<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> -->
-<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script> -->
-<!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script> -->
-<!-- <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script> -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
 <!-- page-wrapper -->
+<script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
 <script src="<?= pathJs . "admin.js" ?>"></script>
 
 </html>

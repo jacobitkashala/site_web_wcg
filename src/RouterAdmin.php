@@ -57,10 +57,8 @@ class RouterAdmin
         $params = $match['params'];
         $view = $match['target'];
         $router = $this;
+
         if (is_array($match)) {
-            // echo '<pre>';
-            // var_dump($uri);
-            // echo '</pre>';
             if (strpos($uri, "login") !== false) {
                 // si la variable de session  est definit  on charge la page admin
                 if (isset($_SESSION['user'])) {
@@ -68,8 +66,7 @@ class RouterAdmin
                 } else {
                     require $this->viewPath . DIRECTORY_SEPARATOR . $view;
                 }
-            } else {
-
+            } else { 
                 ob_start();
                 require $this->viewPath . DIRECTORY_SEPARATOR . $view;
                 $contentPageAdmin = ob_get_clean();

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Poppins:wght@400;500;600;700&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Poppins:wght@400;500;600;700&display=swap'); */
 
 * {
 	margin: 0;
@@ -15,8 +15,8 @@ li {
 }
 
 :root {
-	--poppins: 'Poppins', sans-serif;
-	--lato: 'Lato', sans-serif;
+	/* --poppins: 'Poppins', sans-serif; */
+	/* --lato: 'Lato', sans-serif; */
 
 	--light: #F9F9F9;
 	--blue: #3C91E6;
@@ -54,7 +54,7 @@ body {
 	height: 100%;
 	background: var(--light);
 	z-index: 2000;
-	font-family: var(--lato);
+	/* font-family: var(--lato); */
 	transition: .3s ease;
 	overflow-x: hidden;
 	scrollbar-width: none;
@@ -184,7 +184,7 @@ text-decoration: none;
 	display: flex;
 	align-items: center;
 	grid-gap: 24px;
-	font-family: var(--lato);
+	/* font-family: var(--lato); */
 	position: sticky;
 	top: 0;
 	left: 0;
@@ -308,7 +308,7 @@ text-decoration: none;
 #content main {
 	width: 100%;
 	padding: 36px 24px;
-	font-family: var(--poppins);
+	/* font-family: var(--poppins); */
 	max-height: calc(100vh - 56px);
 	overflow-y: auto;
 }
