@@ -25,6 +25,7 @@ if (strpos($uri, "admin") !== false) {
 	$routerAdmin->match(ROOT_URL . 'admin:login', 'admin/login.php', 'login');
 	$routerAdmin->get(ROOT_URL . 'admin:ressource:[*:slug]-[i:id]', 'admin/ressources.php', 'resourcesParams');
 	$routerAdmin->get(ROOT_URL . 'admin:ressources', 'admin/ressources.php', 'ressources');
+	$routerAdmin->get(ROOT_URL . 'admin:add_form_ressource', 'admin/form_add_ressouce.php', 'form_add_ressource');
 	$routerAdmin->get(ROOT_URL . 'admin:hiring:[*:slug]-[i:id]', '/hiring.php', 'hiring');
 	$routerAdmin->get(ROOT_URL . 'admin:hiring_detail:[*:slug]-[i:id]', '/hiring_detail.php', 'hiring_detail');
 	$routerAdmin->get(ROOT_URL . 'admin:form', '/form.php', 'form');

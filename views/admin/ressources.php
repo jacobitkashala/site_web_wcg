@@ -18,16 +18,16 @@ $ressources = $queryRessources->fetchAll(PDO::FETCH_CLASS, Ressources::class);
 		<div class="left">
 			<h1>Resources</h1>
 			<ul class="breadcrumb">
-				<!-- <li>
-					<a href="#">Dashboard</a>-->
+				<li>
+					<a class="active" href="#">Dashboard</a>
 				</li>
 				<li><i class='bx bx-chevron-right'></i></li>
 				<li>
-					<a class="active" href="#">ressources</a>
+					<a href="#">ressources</a>
 				</li>
 			</ul>
 		</div>
-		<a href="#" class="btn-download">
+		<a href="<?= $router->url("form_add_ressource") ?>" class="btn-download">
 			<i class='bx bxs-cloud-download'></i>
 			<span class="text">Ajouter une ressource</span>
 		</a>
