@@ -19,7 +19,7 @@ $ressources = $queryRessources->fetchAll(PDO::FETCH_CLASS, Ressources::class);
 			<h1>Resources</h1>
 			<ul class="breadcrumb">
 				<li>
-					<a class="active" href="#">Dashboard</a>
+					<a class="active" href="<?= $router->url("admin") ?>">Dashboard</a>
 				</li>
 				<li><i class='bx bx-chevron-right'></i></li>
 				<li>
@@ -54,14 +54,6 @@ $ressources = $queryRessources->fetchAll(PDO::FETCH_CLASS, Ressources::class);
 					</tr>
 				</thead>
 				<tbody>
-					<!-- <tr>
-						<td>
-							<img src=" ">
-							<p>John Doe</p>
-						</td>
-						<td>01-10-2021</td>
-						<td><span class="status completed">Completed</span></td>
-					</tr> -->
 					<?php $i = 1;
 					foreach ($ressources as $ressource) : ?>
 						<tr>
@@ -87,8 +79,8 @@ $ressources = $queryRessources->fetchAll(PDO::FETCH_CLASS, Ressources::class);
 								<img src="<?= ephoto . $ressource->getRessources() ?>">
 							</td>
 							<td>
-								<button type="button" class="btn btn-primary">Primary</button>
-								<button type="button" class="btn btn-danger">Danger</button>
+								<a class="btn btn-primary m-1" href="#">Modifier</a>
+								<a class="btn btn-danger m-1" href="#">Supprimer</a>
 							</td>
 						<?php endforeach ?>
 				</tbody>
