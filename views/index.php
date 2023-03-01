@@ -84,8 +84,7 @@ $homeServiceMiseEnAvant = $query4->fetchAll(PDO::FETCH_CLASS, SectionTwoHome::cl
 		<div class="contenaire-service">
 			<!-- <div class=""> -->
 			<div class="row text-center service-element">
-				<?php
-				foreach ($homeServiceMiseEnAvant as $contentMiseEnAvant) : ?>
+				<?php foreach ($homeServiceMiseEnAvant as $contentMiseEnAvant) : ?>
 					<!-- <div class="service-content"> -->
 					<div class="service-content">
 						<img class=" img-fluid image" src="<?= ephoto . $contentMiseEnAvant->getRessource() ?>" alt="image titre" srcset="">

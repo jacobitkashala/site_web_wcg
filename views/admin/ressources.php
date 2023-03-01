@@ -1,237 +1,100 @@
 <?php
 
+use App\MODEL\Ressources;
+
+use App\Connection;
+
+$pdo = Connection::getPDO(db_host, db_user, db_pass, db_name);
+$slqRessources = "SELECT m.MED_LIBELLE as libelle, m.MED_RESSOURCE ressources,m.MED_INFOBULLE  as infobulle ,m.MED_META as metadesc ,tm.TYM_LIBELLE as nomtype FROM  media m inner join type_media tm ON tm.TYM_ID=m.TYM_ID LIMIT 10;";
+$queryRessources = $pdo->query($slqRessources);
+$ressources = $queryRessources->fetchAll(PDO::FETCH_CLASS, Ressources::class);
+// echo '<pre>';
+// var_dump($ressources);
+// echo '</pre>';
+// exit();
 ?>
-
-<!-- <main id="content">
-	<div class="row m-3 ">
-		<div class="col">
-			<div class="table-data">
-
-			</div>
-		</div>
-	</div>
-</main> -->
-<!-- MAIN -->
-<!-- <section id="content">
-	<main>
-		<div class="head-title">
-			<div class="left">
-				<h1>Titre</h1>
-				<ul class="breadcrumb">
-					<li>
-						<a href="#">Dashboard</a>
-					</li>
-					<li><i class='bx bx-chevron-right'></i></li>
-					<li>
-						<a class="active" href="#">Home</a>
-					</li>
-				</ul>
-			</div>
-			<a href="#" class="btn-download">
-				<i class='bx bxs-cloud-download'></i>
-				<span class="text">Download PDF</span>
-			</a>
-		</div>
-
-		<div class="table-data">
-			<div class="order">
-				<div class="head">
-					<h3>Recent Orders</h3>
-					<i class='bx bx-search'></i>
-					<i class='bx bx-filter'></i>
-				</div>
-				<table>
-					<thead>
-						<tr>
-							<th>User</th>
-							<th>Date Order</th>
-							<th>Status</th>
-						</tr>
-					</thead>
-					<tbody>
-						<tr>
-							<td>
-								<img src="img/people.png">
-								<p>John Doe</p>
-							</td>
-							<td>01-10-2021</td>
-							<td><span class="status completed">Completed</span></td>
-						</tr>
-						<tr>
-							<td>
-								<img src="img/people.png">
-								<p>John Doe</p>
-							</td>
-							<td>01-10-2021</td>
-							<td><span class="status pending">Pending</span></td>
-						</tr>
-						<tr>
-							<td>
-								<img src="img/people.png">
-								<p>John Doe</p>
-							</td>
-							<td>01-10-2021</td>
-							<td><span class="status process">Process</span></td>
-						</tr>
-						<tr>
-							<td>
-								<img src="img/people.png">
-								<p>John Doe</p>
-							</td>
-							<td>01-10-2021</td>
-							<td><span class="status pending">Pending</span></td>
-						</tr>
-						<tr>
-							<td>
-								<img src="img/people.png">
-								<p>John Doe</p>
-							</td>
-							<td>01-10-2021</td>
-							<td><span class="status completed">Completed</span></td>
-						</tr>
-					</tbody>
-				</table>
-			</div>
-			<div class="todo">
-				<div class="head">
-					<h3>Todos</h3>
-					<i class='bx bx-plus'></i>
-					<i class='bx bx-filter'></i>
-				</div>
-				<ul class="todo-list">
-					<li class="completed">
-						<p>Todo List</p>
-						<i class='bx bx-dots-vertical-rounded'></i>
-					</li>
-					<li class="completed">
-						<p>Todo List</p>
-						<i class='bx bx-dots-vertical-rounded'></i>
-					</li>
-					<li class="not-completed">
-						<p>Todo List</p>
-						<i class='bx bx-dots-vertical-rounded'></i>
-					</li>
-					<li class="completed">
-						<p>Todo List</p>
-						<i class='bx bx-dots-vertical-rounded'></i>
-					</li>
-					<li class="not-completed">
-						<p>Todo List</p>
-						<i class='bx bx-dots-vertical-rounded'></i>
-					</li>
-				</ul>
-			</div>
-		</div>
-	</main>
-
-</section> -->
-<!-- MAIN -->
-<!-- MAIN -->
 <main>
 	<div class="head-title">
 		<div class="left">
-			<h1>Dashboard</h1>
+			<h1>Resources</h1>
 			<ul class="breadcrumb">
-				<li>
-					<a href="#">Dashboard</a>
+				<!-- <li>
+					<a href="#">Dashboard</a>-->
 				</li>
 				<li><i class='bx bx-chevron-right'></i></li>
 				<li>
-					<a class="active" href="#">Home</a>
+					<a class="active" href="#">ressources</a>
 				</li>
 			</ul>
 		</div>
 		<a href="#" class="btn-download">
 			<i class='bx bxs-cloud-download'></i>
-			<span class="text">Download PDF</span>
+			<span class="text">Ajouter une ressource</span>
 		</a>
 	</div>
-
-	<ul class="box-info">
-		<li>
-			<i class='bx bxs-calendar-check'></i>
-			<span class="text">
-				<h3>1020</h3>
-				<p>New Order</p>
-			</span>
-		</li>
-		<li>
-			<i class='bx bxs-group'></i>
-			<span class="text">
-				<h3>2834</h3>
-				<p>Visitors</p>
-			</span>
-		</li>
-		<li>
-			<i class='bx bxs-dollar-circle'></i>
-			<span class="text">
-				<h3>$2543</h3>
-				<p>Total Sales</p>
-			</span>
-		</li>
-	</ul>
-
 
 	<div class="table-data">
 		<div class="order">
 			<div class="head">
-				<h3>Recent Orders</h3>
+				<h3>Liste de ressources</h3>
 				<i class='bx bx-search'></i>
 				<i class='bx bx-filter'></i>
 			</div>
 			<table>
 				<thead>
 					<tr>
-						<th>User</th>
-						<th>Date Order</th>
-						<th>Status</th>
+						<th>#</th>
+						<th>Type </th>
+						<th>Ressources</th>
+						<th>Libeller</th>
+						<th>Infobulle</th>
+						<th>Description</th>
+						<th>Visualisation</th>
+						<th>actions</th>
 					</tr>
 				</thead>
 				<tbody>
-					<tr>
+					<!-- <tr>
 						<td>
-							<img src=" <?php echo ephoto . "people.png" ?>">
+							<img src=" ">
 							<p>John Doe</p>
 						</td>
 						<td>01-10-2021</td>
 						<td><span class="status completed">Completed</span></td>
-					</tr>
-					<tr>
-						<td>
-							<img src=" <?php echo ephoto . "people.png" ?>">
-							<p>John Doe</p>
-						</td>
-						<td>01-10-2021</td>
-						<td><span class="status pending">Pending</span></td>
-					</tr>
-					<tr>
-						<td>
-							<img src=" <?php echo ephoto . "people.png" ?>">
-							<p>John Doe</p>
-						</td>
-						<td>01-10-2021</td>
-						<td><span class="status process">Process</span></td>
-					</tr>
-					<tr>
-						<td>
-							<img src=" <?php echo ephoto . "people.png" ?>">
-							<p>John Doe</p>
-						</td>
-						<td>01-10-2021</td>
-						<td><span class="status pending">Pending</span></td>
-					</tr>
-					<tr>
-						<td>
-							<img src=" <?php echo ephoto . "people.png" ?>">
-							<p>John Doe</p>
-						</td>
-						<td>01-10-2021</td>
-						<td><span class="status completed">Completed</span></td>
-					</tr>
+					</tr> -->
+					<?php $i = 1;
+					foreach ($ressources as $ressource) : ?>
+						<tr>
+							<td>
+								<?= $i++ ?></td>
+							</td>
+							<td>
+								<?= $ressource->getNomtype() ?? "Manque info" ?></td>
+							</td>
+							<td>
+								<?= $ressource->getRessources() ?? "Manque info" ?></td>
+							</td>
+							<td>
+								<?= $ressource->getLibelle() ?? "Manque info" ?></td>
+							</td>
+							<td>
+								<?= $ressource->getInfobulle() ?? "Manque info" ?></td>
+							</td>
+							<td>
+								<?= $ressource->getMetadesc() ?? "Manque info" ?></td>
+							</td>
+							<td>
+								<img src="<?= ephoto . $ressource->getRessources() ?>">
+							</td>
+							<td>
+								<button type="button" class="btn btn-primary">Primary</button>
+								<button type="button" class="btn btn-danger">Danger</button>
+							</td>
+						<?php endforeach ?>
 				</tbody>
 			</table>
 		</div>
-		<div class="todo">
+		<!-- <div class="todo">
 			<div class="head">
 				<h3>Todos</h3>
 				<i class='bx bx-plus'></i>
@@ -259,9 +122,9 @@
 					<i class='bx bx-dots-vertical-rounded'></i>
 				</li>
 			</ul>
-		</div>
+		</div> -->
 	</div>
 </main>
-<!-- MAIN -->
+
 </section>
 <!-- CONTENT -->
