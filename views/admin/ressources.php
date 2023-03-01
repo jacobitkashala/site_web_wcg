@@ -5,7 +5,24 @@ use App\MODEL\Ressources;
 use App\Connection;
 
 $pdo = Connection::getPDO(db_host, db_user, db_pass, db_name);
-$slqRessources = "SELECT m.MED_LIBELLE as libelle, m.MED_RESSOURCE ressources,m.MED_INFOBULLE  as infobulle ,m.MED_META as metadesc ,tm.TYM_LIBELLE as nomtype FROM  media m inner join type_media tm ON tm.TYM_ID=m.TYM_ID LIMIT 10;";
+
+//On passe a la variable page 1 s'il n'existe pas et 1 s'il contient ne porte quoi
+$currentPage = (int)($_GET['page'] ?? 1) ?: 1;
+
+if ($currentPage <= 0) {
+	throw new Exception("Numéro de page invalide");
+}
+$slqRessourcesCount = "SELECT COUNT(*) FROM  media m inner join type_media tm ON tm.TYM_ID=m.TYM_ID LIMIT 10;";
+$countRessources = (int)$pdo->query($slqRessources)->fetch(PDO::FETCH_NUM)[0];
+$nbreElment = 10;
+$page = ceil($countRessources / $nbreElment);
+
+if($currentPage> $page){
+	throw new Exception("Cette page n'existe pas");
+}
+$offset = $nbreElment * ($currentPage -1);
+$slqRessources = "SELECT m.MED_LIBELLE as libelle, m.MED_RESSOURCE ressources,m.MED_INFOBULLE  as infobulle ,m.MED_META as metadesc ,tm.TYM_LIBELLE as nomtype FROM  media m inner join type_media tm ON tm.TYM_ID=m.TYM_ID LIMIT $nbreElment OFFSET  $offset";
+
 $queryRessources = $pdo->query($slqRessources);
 $ressources = $queryRessources->fetchAll(PDO::FETCH_CLASS, Ressources::class);
 // echo '<pre>';
@@ -86,35 +103,14 @@ $ressources = $queryRessources->fetchAll(PDO::FETCH_CLASS, Ressources::class);
 				</tbody>
 			</table>
 		</div>
-		<!-- <div class="todo">
-			<div class="head">
-				<h3>Todos</h3>
-				<i class='bx bx-plus'></i>
-				<i class='bx bx-filter'></i>
-			</div>
-			<ul class="todo-list">
-				<li class="completed">
-					<p>Todo List</p>
-					<i class='bx bx-dots-vertical-rounded'></i>
-				</li>
-				<li class="completed">
-					<p>Todo List</p>
-					<i class='bx bx-dots-vertical-rounded'></i>
-				</li>
-				<li class="not-completed">
-					<p>Todo List</p>
-					<i class='bx bx-dots-vertical-rounded'></i>
-				</li>
-				<li class="completed">
-					<p>Todo List</p>
-					<i class='bx bx-dots-vertical-rounded'></i>
-				</li>
-				<li class="not-completed">
-					<p>Todo List</p>
-					<i class='bx bx-dots-vertical-rounded'></i>
-				</li>
-			</ul>
-		</div> -->
+		<div class="d-flex justify-content-betwen my-4">
+			<?php if ($currentPage > 1) : ?>
+				<a class="btn btn-primary" href="<?= $router->url('ressources') ?>?page<?= $currentPage - 1 ?>"> Page précédente </a>
+			<?php endif ?>
+			<?php if ($currentPage < $page) : ?>
+				<a class="btn btn-primary" href="<?= $router->url('ressources') ?>?page<?= $currentPage + 1 ?>"> Page suivant </a>
+			<?php endif ?>
+		</div>
 	</div>
 </main>
 

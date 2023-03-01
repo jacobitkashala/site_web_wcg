@@ -35,7 +35,30 @@
 			<div class="head">
 				<h3>Ajouter une ressource</h3>
 			</div>
-			<h1> Formulaire ajouter une ressource</h1>
+			<form method="post" enctype="multipart/form-data">
+				<div class="row text-center">
+					<div class="col-log-6 col-md-5 col-sm-10 ">
+						<div class="form-outline mb-4">
+							<input type="text" name="username" id="typeEmailX-2" class="form-control form-control-lg" />
+							<label class="form-label" for="typeEmailX-2">Email ou non d'utilisateur</label>
+						</div>
+						<div class="form-outline mb-4">
+							<input type="password" name="userPassword" id="typePasswordX-2" class="form-control form-control-lg" />
+							<label class="form-label" for="typePasswordX-2">Password</label>
+						</div>
+						<!-- Checkbox -->
+						<div class="form-check d-flex justify-content-start mb-4">
+							<input class="form-check-input" type="checkbox" value="" id="form1Example3" />
+							<label class="form-check-label" for="form1Example3"> Remember password </label>
+						</div>
+						<button class="btn btn-primary btn-lg btn-block" name="btnLogin" type="submit">Login</button>
+
+					</div>
+				</div>
+
+
+				<hr class="my-4">
+			</form>
 		</div>
 
 	</div>
