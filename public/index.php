@@ -21,7 +21,7 @@ $router = new App\Router(dirname(__DIR__) . '/views');
 
 
 if (strpos($uri, "admin") !== false) {
-	list($base, $menu, $para) = explode(':', $uri);
+	// list($base, $menu, $para) = explode(':', $uri);
 	
 	session_start();
 	// }
