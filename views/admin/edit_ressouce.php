@@ -1,15 +1,33 @@
 <?php
 
-// use App\MODEL\Ressources;
+use App\MODEL\Ressources;
+use App\Connection;
 
-// use App\Connection;
 
-// $pdo = Connection::getPDO(db_host, db_user, db_pass, db_name);
-// $slqRessources = "SELECT m.MED_LIBELLE as libelle, m.MED_RESSOURCE ressources,m.MED_INFOBULLE  as infobulle ,m.MED_META as metadesc ,tm.TYM_LIBELLE as nomtype FROM  media m inner join type_media tm ON tm.TYM_ID=m.TYM_ID LIMIT 10;";
-// $queryRessources = $pdo->query($slqRessources);
-// $ressources = $queryRessources->fetchAll(PDO::FETCH_CLASS, Ressources::class);
+$id = $params['id'];
+
+
+if (!filter_var($id, FILTER_VALIDATE_INT)) {
+	header("Location: " . $router->url('ressources'));
+	http_response_code(301);
+	exit();
+};
+
+
+$pdo = Connection::getPDO(db_host, db_user, db_pass, db_name);
+$query = $pdo->prepare('SELECT m.MED_ID id_media ,tm.TYM_ID  id_typeMedia, m.MED_LIBELLE as libelle, m.MED_RESSOURCE ressources,m.MED_INFOBULLE  as infobulle ,m.MED_META as metadesc ,tm.TYM_LIBELLE as nomtype FROM  media m inner join type_media tm ON tm.TYM_ID=m.TYM_ID WHERE  m.MED_ID  = :id');
+$query->execute(['id' => $id]);
+$ressource = $query->setFetchMode(PDO::FETCH_CLASS, Ressources::class);
+$ressource = $query->fetch();
+
+if ($ressource == false) {
+	// on fait une redirection 
+	header("Location: " . $router->url('ressources'));
+	http_response_code(301);
+	exit();
+}
 // echo '<pre>';
-// var_dump($ressources);
+// var_dump($ressource);
 // echo '</pre>';
 // exit();
 ?>

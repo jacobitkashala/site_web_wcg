@@ -50,40 +50,20 @@ class Router
     public function run(): self
     {
         $match = $this->router->match();
-        // $uri =;
-
-        if ($_SERVER['REQUEST_URI'] === "/admin") {
-            // echo "eee";
-            // $paramsAdmin = $match['params'];
+        if ($match === false) {
+            header("Location:/");
+        }
+        if (is_array($match)) {
+            $params = $match['params'];
             $view = $match['target'];
             $router = $this;
             ob_start();
-            // echo '<pre>';
-            // var_dump($this->viewPath . DIRECTORY_SEPARATOR . $view);
-            // echo '</pre>';
-            // echo '<pre>';
-            // var_dump($match);
-            // echo '</pre>';
             require $this->viewPath . DIRECTORY_SEPARATOR . $view;
-            // $contentPageAdmin = ob_get_clean();
+            $contentPage = ob_get_clean();
 
-            // require $this->viewPath . DIRECTORY_SEPARATOR . 'layouts/default.php';
+            require $this->viewPath . DIRECTORY_SEPARATOR . 'layouts/default.php';
         } else {
-            if (is_array($match)) {
-                $params = $match['params'];
-                $view = $match['target'];
-                $router = $this;
-                ob_start();
-                // echo '<pre>';
-                // var_dump($this->viewPath . $view);
-                // echo '</pre>';
-                require $this->viewPath . DIRECTORY_SEPARATOR . $view;
-                $contentPage = ob_get_clean();
-
-                require $this->viewPath . DIRECTORY_SEPARATOR . 'layouts/default.php';
-            } else {
-                require $this->viewPath . DIRECTORY_SEPARATOR . 'layouts/error.php';
-            }
+            header("Location:/");
         }
 
 

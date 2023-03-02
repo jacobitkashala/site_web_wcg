@@ -50,6 +50,9 @@ class RouterAdmin
     public function run(): self
     {
         $match = $this->router->match();
+        if ($match === false) {
+            header("Location:/");
+        }
         $view = $match['target'];
         $router = $this;
 
@@ -66,13 +69,15 @@ class RouterAdmin
                 } else {
                     require $this->viewPath . DIRECTORY_SEPARATOR . $view;
                 }
-            } else { 
+            } else {
                 ob_start();
                 require $this->viewPath . DIRECTORY_SEPARATOR . $view;
                 $contentPageAdmin = ob_get_clean();
 
                 require $this->viewPath . DIRECTORY_SEPARATOR . 'admin/layouts/default.php';
             }
+        } else {
+            header("Location:/");
         }
         return $this;
     }

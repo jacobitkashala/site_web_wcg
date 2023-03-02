@@ -15,16 +15,20 @@ $whoops->register();
 $uri = $_SERVER['REQUEST_URI'];
 // echo $uri;
 // exit();
+
 $routerAdmin = new App\RouterAdmin(dirname(__DIR__) . '/views');
 $router = new App\Router(dirname(__DIR__) . '/views');
+
+
 if (strpos($uri, "admin") !== false) {
-	// le router pour l'admin
+	list($base, $menu, $para) = explode(':', $uri);
+	
 	session_start();
 	// }
 	$routerAdmin->match(ROOT_URL . 'admin', 'admin/index.php', 'admin');
 	$routerAdmin->match(ROOT_URL . 'admin:login', 'admin/login.php', 'login');
 	$routerAdmin->get(ROOT_URL . 'admin:ressources', 'admin/ressources.php', 'ressources');
-	$routerAdmin->get(ROOT_URL . 'admin:update_ressource:[i:slug]-[i:id]', 'admin/edit_ressouce.php', 'update_ressource');
+	$routerAdmin->get(ROOT_URL . 'admin:update_ressource:[i:id]', 'admin/edit_ressouce.php', 'update_ressource');
 	$routerAdmin->get(ROOT_URL . 'admin:update_delete:[i:id]', 'admin/detete_ressouce.php', 'delete_ressource');
 	$routerAdmin->get(ROOT_URL . 'admin:add_form_ressource', 'admin/form_add_ressouce.php', 'form_add_ressource');
 
