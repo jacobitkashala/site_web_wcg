@@ -128,3 +128,8 @@ $(document).on('ready', function () {
   })
 
 })
+// Confirmer delete ressource
+function confirmDeleteRessource(idRessource){
+  console.log(idRessource)
+
+} 

@@ -41,7 +41,7 @@ if ($currentPage > $page) {
 	throw new Exception("Cette page n'existe pas");
 }
 $offset = $nbreElment * ($currentPage - 1);
-$slqRessources = "SELECT m.MED_LIBELLE as libelle, m.MED_RESSOURCE ressources,m.MED_INFOBULLE  as infobulle ,m.MED_META as metadesc ,tm.TYM_LIBELLE as nomtype FROM  media m inner join type_media tm ON tm.TYM_ID=m.TYM_ID LIMIT $nbreElment OFFSET  $offset";
+$slqRessources = "SELECT m.MED_ID id_media ,tm.TYM_ID  id_typeMedia, m.MED_LIBELLE as libelle, m.MED_RESSOURCE ressources,m.MED_INFOBULLE  as infobulle ,m.MED_META as metadesc ,tm.TYM_LIBELLE as nomtype FROM  media m inner join type_media tm ON tm.TYM_ID=m.TYM_ID LIMIT $nbreElment OFFSET  $offset";
 
 $queryRessources = $pdo->query($slqRessources);
 $ressources = $queryRessources->fetchAll(PDO::FETCH_CLASS, Ressources::class);
@@ -116,8 +116,8 @@ $ressources = $queryRessources->fetchAll(PDO::FETCH_CLASS, Ressources::class);
 								<img src="<?= ephoto . $ressource->getRessources() ?>">
 							</td>
 							<td>
-								<a class="btn btn-primary m-1" href="#">Modifier</a>
-								<a class="btn btn-danger m-1" href="#">Supprimer</a>
+								<a class="btn btn-primary m-1" href="<?= $router->url('update_ressource', ['id' => $ressource->getId_media(), "slug" => $ressource->getId_typeMedia()]) ?>">Modifier</a>
+								<a class="btn btn-danger m-1" href="<?= $router->url('delete_ressource', ['id' => $ressource->getId_media()]) ?>" onclick="return confirm('voulez vous vraiment effectuer cette action?','Modification')">Supprimer</a>
 							</td>
 						<?php endforeach ?>
 				<tfoot>
