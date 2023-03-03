@@ -91,17 +91,29 @@ li{
 	list-style: none;
 }
 
+
+/* Style appliquer au survole de l'element au survole */
+
+.link-navbar .link a{
+	border-color: none;
+	border-bottom: 1px solid #ffffff00;
+}
 .link-navbar .link a:hover{
     text-decoration: none;	
     font-size: 18px;
 	border-bottom: 1px solid #FFFFFF;
 }
-/* Style appliquer au survole de l'element au survole */
 .link-navbar .link a:hover{
     text-decoration: none;	
     font-size: 18px;
 	transform: scale(1);
+	font-weight: bold;
 	border-bottom: 1px solid #FFFFFF;
+}
+.underline-element{
+	height: 5px;
+	width:100%;
+	background-color:#FFFFFF
 }
 .link-navbar .link a.no__border-btom{
 	border-bottom: none;

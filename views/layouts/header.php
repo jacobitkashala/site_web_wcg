@@ -22,15 +22,17 @@ $newPathIcons = icons;
 			<?php $i = 0;
 			foreach ($menus as $itemMenu) : ?>
 				<li class="menu  <?= $itemMenu->getMenuBackgroud() . " " . $itemMenu->getMenuFontColor() ?> link  <?= ($itemMenu->getIsSubMenu() == 1 ? "link-menu-grid overMenu" : "") ?>">
-					<a class="						<?= ($i === 0) ? "no__border-btom" : " " ?>" href="<?= $router->url($itemMenu->getMenuTemplate(), array('id' => $itemMenu->getMenuId(), 'slug' => $itemMenu->getMenuSlug())) ?>">
+					<a class="<?= ($i === 0) ? "no__border-btom" : " " ?>" href="<?= $router->url($itemMenu->getMenuTemplate(), array('id' => $itemMenu->getMenuId(), 'slug' => $itemMenu->getMenuSlug())) ?>">
 						<img class="logo-menu" src="<?= $newPathIcons . $itemMenu->getMenuNameIcone(); ?>" alt="logo" />
 						<?= $itemMenu->getMenuName()  ?>
 
 						<?php if ($itemMenu->getIsSubMenu() == 1) : ?>
 							<i class="fa-solid fa-plus icon-cog" id="btn-plus-sous-menu"></i>
 						<?php endif ?>
+							
 						<!-- <i class="fa fa-angle-right pull-right"></i> -->
 					</a>
+					<!-- <span class="underline-element"></span> -->
 					<?php if ($itemMenu->getIsSubMenu() == 1) {
 						$sql2 = "SELECT sous_rubrique.SRU_ID as id, SRU_TITRE  as title , template.TPL_LIBELLE as url_sub_menu, template.TPL_RESSOURCES as ressource_sub_menu FROM sous_rubrique INNER JOIN status   ON status.STA_ID = sous_rubrique.STA_ID INNER JOIN template   ON template.TPL_ID = sous_rubrique.TPL_ID WHERE sous_rubrique.RUB_ID = " . $itemMenu->getMenuId() . " AND sous_rubrique.STA_ID = 1 ORDER BY SRU_ORDRE";
 						$query = $pdo->query($sql2);
