@@ -32,7 +32,7 @@ html{
  	background-color: var(--white) ; 
 	 padding: 9px;
 }
-.header_image > img {
+.header_image a > img {
 	height: 70px;
 }
 
@@ -98,11 +98,11 @@ li{
 	border-color: none;
 	border-bottom: 1px solid #ffffff00;
 }
-.link-navbar .link a:hover{
+/* .link-navbar .link a:hover{
     text-decoration: none;	
     font-size: 18px;
 	border-bottom: 1px solid #FFFFFF;
-}
+} */
 .link-navbar .link a:hover{
     text-decoration: none;	
     font-size: 18px;
@@ -139,7 +139,6 @@ ul .menu:nth-child(0n+1){
 nav.navbar {
 	padding:0px;
 }
-
 
 .container-sous-menu-grid{
 	display: flex;

@@ -9,27 +9,28 @@ $pdo = Connection::getPDO(db_host, db_user, db_pass, db_name);
 $query = $pdo->query('SELECT  template.TPL_LIBELLE,r.a_sous_rubrique,r.url_page,r.RUB_ID, r.RUB_ICONE_ID, r.RUB_LIBELLE,r.RUB_BACKGROUND,r.RUB_FONT_NAME,r.RUB_FONT_SIZE,r.RUB_FONT_COLOR, m.med_ressource FROM rubrique r, media m, site s ,template WHERE m.med_id = r.rub_icone_id and r.SIT_ID = s.SIT_ID and s.SIT_ID = 1 and template.TPL_ID = r.TPL_ID ORDER BY r.RUB_ORDRE');
 $menus = $query->fetchAll(PDO::FETCH_CLASS, Menu::class);
 
-$newPathLogo = logo;
-$newPathIcons = icons;
+
 
 ?>
 <header class="header_container ">
 	<div class="header_image">
-		<img src=<?= $newPathLogo . 'logo_wcg.png' ?> alt="logo wcg" />
+		<a class="" href="<?= $router->url('homepage') ?>">
+			<img src=<?= logo . 'logo_wcg.png' ?> alt="logo wcg" />
+		</a>
 	</div>
 	<nav class="header_nav_container navbar navbar-expand-lg bg-body-tertiary">
 		<ul class="link-navbar bg-color-shadox" id="main-menu">
 			<?php $i = 0;
 			foreach ($menus as $itemMenu) : ?>
-				<li class="menu  <?= $itemMenu->getMenuBackgroud() . " " . $itemMenu->getMenuFontColor() ?> link  <?= ($itemMenu->getIsSubMenu() == 1 ? "link-menu-grid overMenu" : "") ?>">
-					<a class="<?= ($i === 0) ? "no__border-btom" : " " ?>" href="<?= $router->url($itemMenu->getMenuTemplate(), array('id' => $itemMenu->getMenuId(), 'slug' => $itemMenu->getMenuSlug())) ?>">
-						<img class="logo-menu" src="<?= $newPathIcons . $itemMenu->getMenuNameIcone(); ?>" alt="logo" />
+				<li class="menu link  <?= ($itemMenu->getIsSubMenu() == 1 ? "link-menu-grid overMenu" : "") ?>" style="background-color:<?= $itemMenu->getMenuBackgroud() ?>;">
+					<a class="<?= ($i === 0) ? "no__border-btom" : " " ?>" href="<?= $router->url($itemMenu->getMenuTemplate(), array('id' => $itemMenu->getMenuId(), 'slug' => $itemMenu->getMenuSlug())) ?>" style="color:<?= $itemMenu->getMenuFontColor() ?>;">
+						<img class="logo-menu" src="<?= icons . $itemMenu->getMenuNameIcone(); ?>" alt="logo" />
 						<?= $itemMenu->getMenuName()  ?>
 
 						<?php if ($itemMenu->getIsSubMenu() == 1) : ?>
 							<i class="fa-solid fa-plus icon-cog" id="btn-plus-sous-menu"></i>
 						<?php endif ?>
-							
+
 						<!-- <i class="fa fa-angle-right pull-right"></i> -->
 					</a>
 					<!-- <span class="underline-element"></span> -->
