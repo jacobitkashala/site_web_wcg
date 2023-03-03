@@ -21,7 +21,6 @@
 	border:0;
 	text-decoration:none;
 	outline:none;
-	/* text-transform: capitalize;	 */
 }
 
 html{
@@ -31,6 +30,7 @@ html{
 }
 .header_image {
  	background-color: var(--white) ; 
+	 padding: 9px;
 }
 .header_image > img {
 	height: 70px;
@@ -46,8 +46,6 @@ html{
 	left: 0;
 	right: 0;
 	z-index: 1000!important;
-	
-
 }
 .icon-cog{
 	color: var(--white) ;
@@ -56,13 +54,9 @@ html{
 }
 .header_nav_container{
 	z-index: 1000;	
-	/* overflow-x: auto; */
     display: flex;
 	width: 100%;
-	/* height: 65px; */
     flex-direction: row;
-    /* align-content: center; */
-	/* gap: 0; */
     align-items: center;
 	
 }
@@ -80,9 +74,13 @@ html{
 	cursor: pointer;
 }
 .link-navbar .link{
-    list-style: none;
-	width: 100%;
-	padding:10px;
+	list-style: none;
+    display: flex;
+    width: 100%;
+    padding: 5px;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
 }
 
 .link-navbar-sous-menu {
@@ -93,26 +91,35 @@ li{
 	list-style: none;
 }
 
-.link-navbar .link a{
+.link-navbar .link a:hover{
     text-decoration: none;	
     font-size: 18px;
-	
+	border-bottom: 1px solid #FFFFFF;
+}
+/* Style appliquer au survole de l'element au survole */
+.link-navbar .link a:hover{
+    text-decoration: none;	
+    font-size: 18px;
+	transform: scale(1);
+	border-bottom: 1px solid #FFFFFF;
+}
+.link-navbar .link a.no__border-btom{
+	border-bottom: none;
 }
 ul .menu:nth-child(0n+1){
 	width: 20%;
+	border-bottom: none;
 }
+/* Style applicaquer au sous-menu */
 .link-menu-grid .sous-menu{
  	position: absolute;
     width: 100%;
 	display: none;
     padding: 29px 0px;
-	margin-top: 2px;
+	top:50px;
 	left:0;
 }
-/* a  :hover{
-	transform: scale(1);
-	font-weight: bold;
-}  */
+
 .menu:hover .sous-menu{
 	display: block;
 	transition: all 0.3s ease-in;
@@ -120,9 +127,6 @@ ul .menu:nth-child(0n+1){
 nav.navbar {
 	padding:0px;
 }
-/* div.container-sous-menu-grid{
-
-} */
 
 
 .container-sous-menu-grid{
@@ -136,9 +140,7 @@ nav.navbar {
 	justify-content: flex-start;
 }
 .element-sous-menu li::before {
-    content: "•";
-    /* content: "Alt+0 1 4 9"; */
-	
+    content: "•";	
     color: white;
     margin-left: 1rem;
     font-size: 1.5em

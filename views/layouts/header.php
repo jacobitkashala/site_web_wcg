@@ -19,11 +19,13 @@ $newPathIcons = icons;
 	</div>
 	<nav class="header_nav_container navbar navbar-expand-lg bg-body-tertiary">
 		<ul class="link-navbar bg-color-shadox" id="main-menu">
-			<?php foreach ($menus as $itemMenu) : ?>
-				<li class="menu  <?php echo $itemMenu->getMenuBackgroud() . " " . $itemMenu->getMenuFontColor() ?> link  <?php echo ($itemMenu->getIsSubMenu() == 1 ? "link-menu-grid overMenu" : "") ?>">
-					<a href="<?= $router->url($itemMenu->getMenuTemplate(), array('id' => $itemMenu->getMenuId(), 'slug' => $itemMenu->getMenuSlug())) ?>">
+			<?php $i = 0;
+			foreach ($menus as $itemMenu) : ?>
+				<li class="menu  <?= $itemMenu->getMenuBackgroud() . " " . $itemMenu->getMenuFontColor() ?> link  <?= ($itemMenu->getIsSubMenu() == 1 ? "link-menu-grid overMenu" : "") ?>">
+					<a class="						<?= ($i === 0) ? "no__border-btom" : " " ?>" href="<?= $router->url($itemMenu->getMenuTemplate(), array('id' => $itemMenu->getMenuId(), 'slug' => $itemMenu->getMenuSlug())) ?>">
 						<img class="logo-menu" src="<?= $newPathIcons . $itemMenu->getMenuNameIcone(); ?>" alt="logo" />
 						<?= $itemMenu->getMenuName()  ?>
+
 						<?php if ($itemMenu->getIsSubMenu() == 1) : ?>
 							<i class="fa-solid fa-plus icon-cog" id="btn-plus-sous-menu"></i>
 						<?php endif ?>
@@ -39,7 +41,7 @@ $newPathIcons = icons;
 							<div class="container-sous-menu-grid">
 								<ul class="element-sous-menu link-navbar">
 									<?php foreach ($subMenus as $itemSousMenu) : ?>
-										<li class="  <?= $itemMenu->getMenuFontColor() ?>">
+										<li class=" <?= $itemMenu->getMenuFontColor() ?>">
 											<a class="" href="<?= $router->url($itemMenu->getMenuTemplate(), array('id' => $itemSousMenu->getSubMenuId(), 'slug' => $itemMenu->getMenuId())) ?>">
 												<?php echo $itemSousMenu->getSubMenuTitle(); ?>
 
@@ -49,7 +51,9 @@ $newPathIcons = icons;
 								</ul>
 							</div>
 						</div>
-					<?php } ?>
+					<?php
+					}
+					$i++; ?>
 				<?php endforeach ?>
 				</li>
 		</ul>

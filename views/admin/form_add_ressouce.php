@@ -4,10 +4,10 @@
 
 // use App\Connection;
 // list($base, $menu, $para) = explode(':', $uri);
-echo '<pre>';
-var_dump($uri);
-echo '</pre>';
-exit();
+// echo '<pre>';
+// var_dump($uri);
+// echo '</pre>';
+// exit();
 
 // $pdo = Connection::getPDO(db_host, db_user, db_pass, db_name);
 // $slqRessources = "SELECT m.MED_LIBELLE as libelle, m.MED_RESSOURCE ressources,m.MED_INFOBULLE  as infobulle ,m.MED_META as metadesc ,tm.TYM_LIBELLE as nomtype FROM  media m inner join type_media tm ON tm.TYM_ID=m.TYM_ID LIMIT 10;";
