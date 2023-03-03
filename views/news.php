@@ -28,7 +28,7 @@ echo "
  ";
 ?>
 <main>
-	<div class="row margin-15 mb-5">
+	<!-- <div class="row margin-15 mb-5">
 		<div class="bloc-mood">
 			<video playsinline="" autoplay="autoplay" loop="infinite" muted="muted">
 				<source src="<?= evideo . "safari_beach.mp4" ?>" type="video/mp4">
@@ -40,9 +40,9 @@ echo "
 				<a class="btn" href="#">En savoir plus</a>
 			</div>
 		</div>
-	</div>
+	</div> -->
 
-	<div class="container-fluid">
+	<!-- <div class="container-fluid">
 		<div class="row  d-flex justify-content-center mb-4">
 			<div class="card col-log-4 col-md-3 col-sm-9  " style="width: 19rem">
 				<img src="<?= ephoto . "business.jpg" ?>" class="img-fluid" alt="...">
@@ -69,9 +69,9 @@ echo "
 				</div>
 			</div>
 		</div>
-	</div>
+	</div> -->
 
-	<div class="row bg-image-new mb-4 d-flex justify-content-end ">
+	<!-- <div class="row bg-image-new mb-4 d-flex justify-content-end ">
 		<div class="col-log-4 col-md-3 col-sm-9 ">
 			<div class="">
 				<p>
@@ -79,9 +79,9 @@ echo "
 				</p>
 			</div>
 		</div>
-	</div>
+	</div> -->
 
-	<div class="container-fluid">
+	<!-- <div class="container-fluid">
 		<div class="row mb-4">
 			<div class="col-log-5 col-md-4 col-sm-9 ">
 				<img src="<?= ephoto . "business.jpg" ?>" class="img-fluid" alt="...">
@@ -101,7 +101,7 @@ echo "
 
 			</div>
 		</div>
-	</div>
+	</div> -->
 
 
 </main>
