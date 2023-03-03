@@ -8,8 +8,10 @@ class SousMenu
 	private $title;
 	private $url_sub_menu;
 	private $ressource_sub_menu;
+	private $bgColor;
+	private $color;
 
-
+	
 	// private $menu;
 
 	public function getSubMenuId()
@@ -29,4 +31,20 @@ class SousMenu
 		return $this->ressource_sub_menu;
 	}
 
+
+	/**
+	 * Get the value of bgColor
+	 */ 
+	public function getBgColor()
+	{
+		return $this->bgColor;
+	}
+
+	/**
+	 * Get the value of color
+	 */ 
+	public function getColor()
+	{
+		return $this->color;
+	}
 }

@@ -5,7 +5,7 @@ use App\MODEL\HiringContent;
 // use App\Helpers\Text;
 use App\Connection;
 
-$pdo = Connection::getPDO(db_host,db_user,db_pass,db_name);
+$pdo = Connection::getPDO(db_host, db_user, db_pass, db_name);
 
 $titlePage = 'hiring';
 $descriptionPage = 'World Corp Group est une société de consulting et de développement de projets innovants, spécialiste en solutions SMAC (Social, Mobile, Analytics, Cloud)';
@@ -20,7 +20,7 @@ if ($idParent === 0) {
 }
 $resultquery = $queryLittleContent->fetchAll(PDO::FETCH_CLASS, LittleContent::class);
 // idMenu
-$query2 = $pdo->query("SELECT template.TPL_LIBELLE as template,sous_rubrique.SRU_ID as id, sous_rubrique.SRU_LIBELLE as libelle,sous_rubrique.SRU_TITRE as titre ,sous_rubrique.SRU_CONTENU  as contenu FROM sous_rubrique INNER JOIN template ON  template.TPL_ID = sous_rubrique.TPL_ID WHERE sous_rubrique.RUB_ID = ".$idMenu."  AND sous_rubrique.STA_ID = 1");
+$query2 = $pdo->query("SELECT template.TPL_LIBELLE as template,sous_rubrique.SRU_ID as id, sous_rubrique.SRU_LIBELLE as libelle,sous_rubrique.SRU_TITRE as titre ,sous_rubrique.SRU_CONTENU  as contenu FROM sous_rubrique INNER JOIN template ON  template.TPL_ID = sous_rubrique.TPL_ID WHERE sous_rubrique.RUB_ID = " . $idMenu . "  AND sous_rubrique.STA_ID = 1");
 $resultQueryHiring = $query2->fetchAll(PDO::FETCH_CLASS, HiringContent::class);
 
 // $carouselSlq="SELECT media.MED_ID, media.MED_RESSOURCE ,sous_rubrique.SRU_ORDRE FROM  media Inner JOIN sous_rubrique ON sous_rubrique.SRU_IMG_ID = media.MED_ID Inner JOIN site ON sous_rubrique.SIT_ID = site.SIT_ID WHERE  sous_rubrique.SRU_UNE = 1 AND site.SIT_ID=1";
@@ -43,15 +43,15 @@ $resultQueryHiring = $query2->fetchAll(PDO::FETCH_CLASS, HiringContent::class);
 		<h4 class="title__recrutement"><?= $resultquery[0]->getLittContenu() ?></h4>
 		<div class="recrutement-box">
 			<div class="box-content">
-			<?php foreach ($resultQueryHiring as $itemHiring) : ?>
-				<div class="content-item">
-					<h4><?=  $itemHiring->getTitle()?></h4>
-					<p><?=  $itemHiring->getContenu()?></p>
-					<div class="box_info"> <a class="btn" href="<?= $router->url($itemHiring->getTemplate(), array('id' => $itemHiring->getId(), 'slug' => 0)) ?>"> En savoir plus</a>
-						<p><?=  $itemHiring->getLibelle()?></</p>
+				<?php foreach ($resultQueryHiring as $itemHiring) : ?>
+					<div class="content-item">
+						<h1><?= $itemHiring->getTitle() ?></h1>
+						<p><?= $itemHiring->getContenu() ?></p>
+						<div class="box_info"> <a class="btn" href="<?= $router->url($itemHiring->getTemplate(), array('id' => $itemHiring->getId(), 'slug' => 0)) ?>"> En savoir plus</a>
+							<p><?= $itemHiring->getLibelle() ?></< /p>
+						</div>
+						<div class="item_inline"></div>
 					</div>
-					<div class="item_inline"></div>
-				</div>
 				<?php endforeach ?>
 			</div>
 		</div>

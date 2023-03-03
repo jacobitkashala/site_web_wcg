@@ -4,13 +4,12 @@ use App\MODEL\Menu;
 use App\MODEL\SousMenu;
 use App\Connection;
 
+$id = siteId;
+$idActive = idActive;
 
 $pdo = Connection::getPDO(db_host, db_user, db_pass, db_name);
-$query = $pdo->query('SELECT  template.TPL_LIBELLE,r.a_sous_rubrique,r.url_page,r.RUB_ID, r.RUB_ICONE_ID, r.RUB_LIBELLE,r.RUB_BACKGROUND,r.RUB_FONT_NAME,r.RUB_FONT_SIZE,r.RUB_FONT_COLOR, m.med_ressource FROM rubrique r, media m, site s ,template WHERE m.med_id = r.rub_icone_id and r.SIT_ID = s.SIT_ID and s.SIT_ID = 1 and template.TPL_ID = r.TPL_ID ORDER BY r.RUB_ORDRE');
+$query = $pdo->query("SELECT  template.TPL_LIBELLE,r.a_sous_rubrique,r.url_page,r.RUB_ID, r.RUB_ICONE_ID, r.RUB_LIBELLE,r.RUB_BACKGROUND,r.RUB_FONT_NAME,r.RUB_FONT_SIZE,r.RUB_FONT_COLOR, m.med_ressource FROM rubrique r, media m, site s ,template WHERE m.med_id = r.rub_icone_id and r.SIT_ID = s.SIT_ID and s.SIT_ID = $id and template.TPL_ID = r.TPL_ID ORDER BY r.RUB_ORDRE");
 $menus = $query->fetchAll(PDO::FETCH_CLASS, Menu::class);
-
-
-
 ?>
 <header class="header_container ">
 	<div class="header_image">
@@ -26,28 +25,23 @@ $menus = $query->fetchAll(PDO::FETCH_CLASS, Menu::class);
 					<a class="<?= ($i === 0) ? "no__border-btom" : " " ?>" href="<?= $router->url($itemMenu->getMenuTemplate(), array('id' => $itemMenu->getMenuId(), 'slug' => $itemMenu->getMenuSlug())) ?>" style="color:<?= $itemMenu->getMenuFontColor() ?>;">
 						<img class="logo-menu" src="<?= icons . $itemMenu->getMenuNameIcone(); ?>" alt="logo" />
 						<?= $itemMenu->getMenuName()  ?>
-
 						<?php if ($itemMenu->getIsSubMenu() == 1) : ?>
 							<i class="fa-solid fa-plus icon-cog" id="btn-plus-sous-menu"></i>
 						<?php endif ?>
-
 						<!-- <i class="fa fa-angle-right pull-right"></i> -->
 					</a>
-					<!-- <span class="underline-element"></span> -->
 					<?php if ($itemMenu->getIsSubMenu() == 1) {
-						$sql2 = "SELECT sous_rubrique.SRU_ID as id, SRU_TITRE  as title , template.TPL_LIBELLE as url_sub_menu, template.TPL_RESSOURCES as ressource_sub_menu FROM sous_rubrique INNER JOIN status   ON status.STA_ID = sous_rubrique.STA_ID INNER JOIN template   ON template.TPL_ID = sous_rubrique.TPL_ID WHERE sous_rubrique.RUB_ID = " . $itemMenu->getMenuId() . " AND sous_rubrique.STA_ID = 1 ORDER BY SRU_ORDRE";
+						$sql2 = "SELECT sous_rubrique.SRU_FONT_COLOR color, sous_rubrique.SRU_BACKGROUND bgColor, sous_rubrique.SRU_ID as id, SRU_TITRE  as title , template.TPL_LIBELLE as url_sub_menu, template.TPL_RESSOURCES as ressource_sub_menu FROM sous_rubrique INNER JOIN status   ON status.STA_ID = sous_rubrique.STA_ID INNER JOIN template   ON template.TPL_ID = sous_rubrique.TPL_ID WHERE sous_rubrique.RUB_ID =" . $itemMenu->getMenuId() . " AND sous_rubrique.STA_ID = 1 ORDER BY SRU_ORDRE";
 						$query = $pdo->query($sql2);
 						$subMenus = $query->fetchAll(PDO::FETCH_CLASS, SousMenu::class);
 					?>
-
-						<div class="sous-menu <?php echo $itemMenu->getMenuBackgroud() ?> ">
+						<div class="sous-menu <?php echo $itemMenu->getMenuBackgroud() ?> " style="background-color:<?= $subMenus[0]->getBgColor() ?>;">
 							<div class="container-sous-menu-grid">
 								<ul class="element-sous-menu link-navbar">
 									<?php foreach ($subMenus as $itemSousMenu) : ?>
-										<li class=" <?= $itemMenu->getMenuFontColor() ?>">
-											<a class="" href="<?= $router->url($itemMenu->getMenuTemplate(), array('id' => $itemSousMenu->getSubMenuId(), 'slug' => $itemMenu->getMenuId())) ?>">
-												<?php echo $itemSousMenu->getSubMenuTitle(); ?>
-
+										<li class="sub-menu">
+											<a href="<?= $router->url($itemMenu->getMenuTemplate(), array('id' => $itemSousMenu->getSubMenuId(), 'slug' => $itemMenu->getMenuId())) ?>" style="color:<?= $subMenus[0]->getColor(); ?>;">
+												<?= $itemSousMenu->getSubMenuTitle(); ?>
 											</a>
 										</li>
 									<?php endforeach ?>

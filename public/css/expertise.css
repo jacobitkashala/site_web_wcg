@@ -6,13 +6,9 @@
    object-fit: cover;
    width: 100vw;
    background-size: cover;
-   /* height: 866px; */
-   padding-top: 111px;
-   padding-left: 126px;
+   height: 866px;
 }
-.container_content_expertise h4{
-	font-style: normal;
-	font-weight: 700;
+.container_content_expertise h3{
 	font-size: 40px;
 	line-height: 49px;
 	text-align: left;

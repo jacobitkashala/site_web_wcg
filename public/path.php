@@ -11,6 +11,13 @@ if (ROOT_HOST == 'http://localhost:8080/') {
 	define('background',  ROOT_HOST . 'media/background/');
 	define('evideo', ROOT_HOST . 'media/video/');
 	define('ephoto', ROOT_HOST . 'media/photo/');
+	define('siteId', 1);
+	define('idActive', 1);
+	define('limite1', 1);
+	define('limite2', 2);
+	define('limite3', 3);
+	define('limite4', 4);
+	define('limite5', 5);
 } else {
 	define('pathCss', ROOT_HOST . 'public/css/');
 	define('pathJs',  ROOT_HOST . 'public/js/');
@@ -20,12 +27,4 @@ if (ROOT_HOST == 'http://localhost:8080/') {
 	define('background',  ROOT_HOST . 'public/media/background/');
 	define('evideo', ROOT_HOST . 'public/media/video/');
 	define('ephoto', ROOT_HOST . 'public/media/photo/');
-	
 }
-
-define('siteId', 1);
-define('limite1', 1);
-define('limite2', 2);
-define('limite3', 3);
-define('limite4', 4);
-define('limite5', 5);

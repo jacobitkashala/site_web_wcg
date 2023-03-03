@@ -98,11 +98,7 @@ li{
 	border-color: none;
 	border-bottom: 1px solid #ffffff00;
 }
-/* .link-navbar .link a:hover{
-    text-decoration: none;	
-    font-size: 18px;
-	border-bottom: 1px solid #FFFFFF;
-} */
+
 .link-navbar .link a:hover{
     text-decoration: none;	
     font-size: 18px;
@@ -110,14 +106,12 @@ li{
 	font-weight: bold;
 	border-bottom: 1px solid #FFFFFF;
 }
-.underline-element{
-	height: 5px;
-	width:100%;
-	background-color:#FFFFFF
-}
+
 .link-navbar .link a.no__border-btom{
 	border-bottom: none;
 }
+
+
 ul .menu:nth-child(0n+1){
 	width: 20%;
 	border-bottom: none;
@@ -130,6 +124,7 @@ ul .menu:nth-child(0n+1){
     padding: 29px 0px;
 	top:50px;
 	left:0;
+	height:192px;
 }
 
 .menu:hover .sous-menu{
@@ -143,19 +138,36 @@ nav.navbar {
 .container-sous-menu-grid{
 	display: flex;
     justify-content: space-evenly;
-    align-items: center;
-    text-align: center;
+    /* align-items: center;
+    text-align: center; */
+	margin-left:2rem;
+	width: 71%;
 }
 .element-sous-menu{
-	display: flex;
-	justify-content: flex-start;
+	display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    justify-content: start;
+    align-content: space-between;
+    align-items: center;
+    justify-items: start;
 }
-.element-sous-menu li::before {
+
+.link-navbar .link li.sub-menu a:hover{
+    text-decoration: none;	
+    font-size: 18px;
+	transform: scale(1);
+	font-weight: bold;
+	color:#FFFFFF!important;
+	border: 1px solid #FFFFFF;
+	border-radius: 5px;
+}
+/*  li::before {
     content: "•";	
     color: white;
     margin-left: 1rem;
     font-size: 1.5em
-}
+} */
 
 .logo-menu{
 	width: 30px;
