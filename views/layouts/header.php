@@ -35,7 +35,10 @@ $menus = $query->fetchAll(PDO::FETCH_CLASS, Menu::class);
 						$query = $pdo->query($sql2);
 						$subMenus = $query->fetchAll(PDO::FETCH_CLASS, SousMenu::class);
 					?>
-						<div class="sous-menu <?php echo $itemMenu->getMenuBackgroud() ?> " style="background-color:<?= $subMenus[0]->getBgColor() ?>;">
+						<div class="sous-menu " style="background-color:<?= $subMenus[0]->getBgColor() ?>;">
+							<div class="underlin">
+
+							</div>
 							<div class="container-sous-menu-grid">
 								<ul class="element-sous-menu link-navbar">
 									<?php foreach ($subMenus as $itemSousMenu) : ?>
