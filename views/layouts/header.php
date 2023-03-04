@@ -37,7 +37,6 @@ $menus = $query->fetchAll(PDO::FETCH_CLASS, Menu::class);
 					?>
 						<div class="sous-menu " style="background-color:<?= $subMenus[0]->getBgColor() ?>;">
 							<div class="underlin">
-
 							</div>
 							<div class="container-sous-menu-grid">
 								<ul class="element-sous-menu link-navbar">
