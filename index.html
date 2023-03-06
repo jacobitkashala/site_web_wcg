@@ -36,9 +36,13 @@
 		crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
 	<!-- swiper -->
+
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 	<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.6/swiper-bundle.css"> -->
+
+	<link rel='stylesheet' type='text/css' media='screen' href="./css/slick.css">
+	<link rel='stylesheet' type='text/css' media='screen' href="./css/slick-theme.css">
 
 	<link rel='stylesheet' type='text/css' media='screen' href='./css/header.css'>
 	<link rel='stylesheet' type='text/css' media='screen' href='./css/home.css'>
@@ -47,6 +51,7 @@
 </head>
 
 <body>
+	<!-- Le header -->
 	<header class="header_container ">
 		<div class="header_image">
 			<a class="" href="#">
@@ -153,12 +158,13 @@
 							</h3>
 						</div>
 					</div>
-					<div class="slide swiper-slide" style="background:url(media/carousel/carousel1.png) no-repeat">
+					<div class="slide swiper-slide" style="background:url(./media/carousel/carousel1.png) no-repeat">
 						<div class="content">
 						</div>
 					</div>
-					<div class="slide swiper-slide" style="background:url(media/carousel/carousel1.png) no-repeat">
+					<div class="slide swiper-slide" style="background:url(./media/carousel/carousel1.png) no-repeat">
 						<div class="content">
+
 						</div>
 					</div>
 				</div>
@@ -171,9 +177,8 @@
 			<div class="row mb-4">
 				<div class="col-md-3 col-sm-3  ">
 					<picture>
-						<!-- <source media="(max-width: 575px)" srcset="/images/partners/facebook-white.png?w=160"> -->
-						<!-- <source media="(max-width: 768px)" srcset="/images/partners/facebook-white.png?w=90"> -->
-						<!-- <img src="/images/partners/facebook-white.png?w=160" alt="Facebook" class="img-fluid" loading="lazy"> -->
+						<source media="(max-width: 575px)" srcset="./media/photo/image1.png?w=160">
+						<source media="(max-width: 768px)" srcset="./media/photo/image1.png?w=90">
 						<img class="img-fluid" src="./media/photo/image1.png" alt="illustration lampe" srcset="">
 					</picture>
 				</div>
@@ -246,31 +251,35 @@
 			</div>
 		</section>
 		<!-- 4eme section partenaire -->
-		<section class="container">
-			<div class="slide-container swiper">
-				<div class="slide-content">
-					<div class="card-wapper swiper-wrapper">
-						<!-- <div class="card"> -->
-						<div class="image-content swiper-slide">
-							<div class="card-image">
-								<img class="card-img img-fluid" src="./media/logo/image_konnect.png" alt="" srcset="">
-							</div>
-						</div>
-						<div class="image-content swiper-slide">
-							<div class="card-image">
-								<img class="card-img img-fluid" src="./media/logo/image_konnect.png" alt="" srcset="">
-							</div>
-						</div>
-						<!-- </div> -->
-					</div>
+		<section class="container-fluid">
+			<h2 class="title">Nos Partenaires</h2>
+			<div class="regular slider">
+				<div class="card-image">
+					<img class="card-img img-fluid" src="./media/logo/image_konnect.png" alt="" srcset="">
 				</div>
-				<div class="swiper-button-next-part"></div>
-				<div class="swiper-button-prev-part"></div>
-				<div class="swiper-pagination-part"></div>
+				<div class="card-image">
+					<img class="card-img img-fluid" src="./media/logo/image_juris_consult.png" alt="" srcset="">
+				</div>
+				<div class="card-image">
+					<img class="card-img img-fluid" src="./media/logo/image_huawai.png" alt="" srcset="">
+				</div>
+				<div class="card-image">
+					<img class="card-img img-fluid" src="./media/logo/image_evolis.png" alt="" srcset="">
+				</div>
+				<div class="card-image">
+					<img class="card-img img-fluid" src="./media/logo/image_konnect.png" alt="" srcset="">
+				</div>
+				<div class="card-image">
+					<img class="card-img img-fluid" src="./media/logo/image_juris_consult.png" alt="" srcset="">
+				</div>
+				<div class="card-image">
+					<img class="card-img img-fluid" src="./media/logo/image_huawai.png" alt="" srcset="">
+				</div>
+				<div class="card-image">
+					<img class="card-img img-fluid" src="./media/logo/image_evolis.png" alt="" srcset="">
+				</div>
 			</div>
 		</section>
-		<!-- 4eme section partenaire ess -->
-
 	</main>
 	<!-- Footer -->
 	<footer class="container-footer">
@@ -327,10 +336,13 @@
 		</div>
 	</footer>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-	<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> -->
+	<script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
-	<script src='js/main.js'></script>
+	<script src="./js/main.js"></script>
+	<script src="./js/slick.min.js "></script>
+	<script src="./js/slick.js"></script>
+
 
 </html>

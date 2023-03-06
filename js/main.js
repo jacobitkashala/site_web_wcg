@@ -1,29 +1,4 @@
 // slide jquery partners
-$(document).ready(function () {
-  $('.patners-logos').slick({
-    slidesToShow: 6,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 1500,
-    arrows: false,
-    dots: false,
-    pauseOnHover: false,
-    responsive: [
-      {
-        breakpoint: 768,
-        setting: {
-          slidesToShow: 4,
-        },
-      },
-      {
-        breakpoint: 520,
-        setting: {
-          slidesToShow: 3,
-        },
-      },
-    ],
-  })
-})
 //btn menu
 const btnNavigation = document.querySelector('#menu-btn')
 const menuBtn = document.querySelector('#menu-btn')
@@ -114,17 +89,52 @@ $(function () {
 // par
 $(document).on('ready', function () {
   $('.regular').slick({
+      // slidesPerView: 3,
+    spaceBetween: 30,
+    // slidesPerGroup: 3,
+    // loop: true,
+    // loopFilleGroupWithBlank: true,
+    // pagination:
     dots: true,
-    infinite: true,
+    infinite: false,
+    speed: 300,
     slidesToShow: 3,
     slidesToScroll: 3,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+          infinite: true,
+          dots: true,
+        },
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+      // You can unslick at a given breakpoint now by adding:
+      // settings: "unslick"
+      // instead of a settings object
+    ],
   })
   $('.center').slick({
-    dots: true,
-    infinite: true,
-    centerMode: true,
-    slidesToShow: 5,
-    slidesToScroll: 3,
+    // dots: true,
+    // infinite: true,
+    // centerMode: true,
+    // slidesToShow: 5,
+    // slidesToScroll: 3,
   })
 })
 // Confirmer delete ressource
