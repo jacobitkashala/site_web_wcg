@@ -130,7 +130,27 @@ h1.title{
     text-align: center;
     color: #ffff;
 }
-
+/* Debut partnaire */
+.slide-container{
+    background-color:#FF0000;
+}
+.slide-content{
+    margin:0 40px;
+}
+.card-image{
+    position: relative;
+    width: 205px;
+    height: 80px;
+}
+.card-image .card-img{
+    height:100%;
+    width:100%;
+    object-fit: cover;
+    background: #FFFFFF;
+    border: 1px solid #BBBBBB;
+    border-radius: 7px;
+}
+/* Fin style partnaire */
 /* Nos partenaires */
 * {
     box-sizing: border-box;

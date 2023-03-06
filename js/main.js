@@ -126,10 +126,33 @@ $(document).on('ready', function () {
     slidesToShow: 5,
     slidesToScroll: 3,
   })
-
 })
 // Confirmer delete ressource
-function confirmDeleteRessource(idRessource){
+function confirmDeleteRessource(idRessource) {
   console.log(idRessource)
+}
 
-} 
+// slide partnaire
+const swiperPart = new Swiper('.slide-container', {
+  slidesPerView: 3,
+  spaceBetween: 30,
+  slidesPerGroup: 3,
+  loop: true,
+  loopFilleGroupWithBlank: true,
+  // If we need pagination
+  pagination: {
+    el: '.swiper-pagination-part',
+    clickable: true,
+  },
+
+  // Navigation arrows
+  navigation: {
+    nextEl: '.swiper-button-next-part',
+    prevEl: 'swiper-button-prev-part',
+  },
+
+  // And if we need scrollbar
+  scrollbar: {
+    el: '.swiper-scrollbar',
+  },
+})
