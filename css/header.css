@@ -307,8 +307,6 @@ font-size: 1.9rem; */
 	}
 	.header_nav_container ul {
 		display: block;
-		/* flex-direction: column; */
-		/* text-align: justify; */
 		margin:0px;
 		width: 100%;
 		font-size: 18px;
@@ -324,7 +322,9 @@ font-size: 1.9rem; */
 		justify-content: start;
 	}
 
-
+	.link-navbar .link-menu-grid {
+		display: block;
+	}
 	.link-navbar .link a{
 		height:45px;
 	}
