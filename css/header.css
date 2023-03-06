@@ -73,6 +73,16 @@ html{
 .link{
 	cursor: pointer;
 }
+
+.link-navbar .link-menu-grid{
+	list-style: none;
+    display: flex;
+    width: 100%;
+    padding: 5px;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+}
 .link-navbar .link{
 	list-style: none;
     display: flex;
@@ -94,6 +104,11 @@ li{
 
 /* Style appliquer au survole de l'element au survole */
 
+
+.link-navbar .link-menu-grid a{
+	border-color: none;
+	border-bottom: 1px solid #ffffff00;
+}
 .link-navbar .link a{
 	border-color: none;
 	border-bottom: 1px solid #ffffff00;
@@ -106,6 +121,7 @@ li{
 	font-weight: bold;
 	border-bottom: 1px solid #FFFFFF;
 }
+
 
 .link-navbar .link a.no__border-btom{
 	border-bottom: none;
@@ -165,7 +181,7 @@ div.underlin{
 
 
 
-.link-navbar .link li.sub-menu a:hover{
+.link-navbar .link-menu-grid li.sub-menu a:hover{
     text-decoration: none;	
     font-size: 18px;
 	transform: scale(1);
@@ -318,7 +334,6 @@ font-size: 1.9rem; */
 	li.link-navbar .link-menu-grid {
 		list-style: none;
     	display: grid;
-		/* grid-template-rows: 1fr ; */
 		grid-template-columns: 1fr 1fr;
 		padding:0;
 	}
