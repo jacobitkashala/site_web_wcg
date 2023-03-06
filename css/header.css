@@ -22,7 +22,15 @@
 	text-decoration:none;
 	outline:none;
 }
+/* Style global */
+a.btn.btn-primary{
+	background-color:#FF0000 !important;
+	color: #FFFFFF !important;
+	outline:none!important;
+	border-color:#FF0000 !important;
 
+}
+/* Fin styles global */
 html{
 	font-size:18px;
 	min-width: 320;

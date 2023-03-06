@@ -25,7 +25,6 @@
     align-items: flex-end;
 }
 .content h3{
-    /* width:85rem; */
     color:#FFFFFF;
     width: 568px;
     text-align:left;
@@ -34,7 +33,15 @@
 
     
 }
+/* Deuxieme section */
+h1.title{
+    font-size: 39px;
+    font-weight: 600;
+    line-height: 48px;
+    letter-spacing: 0em;
+    text-align: justified;
 
+}
 .image-illustration{
     width: 99%;
     height: 38%;
