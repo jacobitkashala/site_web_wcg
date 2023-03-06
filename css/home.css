@@ -1,7 +1,9 @@
+/* 
 *{
     font-size: 24px;
     font-style: normal;
-}
+} */
+/* Carrousel home */
  .home{
 	padding:0;
     margin-top: -16px;
@@ -13,7 +15,24 @@
     height: 33rem;
 }
 .home .slide .content{
+    display:flex;
     width:85rem;
+    height:100%;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    align-content: center;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+.home .slide .content h3{
+    /* width:85rem; */
+    color:#FFFFFF;
+    width: 568px;
+    text-align:left;
+    font-size: 24px;
+    height: 276px;
+
+    
 }
 
 .image-illustration{
@@ -192,13 +211,7 @@
 	}
     /* Description service une */
      
-    /* .description{
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        align-content: space-between;
-        align-items: center;
-    } */
+
     .image-illustration {
         width: 13%;
         height: 160%;
