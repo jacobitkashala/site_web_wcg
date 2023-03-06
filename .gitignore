@@ -2,6 +2,7 @@
 /src/
 /public/
 /views/
+/commands/
 ##### Windows
 # Windows thumbnail cache files
 Thumbs.db
@@ -43,3 +44,5 @@ $RECYCLE.BIN/
 /src/en.php
 *.log
 *.sql
+*.htaccess
+*.json
