@@ -6,6 +6,19 @@ const btnSousMenu = document.querySelector('.icon-cog')
 const navBar = document.querySelector('.header_nav_container')
 const containerSousMenu = document.querySelector('.sous-menu')
 
+const header = document.getElementById('#main-menu')
+const btonLinks = document.getElementsByClassName('link')
+// Bton active
+// for(let i=0 ; i < btonLinks.length ;i++){
+//   btonLinks[i].addEventListener("click",()=>{
+//     let current = document.getElementsByClassName("active-menu");
+//     current[0].className=
+//     current[0].className.replace("active-menu","")
+//     this.className += "active-menu"
+//   })
+
+// }
+
 menuBtn.addEventListener('click', () => {
   navBar.classList.toggle('active')
   menuBtn.classList.toggle('fa-times')
@@ -89,7 +102,7 @@ $(function () {
 // par
 $(document).on('ready', function () {
   $('.regular').slick({
-      // slidesPerView: 3,
+    // slidesPerView: 3,
     spaceBetween: 30,
     // slidesPerGroup: 3,
     // loop: true,
