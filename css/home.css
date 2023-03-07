@@ -81,9 +81,9 @@ h1.title{
     grid-column: 1 / 2;
     grid-row: 1/2;
 }
-.item-deux{}
+/* .item-deux{}
 .item-trois{}
-.item-quatre{}
+.item-quatre{} */
 /* .contenaire-service{
     display: flex;
     flex-wrap: wrap;
@@ -260,6 +260,11 @@ div.slick-slide {
 .item_slide img{
     width: 100%;
     height: 100%;
+}
+@media (max-width:1291px) {
+    .home{
+        
+    }
 }
 
 /* Responsive mobile */
