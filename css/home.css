@@ -61,11 +61,6 @@ h1.title{
     flex-direction:row;
 }
 
-.contenaire-video video{
-    height: 300px;
-    width: 300px;
-    border-radius: 5px;
-}
 .container-home{
     padding:0 2rem;
 }
@@ -81,22 +76,7 @@ h1.title{
     grid-column: 1 / 2;
     grid-row: 1/2;
 }
-/* .item-deux{}
-.item-trois{}
-.item-quatre{} */
-/* .contenaire-service{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-} */
-/* .service-element{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-content: center;
-    align-items: flex-start;
-    width:95%;
-} */
+
 .service-content{
     display: flex;
     flex-direction: column;
@@ -130,17 +110,13 @@ h1.title{
     padding:1rem 2rem;
 
 }
-.service-content a{
-    height: 40px;
-    /* margin: 2rem 0; */
-    background: #FF0000;
-    border-radius: 7px;
-    font-style: normal;
-    font-weight: 600;
-    font-size: 17px;
-    line-height: 21px;
-    text-align: center;
-    color: #ffff;
+h3.title{
+    font-family: Montserrat;
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 29px;
+    text-align: left;
+    
 }
 /* Debut partnaire */
 h2.title{
