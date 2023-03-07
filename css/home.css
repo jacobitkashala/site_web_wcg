@@ -71,20 +71,32 @@ h1.title{
 }
 
 /* Présentation de services 2eme section */
-
-.contenaire-service{
+.container-media{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr ;
+    grid-template-rows: 1fr 1fr 1fr ;
+    gap: 10px;
+}
+.item-un{
+    grid-column: 1 / 2;
+    grid-row: 1/2;
+}
+.item-deux{}
+.item-trois{}
+.item-quatre{}
+/* .contenaire-service{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-}
-.service-element{
+} */
+/* .service-element{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-content: center;
     align-items: flex-start;
     width:95%;
-}
+} */
 .service-content{
     display: flex;
     flex-direction: column;
