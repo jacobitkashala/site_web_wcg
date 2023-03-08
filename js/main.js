@@ -8,6 +8,9 @@ const containerSousMenu = document.querySelector('.sous-menu')
 
 const header = document.getElementById('#main-menu')
 const btonLinks = document.getElementsByClassName('link')
+
+const gridSubMenu = document.getElementsByClassName('grid-item')
+
 // Bton active
 // for(let i=0 ; i < btonLinks.length ;i++){
 //   btonLinks[i].addEventListener("click",()=>{
@@ -19,10 +22,22 @@ const btonLinks = document.getElementsByClassName('link')
 
 // }
 
+/*
+  Cacher le sous-menu qui est visible lorsqu'on 
+  scroll
+*/
+// let scrollValue = $(window).scrollTop()
+// console.log('Scroll value: ' + scrollValue)
+
+// window.onscroll = () => {
+//   console.log('kkkkk')
+// }
+
 menuBtn.addEventListener('click', () => {
   navBar.classList.toggle('active')
   menuBtn.classList.toggle('fa-times')
 })
+
 let active = true
 
 btnSousMenu?.addEventListener('click', () => {

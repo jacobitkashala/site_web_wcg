@@ -192,7 +192,9 @@ div.underlin{
 	row-gap: 2ch;
 }
 
-
+div.d-none{
+ display:none !important;
+}
 
 .link-navbar .link-menu-grid li.sub-menu a:hover{
     text-decoration: none;	
