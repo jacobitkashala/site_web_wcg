@@ -49,6 +49,7 @@ h3.title__recrutement{
 .date__recrutement{
 	font-family: 'Montserrat';
 	font-style: normal;
+	margin: auto 0;
 	text-align: end;
 	font-size: 20px;
 	line-height: 24px;
@@ -119,11 +120,10 @@ background-color: #000000;
 @media (max-width:450px) {
 
 	.header-box h4{
-		padding-top: 10rem;
-		padding-right: 0rem;
 		text-align:center;
 		font-weight: 900;
-		font-size: 20px;
+		font-size: 26px;
+		margin: auto 0;
 		line-height: 19px;
 	}
 	h4.title__recrutement {
@@ -135,7 +135,7 @@ background-color: #000000;
 		font-size: 15px;
 		line-height: 16px;
 	}
-	.flex-sm-column-reverse{
+	.d-flex-sm-colum-revrse{
 		flex-direction: column-reverse;
 	}
 	.date__recrutement{
