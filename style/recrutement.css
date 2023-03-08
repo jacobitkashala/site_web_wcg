@@ -18,6 +18,9 @@
 	color: #FFFFFF;
 	
 }
+.text-danger{
+	color: #FF0000 !important;
+}
 .container-content-recrutement{
 	font-family: 'Montserrat';
 	padding: 2rem 10rem;
@@ -136,7 +139,7 @@ background-color: #000000;
 	h4.title__recrutement {
 		text-align: center;
 		font-size: 17px;
-		line-height: 43px;
+		line-height: 20px;
 	}
 	.content-item > h4 {
 		font-size: 15px;
