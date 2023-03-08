@@ -23,13 +23,18 @@
 	outline:none;
 }
 /* Style global */
-a.btn.btn-primary{
+a.btn.btn-primary ,button.btn.btn-primary{
 	background-color:#FF0000 !important;
 	color: #FFFFFF !important;
 	outline:none!important;
 	border-color:#FF0000 !important;
 
 }
+.form-control:focus{
+	border-color: #00000071;
+	box-shadow: none;
+}
+
 /* Fin styles global */
 html{
 	font-size:18px;
