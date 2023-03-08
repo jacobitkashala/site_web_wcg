@@ -42,10 +42,16 @@ h1.title{
     text-align: justified;
 
 }
-.image-illustration{
-    width: 99%;
-    height: 38%;
-    object-fit: contain;
+.p-left-10{
+    padding-right: 0px;
+}
+.box-media{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* padding: 0 1px; */
+    padding-right: 5px;
+    padding-left: 5px;
 }
 .w-video-main{
     object-fit: cover;
@@ -110,7 +116,7 @@ h1.title{
     padding:1rem 2rem;
 
 }
-h3.title{
+h3.title,h2.title{
     font-family: Montserrat;
     font-size: 22px;
     font-weight: 400;
@@ -121,6 +127,11 @@ h3.title{
 /* Debut partnaire */
 h2.title{
     text-align: center;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 34px;
+    line-height: 41px;
+    color: #000000;
 }
 div.slick-slide {
     /* transition: all ease-in-out .3s; */

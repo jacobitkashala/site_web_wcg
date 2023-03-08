@@ -97,34 +97,30 @@ const swiperPartner = new Swiper('.partner_slide', {
 })
 
 // Slider partenaire
-$(function () {
-  $('.slider-for').slick({
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    arrows: false,
-    fade: true,
-    asNavFor: '.slider-nav',
-  })
-  $('.slider-nav').slick({
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    asNavFor: '.slider-for',
-    dots: true,
-    centerMode: true,
-    focusOnSelect: true,
-  })
-})
-// par
+// $(function () {
+//   $('.slider-for').slick({
+//     slidesToShow: 1,
+//     slidesToScroll: 1,
+//     arrows: false,
+//     fade: true,
+//     asNavFor: '.slider-nav',
+//   })
+//   $('.slider-nav').slick({
+//     slidesToShow: 3,
+//     slidesToScroll: 1,
+//     asNavFor: '.slider-for',
+//     dots: true,
+//     centerMode: true,
+//     focusOnSelect: true,
+//   })
+// })
+
+// Nos parternaire slider
 $(document).on('ready', function () {
   $('.regular').slick({
-    // slidesPerView: 3,
     spaceBetween: 30,
-    // slidesPerGroup: 3,
-    // loop: true,
-    // loopFilleGroupWithBlank: true,
-    // pagination:
+    infinite: true,
     dots: true,
-    infinite: false,
     speed: 300,
     slidesToShow: 3,
     slidesToScroll: 3,
@@ -134,7 +130,6 @@ $(document).on('ready', function () {
         settings: {
           slidesToShow: 3,
           slidesToScroll: 3,
-          infinite: true,
           dots: true,
         },
       },
@@ -152,9 +147,6 @@ $(document).on('ready', function () {
           slidesToScroll: 1,
         },
       },
-      // You can unslick at a given breakpoint now by adding:
-      // settings: "unslick"
-      // instead of a settings object
     ],
   })
   $('.center').slick({
