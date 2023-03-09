@@ -1,3 +1,5 @@
+// slide jquery partners
+//btn menu
 const btnNavigation = document.querySelector('#menu-btn')
 const menuBtn = document.querySelector('#menu-btn')
 const btnSousMenu = document.querySelector('.icon-cog')
@@ -6,19 +8,37 @@ const containerSousMenu = document.querySelector('.sous-menu')
 
 const header = document.getElementById('#main-menu')
 const btonLinks = document.getElementsByClassName('link')
+// Bloc de sous menu
+const blocSubMenu = document.getElementsByClassName('sous-menu')
+
+const gridSubMenu = document.getElementsByClassName('grid-item')
+
+// Bton active
+// for(let i=0 ; i < btonLinks.length ;i++){
+//   btonLinks[i].addEventListener("click",()=>{
+//     let current = document.getElementsByClassName("active-menu");
+//     current[0].className=
+//     current[0].className.replace("active-menu","")
+//     this.className += "active-menu"
+//   })
+
+// }
 
 /*
   Cacher le sous-menu qui est visible lorsqu'on 
   scroll
 */
-let scrollValue = $(window).scrollTop()
+// let scrollValue = $(window).scrollTop()
 // console.log('Scroll value: ' + scrollValue)
+blocSubMenu.addEventListener('click', () => {
+  console.log('click')
+})
 
 window.onscroll = () => {
-  menuBtn.classList.remove('fa-times')
-  navBar.classList.remove('active')
-  // containerSousMenu.style.display = 'none'
+  // menuBtn.classList.remove('fa-times')
+  // navBar.classList.remove('active')
 }
+
 menuBtn.addEventListener('click', () => {
   navBar.classList.toggle('active')
   menuBtn.classList.toggle('fa-times')
