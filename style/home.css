@@ -16,7 +16,7 @@
 }
 .home .slide .content{
     display:flex;
-    width:85rem;
+    width:73rem;
     height:100%;
     flex-wrap: nowrap;
     flex-direction: row;
