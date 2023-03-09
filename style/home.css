@@ -203,38 +203,7 @@ div.slick-slide {
 /* Fin style partnaire */
 /* Nos partenaires */
 
-  
 
-
-.partner_block{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    /* width: 100%; */
-}
-.partner_display_item{
-    display:flex;
-    overflow-x: scroll;
-    padding: 24px;
-    width:300px;
-    scroll-snap-type: x mandatory;
-    scroll-padding: 24px;
-    border-radius: 8px;
-    gap:12px;
-}
-.partner_display_item .item_slide{
-    flex:0 0 100%;
-    padding: 24px;
-    border-radius: 8px;
-    scroll-snap-align:start ;
-}
-.item_slide{
-    width: 105px!important;
-    height: 80px!important;
-    background: #FFFFFF;
-    border: 1px solid #BBBBBB;
-    border-radius: 7px;
-}
 .one-content{
     margin-top: 8px;
 }
@@ -287,24 +256,6 @@ div.slick-slide {
     .w-sm-30{
         width: 30%;
     }
-    /* .box-media{
-        display: none;
-    } */
-    /* .box-picture{
-        width: 29%;
-        padding-right: 0px;
-        padding-left: 0px;
-    } */
-    /* .box-w{
-
-    } */
-    /* .w-sm-50 {
-        width:50% !important;
-    } */
-    /* .d-sm-inline{
-        display: inline-block;
-        /* padding: 0 0; */
-    /* }  */
     h1.title{
         font-size:18px;
         display: inline-block;
@@ -312,17 +263,6 @@ div.slick-slide {
 
     
     /* Description service une */
-     
-
-    .image-illustration {
-        width: 13%;
-        height: 160%;
-        object-fit: contain;
-    }
-    .content-image >img{
-        width:50px;
-        height:100px
-    }
   
     .content-desc{ 
         height: 285px;
@@ -345,10 +285,6 @@ div.slick-slide {
         width: 52px;
         height: 79px;
     }
-
-    /* .contenaire-video video{
-        width: 300px;
-    } */
     .service-content {
         display: flex;
         width: 320px;
@@ -365,14 +301,11 @@ div.slick-slide {
         width: 310px;
     }
   
-    /* Partner */
-    /* .slider {
-        width: 50%;
-        margin: 100px auto;
-      } */
+    /* section Partner */
+
     .slider {
-        width: 80%;
-        margin: 100px auto;
+        width: 98%;
+        margin: 30px auto;
       }
     
       .slick-slide {
@@ -380,9 +313,15 @@ div.slick-slide {
       }
     
       .slick-slide img {
-        width: 80%;
+        width: 60%;
       }
-  
+  .slick-list{
+    margin:0 50px
+  }
+  button.slick-arrow {
+    margin: 0px 20px;
+
+  }
     .container_partner_display {
         display:flex;
         /* width:100%; */
@@ -390,13 +329,7 @@ div.slick-slide {
         text-align: center;
          background: #FFFFFF;
     }
-    .partner_block{
-        display:flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        width:100vw;
-    }
+  
     .container-next-slide {
         width:100px;
         height:100px
