@@ -22,7 +22,7 @@ font-size: 26px;
 line-height: 32px;
 color: #FFFFFF;
 }
-.contenair-new a{
+.contenair-new a,.contenair-new a:hover	{
 	font-weight: 600;
 	font-size: 26px;
 	line-height: 32px;
@@ -51,7 +51,7 @@ color: #FFFFFF;
 	position: relative;
 	height: 90vh;
 	width: 100vw;
-    /* background-color: red; */
+	top: 0;
 	overflow: hidden;
 	 margin-right: 0px;
 	 color:#FFFFFF;
