@@ -42,6 +42,8 @@ color: #FFFFFF;
 	object-fit: cover;
 	width: 100%;
 	background-size: cover;
+	margin-right:0 !important;
+	margin-left:0 !important;
 	height: 457px;
  }
  .margin-15{
@@ -72,3 +74,36 @@ color: #FFFFFF;
 	width: 100%;
 	background-color: red;
  }
+
+ /* Mobile */
+@media (max-width:450px) {
+	.box-text{
+		margin: auto 0;
+	}
+	
+	.header_container{
+		display:flex;
+		justify-content: space-between;
+		align-items: center;
+		background-color:#FFFFFF;
+		margin-right: 0px;
+	} 
+	.header_image a > img {
+		height: 70px;
+		width: 200px;
+	}
+	.icon-cog{
+		display: inherit;
+	}
+	#menu-btn{
+		font-size :2rem;
+		padding-right:20px;
+		display: inline-block;
+		transition:.3s linear;
+	}
+	#menu-btn.fa-times{
+		margin-right:20px;
+		transform:rotate(180deg)
+	}
+	
+}
