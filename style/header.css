@@ -30,9 +30,10 @@ a.btn.btn-primary ,button.btn.btn-primary{
 	border-color:#FF0000 !important;
 
 }
-.form-control:focus{
-	border-color: #00000071;
-	box-shadow: none;
+
+.form-control:focus,a.btn.btn-primary:focus,a.btn.btn-primary:focus{
+	border-color: #00000071 !important;
+	box-shadow: none!important;
 }
 
 /* Fin styles global */
