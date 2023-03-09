@@ -249,35 +249,63 @@ div.slick-slide {
     height: 100%;
 }
 @media (max-width:1291px) {
-    .home{
-        
-    }
+
 }
 
 /* Responsive mobile */
 @media (max-width:450px) {
     *{
-        font-size: 18px;
+        font-size: 16px;
     }
-    /* Caroussel */
-	.home .slide{
-		padding: 2rem;
-		margin-top: 2rem;
-	}
-
+    /* 1ere section carrousel  */
+    .home .slide {
+        text-align: center;
+        background-size: cover !important;
+        background-position: revert !important;
+        height: 10rem;
+    }
     .home .slide .content {
-        display:flex;
-        width: 27rem;
-        height: 60%;
+        position: relative;
+        width: 90rem;
+        height: 100%;
+        flex-direction: row;
+        align-content: start;
         justify-content: start;
-        
+      
     }
     .content h3{
-        display: inline;
-        font-size:18px;
-         height: 200px;
-         width: 300px;
+        display: block;
+        font-size: 14px;
+        height: 63%;
+        width: 21%;
+        margin-left: 42px;
     }
+    /*  2ere section picture and media */
+    
+    /* .box-media{
+        display: none;
+    } */
+    /* .box-picture{
+        width: 29%;
+        padding-right: 0px;
+        padding-left: 0px;
+    } */
+    /* .box-w{
+
+    } */
+    /* .w-sm-50 {
+        width:50% !important;
+    } */
+    /* .d-sm-inline{
+        display: inline-block;
+        /* padding: 0 0; */
+    /* }  */
+    h1.title{
+        font-size:18px;
+        display: inline-block;
+    }
+
+    
     /* Description service une */
      
 
