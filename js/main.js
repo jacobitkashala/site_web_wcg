@@ -2,6 +2,7 @@ const btnNavigation = document.querySelector('#menu-btn')
 const menuBtn = document.querySelector('#menu-btn')
 // btn qui permet d'afficher et cacher le sous menu
 const btnSousMenu = document.querySelector('.icon-cog')
+const btnToTopNavigation = document.querySelector('.scrollTop')
 const navBar = document.querySelector('.header_nav_container')
 const containerSousMenu = document.querySelector('.sous-menu')
 
@@ -12,14 +13,24 @@ const btonLinks = document.getElementsByClassName('link')
   Cacher le sous-menu qui est visible lorsqu'on 
   scroll
 */
-//  let scrollValue = $(window).scrollTop()
+let scrollValue = $(window).scrollTop()
 // console.log('Scroll value: ' + scrollValue)
 
 window.onscroll = () => {
-  menuBtn.classList.remove('fa-times')
-  navBar.classList.remove('active')
+  // if (scrollValue == 0) {
+  //   btnToTopNavigation.style.display = 'none'
+  // } else {
+  //   btnToTopNavigation.style.display = 'block'
+  // }
+  // menuBtn.classList.remove('fa-times')
+  // navBar.classList.remove('active')
   // containerSousMenu.style.display = 'none'
 }
+// if (scrollValue == 0) {
+//   btnToTopNavigation.style.display = 'none'
+// } else {
+//   btnToTopNavigation.style.display = 'block'
+// }
 menuBtn.addEventListener('click', () => {
   navBar.classList.toggle('active')
   menuBtn.classList.toggle('fa-times')
@@ -81,6 +92,8 @@ const swiper = new Swiper('.home-slider', {
 // document.addEventListener('contextmenu', (event) => {
 //   event.preventDefault()
 // })
+//
+
 // clique bton top
 function scrollToTop() {
   window.scrollTo(0, 0)

@@ -78,33 +78,6 @@ h1.title{
     grid-row: 1/2;
 }
 
-.service-content{
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    justify-content: center;
-    align-items: center;
-    width: 392px;
-    margin-top: 2rem;
-    margin-right: 3rem;
-    background: #F5F7F8;
-    border: 1px solid #9D9898;
-
-}
-.service-content img{
-    width: 375px;
-    height: 289px;
-}
-.service-content h1{
-    margin: 1rem;
-    font-style: normal;
-    font-weight: 700;
-    font-size: 24px;
-    text-align: center;
-    
-    color: #000000;
-    
-}
 .service-content p{
     text-align: justify;
     padding:1rem 2rem;
@@ -128,13 +101,14 @@ h2.title{
     color: #000000;
 }
 div.slick-slide {
-    /* transition: all ease-in-out .3s; */
+    transition: all ease-in-out .3s;
     opacity: 1 !important;
 }
 .card-image{
     position: relative;
     width: 205px;
     height: 80px;
+   
 }
 .card-image .card-img{
     height:100%;
@@ -227,9 +201,16 @@ div.slick-slide {
         background-position: revert !important;
         height: 10rem;
     }
+    .bg-carrousel{
+        /* width: 100%; */
+        width: 100vw;
+    }
+    .bg-carrousel__affiche{
+        width: 100vw;
+    }
     .home .slide .content {
         position: relative;
-        width: 90rem;
+        width: 100vw;
         height: 100%;
         flex-direction: row;
         align-content: start;
@@ -256,11 +237,18 @@ div.slick-slide {
     .w-sm-30{
         width: 30%;
     }
-    h1.title{
-        font-size:18px;
-        display: inline-block;
+    .img-illustation{
+        display: none;
     }
-
+    h1.title{
+        font-size:16px;
+        display: inline-block;
+        text-align: justify;
+    }
+    h1.title + p{
+        display:block;
+        width:80vw;
+    }
     
     /* Description service une */
   
@@ -302,6 +290,88 @@ div.slick-slide {
     }
   
     /* section Partner */
+    .slider {
+        width: 98%;
+        margin: 30px auto;
+      }
+      .slick-slide {
+        margin: 0px 50px;
+      }
+      .slick-slide img {
+        width: 60%;
+      }
+    .slick-list{
+        margin:0 50px
+    }
+    button.slick-arrow {
+    margin: 0px 20px;
+    }
+    .container_partner_display {
+        display:flex;
+        /* width:100%; */
+        justify-content: center; 
+        text-align: center;
+         background: #FFFFFF;
+    }
+    .container-next-slide {
+        width:100px;
+        height:100px
+    }
+    .item_slide{
+        display:inline-block;
+        width: 205px!important;
+        height: 80px!important;
+        margin: 0 2rem;
+        background: #FFFFFF;
+        border: 1px solid #BBBBBB;
+        border-radius: 7px;
+    }
+    div.card-image{
+        position: relative;
+        width: 205px !important;
+        height: 70px;
+    }
+    div.card-image .card-img{
+        height:100%;
+        width:100%;
+        object-fit: cover;
+        /* margin:0 20px !important; */
+        border: 1px solid #BBBBBB;
+        border-radius: 7px;
+    }
+}
+
+@media (max-width:322px) {
+    /*  2ere section picture and media */
+    .box-media{
+        display: none;
+    }
+    .w-sm-70{
+        width: 70%;
+    }
+    .w-sm-20{
+        width: 10%;
+    }
+    .w-sm-30{
+        width: 30%;
+    }
+    .img-illustation{
+        display: none;
+    }
+    h1.title{
+        font-size:16px;
+        display: inline-block;
+        text-align: justify;
+    }
+    h1.title + p{
+        display:block;
+        width:80vw;
+    }
+    
+    /* Description service une */
+  
+  
+    /* section Partner */
 
     .slider {
         width: 98%;
@@ -315,13 +385,15 @@ div.slick-slide {
       .slick-slide img {
         width: 60%;
       }
-  .slick-list{
-    margin:0 50px
-  }
-  button.slick-arrow {
+    .slick-list{
+        margin:0 34px
+    }
+    button.slick-arrow {
     margin: 0px 20px;
-
-  }
+    margin: 0px 20px;
+    width: 40px;
+    height: 40px;
+      }
     .container_partner_display {
         display:flex;
         /* width:100%; */
@@ -346,16 +418,14 @@ div.slick-slide {
     }
     div.card-image{
         position: relative;
-        width: 205px !important;
-        height: 70px;
+        width: 57vw !important;
+        height: 25vh;
       
     }
     div.card-image .card-img{
-        height:100%;
-        width:100%;
-        object-fit: cover;
-        /* margin:0 20px !important; */
-        border: 1px solid #BBBBBB;
-        border-radius: 7px;
+        
+        margin:0 -28px !important;
+      
     }
 }
+
