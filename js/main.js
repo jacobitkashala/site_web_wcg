@@ -12,7 +12,7 @@ const btonLinks = document.getElementsByClassName('link')
   Cacher le sous-menu qui est visible lorsqu'on 
   scroll
 */
-let scrollValue = $(window).scrollTop()
+//  let scrollValue = $(window).scrollTop()
 // console.log('Scroll value: ' + scrollValue)
 
 window.onscroll = () => {
@@ -55,6 +55,7 @@ btnSousMenu?.addEventListener('click', () => {
 //   })
 // })
 
+// slide home
 const swiper = new Swiper('.home-slider', {
   loop: true,
   // slidesToShow: 3,
@@ -76,6 +77,11 @@ const swiper = new Swiper('.home-slider', {
     el: '.swiper-scrollbar',
   },
 })
+
+// clique bton top
+function scrollToTop() {
+  window.scrollTo(0, 0)
+}
 
 // Nos parternaire slider
 $(document).on('ready', function () {

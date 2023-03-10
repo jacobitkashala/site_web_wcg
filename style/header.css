@@ -19,6 +19,7 @@
 	margin: 0;
 	padding: 0;
 	border:0;
+	scroll-behavior: smooth;
 	text-decoration:none;
 	outline:none;
 }
@@ -73,6 +74,23 @@ html{
     flex-direction: row;
     align-items: center;
 	
+}
+
+.scrollTop{
+	position:fixed;
+	bottom:30px;
+	right:30px;
+	padding: 20px 20px;
+	background-color:#000; 
+	border-radius: 5px;
+	cursor: pointer;
+	transition:all 0.5s ease 0s;
+}
+
+.scrollTop:hover{
+	transform: scale(1);
+	border: 1px solid #FFFFFF;
+	border-radius: 19px;
 }
 
 .bg-color-shadox{
