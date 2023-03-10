@@ -1,5 +1,6 @@
 const btnNavigation = document.querySelector('#menu-btn')
 const menuBtn = document.querySelector('#menu-btn')
+// btn qui permet d'afficher et cacher le sous menu
 const btnSousMenu = document.querySelector('.icon-cog')
 const navBar = document.querySelector('.header_nav_container')
 const containerSousMenu = document.querySelector('.sous-menu')
@@ -29,17 +30,18 @@ let active = true
 btnSousMenu?.addEventListener('click', () => {
   if (active) {
     // console.log('active')
+    // containerSousMenu.style.display = 'bloc'
+    // display: none;
     containerSousMenu.classList.remove('sous-menu')
     containerSousMenu.classList.add('disable-menu')
     active = false
   } else {
     active = true
+    // containerSousMenu.style.display = 'none'
     containerSousMenu.classList.remove('disable-menu')
     containerSousMenu.classList.add('sous-menu')
     // console.log('desactive')
   }
-  // containerSousMenu.style.display = 'block'
-  // containerSousMenu.classList.add('sous-menu')
 })
 
 const swiper = new Swiper('.home-slider', {

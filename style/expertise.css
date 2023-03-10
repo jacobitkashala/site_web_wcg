@@ -43,10 +43,12 @@
 		width: 100%;
 		background-size: cover;
 		height: 866px;
-		padding-top: 111px;
+		padding-top: 30px;
 		padding-left: 0px;
 	 }
-
+.content-expertise{
+	margin: 15px;
+}
 	.expertise_box {
 		display: flex;
 		flex-direction:column;	
