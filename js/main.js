@@ -44,14 +44,27 @@ btnSousMenu?.addEventListener('click', () => {
   }
 })
 
+// Slider Home
+// $(document).on('ready', function () {
+//   $('.single-item').slick({
+//     infinite: true,
+//     slidesToShow: 3,
+//     slidesToScroll: 1,
+//     autoplay: true,
+//     autoplaySpeed: 2000,
+//   })
+// })
+
 const swiper = new Swiper('.home-slider', {
   loop: true,
-
+  // slidesToShow: 3,
+  slidesToScroll: 1,
+  autoplay: true,
+  autoplaySpeed: 2000,
   // If we need pagination
-  // pagination: {
-  //   el: '.swiper-pagination',
-  // },
-
+  pagination: {
+    el: '.swiper-pagination',
+  },
   // Navigation arrows
   navigation: {
     nextEl: '.swiper-button-next',
@@ -63,45 +76,6 @@ const swiper = new Swiper('.home-slider', {
     el: '.swiper-scrollbar',
   },
 })
-
-const swiperPartner = new Swiper('.partner_slide', {
-  loop: true,
-
-  // If we need pagination
-  // pagination: {
-  //   el: '.swiper-pagination',
-  // },
-
-  // Navigation arrows
-  navigation: {
-    nextEl: '.swiper-button-next-partners',
-    prevEl: '.swiper-button-prev-partners',
-  },
-
-  // And if we need scrollbar
-  scrollbar: {
-    el: '.swiper-scrollbar',
-  },
-})
-
-// Slider partenaire
-// $(function () {
-//   $('.slider-for').slick({
-//     slidesToShow: 1,
-//     slidesToScroll: 1,
-//     arrows: false,
-//     fade: true,
-//     asNavFor: '.slider-nav',
-//   })
-//   $('.slider-nav').slick({
-//     slidesToShow: 3,
-//     slidesToScroll: 1,
-//     asNavFor: '.slider-for',
-//     dots: true,
-//     centerMode: true,
-//     focusOnSelect: true,
-//   })
-// })
 
 // Nos parternaire slider
 $(document).on('ready', function () {
@@ -146,9 +120,6 @@ $(document).on('ready', function () {
   })
 })
 // Confirmer delete ressource
-function confirmDeleteRessource(idRessource) {
-  console.log(idRessource)
-}
 
 // slide partnaire
 const swiperPart = new Swiper('.slide-container', {
@@ -168,9 +139,8 @@ const swiperPart = new Swiper('.slide-container', {
     nextEl: '.swiper-button-next-part',
     prevEl: 'swiper-button-prev-part',
   },
-
   // And if we need scrollbar
-  scrollbar: {
-    el: '.swiper-scrollbar',
-  },
+  // scrollbar: {
+  //   el: '.swiper-scrollbar',
+  // },
 })
