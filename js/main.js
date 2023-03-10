@@ -77,7 +77,10 @@ const swiper = new Swiper('.home-slider', {
     el: '.swiper-scrollbar',
   },
 })
-
+// desactiver le click
+// document.addEventListener('contextmenu', (event) => {
+//   event.preventDefault()
+// })
 // clique bton top
 function scrollToTop() {
   window.scrollTo(0, 0)
