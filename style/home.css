@@ -185,9 +185,26 @@ div.slick-slide {
     width: 100%;
     height: 100%;
 }
+ /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media (max-width:1291px) {
 
 }
+
+@media only screen and (max-width: 995px) {
+    /* .grid-customuse{
+        display:grid;
+        grid-template-columns: 50% 100%;
+    } */
+ } 
+ @media only screen and (min-width: 1200px) {
+    .grid-customuse{
+        display:grid;
+    }
+ } 
+ /* Smartphones (portrait and landscape) ----------- */
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+	/* Styles */
+	}
 
 /* Responsive mobile */
 @media (max-width:450px) {
@@ -394,28 +411,7 @@ div.slick-slide {
     width: 40px;
     height: 40px;
       }
-    .container_partner_display {
-        display:flex;
-        /* width:100%; */
-        justify-content: center; 
-        text-align: center;
-         background: #FFFFFF;
-    }
-  
-    .container-next-slide {
-        width:100px;
-        height:100px
-    }
     
-    .item_slide{
-        display:inline-block;
-        width: 205px!important;
-        height: 80px!important;
-        margin: 0 2rem;
-        background: #FFFFFF;
-        border: 1px solid #BBBBBB;
-        border-radius: 7px;
-    }
     div.card-image{
         position: relative;
         width: 57vw !important;
