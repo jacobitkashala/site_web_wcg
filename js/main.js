@@ -71,7 +71,7 @@ const swiper = new Swiper('.home-slider', {
   loop: true,
   // slidesToShow: 3,
   slidesToScroll: 1,
-  // autoplay: true,
+  autoplay: true,
   autoplaySpeed: 2000,
   // If we need pagination
   pagination: {
@@ -89,10 +89,10 @@ const swiper = new Swiper('.home-slider', {
   },
 })
 // desactiver le click
-// document.addEventListener('contextmenu', (event) => {
-//   event.preventDefault()
-// })
-//
+document.addEventListener('contextmenu', (event) => {
+  event.preventDefault()
+})
+
 
 // clique bton top
 function scrollToTop() {
