@@ -71,7 +71,7 @@ const swiper = new Swiper('.home-slider', {
   loop: true,
   // slidesToShow: 3,
   slidesToScroll: 1,
-  autoplay: true,
+  // autoplay: true,
   autoplaySpeed: 2000,
   // If we need pagination
   pagination: {

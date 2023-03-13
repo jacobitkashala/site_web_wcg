@@ -10,6 +10,10 @@
     background-position: center !important;
     height: 33rem;
 }
+.bg-carrousel{
+    /* width: 100%; */
+    width: 10vw;
+}
 .home .slide .content{
     display:flex;
     width:73rem;
