@@ -89,9 +89,9 @@ const swiper = new Swiper('.home-slider', {
   },
 })
 // desactiver le click
-document.addEventListener('contextmenu', (event) => {
-  event.preventDefault()
-})
+// document.addEventListener('contextmenu', (event) => {
+//   event.preventDefault()
+// })
 
 
 // clique bton top
@@ -133,13 +133,7 @@ $(document).on('ready', function () {
       },
     ],
   })
-  $('.center').slick({
-    // dots: true,
-    // infinite: true,
-    // centerMode: true,
-    // slidesToShow: 5,
-    // slidesToScroll: 3,
-  })
+ 
 })
 // Confirmer delete ressource
 

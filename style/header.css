@@ -163,10 +163,10 @@ li{
 	border-bottom: 1px solid #ffffff00;
 }
 
-ul .menu:nth-child(0n+1){
+/* ul .menu:nth-child(0n+1){
 	width: 20%;
 	border-bottom: none;
-}
+} */
 /* Style applicaquer au sous-menu */
 .link-menu-grid .sous-menu{
  	position: absolute;
@@ -318,9 +318,9 @@ div.d-none{
 	.header_nav_container a{
 		text-align: left;
 	}
-	ul .menu:nth-child(0n+1) {
+	/* ul .menu:nth-child(0n+1) {
 		width: 100%;
-	}
+	} */
 
 	.link-navbar .link {
 		justify-content: start;
