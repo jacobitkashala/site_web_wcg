@@ -29,7 +29,7 @@
 
     
 }
-/* Deuxieme section */
+/* Deuxieme section illustration, description etvideo  */
 h1.title{
     font-size: 39px;
     font-weight: 600;
@@ -73,14 +73,24 @@ h1.title{
     grid-template-rows: 1fr 1fr 1fr ;
     gap: 10px;
 }
-.item-un{
-    grid-column: 1 / 2;
+/* card video */
+.card-video{
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: 0.25rem;
+    padding: 0 0;
+    /* padding: 0 0; */
+    /* margin: 2px; */
+}
+/*.item-un{
+     grid-column: 1 / 2;
     grid-row: 1/2;
 }
-
-.service-content p{
+ */
+ p.service-description{
     text-align: justify;
-    padding:1rem 2rem;
+    /* overflow: hidden; */
+    /* padding:1rem 2rem; */
+
 
 }
 h3.title,h2.title{
@@ -124,11 +134,7 @@ div.slick-slide {
     margin: 55px auto;
   }
 .slick-list {
-    /* position: relative; */
-    /* display: block; */
-    /* overflow: hidden; */
     margin: 0px 77px;
-    /* padding: 0; */
     text-align: center;
   }
   .slick-slide {
@@ -161,19 +167,6 @@ div.slick-slide {
         content: url(./../media/logo/sup.png);
         }
 
-
-  /* .slick-slide {
-    transition: all ease-in-out .3s;
-    opacity: .2;
-  } */
-
-  /* .slick-active {
-    opacity: .5;
-  } */
-
-  /* .slick-current {
-    opacity: 1;
-  } */
 /* Fin style partnaire */
 /* Nos partenaires */
 
@@ -185,8 +178,19 @@ div.slick-slide {
     width: 100%;
     height: 100%;
 }
- /* Extra large devices (large laptops and desktops, 1200px and up) */
-@media (max-width:1291px) {
+
+@media (max-width:1090px) {
+    .home .slide .content{
+        width:80%;
+    }
+    .card-video{
+       
+        margin: 2px;
+    }
+    /* Description service */
+    p.service-description{
+        margin-bottom: 2rem;
+    }
 
 }
  
