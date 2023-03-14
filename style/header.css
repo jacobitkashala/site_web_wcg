@@ -162,16 +162,10 @@ li{
 	border-bottom: none;
 	border-bottom: 1px solid #ffffff00;
 }
-
-/* ul .menu:nth-child(0n+1){
-	width: 20%;
-	border-bottom: none;
-} */
 /* Style applicaquer au sous-menu */
 .link-menu-grid .sous-menu{
  	position: absolute;
     width: 100%;
-	/* z-index: -20; */
 	display: none;
 	top:149px;
 	left:0;
@@ -241,28 +235,6 @@ div.d-none{
 }
 /* query 1037 */
 @media (max-width:1037px) {
-	/* img.logo-menu {
-		width: 30px;
-		height: 40px;
-	} */
-	/* .header_nav_container a{
-		font-size:17px;	
-		padding:2px;
-	} */
-	/* .link-navbar .link {
-		padding:2px;
-	} */
-	/* .link-navbar .link-menu-grid{
-		padding:2px;
-	} */
-	/* .header_nav_container a:hover{
-		font-size:17px !important ;	
-		
-	} */
-	/* ul .menu:nth-child(0n+1){
-		width: 5%;
-		border-bottom: none;
-	} */
 
 }
    /* Tablette */
