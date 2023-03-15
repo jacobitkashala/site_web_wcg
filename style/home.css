@@ -49,6 +49,9 @@ h1.title{
     padding-right: 5px;
     padding-left: 5px;
 }
+#main-Video{
+    height:12rem
+}
 .w-video-main{
     object-fit: cover;
     width: 100%;
@@ -57,6 +60,15 @@ h1.title{
 	width:17%;
 	height:100%;
     
+}
+.playlist img{
+    cursor: pointer;
+}
+.active-video-Playing{
+    /* transform: scale(1); */
+    margin: 2px 1px;
+	border: 1px solid #D5D5D5D5;
+	border-radius: 5px;
 }
 .container-grid-video{
     display: flex;

@@ -9,6 +9,8 @@ const containerSousMenu = document.querySelector('.sous-menu')
 const header = document.getElementById('#main-menu')
 const btonLinks = document.getElementsByClassName('link')
 
+/**/
+
 /*
   Cacher le sous-menu qui est visible lorsqu'on 
   scroll
@@ -163,3 +165,79 @@ const swiperPart = new Swiper('.slide-container', {
   //   el: '.swiper-scrollbar',
   // },
 })
+
+/* Lecteur video */
+
+const mainVideo = document.querySelector('#main-Video')
+const playlist = document.getElementById('playlist')
+const videos = [
+  {
+    srcvVideo: 'http://wcg-rdc.com/video/gespat.mp4',
+    src: 'https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-HD.jpg',
+    id: '1',
+  },
+  {
+    srcvVideo:
+      'https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-576p.mp4',
+    src: 'https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-HD.jpg',
+    id: '2',
+  },
+  {
+    srcvVideo: '../media/video/safari_beach.mp4',
+    src: 'https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-HD.jpg',
+    id: '3',
+  },
+]
+let indexVideo = videos[0].id
+window.addEventListener('load', () => {
+  loadVideo(indexVideo)
+  playingNow()
+})
+
+for (let index = 0; index < videos.length; index++) {
+  let element = `<img li-index="${videos[index].id}"
+  class="item-video img-fluid image-${videos[index].id} "
+  src="${videos[index].src}"
+  alt=""
+  srcset=""
+/>`
+  playlist.insertAdjacentHTML('beforeend', element)
+}
+
+let initialSrc = 'http://wcg-rdc.com/video/gespat.mp4'
+
+const allTagsVideo = playlist.querySelectorAll('img')
+
+function playingNow() {
+  for (let index = 0; index < videos.length; index++) {
+    console.log(allTagsVideo[index].getAttribute('li-index') == indexVideo)
+    if (allTagsVideo[index].classList.contains('playing')) {
+      allTagsVideo[index].classList.remove('playing')
+      allTagsVideo[index].classList.remove('active-video-Playing')
+    }
+    if (allTagsVideo[index].getAttribute('li-index') == indexVideo) {
+      allTagsVideo[index].classList.add('playing')
+      allTagsVideo[index].classList.add('active-video-Playing')
+    }
+    // On ajoute un attribut qui permet de faire le clique sur tout le tags
+    allTagsVideo[index].setAttribute('onclick', 'clicked(this)')
+  }
+}
+
+function playVideo() {
+  mainVideo.play()
+  mainVideo.autoplay = 'autoplay'
+}
+function loadVideo(indexElement) {
+  let currentElement = videos.filter((element) => element.id == indexElement)
+  const { srcvVideo } = currentElement[0]
+  mainVideo.src = `${srcvVideo}`
+}
+// clicked lecteur liste
+function clicked(element) {
+  let getIndex = element.getAttribute('li-index')
+  indexVideo = getIndex
+  loadVideo(indexVideo)
+  playVideo()
+  playingNow()
+}
