@@ -62,8 +62,9 @@
 					Innovations
 				</a>
 			</li>
+			<!--   -->
 			<li class="menu link " style="background-color:#14D1B3">
-				<a class="" href="./pages/recrutement.html" style="color:#FFFFFF ">
+				<a class="" href="index.php?template=Recrutement&id=<?= urlencode(1) ?>" style="color:#FFFFFF ">
 					<img class="logo-menu" src="./media/icons/recrutement_menu.png" alt="logo" />
 					Recrutements
 				</a>

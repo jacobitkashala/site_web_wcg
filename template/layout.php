@@ -41,6 +41,7 @@
 	<link rel='stylesheet' type='text/css' media='screen' href='./style/header.css'>
 	<link rel='stylesheet' type='text/css' media='screen' href='./style/home.css'>
 	<link rel='stylesheet' type='text/css' media='screen' href='./style/expertise.css'>
+	<link rel='stylesheet' type='text/css' media='screen' href='./style/recrutement.css'>
 	<link rel='stylesheet' type='text/css' media='screen' href='./style/footer.css'>
 
 	<link rel="icon" href="./media/icons/favico.ico">
