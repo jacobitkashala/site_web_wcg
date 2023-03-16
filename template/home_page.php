@@ -147,3 +147,6 @@ ob_start();
 		</div>
 	</section>
 </main>
+<?php $contentPage = ob_get_clean(); ?>
+
+<?php require('layout.php') ?>

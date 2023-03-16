@@ -43,8 +43,11 @@
 	<link rel='stylesheet' type='text/css' media='screen' href='./style/footer.css'>
 	<link rel="shortcut icon" href="./media/icons/favico.ico">
 </head>
-<body class="body">
 
+<body class="body">
+	<?php include("./elements/header.php"); ?>
+	<?= $content ?>
+	<?php include("./elements/footer.php"); ?>
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
 <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
