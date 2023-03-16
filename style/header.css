@@ -142,7 +142,7 @@ li{
 	border-color: none;
 	border-bottom: 1px solid #ffffff00;
 }
-/* class appliquer lors qu'on survole un menu contenant du grid */
+
 .active-menu{
 	text-decoration: none;	
 	font-size: 18px;
@@ -150,6 +150,7 @@ li{
 	font-weight: bold;
 	border-bottom: 1px solid #FFFFFF;
 }
+/* class appliquer lors qu'on survole un menu contenant du grid */
 .link-navbar .link-menu-grid a:hover{
     text-decoration: none;	
     font-size: 18px;
@@ -179,7 +180,7 @@ li{
 	height:192px;
 	
 }
-
+/* Style appliquer lorsqu'on survole un menu qui contient le sous menu */
 .menu:hover .sous-menu{
 	display: block;
 	transition: all 0.3s ease-in;
@@ -246,6 +247,9 @@ div.d-none{
 }
    /* Tablette */
 @media (max-width:1090px) {
+	.menu:hover .sous-menu{
+		display: none;
+	}
 	.header_container{
 		display:flex;
 		justify-content: space-between;

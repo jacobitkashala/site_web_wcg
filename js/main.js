@@ -165,6 +165,13 @@ const swiperPart = new Swiper('.slide-container', {
   // },
 })
 
+/* Appliquer le style active au menu principal */
+const listMennu = document.querySelectorAll('li.menu')
+// const playlist = document.getElementById('playlist')
+let indexActive=0;
+
+console.log(listMennu)
+
 /* Lecteur video */
 
 const mainVideo = document.querySelector('#main-Video')
@@ -209,7 +216,7 @@ const allTagsVideo = playlist.querySelectorAll('img')
 
 function playingNow() {
   for (let index = 0; index < videos.length; index++) {
-    console.log(allTagsVideo[index].getAttribute('li-index') == indexVideo)
+    // console.log(allTagsVideo[index].getAttribute('li-index') == indexVideo)
     if (allTagsVideo[index].classList.contains('playing')) {
       allTagsVideo[index].classList.remove('playing')
       allTagsVideo[index].classList.remove('active-video-Playing')
