@@ -43,8 +43,6 @@
 	<link rel='stylesheet' type='text/css' media='screen' href='./style/footer.css'>
 	<link rel="shortcut icon" href="./media/icons/favico.ico">
 </head>
-
-
 <body class="body">
 
 </body>

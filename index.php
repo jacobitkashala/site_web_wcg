@@ -1,2 +1,4 @@
+<?php
+require_once('src/controller/home_page.php');
 
-require_once('src')
+Homepage();
