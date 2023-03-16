@@ -11,7 +11,6 @@
 			<li class="menu  link-menu-grid overMenu   " style="background-color:#BF24C0">
 				<a href="">
 					<a class=" menu-show-no-mo  " href="index.php?template=Expertise&id=<?= urlencode(1) ?>" style="color:#FFFFFF ">
-						<!-- <a class=" menu-show-no-mo  " href="./pages/expertise.html" style="color:#FFFFFF "> -->
 						<img class="logo-menu " src="./media/icons/expertise_menu.png" alt="logo" />
 						Expertises
 					</a>
@@ -23,27 +22,27 @@
 						<div class="container-sous-menu-grid">
 							<ul class="element-sous-menu link-navbar">
 								<li class="sub-menu">
-									<a href="./pages/expertise.html" style="color:#FFFF">
+									<a href="index.php?template=Expertise&id=<?= urlencode(1) ?>" style="color:#FFFF">
 										CONSULTING
 									</a>
 								</li>
 								<li class="sub-menu">
-									<a href="./pages/expertise.html" style="color:#FFFF">
+									<a href="index.php?template=Expertise&id=<?= urlencode(1) ?>" style="color:#FFFF">
 										CLOUD & DATA
 									</a>
 								</li>
 								<li class="sub-menu">
-									<a href="./pages/expertise.html" style="color:#FFFF">
+									<a href="index.php?template=Expertise&id=<?= urlencode(1) ?>" style="color:#FFFF">
 										DIGITAL & INNOVATION
 									</a>
 								</li>
 								<li class="sub-menu">
-									<a href="./pages/expertise.html" style="color:#FFFF">
+									<a href="index.php?template=Expertise&id=<?= urlencode(1) ?>" style="color:#FFFF">
 										DESIGN
 									</a>
 								</li>
 								<li class="sub-menu">
-									<a href="./pages/expertise.html" style="color:#FFFF">
+									<a href="index.php?template=Expertise&id=<?= urlencode(1) ?>" style="color:#FFFF">
 										TELECOM
 									</a>
 								</li>
@@ -52,13 +51,13 @@
 					</div>
 			</li>
 			<li class="menu link   " style="background-color:#3F079C">
-				<a class="" href="./pages/expertise.html" style="color:#FFFFFF ">
+				<a class="" href="index.php?template=Expertise&id=<?= urlencode(1) ?>" style="color:#FFFFFF ">
 					<img class="logo-menu" src="./media/icons/secteur_menu.png" alt="logo" />
 					Secteurs
 				</a>
 			</li>
 			<li class="menu link " style="background-color:#2592F9">
-				<a class="" href="./pages/expertise.html" style="color:#FFFFFF ">
+				<a class="" href="index.php?template=Expertise&id=<?= urlencode(1) ?>" style="color:#FFFFFF ">
 					<img class="logo-menu " src="./media/icons/innovation_menu.png" alt="logo" />
 					Innovations
 				</a>
@@ -70,7 +69,7 @@
 				</a>
 			</li>
 			<li class="menu link  " style="background-color:#FFB400">
-				<a class="" href="./pages/expertise.html" style="color:#FFFFFF ">
+				<a class="" href="index.php?template=Expertise&id=<?= urlencode(1) ?>" style="color:#FFFFFF ">
 					<img class="logo-menu " src="./media/icons/ressource_menu.png" alt="logo" />
 					Ressources
 				</a>
