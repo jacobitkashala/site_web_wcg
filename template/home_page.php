@@ -80,7 +80,7 @@ ob_start();
 					<p class="card-text  service-description"> Nous accompagnons, très en amont de projets, nos
 						clients dans leurs
 						démarches de transformation digitale et d’optimisation de leur stratégie numérique. </p>
-					<a href="./pages/expertise.html" class="mt-2 btn btn-primary">En savoir plus</a>
+					<a href="index.php?template=Expertise&id=<?= urlencode(1) ?>" class="mt-2 btn btn-primary">En savoir plus</a>
 				</div>
 			</div>
 			<div class="card col-xl-3 col-lg-4  m-2" style="width: 19rem">
@@ -90,7 +90,7 @@ ob_start();
 					<p class="card-text service-description h-50">Nous accompagnons nos clients dans
 						l’implémentation et le maintien en
 						conditions opérationnelles de leurs plateformes digitales ou des services digitaux ...</p>
-					<a href="./pages/expertise.html" class=" mt-2 btn btn-primary">En savoir plus</a>
+					<a href="index.php?template=Expertise&id=<?= urlencode(1) ?>" class=" mt-2 btn btn-primary">En savoir plus</a>
 				</div>
 			</div>
 			<div class="card col-xl-3 col-lg-4  m-2" style="width: 19rem">
@@ -101,7 +101,7 @@ ob_start();
 						un service et une
 						activité de conseils pour la mise en place et le déploiement des infrastructures
 						accompagnatrices. </p>
-					<a href="./pages/expertise.html" class="mt-2 btn btn-primary">En savoir plus</a>
+					<a href="index.php?template=Expertise&id=<?= urlencode(1) ?>" class="mt-2 btn btn-primary">En savoir plus</a>
 				</div>
 			</div>
 			<div class="card col-xl-3 col-lg-4  m-2" style="width: 19rem">
@@ -111,7 +111,7 @@ ob_start();
 					<p class="card-text service-description  h-50 ">
 						Nous proposons la connectivité Internet par satellite de qualité et une allocation de bande
 						passante dédiée aux entreprises congolaise (Publiques et Privées). </p>
-					<a href="./pages/expertise.html" class="mt-2 btn btn-primary">En savoir plus</a>
+					<a href="index.php?template=Expertise&id=<?= urlencode(1) ?>" class="mt-2 btn btn-primary">En savoir plus</a>
 				</div>
 			</div>
 			<div class="card col-xl-3 col-lg-4  m-2" style="width: 19rem">
@@ -122,7 +122,7 @@ ob_start();
 						de nouveaux univers
 						graphiques, de l’ergonomie, des contenus, textes et images, ainsi que les habillages ...
 					<p>
-						<a href="./pages/expertise.html" class="mt-xl-2 mt-lg-5  btn btn-primary">En savoir plus</a>
+						<a href="index.php?template=Expertise&id=<?= urlencode(1) ?>" class="mt-xl-2 mt-lg-5  btn btn-primary">En savoir plus</a>
 				</div>
 			</div>
 		</div>
