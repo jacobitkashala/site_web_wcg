@@ -1,7 +1,7 @@
 <!-- Le header -->
 <header class="header_container ">
 	<div class="header_image">
-		<a class="" href="#">
+		<a class="" href="index.php?template=home&id=<?= urlencode(1) ?>">
 			<img src="./media/logo/logo_wcg.png" alt="logo wcg" />
 		</a>
 	</div>
