@@ -76,7 +76,7 @@
 				</a>
 			</li>
 			<li class="menu link " style="background-color:#FF0000">
-				<a class="" href="./pages/actualite.html" style="color:#FFFFFF ">
+				<a class="" href="index.php?template=actualite&id=<?= urlencode(1) ?>" style="color:#FFFFFF ">
 					<img class="logo-menu" src="./media/icons/actualite_menu.png" alt="logo" />
 					Actualités
 				</a>

@@ -12,6 +12,9 @@ if (isset($_GET['template']) && $_GET['template'] !== '') {
 	} else if ($_GET['template'] === 'form_recrutement') {
 		require_once('src/controller/recrutement_formulaire.php');
 	}
+	else if ($_GET['template'] === 'actualite') {
+		require_once('src/controller/actualite.php');
+	}
 } else {
 	require_once('src/controller/home_page.php');
 }

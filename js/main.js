@@ -10,7 +10,6 @@ const header = document.getElementById('#main-menu')
 const btonLinks = document.getElementsByClassName('link')
 
 /**/
-
 /*
   Cacher le sous-menu qui est visible lorsqu'on 
   scroll
