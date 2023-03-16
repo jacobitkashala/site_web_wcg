@@ -9,6 +9,8 @@ if (isset($_GET['template']) && $_GET['template'] !== '') {
 		require_once('src/controller/recrutement.php');
 	} else if ($_GET['template'] === 'detail_recrutement') {
 		require_once('src/controller/detail_recrutement.php');
+	} else if ($_GET['template'] === 'form_recrutement') {
+		require_once('src/controller/recrutement_formulaire.php');
 	}
 } else {
 	require_once('src/controller/home_page.php');

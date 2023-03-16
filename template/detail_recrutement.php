@@ -59,10 +59,9 @@ ob_start();
 				</p>
 				<div class="item_inline"></div>
 				<p class="mt-5 ">Pour postuler en ligne</p>
-				<a class="col-md-2 col-sm-11 mt-sm-3 btn btn-primary" href="./formulaire_recrutement.html"> En
+				<a class="col-md-2 col-sm-11 mt-sm-3 btn btn-primary" href="index.php?template=form_recrutement&id=<?= urlencode(1) ?>"> En
 					savoir
 					plus</a>
-
 			</div>
 
 	</section>

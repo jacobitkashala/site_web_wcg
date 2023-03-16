@@ -18,11 +18,11 @@ const btonLinks = document.getElementsByClassName('link')
 let scrollValue = $(window).scrollTop()
 // console.log('Scroll value: ' + scrollValue)
 
-if (window.scrollY > 100) {
-  btnToTopNavigation.style.display = 'fixed'
-} else {
-  btnToTopNavigation.style.display = 'none'
-}
+// if (window.scrollY > 100) {
+//   btnToTopNavigation.style.display = 'fixed'
+// } else {
+//   btnToTopNavigation.style.display = 'none'
+// }
 window.onscroll = () => {
   // if (scrollValue == 0) {
   //   btnToTopNavigation.style.display = 'none'
