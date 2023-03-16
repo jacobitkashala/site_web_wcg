@@ -40,8 +40,12 @@
 
 	<link rel='stylesheet' type='text/css' media='screen' href='./style/header.css'>
 	<link rel='stylesheet' type='text/css' media='screen' href='./style/home.css'>
+	<link rel='stylesheet' type='text/css' media='screen' href='./style/expertise.css'>
 	<link rel='stylesheet' type='text/css' media='screen' href='./style/footer.css'>
+
+	<link rel="icon" href="./media/icons/favico.ico">
 	<link rel="shortcut icon" href="./media/icons/favico.ico">
+	<link rel="apple-touch-icon" href="./media/icons/favico.ico">
 </head>
 
 <body class="body">

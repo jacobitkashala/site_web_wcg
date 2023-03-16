@@ -5,48 +5,51 @@
 			<img src="./media/logo/logo_wcg.png" alt="logo wcg" />
 		</a>
 	</div>
+
 	<nav class="header_nav_container ">
 		<ul class="link-navbar bg-color-shadox" id="main-menu">
 			<li class="menu  link-menu-grid overMenu   " style="background-color:#BF24C0">
-				<a class=" menu-show-no-mo  " href="./pages/expertise.html" style="color:#FFFFFF ">
-					<img class="logo-menu " src="./media/icons/expertise_menu.png" alt="logo" />
-					Expertises
-				</a>
-				<i class="  fa-solid fa-plus icon-cog" id="btn-plus-sous-menu"></i>
+				<a href="">
+					<a class=" menu-show-no-mo  " href="index.php?template=Expertise&id=<?= urlencode(1) ?>" style="color:#FFFFFF ">
+						<!-- <a class=" menu-show-no-mo  " href="./pages/expertise.html" style="color:#FFFFFF "> -->
+						<img class="logo-menu " src="./media/icons/expertise_menu.png" alt="logo" />
+						Expertises
+					</a>
+					<i class="  fa-solid fa-plus icon-cog" id="btn-plus-sous-menu"></i>
 
-				<div class="grid-item sous-menu  " style="background-color:#701475">
-					<div class="underlin">
+					<div class="grid-item sous-menu  " style="background-color:#701475">
+						<div class="underlin">
+						</div>
+						<div class="container-sous-menu-grid">
+							<ul class="element-sous-menu link-navbar">
+								<li class="sub-menu">
+									<a href="./pages/expertise.html" style="color:#FFFF">
+										CONSULTING
+									</a>
+								</li>
+								<li class="sub-menu">
+									<a href="./pages/expertise.html" style="color:#FFFF">
+										CLOUD & DATA
+									</a>
+								</li>
+								<li class="sub-menu">
+									<a href="./pages/expertise.html" style="color:#FFFF">
+										DIGITAL & INNOVATION
+									</a>
+								</li>
+								<li class="sub-menu">
+									<a href="./pages/expertise.html" style="color:#FFFF">
+										DESIGN
+									</a>
+								</li>
+								<li class="sub-menu">
+									<a href="./pages/expertise.html" style="color:#FFFF">
+										TELECOM
+									</a>
+								</li>
+							</ul>
+						</div>
 					</div>
-					<div class="container-sous-menu-grid">
-						<ul class="element-sous-menu link-navbar">
-							<li class="sub-menu">
-								<a href="./pages/expertise.html" style="color:#FFFF">
-									CONSULTING
-								</a>
-							</li>
-							<li class="sub-menu">
-								<a href="./pages/expertise.html" style="color:#FFFF">
-									CLOUD & DATA
-								</a>
-							</li>
-							<li class="sub-menu">
-								<a href="./pages/expertise.html" style="color:#FFFF">
-									DIGITAL & INNOVATION
-								</a>
-							</li>
-							<li class="sub-menu">
-								<a href="./pages/expertise.html" style="color:#FFFF">
-									DESIGN
-								</a>
-							</li>
-							<li class="sub-menu">
-								<a href="./pages/expertise.html" style="color:#FFFF">
-									TELECOM
-								</a>
-							</li>
-						</ul>
-					</div>
-				</div>
 			</li>
 			<li class="menu link   " style="background-color:#3F079C">
 				<a class="" href="./pages/expertise.html" style="color:#FFFFFF ">
