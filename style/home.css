@@ -49,9 +49,17 @@ h1.title{
     padding-right: 5px;
     padding-left: 5px;
 }
+/* Lecteur video */
 #main-Video{
-    height:12rem
+    height:12rem;
+    width: 100%;
+    background-color: #fff;
+    border-radius: 5px;
+    /* padding: 20px; */
+    box-shadow: 8px 5px 15px rgba(0,0,0,0.25);
+    margin: 2px;
 }
+
 .w-video-main{
     object-fit: cover;
     width: 100%;
@@ -65,7 +73,6 @@ h1.title{
     cursor: pointer;
 }
 .active-video-Playing{
-    /* transform: scale(1); */
     margin: 2px 1px;
 	border: 1px solid #D5D5D5D5;
 	border-radius: 5px;
@@ -88,17 +95,11 @@ h1.title{
 }
 /* card video */
 .card-video{
-    border: 1px solid rgba(0,0,0,.125);
+    /* border: 1px solid rgba(0,0,0,.125); */
     border-radius: 0.25rem;
     padding: 0 0;
-    /* padding: 0 0; */
-    /* margin: 2px; */
 }
-/*.item-un{
-     grid-column: 1 / 2;
-    grid-row: 1/2;
-}
- */
+
  p.service-description{
     text-align: justify;
     /* overflow: hidden; */
@@ -219,9 +220,9 @@ div.slick-slide {
     }
    
     /*  */
-    .card-video{
-       
-        margin: 2px;
+   
+    .card-video video{
+      width: 100%;
     }
     /* Description service */
     p.service-description{

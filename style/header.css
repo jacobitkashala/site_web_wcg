@@ -143,6 +143,13 @@ li{
 	border-bottom: 1px solid #ffffff00;
 }
 /* class appliquer lors qu'on survole un menu contenant du grid */
+.active-menu{
+	text-decoration: none;	
+	font-size: 18px;
+	transform: scale(1);
+	font-weight: bold;
+	border-bottom: 1px solid #FFFFFF;
+}
 .link-navbar .link-menu-grid a:hover{
     text-decoration: none;	
     font-size: 18px;
