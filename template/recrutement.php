@@ -10,7 +10,7 @@ ob_start();
 			<h4 class="col-lg-12 col-md-12 col-sm-12">Rejoignez-nous !</h4>
 		</div>
 	</section>
-	<!-- Section liste des offres -->
+	<!-- Section liste des offres    -->
 	<section class="container">
 		<h4 class="mx-5">OFFRES D’EMPLOI</h4>
 		<div class="row box-content my-5 pb-5">
@@ -22,7 +22,7 @@ ob_start();
 					l'évolution et l'intégration des API.
 				</p>
 				<div class=" row d-flex justify-content-between d-flex-sm-colum-revrse align-items-cente">
-					<a class="col-md-2 col-sm-11 mt-sm-3 btn btn-primary" href="./detail_recrutement.html"> En
+					<a class="col-md-2 col-sm-11 mt-sm-3 btn btn-primary" href="index.php?template=detail_recrutement&id=<?= urlencode(1) ?>"> En
 						savoir
 						plus</a>
 					<p class="col-md-6  col-sm-11  date__recrutement">Ouverture : 04-11-2022 / Clôture :
@@ -43,7 +43,7 @@ ob_start();
 					l'évolution et l'intégration des API.
 				</p>
 				<div class=" row d-flex justify-content-between d-flex-sm-colum-revrse align-items-cente">
-					<a class="col-md-2 col-sm-11 mt-sm-3 btn btn-primary" href="./detail_recrutement.html"> En
+					<a class="col-md-2 col-sm-11 mt-sm-3 btn btn-primary" href="index.php?template=detail_recrutement&id=<?= urlencode(1) ?>"> En
 						savoir
 						plus</a>
 					<p class="col-md-6  col-sm-11  date__recrutement">Ouverture : 04-11-2022 / Clôture :
@@ -64,7 +64,7 @@ ob_start();
 					l'évolution et l'intégration des API.
 				</p>
 				<div class=" row d-flex justify-content-between d-flex-sm-colum-revrse align-items-cente">
-					<a class="col-md-2 col-sm-11 mt-sm-3 btn btn-primary" href="./detail_recrutement.html"> En
+					<a class="col-md-2 col-sm-11 mt-sm-3 btn btn-primary" href="index.php?template=detail_recrutement&id=<?= urlencode(1) ?>"> En
 						savoir
 						plus</a>
 					<p class="col-md-6  col-sm-11  date__recrutement">Ouverture : 04-11-2022 / Clôture :
