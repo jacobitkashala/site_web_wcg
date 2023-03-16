@@ -3,6 +3,16 @@ $title = "wcg";
 
 ob_start();
 ?>
+<style>
+	.bg-carrousel {
+		background: url('media/photo/back_groud.jpg') no-repeat;
+		box-sizing: border-box;
+	}
+
+	.bg-carrousel__affiche {
+		background: url('media/carousel/carousel2.png') no-repeat;
+	}
+</style>
 <main class="">
 	<!-- 1ere section -->
 	<section class=" home">
@@ -50,7 +60,8 @@ ob_start();
 			<div class=" col-xl-4 col-lg-5 col-xs-10 col-md-12 md-text-center col-sm-10 mt-md-5 ">
 				<div class="row">
 					<div class=" card-video col-xs-10  col-md-8   d-flex" id="video_player">
-						<video id="main-Video" class="img-fluid" loop="infinite" autoplay="autoplay" controls></video>
+						<!-- autoplay="autoplay" -->
+						<video id="main-Video" class="img-fluid" loop="infinite" controls></video>
 					</div>
 					<div class=" col-xs-10 col-md-3 box-media playlist " id="playlist">
 
