@@ -170,7 +170,7 @@ const listMennu = document.querySelectorAll('li.menu')
 // const playlist = document.getElementById('playlist')
 let indexActive=0;
 
-console.log(listMennu)
+// console.log(listMennu)
 
 /* Lecteur video */
 
@@ -209,8 +209,6 @@ for (let index = 0; index < videos.length; index++) {
 />`
   playlist.insertAdjacentHTML('beforeend', element)
 }
-
-let initialSrc = 'http://wcg-rdc.com/video/gespat.mp4'
 
 const allTagsVideo = playlist.querySelectorAll('img')
 
